@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "mhutchie.git-graph",
+    "james-yu.latex-workshop",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "ms-vscode.powershell",
+    "ban.spellright",
+    "Gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode"
+  ]
+}
