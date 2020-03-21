@@ -1,0 +1,33 @@
+\pagenumbering{gobble}
+
+\begin{titlepage}% per non stampare il numero della pagina
+
+  \raggedleft% allinea a destra la pagina
+  \rule{1pt}{\textheight}% linea verticale
+  \hspace{0.05\textwidth}% spazio tra linea e testo
+  % lasciare questa riga per il corretto funziomento di \parbox
+  \parbox[b]{0.75\textwidth}{% paragrafo che tiene il testo a destra della riga cambiando la larghezza il testo si muove a destra o a sinistra
+  {\hspace{0.15\textwidth}\includegraphics[width=3cm,height=3cm]{logo.jpg}}\\[2\baselineskip] % logo
+  {\Huge\bfseries CoffeeCode \\[0.5\baselineskip] Predire in Grafana}\\[5\baselineskip] % titolo
+  {\Large\textsc{\placeholderTitle{}}}\\[6\baselineskip] % nome del documento
+  {\begin{tabular}{r l}
+    % testo in grassetto
+    \textbf{Versione}     & \versione{}               \\
+    \textbf{Approvazione} & \responsabile{}           \\
+    \textbf{Redazione}    & \redattori{}              \\
+    \textbf{Verifica}     & \verificatori{}           \\
+    \textbf{Uso}          & \uso{}                    \\
+    \textbf{Destinato a}  & CoffeeCode                \\
+                          & prof.\ Vardanega Tullio   \\
+                          & prof.\ Cardin Riccardo    \\
+    \ifthenelse{\equal{\uso}{Esterno}}{
+                          & Zucchetti Group SPA       \\
+    }{}
+  \end{tabular}}\\[5\baselineskip]
+
+  {\bfseries Descrizione}\\
+  {\descrizione{}}\\[2\baselineskip]
+  {\texttt{coffeecodeswe@gmail.com}}\\[\baselineskip] % email
+  }
+
+\end{titlepage}
