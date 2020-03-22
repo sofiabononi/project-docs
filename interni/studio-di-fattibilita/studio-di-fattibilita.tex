@@ -4,7 +4,7 @@
 %Qui ci andrà il percorso delle immagini da includere in analisi dei requisiti
 \appendToGraphicspath{../../commons/img/}
 
-\seiTitle{Studio di Fattibilità}
+\setTitle{Studio di Fattibilità}
 
 \setVersione{}
 
@@ -18,9 +18,54 @@
 
 \setDescrizione{Documento che analizza tutti i capitolati proposti.}
 
+\setModifiche{}
+
 \begin{document}
 
 \input{../../commons/template}
 
+\section{Introduzione}%
+\label{sec:introduzione}
+
+\subsection{Scopo del documento}%
+\label{sub:scopo_del_documento}
+L'obiettivo dello \textit{Studio di fattibilità} è quello di fornire le motivazioni che hanno portato alla scelta del \glossario{capitolato} C4 \emph{Predire in Grafana}, con la conseguente esclusione degli altri capitolati proposti.
+
+\subsection{Glossario}%
+\label{sub:glossario}
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario} che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una G a pedice a fianco del termine.
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+
+\subsubsection{Normativi}%
+\label{subs:normativi}
+
+\begin{itemize}
+  \item \textbf{Norme di progetto}: \textit{Norme di progetto}
+\end{itemize}
+
+\subsubsection{Informativi}%
+\label{subs:informativi}
+
+\begin{itemize}
+  \item \textbf{Capitolato d'appalto C1}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C1.pdf}{Autonomous Highlights Platform}
+  \item \textbf{Capitolato d'appalto C2}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C2.pdf}{Etherless}
+  \item \textbf{Capitolato d'appalto C3}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C3.pdf}{NaturalAPI}
+  \item \textbf{Capitolato d'appalto C4}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf}{Predire in Grafana}
+  \item \textbf{Capitolato d'appalto C5}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C5.pdf}{Stalker}
+  \item \textbf{Capitolato d'appalto C6}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C6.pdf}{ThiReMa --- Things Relationship Management}
+\end{itemize}
+
+%TODO Aggiungere tutte le altre sezioni con i rispettivi file dentro a components/
+%\newpage
+%\section{Capitolato C4 --- Predire in Grafana}%
+%\label{sec:c4}
+%\subfile{components/studio-c4.tex}
+
+\newpage
+\section{Capitolato C5 --- Stalker}%
+\label{sec:c5}
+\subfile{components/studio-c5.tex}
 
 \end{document}
