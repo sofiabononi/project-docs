@@ -7,9 +7,9 @@
   \hspace{0.05\textwidth}% spazio tra linea e testo
   % lasciare questa riga per il corretto funziomento di \parbox
   \parbox[b]{0.75\textwidth}{% paragrafo che tiene il testo a destra della riga cambiando la larghezza il testo si muove a destra o a sinistra
-  {\hspace{0.15\textwidth}\includegraphics[width=3cm,height=3cm]{logo.jpg}}\\[2\baselineskip] % logo
-  {\Huge\bfseries CoffeeCode \\[0.5\baselineskip] Predire in Grafana}\\[5\baselineskip] % titolo
-  {\Large\textsc{\placeholderTitle{}}}\\[6\baselineskip] % nome del documento
+  {\hspace{0.15\textwidth}\includegraphics[width=4cm,height=4cm]{logo.jpg}}\\[4\baselineskip] % logo
+  {\Huge\bfseries CoffeeCode \\[1\baselineskip] Predire in Grafana}\\[6\baselineskip] % titolo
+  {\Large\textsc{\placeholderTitle{}}}\\[7\baselineskip] % nome del documento
   {\begin{tabular}{r l}
     % testo in grassetto
     \textbf{Versione}     & \versione{}               \\
@@ -21,7 +21,7 @@
                           & prof.\ Vardanega Tullio   \\
                           & prof.\ Cardin Riccardo    \\
     \ifthenelse{\equal{\uso}{Esterno}}{
-                          & Zucchetti Group SPA       \\
+                          & Zucchetti S.p.A.       \\
     }{}
   \end{tabular}}\\[5\baselineskip]
 
@@ -31,3 +31,55 @@
   }
 
 \end{titlepage}
+
+\newgeometry{textheight=660pt, lmargin=2cm, tmargin=2cm, rmargin=2cm}
+
+% setup di header e footer nelle pagine senza numero
+\fancypagestyle{nopage}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1.3cm]{logo.jpg}}%
+  \fancyhead[R]{\emph{CoffeeCode}\\\placeholderTitle{}}%
+}
+% setup di header e footer nelle pagine col numero
+\fancypagestyle{usual}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1.3cm]{logo.jpg}}%
+  \fancyhead[R]{\emph{CoffeeCode}\\\placeholderTitle{}}%
+  \fancyfoot[R]{\thepage\ di~\pageref{LastPage}}%
+}
+\setlength{\headheight}{1.8cm}
+
+\newpage
+\pagestyle{nopage}
+
+\section*{Registro delle modifiche}%
+\label{sec:registro_delle_modifiche}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{6.5cm}}
+  \caption{Registro delle modifiche}%
+  \label{tab:registro_delle_modifiche}                                                    \\
+  \rowcolor{lightgray}
+  {\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+  \endhead%
+  \modifiche{}%
+\end{longtable}
+% section registro_delle_modifiche (end)
+
+\newpage
+\thispagestyle{nopage}
+\pagenumbering{roman}
+\tableofcontents
+
+\elencoFigure{}%
+
+\elencoTabelle{}%
+
+\newpage
+
+\pagestyle{usual}
+\pagenumbering{arabic}
