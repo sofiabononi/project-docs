@@ -25,5 +25,63 @@
 
 \input{../../commons/template}
 
+\section{Introduzione}%
+\label{sec:introduzione}
+
+\subsection{Premessa}%
+\label{sub:premessa}
+Il piano di qualifica sarà un documento soggetto a probabili modifiche nel corso dell'intera durata del progetto.
+Tutto ciò è comprensibile dato che le metriche e i processi, identificati inizialmente, possono rivelarsi insufficienti o non adatti al fine di mantenere un'ottima qualità del progetto e all'interno del team di lavoro.
+Per queste ragioni il documento sarà prodotto incrementalmente nel corso dello svolgimento del progetto.
+
+\subsection{Scopo del documento}%
+\label{sub:scopo_del_documento}
+Lo scopo del documento è quello di illustrare formalmente tutte le modalità di verifica, validazione e le norme adottate, con il fine ultimo quello di preservare la qualità di prodotto e di processo.
+Per raggiungere l'obiettivo prefissato verranno svolte continuamente verifiche sulle attività e sui processi in corso in modo da identificare nel minor tempo possibili errori e/o anomalie in modo da rendere più facile gli interventi di manutenzione e riducendo al minimo lo spreco di risorse.
+
+\subsection{Scopo del prodotto}%
+\label{sub:scopo_del_prodotto}
+Lo scopo del prodotto è la realizzazione di due plug-in, in \glossario{Javascript}, per ottenere delle elaborazioni su il flusso di dati raccolti dai sistemi dell’azienda,
+per poter poi prevedere i loro stati futuri così da inviare possibile segnalazioni o allarmi agli operatori del servizio cloud e alla linea di produzione del software.
+In particolare le previsioni che si desiderano ottenere sono di due tipi:
+\begin{itemize}
+    \item ”Classificazioni”: per valutare il gruppo di appartenenza degli eventi dei dati ”\glossario{predittori}”;
+    \item ”Regressioni”: nel caso in cui il valore cercato sia numerico e con campo continuo. 
+\end{itemize}
+I due plug-in devono estendere lo strumento di monitoraggio dei dati in \glossario{Grafana} applicando il Machine Learning attraverso le tecniche di 
+Support Vector Machine e di Regressione Lineare utilizzate per la predizione su dati.
+
+\subsection{Glossario}%
+\label{sub:glossario}
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario} che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una G a pedice a fianco del termine.
+
+\subsection{Riferimenti}%
+\label{sub:riferimenti}
+
+\subsubsection{Normativi}%
+\label{subs:normativi}
+\begin{itemize}
+    \item \textbf{Norme di progetto}: \textit{Norme di progetto};
+    \item \textbf{Capitolato d'appalto C4}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf}{Predire in Grafana}.
+\end{itemize}
+
+\subsubsection{Informativi}%
+\label{subs:informativi}
+\begin{itemize}
+    \item \textbf{Presentazione Capitolato C4}: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/C4a.pdf}{Predire in Grafana};
+    \item \textbf{Slide del corso di Ingegneria del Software (SWE)}:
+    \begin{itemize}
+        \item Qualità di prodotto: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L12.pdf}{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L12.pdf};
+        \item Qualità di processo: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L13.pdf}{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L13.pdf};
+        \item Verifica e validazione: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L14.pdf}{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L14.pdf}.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\section{Qualità di processo}%
+\label{sec:qualita_di_processo}
+\subfile{components/qualita-di-processo.tex}
+
 
 \end{document}
+

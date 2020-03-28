@@ -1,0 +1,156 @@
+\documentclass[../paino-di-qualifica.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo}%
+\label{sub:scopo}
+Lo scopo del documento è quello di ricerca la qualità di un prodotto che è soggetta a cambiamenti in base ai processi utilizzati nel corso della realizzazione dello stesso.
+Si rende necessario quindi adottare un buon \glossario{CICLO DI VITA} che determina i processi da utilizzare che dovranno poi essere verificati e valutati attentamente per la corretta riuscita del prodotto.
+A tal proposito si seguirà lo schema del \glossario{CICLO DI DEMING} per la gestione iterativa dei controlli e miglioramenti dei processi del prodotto.
+
+\subsection{Nomenclatura metriche e obiettivi di qualità}%
+\label{sub:nomenclatura_metriche_e_obiettivi_di_qualita}
+Vengono di seguito spiegati gli obiettivi, le \glossario{METRICHE} e come essi verranno identificati, in modo sintetico:
+\begin{itemize}
+    \item \textbf{Obiettivi}: QoPR[ID][Nome]
+        \begin{itemize}
+            \item QoPR: sta per "Quality of Process" ossia qualità del processo;
+            \item ID: identificatore numerico a 3 cifre;
+            \item Nome: riassunto della descrizione del processo.
+        \end{itemize}
+    \item \textbf{Metriche}: MoPR[ID][Nome]
+        \begin{itemize}
+            \item MoPR: sta per "Metric of Process" ossia metrica del processo;
+            \item ID: identificatore numerico a 3 cifre;
+            \item Nome: riassunto della descrizione della metrica.
+        \end{itemize}
+\end{itemize}  
+Ulteriori informazioni sulle metriche e sul loro funzionamento sono reperibili nel documento Norme di progetto.
+
+\subsection{Processi}%
+\label{sub:processi}
+Come per metriche e obiettivi, i processi faranno affidamento alla seguente identificazione:
+\begin{itemize}
+    \item PRC[ID][Nome]
+    \begin{itemize}
+        \item PRC: sta a indicare "Processo";
+        \item ID: identificatore numerico a 3 cifre;
+        \item Nome: riassunto della funzione del processo.
+    \end{itemize}
+\end{itemize}
+Verranno poi fornite per ogni processo, come ulteriore arricchimento per le specifiche di ogni progetto:
+\begin{itemize}
+    \item Le funzioni principali da esso svolte;
+    \item Gli obiettivi accettabili per garantire una qualità;
+    \item Gli obiettivi desiderabili per ricercare una maggiore qualità;
+    \item Le metriche adottate, nel caso ce ne fossero, per raggiungere tali obiettivi.
+\end{itemize}
+
+\subsubsection{PRC001 Organizzazione e pianificazione del progetto e della sua struttura}%
+\label{sub:organizzazione_e_pianificazione_del_progetto_e_della_sua_struttura}
+Questo \glossario{MACRO-PROCESSO} ha l'obiettivo di organizzare il lavoro da svolgere per la corretta soddisfazione dei \glossario{REQUISITI} identificati nel \glossario{PROGETTO}.
+In questo processo viene messo in atto il \glossario{WAY OF WORKING}, redatto per la consultazione dell'intero \glossario{TEAM DI SVILUPPO}, il quale ha un'importanza significativa perché la corretta attuazione del delle regole contenute al suo interno andranno a condizionare la qualità dell'intero progetto.
+
+\textbf{Funzioni}
+
+\begin{itemize}
+    \item \textbf{Sviluppare \glossario{SOTTO-PROCESSI}}: ogni obiettivo prefissato deve essere associato ad azioni precise ognuna delle quali è raggruppata in un sotto-processo;
+    \item \textbf{Dividere i compiti}: è fondamentale ,a corretta suddivisione dei compiti all'interno dei componenti del gruppo CoffeeCode al fine di non creare incomprensioni;
+    \item \textbf{Calendarizzare i documenti}: definire delle \glossario{BASELINE} durante lo svolgimento del progetto;
+    \item \textbf{Apprendimento autonomo}: data l'inesperienza del team nell'utilizzo di diverse tecnologie concordate nel \glossario{CAPITOLATO}, sarà richiesto un periodo di formazione personale più lungo. Questo periodo va conteggiato all'interno della calendarizzazione;
+    \item \textbf{Standard appropriati}: vengono scelti gli standard più consoni alle finalità del progetto;
+    \item \textbf{Stima budget}: bisogna essere a conoscenza delle proprie risorse in termini di costo/persona in modo da rispettare il \glossario{PREVENTIVO} stilato.
+\end{itemize}
+
+\textbf{Metriche}
+%da realizzare
+
+\textbf{Obiettivi}
+\begin{itemize}
+    \item \textbf{QoPR001 Rispetto delle scadenze della pianificazione}: l'obiettivo è rispettare al meglio le scadenza prefissate in modo da non avere rallentamenti durante la realizzazione del progetto;
+    \item \textbf{QoPR002 Rispetto del budget istanziato}: devono potersi mantenere le risorse definite all'inizio del progetto;
+    \item \textbf{QoPR003 Rispetto del ciclo di vita scelto}: ogni fase del Ciclo di Deming deve essere rispettata dai processi;
+    \item \textbf{QoPR004 Rispetto dei ruoli e identificazione nei documenti}: deve essere possibile sapere i ruoli dei componenti nella partecipazione alla scrittura di un documento e le varie modifiche da loro fatte;
+    \item \textbf{QoPR005 Rispetto del versionamento dei prodotti}: ogni prodotto realizzato durante i processi deve possedere un numero di versionamento in modo da tracciare le modifiche, e in caso di errori, trovare un punto di ripristino per il prodotto.
+\end{itemize}
+
+\subsubsection{PRC002 Analisi}
+\label{sub:analisi}
+In questo processo viene fatta un'analisi più generale di altre attività, non solo dell'analisi dei requisiti (consultabile nel documento AnalisiDeiRequisiti) o dell'analisi dei rischi (consultabile nel documento PianoDiProgetto), che vengono elencate di seguito nella sezione "Funzioni".
+
+\textbf{Funzioni}
+\begin{itemize}
+    \item \textbf{Individuazione dei requisiti}: il testo del capitolato è presentato in modo più discorsivo che tecnico, vi è quindi la necessita di effettuare un'analisi per individuare requisiti: espliciti ,impliciti e classificarli in seguito;
+    \item \textbf{Individuazione delle risorse}: analizzare le risorse e realizzare poi un preventivo è fondamentale, per il \glossario{FORNITORE} per verificare la fattibilità del progetto e per il clienti per valutare il costo del progetto;
+    \item \textbf{Individuazione dei tempi}: capire la durata delle progetto e stabilire la scadenza delle varie fasi è importante per gestire le varie risorse senza incombere in perdite di tempo o in ritardi;
+    \item \textbf{Individuazione dei rischi}: capire quali rischi possono presentarsi durante la realizzazione del progetto è fondamentale per prevedere e in caso attuare delle reazioni ad essi.
+\end{itemize}
+
+\textbf{Metriche}
+%da realizzare
+
+\textbf{Obiettivi}
+\begin{itemize}
+    \item \textbf{QoPR006 Soddisfazione dei requisiti obbligatori}: tutti i requisiti obbligatori, concordati con il cliente, devono essere soddisfatti a fine progetto;
+    \item \textbf{QoPR007 Soddisfazione dei requisiti opzionali e desiderabili}: i requisiti opzionali e desiderabili devono essere definiti in modo corretto, verificati insieme al cliente e possono essere soddisfatti solo se sono state avanzate risorse, in termini di tempo/persona, prima della fine del progetto;
+    \item \textbf{QoPR008 Verifica dei tempi previsti}: i tempi previsti e concordati devono essere rispettati;
+    \item \textbf{QoPR009 Verifica dei rischi previsti}: per mantenere costante lo sviluppo del progetto non dovrebbero presentarsi rischi non preventivati che potrebbero comportare a ritardi sui tempi e a spreco di risorse.
+\end{itemize}
+
+\subsubsection{PRC003 Produzione dei documenti}
+\label{sub:produzione_dei_documenti}
+Questo processo rimane operativo per tutta la durata del progetto in quanto ha il compito di redigere i vari documenti necessari nelle diverse fasi di sviluppo.
+
+\textbf{Funzioni}
+Il processo segue di pari passo il ciclo di vita di ogni documento, come spiegato nelle NormeDiProgetto e prevede le fasi di:
+\begin{itemize}
+    \item Redazione;
+    \item Modifica;
+    \item Verifica;
+    \item Approvazione.        
+\end{itemize}
+
+\textbf{Obiettivi}
+\begin{itemize}
+    \item \textbf{QoPR010 Rispetto delle fasi del ciclo di vita}: deve essere rispettato ogni fase del ciclo di vita del documento e le scadenze previste;
+    \item \textbf{QoPR011 Rispetto nella redazione dei documenti}: devono essere rispettate le linee guida inserite nelle NormeDiProgetto.
+\end{itemize}
+
+\subsubsection{PRC004 Verifica}
+\label{sub:produzione_dei_documenti}
+Durante tutto lo svolgimento del progetto, il processo di verifica sarà attivo con l'obiettivo principale quello di valutare la correttezza dei prodotti generati per: 
+\begin{itemize}
+    \item Individuare eventuali errori;
+    \item Decidere se rispettano gli standard di qualità prefissati.
+\end{itemize}
+
+\textbf{Funzioni}
+\begin{itemize}
+    \item \textbf{Verificare i requisiti dei prodotti}: viene verificato che i prodotti soddisfino i requisiti richiesti concordati;
+    \item \textbf{Verificare l'aderenza alle Norme di Progetto}: viene verificato il rispetto del Way Of Working, contenuto nelle Norme di Progetto.
+\end{itemize}
+
+\textbf{Metriche}
+%da realizzare
+
+\textbf{Obiettivi}
+\begin{itemize}
+    \item \textbf{QoPR012 Attuare una verifica costante}: si effettuano verifiche costanti in ogni fase del progetto, testando e controllando il prodotto ogni volta che viene modificato o che si è in procinto di terminare una \glossario{MILESTONE};
+    \item \textbf{QoPR013 Comunicare costantemente durante la verifica}: mantenere una comunicazione costante con tutti i ruoli all'interno del gruppo;
+    \item \textbf{QoPR014 Rispettare le fasi di verifica}: si esegue la fase di verifica in modo iterativo, rispettando sempre ciò che è stato deciso all'interno delle Norme di Progetto, in modo da rendere coerenti i risultati ottenuti.
+\end{itemize}
+
+\subsection{Tabelle di qualità di processo}
+\label{sub:tabelle_di_qualita_di_processo}
+Gli obiettivi di qualità, discussi nelle precedenti sezioni, che devono essere parte integrante di ogni processo, verranno indicati in tabelle in questa sezione.
+Per ogni obiettivo viene indicato:
+
+\begin{itemize}
+   \item \textbf{Obiettivo}: indica il codice identificativo dell'obiettivo come descritto nella sezione §2.2;
+   \item \textbf{Metrica}: indica, se presente, la metrica adottata per la valutazione dell'obiettivo di qualità come descritto nella sezione §2.2;
+   \item \textbf{Valore accettabile}: rappresenta il valore minimo di qualità dell'obiettivo che CoffeCode intende ottenere. Non è presente in caso di mancanza della norma associata all'obiettivo;
+   \item \textbf{Valore desiderato}: rappresenta il valore di qualità dell'obiettivo che CoffeCode intende ottenere una maggiore qualità rispetto a quella minima. Non è presente in caso di mancanza della norma associata all'obiettivo;
+   \item \textbf{Descrizione}: descrizione generale dell'obiettivo.
+\end{itemize}
+%Tabelle
+\end{document}
