@@ -1,0 +1,208 @@
+\documentclass[../norme-di-progetto.tex]{subfiles}
+\begin{document}
+
+\subsection{Documentazione}
+\subsubsection{Scopo}
+Lo scopo di questo processo è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero ciclo di vita del software.
+\subsubsection{Aspettative}
+Le aspettative della corretta implementazione di questo processo sono:
+\begin{itemize}
+  \item L'identificazione di regole su cui deve essere basata la corretta stesura dei documenti;
+  \item L'individuazione di una struttura rigorosa sulla quale basare la redazione dei documenti durante tutti i processi di sviluppo.
+\end{itemize}
+\subsubsection{Descrizione}
+Questa sezione descrive i dettagli su come deve essere redatta e verificata la documentazione. Al fine di ottenere l'uniformità e il rigore espositivo di tutti i documenti prodotti durante il ciclo di vita del software, ogni documento deve basarsi sulle regole descritte in questa sede.
+\subsubsection{Procedure}
+\paragraph{Ciclo di vita dei documenti}
+Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX sul quale basare la creazione e la stesura di ogni documento. Questo assicura l'uniformità della stesura dei documenti, facilitando il versionamento. \\
+Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti attività:
+\begin{itemize}
+  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal responsabile di progetto; dopo la stesura, il responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
+  \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al responsabile, che farà avanzare il documento all'approvazione finale, o ai  redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai verificatori;
+  \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei verificatori, il responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
+\end{itemize}
+
+\paragraph{Struttura dei documenti}
+Al fine di organizzare coerentemente e uniformamente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \LaTeX \textbf{subfiles}. La repository contiene una \textit{directory} denominata \texttt{commons/} contenente:
+\begin{itemize}
+  \item Il file \texttt{config.tex}, contenente le definizioni dei comandi \LaTeX;
+  \item Il file \texttt{template.tex}, contenente il \textit{template} su cui si basano tutti i documenti;
+  \item La cartella \texttt{img/}, contenente le immagini comuni a tutti i documenti.
+\end{itemize}
+Per ogni documento è quindi presente una \textit{directory} contenente:
+\begin{itemize}
+  \item  Il file principale, chiamato con il nome del documento, in formato \texttt{.tex};
+  \item La cartella \texttt{components/}, contenente gli altri file in formato \texttt{.tex} che vengono inclusi nel file principale.
+\end{itemize}
+Basandosi su un \textit{template}, ogni documento ha una struttura fissa.
+
+\subparagraph{Frontespizio}
+Il frontespizio fornisce tutti i dati principali del documento. Esso presenta il logo del gruppo, centrato, seguito dal nome del gruppo e dal titolo del progetto; sotto di questo è presente il titolo del documento. \\
+Sono fornite anche altre informazioni essenziali, le quali sono:
+\begin{itemize}
+  \item \textbf{Versione}: versione attuale del documento;
+  \item \textbf{Approvazione}: stato di approvazione del documento, che può essere "In redazione" o recare il nome del responsabile che ha approvato il documento;
+  \item \textbf{Redazione}: redattori del documento;
+  \item \textbf{Verifica}: verificatori del documento;
+  \item \textbf{Uso}: destinazione del documento, che può essere "Interno" o "Esterno";
+  \item \textbf{Destinato a}: destinazione specifica del documento.
+\end{itemize}
+\subparagraph{Registro delle modifiche}
+Nella seconda pagina di ogni documento è presente il registro delle modifiche del documento, consistente in una tabella contentente, per ogni modifica:
+\begin{itemize}
+  \item \textbf{Versione}: versione del documento aggiornata alla modifica effettuata;
+  \item \textbf{Nominativo}: nome dell'autore della modifica;
+  \item \textbf{Ruolo}: ruolo dell'autore della modifica;
+  \item \textbf{Data}: data in cui è stata effettuata la modifica;
+  \item \textbf{Descrizione}: descrizione della modifica effettuata.
+\end{itemize}
+\subparagraph{Indice}
+L'indice riepiloga la struttura del documento. Ha una struttura standard: la numerazione ha struttura \\ \centerline{\textbf{a.b.c.d.e}} \\ dove:
+\begin{itemize}
+  \item \textbf{a} è il capitolo principale;
+  \item \textbf{b} è la sezione del capitolo;
+  \item \textbf{c} è la sottosezione della sezione;
+  \item \textbf{d} è il paragrafo della sezione
+  \item \textbf{e} è il sottoparagrafo del paragrafo.
+\end{itemize}
+La massima profondità della numerazione è quindi 5; nel caso in cui si rendesse necessario aggiungere un livello, questo verrà indicato come sottoparagrafo del sottoparagrafo senza ulteriore numerazione.
+
+\subparagraph{Elenco delle figure}
+L'elenco delle figure consiste nell'indice di tutte le figure presenti nel documento, eccezion fatta per il logo del gruppo che non viene riportato.
+
+\subparagraph{Elenco delle tabelle}
+L'elenco delle tabelle indicizza tutte le tabelle presenti nel documento, compresa quella del Registro delle modifiche.
+
+\subparagraph{Contenuto principale}
+Ogni pagina del contenuto principale del documento è composta da:
+\begin{itemize}
+  \item Il logo del gruppo, posizionato in alto a sinistra;
+  \item Il nome del gruppo, posizionato in alto a destra;
+  \item Il nome del documento, posizionato in alto a destra sotto al nome del gruppo;
+  \item Una riga orizzontale, posizionata in alto e che attraversa tutta la pagina, che divide logo, nome del gruppo e nome del documento dal contenuto della pagina;
+  \item Il numero di pagina, posizionato in basso a destra e nel formato \\ \centerline{\textbf{N di T}} \\ dove
+\begin{itemize}
+  \item \textbf{N} è il numero della pagina corrente;
+  \item \textbf{T} è il numero di pagine totali.
+\end{itemize}
+Il conteggio delle pagine inizia dalla prima pagina dopo l'Elenco delle tabelle.
+\end{itemize}
+Nello spazio compreso tra la riga orizzontale e il numero di pagina si articola il contenuto proprio della pagina.
+
+\paragraph{Classi di documenti}
+I documenti prodotti appartengono a diverse categorie, secondo cui sono classificati.
+
+\subparagraph{Documenti ufficiali}
+I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno.
+
+\subparagraph{Glossario}
+In accompagnamento ai documenti ufficiali viene fornito un Glossario, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il Glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
+Perché un termine venga incluso nel Glossario deve soddisfare almeno uno tra i seguenti requisiti:
+\begin{itemize}
+  \item Essere un termine tecnico. Rientrano in questo criterio i nomi propri delle tecnologie utilizzate, i termini propri dell'Ingegneria del Software,
+  \item Essere presente in tutti i documenti;
+  \item Avere più di un significato plausibile nel contesto in cui viene utilizzato;
+  \item Essere un acronimo specifico e raramente usato.
+\end{itemize}
+Il Glossario possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
+I termini appartenenti al Glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso.
+
+\subparagraph{Verbali}
+I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o eserni, e quindi riferirsi a una riunione a cui partecipa anche l'azienda. La struttura del documento è identica a quella dei documenti ufficiali; ogni verbale è composto dai seguenti componenti:
+\begin{itemize}
+  \item \textbf{Informazioni generali}: informazioni dell'incontro, consistenti nella modalità, nella data e negli orari di inizio e fine, e i partecipanti all'incontro;
+  \item \textbf{Ordine del giorno}: lista degli argomenti e dei temi di cui il gruppo ha deciso di discutere durante l'incontro;
+  \item \textbf{Resoconto}: riassunto di quanto detto durante l'incontro punto per punto.
+\end{itemize}
+
+\subparagraph{Lettere}
+Eventuali lettere, tra cui quella di presentazione pubblicata, seguono il formato classico di una lettera: esse includono quindi uno o più mittenti e uno o più destinatari, il logo e il nome del gruppo. \\
+La lettera di presentazione contiene anche l'elenco dei documenti rilasciati e il preventivo per lo svolgimento del progetto.
+
+\paragraph{Norme tipografiche}
+\subparagraph{Nomi dei file}
+La nomenclatura di tutti i file segue la convenzione \textit{kebab case}, nota anche come \textit{lisp-case}. Le regole di questa convenzione sono le seguenti:
+\begin{itemize}
+  \item Ogni file inizia con una lettera minuscola;
+  \item Tra ogni parola viene inserito come separatore il tratto d'unione \textbf{-};
+  \item In caso di presenza di apostrofo, esso verrà sostituito dal tratto d'unione;
+  \item Le lettere accentate sono abolite, sostituite dalla semplice lettera senza accento.
+\end{itemize}
+L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali. \\
+Tutti i nomi di file avranno quindi il seguente formato: \\ \centerline{\textbf{a-b-c[\_YYYY-MM-DD].ext}} \\
+dove:
+\begin{itemize}
+  \item \textbf{[ ]} si applicano solo al caso dei verbali;
+  \item \textbf{a}, \textbf{b} e \textbf{c} sono parole singole. Il numero di parole singole non è limitato a tre ma si può aumentare o diminuire. Nel caso specifico dei verbali, la forma di questa porzione di nome è \\ \centerline{\textbf{verbale-[interno/esterno]}};
+  \item \textbf{ext} è l'estensione del file.
+\end{itemize}
+
+\subparagraph{Stile del testo}
+Ogni diversa formattazione usata all'interno dei documenti ha un significato preciso, e ogni documento deve obbligatoriamente seguire questo stile. Gli stili sono:
+\begin{itemize}
+  \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana;
+  \item Utilizzo di testo in caratteri dattilografici per i nomi di file e delle \textit{directories}; queste ultime devono finire con il carattere barra \textbf{/};
+  \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi;
+  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiusola, per i termini appartenenti al Glossario.
+\end{itemize}
+
+\subparagraph{Formati comuni}
+I formati di data, ora e versione sono determinati e univoci per ogni documento. Nello specifico:
+\begin{itemize}
+  \item La data segue lo standard ISO 8601, e quindi è nel formato \\ \centerline{\textbf{YYYY-MM-DD}} \\ dove:
+  \begin{itemize}
+    \item \textbf{YYYY}: l'anno, scritto per intero;
+    \item \textbf{MM}: il mese, scritto per intero;
+    \item \textbf{DD}: il giorno, scritto per intero
+  \end{itemize};
+  \item L'ora è nel formato \\ \centerline{\textbf{HH:MM}} \\ dove:
+  \begin{itemize}
+    \item \textbf{HH}: l'ora in formato 24 ore;
+    \item \textbf{MM}: i minuti
+  \end{itemize};
+  \item La versione è nel formato DA COMPLETARE - SEMVER? DIPENDE DA PDP
+\end{itemize}
+
+\subparagraph{Sigle}
+All'interno della documentazione possono essere utilizzate delle sigle. Esse sono:
+\begin{itemize}
+  \item \textbf{Sigle dei documenti}:
+  \begin{itemize}
+    \item \textbf{NP}: Norme di Progetto;
+    \item \textbf{SF}: Studio di Fattibilità;
+    \item \textbf{AR}: Analisi dei Requisiti;
+    \item \textbf{PP}: Piano di Progetto;
+    \item \textbf{PQ}: Piano di Qualifica;
+    \item \textbf{Gl}: Glossario;
+    EVENTUALMENTE ALTRE? MANUALI?
+  \end{itemize}
+  \item \textbf{Fasi del progetto}:
+  \begin{itemize}
+  \item \textbf{RR}: Revisione dei Requisiti;
+  \item \textbf{RP}: Revisione di Progettazione;
+  \item \textbf{RQ}: Revisione di Qualifica;
+  \item \textbf{RA}: Revisione di Accettazione.
+  \end{itemize}
+  \item \textbf{Ruoli}:
+  \begin{itemize}
+  \item \textbf{RdP}: Responsabile di Progetto;
+  \item \textbf{AdP}: Amministratore di Progetto;
+  \item \textbf{An}: Analista;
+  \item \textbf{Pr}: Progettista;
+  \item \textbf{Pg}: Programmatore;
+  \item \textbf{Ve}: Verificatore.
+  \end{itemize}
+  \item \textbf{Altre sigle:}
+  \begin{itemize}
+    \item EVENTUALI ALTRE SIGLE
+  \end{itemize}
+\end{itemize}
+
+\subparagraph{Altre norme tipografiche}
+\subparagraph*{Elenchi}
+Gli elenchi presenti nella documentazione sono unicamente di tipo puntato, indicati cioè con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. \\
+Ogni parola appartenente a un elenco puntato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
+
+ALTRE NORME TIPOGRAFICHE EVENTUALI
+
+\end{document}
