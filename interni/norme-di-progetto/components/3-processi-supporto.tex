@@ -1,6 +1,5 @@
 \documentclass[../norme-di-progetto.tex]{subfiles}
 \begin{document}
-
 \subsection{Documentazione}
 \subsubsection{Scopo}
 Lo scopo di questo processo è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero ciclo di vita del software.
@@ -21,6 +20,8 @@ Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti
   \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al responsabile, che farà avanzare il documento all'approvazione finale, o ai  redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai verificatori;
   \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei verificatori, il responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
 \end{itemize}
+
+
 
 \paragraph{Struttura dei documenti}
 Al fine di organizzare coerentemente e uniformamente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \LaTeX \textbf{subfiles}. La repository contiene una \textit{directory} denominata \texttt{commons/} contenente:
@@ -128,12 +129,13 @@ La nomenclatura di tutti i file segue la convenzione \textit{kebab case}, nota a
   \item In caso di presenza di apostrofo, esso verrà sostituito dal tratto d'unione;
   \item Le lettere accentate sono abolite, sostituite dalla semplice lettera senza accento.
 \end{itemize}
-L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali. \\
-Tutti i nomi di file avranno quindi il seguente formato: \\ \centerline{\textbf{a-b-c[\_YYYY-MM-DD].ext}} \\
+L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali e tra la data e la versione. \\
+Tutti i nomi di file avranno quindi il seguente formato: \\ \centerline{\textbf{a-b-c[\_YYYY-MM-DD]\_vX.Y.Z.ext}} \\
 dove:
 \begin{itemize}
   \item \textbf{[ ]} si applicano solo al caso dei verbali;
   \item \textbf{a}, \textbf{b} e \textbf{c} sono parole singole. Il numero di parole singole non è limitato a tre ma si può aumentare o diminuire. Nel caso specifico dei verbali, la forma di questa porzione di nome è \\ \centerline{\textbf{verbale-[interno/esterno]}};
+  \item \textbf{vX.Y.Z} indicano la versione attuale del documento;
   \item \textbf{ext} è l'estensione del file.
 \end{itemize}
 
@@ -145,6 +147,22 @@ Ogni diversa formattazione usata all'interno dei documenti ha un significato pre
   \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi;
   \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiusola, per i termini appartenenti al Glossario.
 \end{itemize}
+
+\subparagraph{Figure}
+L'utilizzo di figure all'interno dei documenti è permesso; le immagini devono essere centrate nella pagina, avere larghezza o lunghezza fissa di 10cm ed essere seguite dalla seguente dicitura: \\ \centerline{\textbf{Figura N: D}} \\ dove:
+\begin{itemize}
+  \item \textbf{N}: numero progressivo della figura all'interno del documento in cui è inserita;
+  \item \textbf{D}: breve descrizione dell'immagine.
+\end{itemize}
+Il logo del gruppo non segue queste regole, poiché non possiede né numero progressivo né descrizione.
+
+\subparagraph{Tabelle}
+Le tabelle devono essere centrate nella pagina, ed essere seguite dalla seguente dicitura: \\ \centerline{\textbf{Tabella N: T}} \\ dove:
+\begin{itemize}
+  \item \textbf{N}: numero progressivo della tabella all'interno del documento in cui è inserita;
+  \item \textbf{T}: titolo della tabella.
+\end{itemize}
+La tabella del Registro delle modifiche non segue queste regole, poiché non possiede né numero progressivo né titolo.
 
 \subparagraph{Formati comuni}
 I formati di data, ora e versione sono determinati e univoci per ogni documento. Nello specifico:
@@ -194,6 +212,8 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
   \end{itemize}
   \item \textbf{Altre sigle:}
   \begin{itemize}
+    \item \textbf{CLI}: \glossario{Command Line};
+    \item \textbf{IDE}: \glossario{Integrated Developement Environment};
     \item EVENTUALI ALTRE SIGLE
   \end{itemize}
 \end{itemize}
@@ -204,5 +224,116 @@ Gli elenchi presenti nella documentazione sono unicamente di tipo puntato, indic
 Ogni parola appartenente a un elenco puntato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 
 ALTRE NORME TIPOGRAFICHE EVENTUALI
+
+
+
+\subsection{Gestione della configurazione}
+\subsubsection{Scopo}
+Lo scopo di questo processo è delineare le norme riguardanti la configurazione del progetto;
+
+\subsubsection{Versionamento}
+Ogni documento deve essere versionato, al fine di avere una cronologia delle modifiche e dell'importanza di queste sul contenuto del documento; fanno eccezione a questa regola i verbali, i quali per definizione non hanno bisogno di essere modificati dopo la stesura e la verifica, ma vanno direttamente approvati. Ad ogni versione del documento corrisponde una riga nel Registro delle modifiche. \\
+Ogni versione viene espressa nel seguente modo: \\ \centerline{\textbf{vX.Y.Z}} \\ dove:
+\begin{itemize}
+  \item \textbf{X}:
+  \item \textbf{Y}:
+  \item \textbf{Z}:
+\end{itemize}
+
+\subsubsection{Repository}
+Una \textit{repository} è un ambiente in cui vengono memorizzati, mantenuti e versionati i file di un progetto software, durante il suo intero ciclo di vita. Il sistema di controllo che il gruppo utilizza è \glossario{Git}
+PARLARE DI GIT, GITHUB E GIT COMMITIZEN
+
+\paragraph{Struttura della repository e workflow}
+La struttura adottata sfrutta il meccanismo di \textit{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa \textit{repository}. \\
+La \textit{repository} utilizzata si suddivide nei seguenti \textit{branch}:
+\begin{itemize}
+  \item \texttt{master}: branch principale, sul quale vengono fatti le \glossario{major releases};
+  \item \texttt{initial-configuration}: ???
+  \item \texttt{other-configurations}: ???
+  \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento riguardante le Norme di Progetto;
+  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento riguardante l'Analisi dei Requisiti;
+  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento Glossario;
+  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento riguardante il Piano di Progetto;
+  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento riguardante il Piano di Qualifica;
+  \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento riguardante lo Studio di Fattibilità;
+  \item \texttt{verbali}:: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
+\end{itemize}
+Il workflow adottato è basato quindi su un principio della separazione dei documenti: questo, unito ai sistemi anti-collisione di git, permette che durante il periodo in cui un membro del gruppo è assegnato a un ruolo di redazione specifico, egli sia l'unico a lavorare su tale documento.
+
+\subparagraph{Struttura dei branch}
+Ogni branch è costituito da file, cartelle e sotto-cartelle.
+\subparagraph*{File}
+I file presenti in ogni branch hanno tipo fisso e predefinito; essi sono:
+\begin{itemize}
+  \item File di configurazione di Github:
+  \begin{itemize}
+    \item \texttt{.gitignore}: contiene la lista di file e directory spuri che possono essere presenti nelle \textit{repository} locali ma non nella \textit{repository} remota;
+    \item File \texttt{.yml}: contengono le istruzioni per l'esecuzione delle Github Actions;
+    \item \texttt{README.md}: file markdown contenente una breve descrizione della \textit{repository}.
+  \end{itemize}
+  \item File di configurazione di Git Commitizen:
+  \begin{itemize}
+    \item \texttt{.czcr}: contiene le impostazioni, definite dal gruppo, di Git Commitizen.
+  \end{itemize}
+  \item File di configurazione di glossario{Visual Studio Code} (cfr. PUNTO IN CUI SI PARLA DI VS CODE)
+  \begin{itemize}
+    \item \texttt{.editorconfig}: contiene le impostazioni, definite dal gruppo, del Workspace di Visual Studio Code;
+    \item \texttt{settings.json}: contiene le impostazioni specifiche, definite dal gruppo, dell'editor Visual Studio Code;
+    \item \texttt{extensions.json}: contiene le estenzioni, consigliate per lo sviluppo del progetto, da includere in Visual Studio Code.
+  \end{itemize}
+  \item File di documentazione:
+  \begin{itemize}
+    \item File \texttt{.tex}: file \LaTeX contenenti il codice sorgente per la generazione dei documenti;
+    \item File \texttt{.png}: immagini che vengono incluse nei documenti.
+  \end{itemize}
+\end{itemize}
+
+\subparagraph*{Cartelle}
+Ogni branch presenta un insieme di cartelle predefinito:
+\begin{itemize}
+\item \texttt{.github/}: contiene i file propri di Github, tra cui i file \texttt{.yml} delle Github Actions;
+  \item \texttt{.vscode/}: contiene i file di configurazione di Visual Studio Code;
+  \item \texttt{commons/}: contiene i file template di \LaTeX;
+  \item \texttt{interni/}: contiene i documenti ad uso interno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, contenente i file sorgente \LaTeX dello specifico documento;
+  \item \texttt{esterni/}: contiene i documenti ad uso esterno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, contenente i file sorgente \LaTeX dello specifico documento;
+\end{itemize}
+
+\paragraph{Strumenti}
+Le attività di gestione della configurazione sono coadiuvate dall'utilizzo di strumenti software, che permettono il perseguimento del giusto workflow e l'applicazione delle norme.
+\subparagraph{Git}
+La repository è ospitata dal servizio di \glossario{hosting} Github; per operare sulla repository vengono utilizzati tre strumenti:
+\begin{itemize}
+  \item Portale Github.com;
+  \item Git Commitizen;
+  \item Visual Studio Code.
+\end{itemize}
+\subparagraph*{Portale Github.com}
+Il portale Github.com permette la consultazione immediata di quanto fatto e pubblicato, e la gestione delle Issues e delle Milestones.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/github.png}
+  \label{fig:github}
+  \caption{Portale in Github della repository di progetto.}
+\end{figure}
+
+\subparagraph*{Git Commitizen}
+Per il \glossario{commit} delle modifiche ai file della repository viene utilizzato Git Commitizen attraverso \glossario{Command Line}. Questo assicura l'uniformità dei commit e quindi una maggiore chiarezza di quanto viene versionato.
+
+\subparagraph*{Visual Studio Code}
+Visual Studio Code è l'IDE che viene uniformemente usato da ogni componente del gruppo. Questo strumento software permette l'estensione delle funzionalità attraverso l'installazione di componenti aggiuntivi. Tra questi, due in particolare permettono di operare sulla repository:
+\begin{itemize}
+  \item \textbf{Git Graph}: visualizzazione del grafo della repository e possibilità di svolgere azioni Git direttamente su di esso;
+  \item \textbf{GitHub Pull Requests}: strumento di revisione delle Pull Requests di Github.
+\end{itemize}
+Per una trattazione più esaustiva in merito all'utilizzo di Visual Studio Code si rimanda a CAPITOLO DEI PROCESSI ORGRANIZZATIVI DOVE SI PARLA DI VSCODE
+
+\subparagraph{DevOps} DA DISCUTERNE \\
+Github mette a disposizione lo strumento delle Github Actions per lo sviluppo delle operazioni di \glossario{DevOps}. Questo strumento è quindi utilizzato per:
+\begin{itemize}
+  \item CI
+  \item CD
+  \item ...
+\end{itemize}
 
 \end{document}
