@@ -1,0 +1,164 @@
+\documentclass[../piano-di-qualifica.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo}%
+\label{sec:scopo}
+Al fine di garantire la qualità del prodotto, il team CoffeeCode ha deciso di prendere come riferimento lo standard ISO/IEC 9126.
+Lo standard definisce un modello, per la qualità esterna ed interna, delle caratteristiche da tenere in considerazione per ottenere un prodotto di buona qualità.
+
+\subsection{Nomenclatura metriche e obiettivi di qualità}%
+\label{sub:nomenclatura_metriche_e_obiettivi_di_qualita}
+Vengono di seguito spiegati gli obiettivi, le metriche e come essi verranno identificati, in modo sintetico:
+\begin{itemize}
+    \item \textbf{Obiettivi}: QoPD[ID][Nome]-[Caratteristica] %da rivedere
+        \begin{itemize}
+            \item QoPD: sta per "Quality of Product" ossia qualità del prodotto;
+            \item ID: identificatore numerico a 3 cifre;
+            \item Nome: riassunto della descrizione del processo;
+            \item Caratteristica: indica in quale caratteristica appartiene l'obiettivo;
+        \end{itemize}
+    \item \textbf{Metriche}: MoPD[ID][Nome]-[Caratteristica] %da rivedere
+        \begin{itemize}
+            \item MoPD: sta per "Metric of Product" ossia metrica del processo;
+            \item ID: identificatore numerico a 3 cifre;
+            \item Nome: riassunto della descrizione della metrica;
+            \item Caratteristica: indica in quale caratteristica appartiene la metrica;
+        \end{itemize}
+\end{itemize}  
+Ulteriori informazioni sulle metriche e sul loro funzionamento sono reperibili nel documento Norme di progetto.
+
+\subsection{Caratteristiche}%
+\label{sub:caratteristiche}
+Vengono qui descritte le caratteristiche prese in considerazione dal gruppo di lavoro.
+
+\subsubsection{Funzionalità}%
+\label{sub:funzionalita}
+Indica la capacità del prodotto di fornire funzioni che soddisfano le esigenze dichiarate e implicite, ricavate dall'analisi dei requisiti, quando il software viene utilizzato in un determinato contesto.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD001 Completezza di implementazione - [Adeguatezza] ;
+    \item MoPD002 Precisione dei dati - [Precisione];
+    \item MoPD003 Coerenza di interfaccia - [Interoperabilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD001 Rispetto dell'implementazione funzionale - [Adeguatezza]}: realizzare le stesse funzioni ricavate dall'analisi iniziale;
+    \item \textbf{QoPD002 Rispetto della precisione dei dati - [Precisione]}: ottenere la stessa precisione sui dati di quella prevista nell'analisi iniziale;
+    \item \textbf{QoPD003 Rispetto delle interfacce - [Interoperabilità]}: realizzare le interfacce del progetto come preventivato nell'analisi iniziale.
+\end{itemize}
+
+\subsubsection{Affidabilità}%
+\label{sub:affidabilita}
+È La capacità del prodotto software di mantenere un determinato livello di prestazioni quando utilizzato sotto specifiche condizioni.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD004 Adeguatezza dei test - [Scadenza];
+    \item MoPD005 Numero di errori - [Affidabilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD004 Test completi sul codice - [Scadenza]}: i test devono coprire il tutto il codice sviluppato;
+    \item \textbf{QoPD005 Classificare gli errori - [Affidabilità]}: trovare il numero di errori nei test e classificarli.
+\end{itemize}
+
+\subsubsection{Usabilità}%
+\label{sub:usabilita}
+L'usabilità indica come il software in questione, può essere compreso, appreso, utilizzato, attraente e conforme alle normative e linee guida sull'usabilità.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD004 Documentazione delle funzioni - [Comprensibilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD004 Chiarezza del comportamento - [Comprensibilità]}: descrivere le funzioni implementate per informare l'utente su come esse lavorano.
+\end{itemize}
+
+\subsubsection{Efficienza}%
+\label{sub:efficienza}
+L'efficienza è la capacità del prodotto software di fornire prestazioni adeguate, in relazione alla quantità di
+risorse utilizzate, in base alle condizioni indicate.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD005 Tempo di risposta - [Comportamento temporale].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD005 Velocità di esecuzione - [Comportamento temporale]}: riuscire ad ottenere il minor tempo di esecuzione possibile.
+\end{itemize}
+
+\subsubsection{Manutenibilità}%
+\label{sub:manutenibilita}
+La manutenibilità è la capacità del prodotto di essere modificato in modo da migliorarlo, correggerlo o adattarlo al sistema, nei requisiti o nelle funzioni.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD006 Commenti sul codice - [Modifica].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD006 Comprensione del codice - [Modifica]}: capire facilmente cosa fa il codice implementato.
+\end{itemize}
+
+
+\subsubsection{Portabilità}%
+\label{sub:portabilita}
+La portabilità è capacità del prodotto software di essere trasferito e implementato da un ambiente a un altro.
+In questa sezione non sono stati presi in considerazione obietti e relative metriche da adottare, in quanto il prodotto viene richiesto solo per uno specifico ambiente di esecuzione (Grafana).
+La portabilità sarà quindi una possibile funzione ausiliaria da implementare nelle modifiche future.
+
+\subsection{Documentazione}%
+\label{sub:documentazione}
+I documenti redatti e pubblicati devono essere leggibili e comprensibili già dopo una prima lettura, riuscendo comunque a contenere parole di carattere tecnico sull'argomento.
+
+\subsubsection{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD007 \glossario{INDICE DI GULPEASE} - [Documentazione];
+    \item MoPD008 Correttezza lessicale/ortografica - [Documentazione].
+\end{itemize}
+
+\subsubsection{Obiettivi}
+\label{sub:obiettivi}
+Le principali caratteristiche che verranno analizzate in ogni documento sono:
+\begin{itemize}
+    \item \textbf{QoPD007 Leggibilità del testo - [Documentazione]}: i documenti devono essere leggibili in modo fluido evitando quindi periodi troppo lunghi;
+    \item \textbf{QoPD008 Correttezza ortografica - [Documentazione]}: in ogni documento non dovranno esserci errori ortografici.
+\end{itemize}
+
+\subsection{Tabelle di qualità di prodotto}
+\label{sub:tabelle_di_qualita_di_prodotto}
+Gli obiettivi di qualità, discussi nelle precedenti sezioni, che devono essere parte integrante di ogni processo, verranno indicati in tabelle in questa sezione.
+Per ogni obiettivo viene indicato:
+
+\begin{itemize}
+   \item \textbf{Obiettivo}: indica il codice identificativo dell'obiettivo come descritto nella sezione §3.2;
+   \item \textbf{Metrica}: indica, se presente, la metrica adottata per la valutazione dell'obiettivo di qualità come descritto nella sezione §3.2;
+   \item \textbf{Valore accettabile}: rappresenta il valore minimo di qualità dell'obiettivo che CoffeCode intende ottenere. Non è presente in caso di mancanza della metrica associata all'obiettivo;
+   \item \textbf{Valore desiderato}: rappresenta il valore di qualità dell'obiettivo che CoffeCode intende ottenere una maggiore qualità rispetto a quella minima. Non è presente in caso di mancanza della metrica associata all'obiettivo;
+   \item \textbf{Descrizione}: descrizione generale dell'obiettivo.
+\end{itemize}
+%Tabelle
+
+
+
+\end{document}
