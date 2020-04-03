@@ -260,6 +260,7 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
     \item \textbf{JS}: \glossario{Javascript};
     \item \textbf{CLI}: \glossario{Command Line};
     \item \textbf{IDE}: \glossario{Integrated Developement Environment};
+    \item \textbf{ITS}: \glossario{Issue Tracking System}.
     %%% AGGIUNGERE QUI SIGLE %%%
   \end{itemize}
 \end{itemize}
@@ -387,24 +388,21 @@ Visual Studio Code è l'IDE che viene uniformemente usato da ogni componente del
   \item \textbf{Git Graph}: visualizzazione del grafo della repository e possibilità di svolgere azioni Git direttamente su di esso;
   \item \textbf{GitHub Pull Requests}: strumento di revisione delle Pull Requests di Github.
 \end{itemize}
-Per una trattazione più esaustiva in merito all'utilizzo di Visual Studio Code si rimanda a CAPITOLO DEI PROCESSI ORGRANIZZATIVI DOVE SI PARLA DI VSCODE
-
-\subparagraph{DevOps}
-Github mette a disposizione lo strumento delle Github Actions per lo sviluppo delle operazioni di \glossario{DevOps}. Questo strumento è quindi utilizzato per:
-\begin{itemize}
-  \item CI
-  \item CD
-  \item ...
-\end{itemize}
-%%% DA DISCUTERNE %%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.3 - GESTIONE DELLA QUALITÀ %%% - %%% NECESSARIO PdQ %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gestione della qualità}
 \subsubsection{Scopo}
+Lo scopo di questo processo è quello di garantire che i prodotti software e i processi del ciclo di vita siano conformi ai requisiti concordati con il cliente, e che rispettino gli obiettivi di qualità.
 \subsubsection{Aspettative}
-\subsubsection{Descrizione}
+Le aspettative di questo processo sono le seguenti:
+\begin{itemize}
+  \item Ottenere qualità nell'organizzazione;
+  \item Sviluppare un prodotto software di qualità, comprendente anche una documentazione completa e di facile fruizione;
+%%% DA AMPLIARE CON PdQ %%%
+\end{itemize}
+\subsubsection{Descrizione} %%% NECESSARIO PdQ
 \subsubsection{Attività}
 \subsubsection{Strumenti}
 
@@ -412,12 +410,65 @@ Github mette a disposizione lo strumento delle Github Actions per lo sviluppo de
 %%% 3.4 - VERIFICA %%%
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Verifica}
+
+\subsubsection{Scopo}
+Lo scopo di questo processo è quello di verificare che il prodotto venga realizzato nel modo corretto, secondo delle regole stabilite. \\
+Il processo di verifica interessa sia il software che la documentazione prodotta, assicurando che il prodotto finale sia corretto e completo.
+
 \subsubsection{Aspettative}
+La procedura che tale processo, al fine di essere implementato correttamente, deve rispettare, è la seguente:
+\begin{itemize}
+  \item Vengono definiti dei chiari criteri di accettazione;
+  \item Vengono definite delle attività di verifica, con relativa documentazione;
+  \item Vengono eseguiti dei test di verifica, ed eventuali difetti vengono catalogati;
+  \item Eventuali difetti vengono corretti.
+\end{itemize}
+
 \subsubsection{Descrizione}
+Il processo di verifica inizia con un prodotto del quale è necessario controllare la conformità alle aspettative e finisce con un prodotto che le soddisfa. Una volta verificato, il prodotto passerà alla fase di validazione.
+
 \subsubsection{Attività}
+Le attività di questo processo sono di due tipologie:
+\begin{itemize}
+  \item Analisi;
+  \item Test.
+\end{itemize}
 \paragraph{Analisi}
+L'attività di analisi si divide in due sottocategorie:
+\begin{itemize}
+  \item Analisi Statica;
+  \item Analisi Dinamica.
+\end{itemize}
 \subparagraph{Analisi Statica}
+L'analisi statica è l'attività di analisi che viene eseguita sul prodotto senza il bisogno che questo venga eseguito. Essa valuta la presenza o assenza di errori e/o difetti, la conformità alle regole definite e la coesione dei componenti. \\
+L'analisi statica si divide in due tipologie:
+\begin{itemize}
+  \item \textbf{Walkthrough}: i componenti del gruppo analizzano il prodotto nella sua interezza alla ricerca di difetti e di inconformità con le regole prescritte. Questa tecnica verrà utilizzata più intensamente durante l'inizio del progetto, per lasciare il tempo ai vari componenti di familizzare con le norme prescritte. Durante questa attività viene stipulata una lista di controllo contenente gli errori trovati;
+  \item \textbf{Inspection}: questa tipologia di analisi statica viene eseguita dal singolo Verificatore, che provvederà a ricercare gli errori segnalati nella lista di controllo all'interno di quanto prodotto; è quindi un'analisi più precisa e mirata agli errori che vengono più comunemente commessi.
+\end{itemize}
+Segue la lista di controllo parziale, contenente gli errori più comuni finora trovati. Questa lista verrà possibilmente ampliata al progredire degli eventuali errori trovati.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{p{5cm}p{10cm}}
+\textbf{Oggetto}           & \textbf{Controllo da effettuare}      \\
+Data e ora                              & Verificare il giusto formato: deve essere coerente con lo standard ISO 8601 \\
+Sintassi                          & Verificare che le frasi non siano eccessivamente verbose o sintatticamente errate       \\
+Uniformità nell'utilizzo dei termini & Controllare che i termini ambigui vengano usati uniformemente (\underline{e.g.} \textit{obiettivo}-\textit{obbiettivo}) \\
+Nidificazione sezioni            & Verificare che non vi siano incongruenze nella nidificazione delle varie sezioni, cioè: \begin{itemize}
+  \item Le sezioni, capitoli, paragrafi e sottoparagrafi abbiano numerazione non crescente;
+  \item Non venga utilizzato il giusto ordine di indentazione.
+\end{itemize}       \\
+Elenchi                           & \begin{itemize}
+  \item Verificare che la prima lettera di ogni elemento sia maiuscola;
+  \item Verificare che ogni elemento finisca con la corretta punteggiatura (; o .).
+\end{itemize}       \\
+\end{tabular}
+\caption{Errori frequenti nella documentazione.}
+\end{table}
+
 \subparagraph{Analisi Dinamica}
+L'analisi dinamica è la tipologia di analisi che viene eseguita sul prodotto eseguendolo. Essa viene effettuata tramite dei test, che controllano il corretto funzionamento del prodotto.
 
 \paragraph{Test} %%% NECESSARIO PdQ %%%
 \subsubsection{Strumenti}
