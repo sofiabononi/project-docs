@@ -6,10 +6,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gestione organizzativa}
 \subsubsection{Scopo}
+Questo processo ha come scopo quello di:
+\begin{itemize}
+  \item Creare un modello organizzativo al fine di identificare i possibili rischi;
+  \item Definire un modello di sviluppo da seguire;
+  \item Pianificare il lavoro al fine di rientrare nelle scadenze prefissate;
+  \item Calcolare un preventivo orario per i vari ruoli e un prospetto economico per lo sviluppo del progetto;
+  \item Effettuare un bilancio finale delle spese.
+\end{itemize}
+Queste attività sono documentate dal Responsabile nel \textsc{Piano di Progetto}.
 
 \subsubsection{Aspettative}
+Le aspettative di questo processo sono:
+\begin{itemize}
+  \item La corretta pianificazione delle attività da seguire;
+  \item Il giusto coordinamento dei ruoli e dei compiti dei vari componenti del gruppo;
+  \item La corretta gestione delle comunicazioni tra i componenti del gruppo e con il proponente;
+  \item Il mantenimento del controllo sul progetto, monitorando quanto prodotto dai componenti del gruppo.
+\end{itemize}
 
 \subsubsection{Descrizione}
+Le attività previste da questo processo sono contenute nel \textsc{Piano di Progetto}; queste sono:
+\begin{itemize}
+  \item %%% IN ATTESA DEL PdP
+\end{itemize}
 
 \subsubsection{Ruoli}
 I diversi ruoli sono cambiati a rotazione fissa, in modo che ogni membro del gruppo possa ricoprire ogni ruolo almeno una volta durante il progetto. Nel \textsc{Piano di Progetto} sono pianificate e organizzate le attività assegnate ad ogni ruolo. \\
@@ -90,18 +110,30 @@ La piattaforma Slack viene utilizzata per le comunicazioni scritte ufficiali; è
   \item \textbf{\#predire-in-grafana}: canale collegato alla repository Github; ogni operazione svolta sulla repository viene qui riportata dal sistema automatico "Github for Slack";
   \item \textbf{\#random}: canale riguardante le comunicazioni che non rientrano in nessuno dei precedenti argomenti.
 \end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/slack.png}
+  \label{fig:slack}
+  \caption{Slack per GNU/Linux.}
+\end{figure}
+
 \subparagraph*{Discord}
 A causa dell'impossibilità di svolgere incontri \textit{vis-à-vis}, è stato deciso di utilizzare una piattaforma consona di comunicazione vocale. È quindi stato creato un server Discord, chiamato "CoffeeCode", contenente un canale \textbf{\#general} per gli incontri in tempo reale tra i componenti del gruppo.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/discord.png}
+  \label{fig:discord}
+  \caption{Discord per browser.}
+\end{figure}
+
 \subparagraph*{Telegram}
 Oltre alle precedenti piattaforme, è stato creato anche un gruppo Telegram, chiamato "CoffeeCode", che il gruppo usa per le comunicazioni informali tra i componenti.
 
 \subparagraph{Comunicazioni Esterne}
 Le comunicazioni esterne riguardano i membri del gruppo, il committente e/o l'azienda proponente; queste comunicazioni sono di competenza del Responsabile. Lo strumento predefinito per le comunicazioni ufficiali è la posta elettronica, tramite l'indirizzo mail \href{coffecodeswe@gmail.com}{coffecodeswe@gmail.com}. \\
-Vengono inoltre utilizzate due diverse piattaforme per le comunicazioni con l'azienda proponente, nello specifico con il Dr. Gregorio Piccoli:
-\begin{itemize}
-  \item \textbf{Skype}: utilizzata per le comunicazioni gruppo-azienda e azienda-gruppo;
-  \item \textbf{Microsoft Teams}: utilizzata per la formazione specifica dei componenti del gruppo, da parte del Dr. Piccoli, sugli argomenti trattati dal capitolato.
-\end{itemize}
+Viene inoltre utilizzata la piattaforma Skype per le comunicazioni del gruppo con l'azienda proponente, nella figura del Dr. Gregorio Piccoli.
 
 \paragraph{Incontri}
 \subparagraph{Incontri interni}
@@ -113,13 +145,34 @@ Il Responsabile, tra i cui compiti è presente anche quello di interfacciare il 
 Anche in questo caso, ogni incontro viene verbalizzato; le modalità di verbalizzazione sono le stesse di quelle adottate per gli incontri interni.
 
 \paragraph{Gestione degli strumenti di coordinamento}
-%%% DECIDERE COME GESTIRE IL TICKETING %%%
+L'andamento dello sviluppo viene tracciato da un Issue Tracking System. Questo permette ai membri del gruppo di avere ben chiaro, in ogni momento, quali attività sono in corso, quali sono state completate e quali saranno le prossime da svolgere. \\ L'ITS che viene utilizzato è Github Issues, il quale è persistente sulla repository stessa del progetto; da questa interfaccia il Responsabile può aprire nuove \textit{issues}, includendo una descrizione di ciò che deve essere fatto e assegnandole a specifici membri del gruppo.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/issues.png}
+  \label{fig:sheets}
+  \caption{Github Issues.}
+\end{figure}
 
 \paragraph{Gestione dei rischi}
-%%% IN ATTESA DEL PIANO DI PROGETTO %%%
+I rischi vengono rilevati dal Responsabile e da lui riportati nel \textsc{Piano di Progetto}; è una procedura dinamica: nel caso in cui vengano rilevati nuovi rischi, questi saranno aggiunti nell'analisi dei rischi. La procedura che il Responsabile dovrà seguire per la gestione dei rischi è la seguente:
+\begin{itemize}
+  \item Individuare i nuovi rischi e monitorare quelli già previsti;
+  \item Registrare ogni riscontro previsto dei rischi nel \textsc{Piano di Progetto};
+  \item Aggiungere i nuovi rischi che vengono man mano individuati nel \textsc{Piano di Progetto};
+  \item Ridefinire, nel caso in cui si rendesse necessario, le strategie per la gestione dei rischi.
+\end{itemize}
+\subparagraph*{Codifica}
+La codifica dei rischi è così definita: %%% DA DISCUTERNE %%%
+\begin{itemize}
+  \item \textbf{RT}: Rischi Tecnologici;
+  \item \textbf{RO}: Rischi Organizzativi;
+  \item \textbf{RI}: Rischi Interpersonali.
+\end{itemize}
 
 \subsubsection{Strumenti}
-\paragraph{Visual Studio Code}
+Per tutta la durata del progetto, il gruppo si servirà di svariati strumenti per organizzare, gestire e svolgere le varie attività.
+\subparagraph{Visual Studio Code}
 Lo sviluppo dell'intero prodotto è eseguito nell'\glossario{IDE} Visual Studio Code, con l'aggiunta delle seguenti estensioni:
 \begin{itemize}
   \item \textbf{Git Graph}: permette di utilizzare azioni Git a partire dal grafo della \glossario{repository};
@@ -139,8 +192,40 @@ Lo sviluppo dell'intero prodotto è eseguito nell'\glossario{IDE} Visual Studio 
   \caption{Visual Studio Code per GNU/Linux.}
 \end{figure}
 
-\subparagraph{Sistemi Operativi}
-I sistemi operativi sui quali persistono gli strumenti software utilizzati sono:
+\subparagraph{GanttProject}
+GanttProject è un software di \textit{project management} che permette di progettare lo \textit{scheduling} di tasks e organizzare le risorse con l'ausilio di grafici. Questo strumento è stato utilizzato principalmente per costruire i diagrammi di Gantt presenti nel \textsc{Piano di Progetto}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gantt.png}
+  \label{fig:gantt}
+  \caption{GanttProject per GNU/Linux.}
+\end{figure}
+
+\subparagraph{Google Sheets}
+Google Sheets è un programma, appartenente alla \textit{suite office} di Google, per la creazione di fogli di calcolo. Questo applicativo è stato usato dal gruppo per la creazione delle tabelle e dei grafici presenti nel \textsc{Piano di Progetto}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/sheets.png}
+  \label{fig:sheets}
+  \caption{Piattaforma online \href{https://docs.google.com/spreadsheets/u/0/}{Google Sheets}.}
+\end{figure}
+
+\subparagraph{Altri strumenti}
+Gli altri strumenti di cui il gruppo fa uso, già documentati nelle \textsc{Norme di Progetto}, sono:
+\begin{itemize}
+  \item Telegram;
+  \item Git;
+  \item Git Commitizen;
+  \item Github;
+  \item Google Drive;
+  \item Skype;
+  \item Microsoft Teams.
+\end{itemize}
+
+\paragraph{Sistemi Operativi}
+Ogni strumento utilizzato dal gruppo è compatibile con ogni piattaforma; i Sistemi Operativi usati dai componenti del gruppo possono essere perciò diversi. I sistemi utilizzati sono:
 \begin{itemize}
   \item Windows 10;
   \item macOS Catalina;
@@ -161,7 +246,7 @@ La formazione avviene in due diverse modalità:
   \item Tramite erogazione di brevi seminari sulle tecnologie da parte dell'azienda;
   \item Tramite auto-apprendimento, studiando cioè la documentazione necessaria individualmente.
 \end{itemize}
-I brevi seminari erogati dall'azienda coprono buona parte delle conoscenze di Machine Learning necessarie allo sviluppo del software. \\ Per la formazione individale, i membri del gruppo devono fare riferimento alla seguente documentazione:
+I brevi seminari erogati dall'azienda coprono buona parte delle conoscenze di Machine Learning necessarie allo sviluppo del software. \\ Per la formazione individuale, i membri del gruppo devono fare riferimento alla seguente documentazione:
 \begin{itemize}
   \item \textbf{Javascript}: \href{https://devdocs.io/javascript/}{https://devdocs.io/javascript/};
   \item \textbf{Grafana}: \href{https://grafana.com/docs/grafana/latest/}{https://grafana.com/docs/grafana/latest/};
