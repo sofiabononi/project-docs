@@ -6,7 +6,7 @@
 \label{sub:scopo}
 Lo scopo del documento è quello di ricerca la qualità di un prodotto che è soggetta a cambiamenti in base ai processi utilizzati nel corso della realizzazione dello stesso.
 Si rende necessario quindi adottare un buon \glossario{CICLO DI VITA} che determina i processi da utilizzare che dovranno poi essere verificati e valutati attentamente per la corretta riuscita del prodotto.
-A tal proposito si seguirà lo schema del \glossario{CICLO DI DEMING} per la gestione iterativa dei controlli e miglioramenti dei processi del prodotto.
+A tal proposito il gruppo ha scelto di adottare lo standard \glossario{ISO/IEC 15504}, anche noto come \glossario{SPICE}, per garantire la qualità dei processi adottati per la composizione del prodotto e di seguire lo schema del \glossario{CICLO DI DEMING} per la gestione iterativa dei controlli e miglioramenti dei processi del prodotto.
 
 \subsection{Nomenclatura metriche e obiettivi di qualità}%
 \label{sub:nomenclatura_metriche_e_obiettivi_di_qualita}
@@ -22,6 +22,7 @@ Vengono di seguito spiegati gli obiettivi, le \glossario{METRICHE} e come essi v
             \item \textbf{ID}: identificatore numerico a 3 cifre;
             \item \textbf{Nome}: riassunto della descrizione del processo.
         \end{itemize}
+        Per ogni obiettivo, dopo una breve descrizione, verrà segnalato il codice della metrica che valuterà il superamento dell'obiettivo e verranno inseriti i valori (singolo valore o range di valori) accettabili e desiderabili per definire le soglie imposte per l'obiettivo.
     \item \textbf{Metriche}: 
     \begin{center}
         \centering
@@ -53,8 +54,7 @@ Come per metriche e obiettivi, i processi faranno affidamento alla seguente iden
 Verranno poi fornite per ogni processo, come ulteriore arricchimento per le specifiche di ogni progetto:
 \begin{itemize}
     \item Le funzioni principali da esso svolte;
-    \item Gli obiettivi accettabili per garantire una qualità;
-    \item Gli obiettivi desiderabili per ricercare una maggiore qualità;
+    \item Gli obiettivi che vengono ricercati nel processo;
     \item Le metriche adottate, nel caso ce ne fossero, per raggiungere tali obiettivi.
 \end{itemize}
 
@@ -64,7 +64,8 @@ Questo \glossario{MACRO-PROCESSO} ha l'obiettivo di organizzare il lavoro da svo
 In questo processo viene messo in atto il \glossario{WAY OF WORKING}, redatto per la consultazione dell'intero \glossario{TEAM DI SVILUPPO}, il quale ha un'importanza significativa perché la corretta attuazione delle regole contenute al suo interno andranno a condizionare la qualità dell'intero progetto.
 È quindi opportuno assicurarsi che la pianificazione temporale e i costi sostenuti siano supportati da metriche in grado di verificarne lo stato di avanzamento del progetto confrontandolo con la pianificazione precedentemente prodotta.
 
-\textbf{Funzioni}
+\paragraph{Funzioni}
+\label{sub:funzioni_1}
 
 \begin{itemize}
     \item \textbf{Sviluppare \glossario{SOTTO-PROCESSI}}: ogni obiettivo prefissato deve essere associato ad azioni precise ognuna delle quali è raggruppata in un sotto-processo;
@@ -75,23 +76,57 @@ In questo processo viene messo in atto il \glossario{WAY OF WORKING}, redatto pe
     \item \textbf{Stima budget}: bisogna essere a conoscenza delle proprie risorse in termini di costo/persona in modo da rispettare il \glossario{PREVENTIVO} stilato.
 \end{itemize}
 
-\textbf{Metriche}
-%da realizzare
+\paragraph{Metriche}
+\label{sub:metriche_1}
+\begin{itemize}
+    \item \textbf{MoPR001 Varianza dei tempi};
+    \item \textbf{MoPR002 Varianza dei costi};
+    \item \textbf{MoPR003 Aderenza agli standard};
+    \item \textbf{MoPR004 Aderenza ai ruoli};
+    \item \textbf{MoPR005 Controllo prodotti}.
+\end{itemize}
 
-\textbf{Obiettivi}
+\paragraph{Obiettivi}
+\label{sub:obiettivi_1}
 \begin{itemize}
     \item \textbf{QoPR001 Rispetto delle scadenze della pianificazione}: l'obiettivo è rispettare al meglio le scadenza prefissate in modo da non avere rallentamenti durante la realizzazione del progetto;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR001;
+            \item \textbf{Valore accettabile}: al massimo 2; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 0.
+        \end{itemize}
     \item \textbf{QoPR002 Rispetto del budget istanziato}: devono potersi mantenere le risorse definite all'inizio del progetto;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR002;
+            \item \textbf{Valore accettabile}: $\pm$ 5\% rispetto al totale preventivato; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: corrisponde al preventivo definito nel PianoDiProgetto.
+        \end{itemize}
     \item \textbf{QoPR003 Rispetto del ciclo di vita scelto}: ogni fase del Ciclo di Deming deve essere rispettata dai processi;
-    \item \textbf{QoPR004 Rispetto dei ruoli e identificazione nei documenti}: deve essere possibile sapere i ruoli dei componenti nella partecipazione alla scrittura di un documento e le varie modifiche da loro fatte;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR003;
+            \item \textbf{Valore accettabile}: Livello di maturità: 3 - Valutazione attributi: L; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: Livello di maturità: 3 - Valutazione attributi: L.
+        \end{itemize}
+    \item \textbf{QoPR004 Rispetto dei ruoli e identificazione nei prodotti}: deve essere possibile sapere i ruoli dei componenti nella partecipazione alla realizzazione di un prodotto e le varie modifiche da loro fatte;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR004;
+            \item \textbf{Valore accettabile}: 0; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 0.
+        \end{itemize}
     \item \textbf{QoPR005 Rispetto del versionamento dei prodotti}: ogni prodotto realizzato durante i processi deve possedere un numero di versionamento in modo da tracciare le modifiche, e in caso di errori, trovare un punto di ripristino per il prodotto.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR005;
+            \item \textbf{Valore accettabile}: 15+; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 20+.
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{PRC002 Analisi}
 \label{sub:analisi}
 In questo processo viene fatta un'analisi più generica, comprendente altri contenuti che non si riferiscono solo all'analisi dei requisiti (consultabile nel documento AnalisiDeiRequisiti) o all'analisi dei rischi (consultabile nel documento PianoDiProgetto), ma che comprende altre attività riportate dalle seguenti funzioni:
 
-\textbf{Funzioni}
+\paragraph{Funzioni}
+\label{sub:funzioni_2}
 \begin{itemize}
     \item \textbf{Individuazione dei requisiti}: il testo del capitolato è presentato in modo più discorsivo che tecnico, vi è quindi la necessita di effettuare un'analisi per individuare requisiti: espliciti ,impliciti e classificarli in seguito;
     \item \textbf{Individuazione delle risorse}: analizzare le risorse e realizzare poi un preventivo è fondamentale, per il \glossario{FORNITORE} per verificare la fattibilità del progetto e per il clienti per valutare il costo del progetto;
@@ -99,22 +134,44 @@ In questo processo viene fatta un'analisi più generica, comprendente altri cont
     \item \textbf{Individuazione dei rischi}: capire quali rischi possono presentarsi durante la realizzazione del progetto è fondamentale per prevedere e in caso attuare delle reazioni ad essi.
 \end{itemize}
 
-\textbf{Metriche}
-%da realizzare
+\paragraph{Metriche}
+\label{sub:metriche_2}
+\begin{itemize}
+    \item \textbf{MoPR006 Verifica requisiti obbligatori};
+    \item \textbf{MoPR007 Verifica requisiti opzionali};
+    \item \textbf{MoPR008 Verifica requisiti desiderabili};
+    \item \textbf{MoPR009 Verifica rischi non pervenuti}.
+\end{itemize}
 
-\textbf{Obiettivi}
+\paragraph{Obiettivi}
+\label{sub:obiettivi_2}
 \begin{itemize}
     \item \textbf{QoPR006 Soddisfazione dei requisiti obbligatori}: tutti i requisiti obbligatori, concordati con il cliente, devono essere soddisfatti a fine progetto;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR006;
+            \item \textbf{Valore accettabile}: 100\%; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 100\%.
+        \end{itemize}
     \item \textbf{QoPR007 Soddisfazione dei requisiti opzionali e desiderabili}: i requisiti opzionali e desiderabili devono essere definiti in modo corretto, verificati insieme al cliente e possono essere soddisfatti solo se sono state avanzate risorse, in termini di tempo/persona, prima della fine del progetto;
-    \item \textbf{QoPR008 Verifica dei tempi previsti}: i tempi previsti e concordati devono essere rispettati;
-    \item \textbf{QoPR009 Verifica dei rischi previsti}: per mantenere costante lo sviluppo del progetto non dovrebbero presentarsi rischi non preventivati che potrebbero comportare a ritardi sui tempi e a spreco di risorse.
+        \begin{itemize}
+            \item \textbf{Metriche di riferimento}: MoPR007,MoPR008;
+            \item \textbf{Valore accettabile}: 30\% (valore totale delle due metriche); %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 50\% (valore totale delle due metriche).
+        \end{itemize}
+    \item \textbf{QoPR008 Verifica dei rischi previsti}: per mantenere costante lo sviluppo del progetto non dovrebbero presentarsi rischi non preventivati che potrebbero comportare a ritardi sui tempi e a spreco di risorse.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR009;
+            \item \textbf{Valore accettabile}: massimo 3; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 0.
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{PRC003 Produzione dei documenti}
 \label{sub:produzione_dei_documenti}
 Questo processo rimane operativo per tutta la durata del progetto in quanto ha il compito di redigere i vari documenti, necessari nelle diverse fasi di sviluppo, che comprendano le scelte effettuate, gli strumenti utilizzati e le modifiche decise ed inserite durante la durata del progetto.
 
-\textbf{Funzioni}
+\paragraph{Funzioni}
+\label{sub:funzioni_3}
 Il processo segue di pari passo il ciclo di vita di ogni documento, come spiegato nelle NormeDiProgetto e prevede le fasi di:
 \begin{itemize}
     \item Redazione;
@@ -123,10 +180,28 @@ Il processo segue di pari passo il ciclo di vita di ogni documento, come spiegat
     \item Approvazione.        
 \end{itemize}
 
-\textbf{Obiettivi}
+\paragraph{Metriche}
+\label{sub:metriche_3}
 \begin{itemize}
-    \item \textbf{QoPR010 Rispetto delle fasi del ciclo di vita}: deve essere rispettato ogni fase del ciclo di vita del documento e le scadenze previste;
-    \item \textbf{QoPR011 Rispetto nella redazione dei documenti}: devono essere rispettate le linee guida inserite nelle NormeDiProgetto.
+    \item \textbf{MoPR010 Analisi Way of Working};
+    \item \textbf{MoPR011 Analisi documenti}.
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi_3}
+\begin{itemize}
+    \item \textbf{QoPR09 Rispetto delle fasi del ciclo di vita}: deve essere rispettato ogni fase del ciclo di vita del documento e le scadenze previste;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR010;
+            \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: /.
+        \end{itemize}
+    \item \textbf{QoPR010 Rispetto nella redazione dei documenti}: devono essere rispettate le linee guida inserite nelle NormeDiProgetto.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR011;
+            \item \textbf{Valore accettabile}: 3; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 4+.
+        \end{itemize}
 \end{itemize}
 
 \subsubsection{PRC004 Verifica}
@@ -137,20 +212,40 @@ Durante tutto lo svolgimento del progetto, il processo di verifica sarà attivo 
     \item Decidere se rispettano gli standard di qualità prefissati.
 \end{itemize}
 
-\textbf{Funzioni}
+\paragraph{Funzioni}
+\label{sub:funzioni_4}
 \begin{itemize}
     \item \textbf{Verificare i requisiti dei prodotti}: viene verificato che i prodotti soddisfino i requisiti richiesti concordati;
     \item \textbf{Verificare l'aderenza alle Norme di Progetto}: viene verificato il rispetto del Way Of Working, contenuto nelle Norme di Progetto.
 \end{itemize}
 
-\textbf{Metriche}
-%da realizzare
-
-\textbf{Obiettivi}
+\paragraph{Metriche}
+\label{sub:metriche_4}
 \begin{itemize}
-    \item \textbf{QoPR012 Attuare una verifica costante}: si effettuano verifiche costanti in ogni fase del progetto, testando e controllando il prodotto ogni volta che viene modificato o che si è in procinto di terminare una \glossario{MILESTONE};
-    \item \textbf{QoPR013 Comunicare costantemente durante la verifica}: mantenere una comunicazione costante con tutti i ruoli all'interno del gruppo;
-    \item \textbf{QoPR014 Rispettare le fasi di verifica}: si esegue la fase di verifica in modo iterativo, rispettando sempre ciò che è stato deciso all'interno delle Norme di Progetto, in modo da rendere coerenti i risultati ottenuti.
+    \item \textbf{MoPR012 Frequenza di controlli}.
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi_4}
+\begin{itemize}
+    \item \textbf{QoPR011 Attuare una verifica costante}: si effettuano verifiche costanti in ogni fase del progetto, testando e controllando il prodotto ogni volta che viene modificato o che si è in procinto di terminare una \glossario{MILESTONE};
+    \begin{itemize}
+        \item \textbf{Metrica di riferimento}: MoPR012;
+        \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
+        \item \textbf{Valore desiderabile}: /.
+    \end{itemize}
+    \item \textbf{QoPR012 Comunicare costantemente durante la verifica}: mantenere una comunicazione costante con tutti i ruoli all'interno del gruppo;
+    \item \begin{itemize}
+        \item \textbf{Metrica di riferimento}: non è presente una metrica in quanto non è un obiettivo facilmente misurabile;
+        \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
+        \item \textbf{Valore desiderabile}: /.
+    \end{itemize}
+    \item \textbf{QoPR013 Rispettare le fasi di verifica}: si esegue la fase di verifica in modo iterativo, rispettando sempre ciò che è stato deciso all'interno delle Norme di Progetto, in modo da rendere coerenti i risultati ottenuti.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR010 rientra in questa metrica perché l'attività di verifica fa parte del ciclo di vita del prodotto;
+            \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: /.
+        \end{itemize}
 \end{itemize}
 
 \subsection{Tabelle di qualità di processo}
@@ -173,11 +268,20 @@ Per ogni obiettivo viene indicato:
 \end{center}
     \begin{table}[H]
         \centering
-        \begin{tabular}{cccc}
-        Obiettivo    & Metrica & Valore accettabile & Valore desiderabile \\
-                     &         &                    &                    \\
-        Descrizione: & \multicolumn{3}{c}{}        
-        \end{tabular}
+        \begin{tabular}{|cccc|}
+            \hline
+            Obiettivo                         & Metrica                                                                                                             & Valore accettabile                                                                                                                                                                                   & Valore desiderabile                                                                                                                                                                                   \\ \hline
+            QoPR001                           & MoPR001                                                                                                             & Massimo 2                                                                                                                                                                                            & 0                                                                                                                                                                                                    \\ \hline
+            \multicolumn{1}{|l}{Descrizione:} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Per le scadenze che sono riportate nel Piano di Progetto, il team ha considerato\\  di introdurre dei tempi di \glossario{SLACK} per prevenire eventuali ritardi. \\ Il completamento di un compito, che corrisponde al completamento di una \\ \glossario{ISSUE} e alla sua chiusura, può accumulare un ritardo massimo di 2 giorni.\end{tabular}}                                                                                                                                                        \\ \hline
+            QoPR002                           & MoPR002                                                                                                             & $\pm$ 5\%                                                                                                                                                                                                    & 0                                                                                                                                                                                                    \\ \hline
+            \multicolumn{1}{|l}{Descrizione:} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Per ogni ruolo all'interno del gruppo vi è una tariffa oraria fissa. Può però \\ accadere che durante il corso del progetto sia richiesta una mole di lavoro\\ differente da quella  preventivata inizialmente. Si è quindi deciso di tollerare\\ un discostamento massimo del 5\% in positivo o negativo.\end{tabular}}                                                                                                                                                           \\ \hline
+            QoPR003                           & MoPR003                                                                                                             & \begin{tabular}[c]{@{}c@{}}Livello di maturità: 3\\ Valutazione attributi: L\end{tabular}                                                                                                            & \begin{tabular}[c]{@{}c@{}}Livello di maturità: 3\\ Valutazione attributi: L\end{tabular}                                                                                                            \\ \hline
+            \multicolumn{1}{|l}{Descrizione:} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Seguendo le valutazioni dello standard ISO/IEC 15504, CoffeeCode intende \\ raggiungere un livello di maturità dei processi pari a 3 e per la valutazione di\\ ogni attributo un livello pari a L ossia che gli attributi sono stati soddisfatti\\ almeno per il 75\% della loro interezza.\end{tabular}}                                                                                                                                                                          \\ \hline
+            QoPR004                           & MoPR004                                                                                                             & 0                                                                                                                                                                                                    & 0                                                                                                                                                                                                    \\ \hline
+            \multicolumn{1}{|l}{Descrizione:} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Le suddivisioni dei ruoli precedentemente definite, devono essere fisse per\\ ogni prodotto, per questo CoffeeCode prevede di avere 0 prodotti nei quali i\\ vari ruoli non sono stati rispettati.\end{tabular}}                                                                                                                                                                                                                                                                   \\ \hline
+            QoPR005                           & MoPR005                                                                                                             & 15+                                                                                                                                                                                                  & 20+                                                                                                                                                                                                  \\ \hline
+            \multicolumn{1}{|l}{Descrizione:} & \multicolumn{3}{l|}{\begin{tabular}[c]{@{}l@{}}Visionare il numero di commit eseguiti sulla repository è un ottimo modo per\\ tenere traccia delle modifiche avvenute sui prodotti, in modo da ricavare\\ facilmente l'ultima versione di ogni prodotto.Si è quindi deciso che il numero\\ di commit da effettuare in media durante una settimana produttiva è di minimo\\ 15 per l'accettazione dell'obiettivo, mentre per una maggiore qualità del processo\\ intendiamo effettuare almeno 20 commit settimanali.\end{tabular}} \\ \hline
+            \end{tabular}
         \caption{Obiettivi e metriche di qualità per il PRC001}
     \end{table}
 
