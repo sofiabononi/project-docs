@@ -30,30 +30,30 @@
 
 \subsection{Premessa}%
 \label{sub:premessa}
-Il piano di qualifica sarà un documento soggetto a probabili modifiche nel corso dell'intera durata del progetto.
-Tutto ciò è comprensibile dato che le metriche e i processi, identificati inizialmente, possono rivelarsi insufficienti o non adatti al fine di mantenere un'ottima qualità del progetto e all'interno del team di lavoro.
+Il piano di qualifica è un documento soggetto a continue modifiche nel corso dell'intera durata del \glossario{progetto}.
+Tutto ciò è comprensibile dato che le \glossario{metriche} e i processi, identificati inizialmente, possono rivelarsi insufficienti o non adatti al fine di mantenere un'ottima qualità del progetto e all'interno del team di lavoro.
 Per queste ragioni il documento sarà prodotto incrementalmente nel corso dello svolgimento del progetto.
 
 \subsection{Scopo del documento}%
 \label{sub:scopo_del_documento}
-Lo scopo del documento è quello di illustrare formalmente tutte le modalità di verifica, validazione e le norme adottate, con il fine ultimo quello di preservare la qualità di prodotto e di processo.
+Lo scopo del documento è quello di illustrare formalmente tutte le modalità di verifica, validazione e le norme di qualità adottate, con il fine ultimo quello di preservare la qualità di prodotto e di processo.
 Per raggiungere l'obiettivo prefissato verranno svolte continuamente verifiche sulle attività e sui processi in corso in modo da identificare nel minor tempo possibili errori e/o anomalie in modo da rendere più facile gli interventi di manutenzione e riducendo al minimo lo spreco di risorse.
 
 \subsection{Scopo del prodotto}%
 \label{sub:scopo_del_prodotto}
-Lo scopo del prodotto è la realizzazione di due plug-in, in \glossario{Javascript}, per ottenere delle elaborazioni su il flusso di dati raccolti dai sistemi dell’azienda,
+Lo scopo del prodotto è la realizzazione di due \glossario{plug-in}, in \glossario{Javascript}, per ottenere delle elaborazioni su il flusso di dati raccolti dai sistemi dell’azienda,
 per poter poi prevedere i loro stati futuri così da inviare possibile segnalazioni o allarmi agli operatori del servizio cloud e alla linea di produzione del software.
 In particolare le previsioni che si desiderano ottenere sono di due tipi:
 \begin{itemize}
     \item ”Classificazioni”: per valutare il gruppo di appartenenza degli eventi dei dati ”\glossario{predittori}”;
     \item ”Regressioni”: nel caso in cui il valore cercato sia numerico e con campo continuo. 
 \end{itemize}
-I due plug-in devono estendere lo strumento di monitoraggio dei dati in \glossario{Grafana} applicando il Machine Learning attraverso le tecniche di 
-Support Vector Machine e di Regressione Lineare utilizzate per la predizione su dati.
+I due plug-in devono estendere lo strumento di monitoraggio dei dati in \glossario{Grafana} applicando il \glossario{Machine Learning} attraverso le tecniche di 
+\glossario{Support Vector Machine} e di \glossario{Regressione Lineare} utilizzate per la predizione su dati.
 
 \subsection{Glossario}%
 \label{sub:glossario}
-All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario} che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una G a pedice a fianco del termine.
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario} che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una sottolineatura e una G a pedice a fianco del termine.
 
 \subsection{Riferimenti}%
 \label{sub:riferimenti}
@@ -76,6 +76,8 @@ All'interno del documento sono presenti termini che possono avere dei significat
         \item Verifica e validazione: \href{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L14.pdf}{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L14.pdf}.
     \end{itemize}
     \item \textbf{Standard ISO/IEC 15504 (SPYCE)}: \href{https://www.cs.helsinki.fi/u/paakki/Pyhajarvi.pdf}{https://www.cs.helsinki.fi/u/paakki/Pyhajarvi.pdf};
+    \item \textbf{Standard ISO/IEC 9126}: \href{https://it.wikipedia.org/wiki/ISO/IEC\_9126}{https://it.wikipedia.org/wiki/ISO/IEC\_9126};
+    \item \textbf{Ciclo di Deming}: \href{https://it.wikipedia.org/wiki/Ciclo\_di\_Deming}{https://it.wikipedia.org/wiki/Ciclo\_di\_Deming}.
 \end{itemize}
 
 \newpage
@@ -89,20 +91,23 @@ All'interno del documento sono presenti termini che possono avere dei significat
 \subfile{components/2-qualita-di-prodotto.tex}
 
 \newpage
+\section{Specifiche dei test}%
+\label{sec:qualita_di_prodotto}
+\subfile{components/3-specifiche-dei-test.tex}
+
+\newpage
 \section{Standard di qualità}%come fare appendice?
 \label{sec:standard_di_qualita}
-\subfile{components/3-standard-di-qualita.tex}
+\subfile{components/4-standard-di-qualita.tex}
 
 \newpage
 \section{Resoconto attività di verifica}%come fare appendice?
 \label{sec:resoconto_attivita_di_verifica}
-\subfile{components/4-attivita-di-verifica.tex}
+\subfile{components/5-attivita-di-verifica.tex}
 
 \newpage
 \section{Valutazioni per il miglioramento}%come fare appendice?
 \label{sec:valutazioni_per_il_miglioramento}
-\subfile{components/5-valutazioni-per-il-miglioramento.tex}
-
+\subfile{components/6-valutazioni-per-il-miglioramento.tex}
 
 \end{document}
-
