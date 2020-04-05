@@ -128,7 +128,8 @@ L'aspettativa di questa attività coincide con la realizzazione dell'architettur
 %%% IN ATTESA DELL'AdR %%%
 \paragraph{Codifica}
 \subparagraph{Scopo}
-Lo scopo di questa attività è quella di forire le regole per la scrittura del codice Javascript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei Programmatori, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti.
+Lo scopo di questa attività è quella di forire le regole per la scrittura del codice Javascript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei Programmatori, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
+Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a Javascript.
 \subparagraph{Aspettative}
 Le aspettative di questo processo sono:
 \begin{itemize}
@@ -144,7 +145,7 @@ Le aspettative di questo processo sono:
 Il codice dovrà essere scritto rispettando quanto documentato; nello specifico, esso dovrà perseguire gli obiettivi di qualità definiti nel documento \textsc{Piano di Qualifica}.
 
 \subparagraph{Intestazione}
-Ogni file contenente codice dovrà possedere la seguente intestazione:
+Ogni file contenente codice deve possedere la seguente intestazione:
 \begin{lstlisting}
  /*
  * File: nome file
@@ -155,21 +156,36 @@ Ogni file contenente codice dovrà possedere la seguente intestazione:
  * Appunti: eventuali appunti da fare (avvertenze, dipendenze...)
  */
 \end{lstlisting}
+In aggiunta a questo, è possibile utilizzare la \textit{keyword} TODO per indicare codice temporaneo e soluzioni migliorabili in un secondo momento.
 
 \subparagraph{Stile}
-Al fine di ottenere una scrittura omogenea e uniforme del codice, ogni membro del gruppo è tenuto a rispettare le seguenti norme:
+Al fine di ottenere una scrittura omogenea e uniforme del codice, ogni membro del gruppo è tenuto a rispettare le norme che seguono.
+
+\subparagraph*{Variabili e funzioni}
+Le funzioni e le variabili locali seguono la codifica \glossario{camelCase}:
 \begin{itemize}
-  \item \textbf{Nomi delle funzioni e delle variabili}: le funzioni e le variabili locali seguono la codifica \glossario{camelCase}:
-      \begin{itemize}
-      \item Iniziano con una lettera minuscola;
-      \item In caso di variabili composte da più parole, ogni parola deve cominciare con la lettera maiuscola, ad eccezione della prima;
-      \end{itemize}
-      Le varabili globali dovranno invece essere scritte in stampatello maiuscolo. \\
-      In aggiunta a questo, ogni variabile e funzione deve avere un nome significativo, al fine di essere facilmente riconducibile al suo scopo;
-  \item \textbf{Indentazione}: i blocchi, ad eccezione dei commenti, devono seguire la corretta indentazione, consistente di quattro spazi per ciascun livello;
-  \item \textbf{Spazi}: non è richiesto l'utilizzo di spazi precedenti e conseguenti agli operatori; è tuttavia buona pratica farne utilizzo in caso di \textit{statements} complessi.
+  \item Iniziano con una lettera minuscola;
+  \item In caso di variabili composte da più parole, ogni parola deve cominciare con la lettera maiuscola, ad eccezione della prima.
 \end{itemize}
-%%% QUESTA SEZIONE È COMPLETA MA SI PUÒ ESPANDERE AGGIUNGENDO ALTRE NORME SULLO STILE %%%
+Le varabili globali dovranno invece essere scritte in stampatello maiuscolo. \\
+In aggiunta a questo, ogni variabile e funzione deve avere un nome significativo, al fine di essere facilmente riconducibile al suo scopo. Le variabili, infine, devono essere sempre dichiarate con l'utilizzo della \textit{keyword} \textbf{var}.
+
+\subparagraph*{Indentazione}
+I blocchi, ad eccezione dei commenti, devono seguire la corretta indentazione, consistente di due spazi per ciascun livello di indentazione. È vietato l'uso di tabulazioni, poiché consistenti di caratteri diversi in diversi sistemi operativi; l'IDE di ciascun membro del gruppo deve quindi essere configurato perché la tabulazione corrisponda a due spazi.
+
+\subparagraph*{Spazi e capo riga}
+Non è richiesto l'utilizzo di spazi precedenti e conseguenti agli operatori; è tuttavia buona pratica farne utilizzo in caso di \textit{statements} complessi. \\
+Tutti i capo riga dovranno essere LF (line feed); l'utilizzo di CRLF non è ammesso, poiché non riconosciuto da sistemi operativi diversi da Microsoft Windows.
+
+\subparagraph*{Punto e virgola}
+Ogni \textit{statement} deve finire con il carattere punto e virgola \textbf{;}. Sebbene l'utilizzo di questi sia opzionale in linguaggio Javascript, questa regola permette una comprensione più chiara degli \textit{statements}.
+
+\subparagraph*{Impostazione dei blocchi}
+I blocchi di codice devono seguire le seguenti regole:
+\begin{itemize}
+  \item \textbf{Righe vuote}: Deve essere sempre presente una riga vuota prima e dopo ogni blocco;
+  \item \textbf{Parentesi}: I blocchi di codice consistenti di più di una riga devono essere racchiusi tra parentesi graffe, le quali devono cominciare nella stessa riga del codice. I blocchi di codice consistenti di un'unica riga possono essere scritti senza parentesi. \\ Nel caso degli \textit{statements} \textbf{if-else-if}, le keyword \textbf{else} ed \textbf{else if} devono essere inseriti nella stessa riga della parentesi graffa che chiude il blocco \textbf{if}.
+\end{itemize}
 
 \paragraph{Strumenti}
 %%% IN ATTESA DEL PdP %%%
