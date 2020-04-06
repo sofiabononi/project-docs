@@ -87,7 +87,7 @@ GanttProject è un software di \textit{project management} che permette di proge
 \end{figure}
 
 \subparagraph{Google Sheets}
-Google Sheets è un programma, appartenente alla \textit{suite office} di Google, per la creazione di fogli di calcolo. Questo applicativo viene usato dal gruppo per la creazione delle tabelle e dei grafici presenti nel \textsc{Piano di Progetto}, e per lo svolgimento dei calcoli dei preventivi presenti nello stesso documento.
+Google Sheets è un programma, appartenente alla \glossario{suite} office di Google, per la creazione di fogli di calcolo. Questo applicativo viene usato dal gruppo per la creazione delle tabelle e dei grafici presenti nel \textsc{Piano di Progetto}, e per lo svolgimento dei calcoli dei preventivi presenti nello stesso documento.
 
 \begin{figure}[H]
   \centering
@@ -102,64 +102,48 @@ Google Sheets è un programma, appartenente alla \textit{suite office} di Google
 %%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Sviluppo}
+
 \subsubsection{Scopo}
-Lo scopo di questo processo è descrivere le attività e i compiti che il gruppo deve svolgere, al fine di realizzare il prodotto finale richiesto dal proponente.
+Lo scopo del processo di sviluppo è descrivere le attività che il gruppo deve svolgere al fine di realizzare il prodotto finale richiesto dal proponente.
+
 \subsubsection{Aspettative}
 Le aspettative di questo processo sono le seguenti:
 \begin{itemize}
-  \item Fissare gli obiettivi di sviluppo;
-  \item Fissare i vincoli tecnologici e di design;
-  \item Realizzare un prodotto finale che:
-  \begin{itemize}
-    \item Rispetti i requisiti e le richieste del proponente;
-    \item Superi i test.
-  \end{itemize}
+  \item Stabilire gli obiettivi di sviluppo;
+  \item Stabilire i vincoli tecnologici e di design;
+  \item Realizzare un prodotto finale che soddisfi i requisiti richiesti dal proponente e superi correttamente i test.
 \end{itemize}
+
 \subsubsection{Descrizione}
-Il processo di sviluppo si articola nelle seguenti attività:
+Il processo di sviluppo si articola nelle seguenti attività, le quali corrispondono ognuno a un diverso documento che il gruppo deve fornire:
 \begin{itemize}
   \item Analisi dei Requisiti;
   \item Progettazione;
   \item Qualifica.
 \end{itemize}
+
 \subsubsection{Attività}
+
 \paragraph{Analisi dei requisiti}
+
 \subparagraph{Scopo}
-Lo scopo dell'\textsc{Analisi dei Requisiti}, redatto dagli Analisti, definisce e quindi elenca tutti i requisiti del capitolato. Il documento quindi conterrà:
+Lo scopo dell'\textsc{Analisi dei Requisiti}, redatto dagli Analisti, definisce e quindi elenca tutti i requisiti del capitolato. Questi vengono estrapolati da diverse fonti:
+\begin{itemize}
+  \item Capitolato d'appalto e relativo approfondimento;
+  \item Riunioni esterne con il proponente;
+  \item Casi d'uso.
+\end{itemize}
+Il documento corrispondente conterrà quindi:
 \begin{itemize}
   \item %%% IN ATTESA DELL'AdR %%%
 \end{itemize}
+
 \subparagraph{Aspettative}
 L'aspettativa di questo processo coincide con la creazione del documento \textsc{Analisi dei Requisiti}, il quale contiene appunto i requisiti richiesti dal proponente per la realizzazione del progetto.
-\subparagraph{Classificazione dei requisiti}
-I requisiti vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la comprensione. La classificazione segue la seguente codifica:
-\begin{center}
-  \centering
-  \textbf{R[P]-[T]-[I]}
-\end{center} dove:
-\begin{itemize}
-  \item \textbf{R}: indica che il codice è un requisito;
-  \item \textbf{P}: indica la priorità del requisito; questa può essere:
-  \begin{itemize}
-    \item \textbf{A}: indica un requisito obbligatorio poiché necessario;
-    \item \textbf{B}: indica un requisito desiderabile, ma non necessario;
-    \item \textbf{C}: indica un requisito opzionale o contrattabile in corso d'opera del progetto.
-  \end{itemize}
-  \item \textbf{T}: indica la tipologia del requisito; questa può essere:
-  \begin{itemize}
-    \item \textbf{F}: funzionale;
-    \item \textbf{P}: prestazionale;
-    \item \textbf{Q}: qualitativo;
-    \item \textbf{V}: vincolo.
-  \end{itemize}
-  \item \textbf{I}: indica l'identificativo del requisito nella forma
-  \begin{center}
-    \centering
-    \textbf{codicePadre.codiceFiglio}
-  \end{center} dove entrambi i codici sono numeri progressivi.
-\end{itemize}
+
 \subparagraph{Classificazione dei casi d'uso}
-Anche i casi d'uso sono identificati secondo uno schema univoco; questo è così composto:
+I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica:
+
 \begin{center}
   \centering
   \textbf{UC[C].[CsC]}
@@ -174,6 +158,34 @@ Ogni caso d'uso deve contenere i seguenti campi:
   \item %%% IN ATTESA DELL'AdR %%%
 \end{itemize}
 
+\subparagraph{Classificazione dei requisiti}
+Anche i requisiti sono identificati secondo uno schema univoco; questo è così composto:
+\begin{center}
+  \centering
+  \textbf{R[P]-[T]-[I]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{R}: indica che il codice è un requisito;
+  \item \textbf{P}: indica la priorità del requisito. Questa può essere:
+  \begin{itemize}
+    \item \textbf{A}: indica un requisito obbligatorio poiché necessario;
+    \item \textbf{B}: indica un requisito desiderabile, ma non necessario;
+    \item \textbf{C}: indica un requisito opzionale o contrattabile in corso d'opera del progetto.
+  \end{itemize}
+  \item \textbf{T}: indica la tipologia del requisito. Il requisito può essere:
+  \begin{itemize}
+    \item \textbf{F}: funzionale;
+    \item \textbf{P}: prestazionale;
+    \item \textbf{Q}: qualitativo;
+    \item \textbf{V}: vincolo.
+  \end{itemize}
+  \item \textbf{I}: indica l'identificativo del requisito nella forma
+  \begin{center}
+    \centering
+    \textbf{codicePadre.codiceFiglio}
+  \end{center} dove entrambi i codici sono numeri progressivi.
+\end{itemize}
+
 \paragraph{Progettazione}
 \subparagraph{Scopo}
 Lo scopo di questa attività è quello di definire le caratteristiche del prodotto richiesto, in funzione dei requisiti elencati nell'\textsc{Analisi dei Requisiti}.
@@ -183,7 +195,7 @@ L'aspettativa di questa attività coincide con la realizzazione dell'architettur
 %%% IN ATTESA DELL'AdR O DI PARLARNE %%%
 \paragraph{Codifica}
 \subparagraph{Scopo}
-Lo scopo di questa attività è quella di forire le regole per la scrittura del codice Javascript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei Programmatori, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
+Lo scopo di questa attività è quella di forire le regole per la scrittura del codice Javascript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei \glossario{Programmatori}, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
 Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a Javascript.
 \subparagraph{Aspettative}
 Le aspettative di questo processo sono:
@@ -207,11 +219,11 @@ Ogni file contenente codice deve possedere la seguente intestazione:
  * Version: versione file
  * Date: data creazione
  * Author: nome autore
- * Descrizione: breve descrizione file
- * Appunti: eventuali appunti da fare (avvertenze, dipendenze...)
+ * Description: breve descrizione file
+ * Remarks: eventuali appunti da fare (avvertenze, dipendenze)
  */
 \end{lstlisting}
-In aggiunta a questo, è possibile utilizzare la \textit{keyword} TODO per indicare codice temporaneo e soluzioni migliorabili in un secondo momento.
+In aggiunta a questo, è possibile utilizzare la \glossario{keyword} TODO per indicare codice temporaneo e soluzioni migliorabili in un secondo momento.
 
 \subparagraph{Stile}
 Al fine di ottenere una scrittura omogenea e uniforme del codice, ogni membro del gruppo è tenuto a rispettare le norme che seguono.
@@ -223,10 +235,11 @@ Le funzioni e le variabili locali seguono la codifica \glossario{camelCase}:
   \item In caso di variabili composte da più parole, ogni parola deve cominciare con la lettera maiuscola, ad eccezione della prima.
 \end{itemize}
 Le varabili globali dovranno invece essere scritte in stampatello maiuscolo. \\
-In aggiunta a questo, ogni variabile e funzione deve avere un nome significativo, al fine di essere facilmente riconducibile al suo scopo. Le variabili, infine, devono essere sempre dichiarate con l'utilizzo della \textit{keyword} \textbf{var}.
+In aggiunta a questo, ogni variabile e funzione deve avere un nome significativo, al fine di essere facilmente riconducibile al suo scopo. \\
+Le variabili, infine, devono essere sempre dichiarate con l'utilizzo della keyword \textbf{var}.
 
 \subparagraph*{Indentazione}
-I blocchi, ad eccezione dei commenti, devono seguire la corretta indentazione, consistente di due spazi per ciascun livello di indentazione. È vietato l'uso di tabulazioni, poiché consistenti di caratteri diversi in diversi sistemi operativi; l'IDE di ciascun membro del gruppo deve quindi essere configurato perché la tabulazione corrisponda a due spazi.
+I blocchi, ad eccezione dei commenti, devono seguire la corretta indentazione, consistente di due spazi per ciascun livello di indentazione. È vietato l'uso di tabulazioni, poiché consistenti di caratteri diversi in diversi sistemi operativi; l'\glossario{IDE} di ciascun membro del gruppo deve quindi essere configurato perché la tabulazione corrisponda a due spazi.
 
 \subparagraph*{Spazi e capo riga}
 Non è richiesto l'utilizzo di spazi precedenti e conseguenti agli operatori; è tuttavia buona pratica farne utilizzo in caso di \textit{statements} complessi. \\
@@ -238,10 +251,9 @@ Ogni \textit{statement} deve finire con il carattere punto e virgola \textbf{;}.
 \subparagraph*{Impostazione dei blocchi}
 I blocchi di codice devono seguire le seguenti regole:
 \begin{itemize}
-  \item \textbf{Righe vuote}: Deve essere sempre presente una riga vuota prima e dopo ogni blocco;
-  \item \textbf{Parentesi}: I blocchi di codice consistenti di più di una riga devono essere racchiusi tra parentesi graffe, le quali devono cominciare nella stessa riga del codice. I blocchi di codice consistenti di un'unica riga possono essere scritti senza parentesi. \\ Nel caso degli \textit{statements} \textbf{if-else-if}, le keyword \textbf{else} ed \textbf{else if} devono essere inseriti nella stessa riga della parentesi graffa che chiude il blocco \textbf{if}.
+  \item \textbf{Righe vuote}: deve essere sempre presente una riga vuota prima e dopo ogni blocco;
+  \item \textbf{Parentesi}: i blocchi di codice consistenti di più di una riga devono essere racchiusi tra parentesi graffe, le quali devono cominciare nella stessa riga del codice. I blocchi di codice consistenti di un'unica riga possono essere scritti senza parentesi. \\ Nel caso degli \textit{statements} \textbf{if-else-if} e dei cicli iterativi, le keyword \textbf{else} ed \textbf{else if} devono essere inserite nella stessa riga della parentesi graffa che chiude il blocco \textbf{if}.
 \end{itemize}
-
 
 \newpage
 
