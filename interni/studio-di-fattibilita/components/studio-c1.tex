@@ -12,24 +12,24 @@
 
 \subsection{Descrizione}%
 \label{sub:descrizione}
-Il capitolato C1 prevede la creazione di una piattaforma web che mediante l'inserimento di un video relativo ad un evento sportivo identificato, riesca a produrre un ulteriore video della durata massima di 5 minuti, contenente i momenti salienti (\glossario{highlights}) del video precedentemente inserito.
+Il capitolato C1 prevede la creazione di una \glossario{piattaforma web} che mediante l'inserimento di un video relativo ad un evento sportivo identificato, riesca a produrre un ulteriore video della durata massima di 5 minuti, contenente i momenti salienti (\glossario{highlights}) del video precedentemente inserito.
 
 \subsection{Finalità del progetto}%
 \label{sub:finalita_del_progetto}
-Il \glossario{progetto} consiste nel creare una piattaforma web dotata di un sistema di \glossario{Machine Learning} in grado di identificare ogni momento importante di un evento.
+Il \glossario{progetto} consiste nel creare una piattaforma web dotata di un sistema di Machine Learning in grado di identificare ogni momento importante di un evento.
 Le principali funzionalità che la piattaforma deve offrire sono:
 \begin{itemize}
   \item Caricamento del video scelto;
   \item Identificazione dei momenti salienti all'interno del video;
   \item Estrazione delle corrispondenti parti di video;
-  \item Generazione della sintesi del video;
+  \item Generazione della sintesi del video.
 \end{itemize}
 Mentre i vincoli obbligatori del progetto sono:
 \begin{itemize}
   \item L'utilizzo di \glossario{Sage Maker};
-  \item Realizzare l'architettura basata a \glossario{micro-servizi}, in modo da dividere il progetto in diverse funzionalità ognuna indipendente dalle altre;
+  \item Realizzare l'\glossario{architettura} basata a \glossario{micro-servizi}, in modo da dividere il progetto in diverse funzionalità ognuna indipendente dalle altre;
   \item Caricamento dei video da elaborare tramite riga di comando;
-  \item Realizzazione di una console web per l'analisi e il controllo degli stati di elaborazione del video;
+  \item Realizzazione di una console web per l'analisi e il controllo degli stati di elaborazione del video.
 \end{itemize}
 
 
@@ -38,32 +38,32 @@ Mentre i vincoli obbligatori del progetto sono:
 Per il progetto viene consigliato di usare la tecnologia di \glossario{Amazon Web Services} e in particolare i seguenti servizi:
 \begin{itemize}
   \item Elastic  Container  Service  o  Elastic  Kubernetes  Service: servizio  di  orchestrazione  di  contenitori  altamente  dimensionabile  ad  elevate prestazioni;
-  \item \glossario{DynamoDB}: database NoSQL dalle alte performance ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo;
+  \item \glossario{DynamoDB}: database \glossario{NoSQL} dalle alte performance ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo;
   \item \glossario{AWS Transcode}: servizio gestito per la conversione ed elaborazione di diversi formati video;
-  \item Sage Maker: servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico per;
+  \item Sage Maker: servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico per:
   \begin{itemize}
     \item Etichettare e preparare i dati;
     \item Scegliere un algoritmo;
     \item Formare il \glossario{modello} e ottimizzarlo per la distribuzione;
     \item Effettuare previsioni;
-    \item Intraprendere azioni;
+    \item Intraprendere azioni.
   \end{itemize} 
   \item AWS Rekognition video: servizio di analisi video basato su apprendimento approfondito, in grado di:
   \begin{itemize}
     \item Riconoscere i movimenti delle persone in un fotogramma;
-    \item Riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati;
+    \item Riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati.
   \end{itemize} 
 \end{itemize}
 Come linguaggi di programmazione vengono consigliati:
 \begin{itemize}
     \item \glossario{NodeJS}: per lo sviluppo di API Restful JSON a supporto dell’applicativo;
-    \item \glossario{Python}: per lo sviluppo delle componenti di Machine Learning;
+    \item \glossario{Python}: per lo sviluppo delle componenti di Machine Learning.
 \end{itemize}
 Per la realizzazione dell'interfaccia web vengono consigliati:
 \begin{itemize}
   \item \glossario{HTML5};
   \item \glossario{CSS3};
-  \item \glossario{Javascript}, utilizzando un \glossario{framework} responsive come \glossario{Twitter};
+  \item \glossario{Javascript}, utilizzando un \glossario{framework} responsive come \glossario{Twitter}.
 \end{itemize}
 
 \subsection{Aspetti positivi}%
