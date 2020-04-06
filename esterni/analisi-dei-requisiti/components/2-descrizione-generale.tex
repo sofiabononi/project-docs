@@ -2,17 +2,14 @@
 
 \begin{document}
 
-\subsection{Descrizione generale}%
-\label{sub:informazioni_generale}
-
-\subsubsection{Obiettivo del prodotto}
+\subsection{Obiettivo del prodotto}
 \label{subs:obiettivo_del_prodotto}
-	Il progetto \emph{Predire in Grafana} si pone come obiettivo finale la realizzazione di un \glossario{plug-in} per il sistema di monitoraggio \glossario{Grafana}. Il plug-in deve essere accompagnato con un programma esterno per l' \glossario{addestramento} per i \glossario{modelli} di \glossario{machine learning}, grazie a questo esso sarà in grado di adattarsi ai diversi flussi di dati e riuscirà a fornire delle \glossario{previsioni} sulle possibili \glossario{criticità} riscontrate sulla linea di produzione del software. Gli utenti del software potranno analizzare la situazione tramite grafici e \glossario{dashboard}, facilitando la visualizzazione di problematiche anche gravi all'interno della linea di produzione.
+	Il progetto \emph{Predire in Grafana} si pone come obiettivo finale la realizzazione di un plug-in per il sistema di monitoraggio Grafana. Il plug-in deve essere accompagnato con un programma esterno per l'addestramento per i \glossario{modelli} di machine learning, grazie a questo esso sarà in grado di adattarsi ai diversi flussi di dati e riuscirà a fornire delle previsioni sulle possibili \glossario{criticità} riscontrate sulla linea di produzione del software. Gli utenti del software potranno analizzare la situazione tramite grafici e dashboard, facilitando la visualizzazione di problematiche anche gravi all'interno della linea di produzione.
 
 \subsection{Funzioni del prodotto}
 \label{subs:funzioni_del_prodotto}
 	Le funzioni offerte dal prodotto sono due.
-	La prima riguarda l'addestramento dei modelli di machine learning usati: SVM e RL, che avviene tramite l'applicazione di addestramento. L'addestramento deve essere effettato dall'utente che deve: 
+	La prima riguarda l'addestramento dei modelli di machine learning usati: SVM e RL, che avviene tramite l'applicazione di addestramento. L'addestramento deve essere effettato dall'utente che deve:
 	\begin{itemize}
 		\item{Creare un file in formato \glossario{CSV} per fornire un set di dati utili e significativi;}
 		\item{Aprire il file tramite un software per fogli elettronici, come ad esempio LibreOffice oppure Microsoft Excel, e assegnargli la classificazione corretta;}
@@ -25,55 +22,56 @@
 	\end{itemize}
 	Dopo aver finito l'addestramento del modello, l'utente deve eseguire i seguenti passi per configurare in modo adeguato il plug-in su Grafana:
 	\begin{itemize}
-			\item{Aprire la pagina delle impostazioni di Granafa e infine abilitare il plug-in;}
-			\item{Aprire la pagina di configurazione dei plug-in;}
-			\item{Selezionare il file JSON con la definizione del modello usato e i risultati dell'addestramento, ovvero il \glossario{predittore} da usare;}
-			\item{Scegliere tra i nodi disponibili quelli che si desidera aggiungere alla rete di flusso di monitoraggio sui quali verranno effettuate le previsioni;}
-			\item{Scegliere quale delle due modalità di visualizzazione dei dati generati dalle previsioni usare:}
-			\begin{itemize}
-				\item{Indicatore: permette di visualizzare in maniera compatta se in un nodo è stata prevista una criticità.}
-				\item{Grafico: permette di visualizzare in un grafico l'evoluzione delle previsioni, in cui sarà presente l'indicatore di soglia massima.}
-			\end{itemize}
-			In entrambi i casi verrà fornita o visualizzata la bontà della previsione.
-			\item{Infine si può avviare la predizione.}
+		\item{Aprire la pagina delle impostazioni di Granafa e abilitare il plug-in;}
+		\item{Aprire la pagina di configurazione dei plug-in;}
+		\item{Selezionare il file JSON con la definizione del modello usato e i risultati dell'addestramento, ovvero il \glossario{predittore} da usare;}
+		\item{Scegliere tra i nodi disponibili quelli che si desidera aggiungere alla rete di flusso di monitoraggio sui quali verranno effettuate le previsioni;}
+		\item{Scegliere quale delle due modalità di visualizzazione dei dati generati dalle previsioni usare:}
+		\begin{itemize}
+			\item{Indicatore: permette di visualizzare in maniera compatta se in un nodo è stata prevista una criticità.}
+			\item{Grafico: permette di visualizzare in un grafico l'evoluzione delle previsioni, in cui sarà presente l'indicatore di soglia massima.}
+		\end{itemize}
+		In entrambi i casi verrà fornita o visualizzata la bontà della previsione.
+		\item{Infine si può avviare la predizione.}
 	\end{itemize}
 	Alla fine del procedimento l'utente viene reindirizzato alla dashboard creata dal plug-in contenente la previsione effettuata nei rispettivi pannelli.
 
 \subsection{Caratteristiche degli utenti}
-\label{caratteristiche_degli_utenti} 
-	Gli utenti che possono utilizzare il plug-in sono soltanto coloro che sono autenticati in Grafana, di conseguenza solo coloro che sono già autenticati su Grafana avranno la possibilità di vedere i dati prodotti sulla dashboard. Un utente non autenticato non potrà usufruire del plug-in in quanto questo non può esistere come entità autonoma, ma come estensione per Grafana.
+\label{subs:caratteristiche_degli_utenti}
+  Gli utenti che possono utilizzare il plug-in per monitorare un flusso di dati sono soltanto coloro che sono autenticati in Grafana. Un utente non autenticato non potrà usufruire del plug-in in quanto questo non può esistere come entità autonoma, ma solo come estensione per Grafana.
 
 \subsection{Architetture e Tecnologie del progetto}
 \label{subs:architetture_e_tecnologie_del_progetto}
+
 	\subsubsection{Architettura del prodotto}
-	\label{subs:architettura_del_prodotto}
+	\label{sssec:architettura_del_prodotto}
 		Il prodotto prevede la realizzazione di un plug-in in linguaggio \glossario{JavaScript} in quanto Grafana, piattaforma che lo utilizzerà per individuare i punti deboli del proprio sistema grazie a previsioni che indicano quali siano le aree con maggiori criticità da risolvere, è espandibile attraverso un sistema di plug-in.
 
-	\subsubsubsection{Programma di addestramento}
-	\label{subs:programma_di_addestramento} 
+	\subsubsection{Programma di addestramento}
+	\label{sssec:programma_di_addestramento}
 		Il prodotto deve essere accompagnato da un programma di addestramento che permetta di eseguire le previsioni corrette adeguandosi ai diversi flussi di dati monitorati dall'utente. Per entrambi i modelli di machine learning si dovrà partire da una base di dati noti che consenta di capire la correlazione tra i dati e i valori delle previsioni attese. Per fare questo è necessario disporre di un' applicazione esterna che permetta all'utente di addestrare i due modelli per produrre previsione di qualità sui propri dati secondo il funzionamento spiegato nella sezione 2.2 di codesto documento.
 
-	\subsubsubsection{Plug-in di previsione}
-	\label{subs:plug-in_di_previsione}
-		Il plug-in che verrà realizzato dal team caricherà il file JSON, prodotto dai dati di addestramento con i parametri per le previsioni con SVM per la classificazione o la RL, leggerà la definizione del predittore e successivamente assocerà tali predittori al flusso dei dati presenti in Grafana.In seguito i risultati verranno resi disponibili al sistema di creazione di grafici e dashboard per la loro visualizzazione. Il sistema, grazie a previsioni accompagnate da motivazioni e dal livello di qualità del valore ottenuto, permetterà al sistemista di analizzare la situazione e verificare se è necessario un intervento o se si tratti di una situazione sopravvalutata. 
-	 
+	\subsubsection{Plug-in di previsione}
+	\label{sssec:plug-in_di_previsione}
+		Il plug-in che verrà realizzato dal team caricherà il file JSON, prodotto dai dati di addestramento con i parametri per le previsioni con SVM per la classificazione o la RL, leggerà la definizione del predittore e successivamente assocerà tali predittori al flusso dei dati presenti in Grafana.In seguito i risultati verranno resi disponibili al sistema di creazione di grafici e dashboard per la loro visualizzazione. Il sistema, grazie a previsioni accompagnate da motivazioni e dal livello di qualità del valore ottenuto, permetterà al sistemista di analizzare la situazione e verificare se è necessario un intervento o se si tratti di una situazione sopravvalutata.
+
 \subsection{Vincoli generali}
 \label{subs:vincoli_generali}
 	L'implementazione deve rispettare i seguente vincoli:
 	\begin{itemize}
-		\item{Utilizzo del linguaggio JavaScript per lo sviluppo del plug-in}.}
+		\item{Utilizzo del linguaggio JavaScript per lo sviluppo del plug-in.}
 		\begin{itemize}
 			\item{Il proponente consiglia l'uso di una libreria creata da Davide Ghiotto, presente al seguente indirizzo:
-			\newline \href{https://www.npmjs.com/package/ml-modules}}
+			\newline \href{https://www.npmjs.com/package/ml-modules}{Libreria per il machine learning.}}
 			\item{Il proponente consiglia anche l'uso di due librerie per l'implementazione dei modelli d'addestramento SVM e RL rispettivamente nei seguenti indirizzi:
-			\newline \href{https://github.com/karpathy/svmjs} 
-			\newline \href{https://github.com/Tom-Alexander/regression-js}}
-			\item{Per le \glosario{reti neurali} in JavaScript, il proponente consiglia l'uso della libreria presente al seguente link:
-			\newline \href{https://cd.standford.edu/people/karpathy/convnetis}}
+			\newline \href{https://github.com/karpathy/svmjs}{Libreria in JavaScript per le SVM;}
+			\newline \href{https://github.com/Tom-Alexander/regression-js}{Libreria in JavaScript per la RL.}}
+			\item{Per le \glossario{reti neurali} in JavaScript, il proponente consiglia l'uso della libreria presente al seguente link:
+			\newline \href{https://cd.standford.edu/people/karpathy/convnetis}{Libreria in JavaScript per le reti neurali.}}
 		\end{itemize}
 		\item{L'addestramento dei modelli SVM e RL deve essere eseguito in un applicazione esterna a cui vengono forniti i dati di test}
 		\begin{itemize}
-			\item{L'esito dell' addestramento deve essere salvato in un file JSON con i parametri per le previsioni con SVM o RL per le classificazioni}
+			\item{L'esito dell' addestramento deve essere salvato in un file JSON con i parametri per le previsioni con SVM o RL per le classificazioni.}
 		\end{itemize}
 	\item{Il plug-in deve essere in grado di svolgere i seguenti compiti:}
 		\begin{itemize}
@@ -84,7 +82,7 @@
 			\item{Rendere disponibili i dati al sistema di creazione di grafici e dashboard per la loro visualizzazione.}
 		\end{itemize}
 	\end{itemize}
-	Il software ha i seguenti requisiti opzionali: 
+	I requisiti opzionali sono:
 	\begin{itemize}
 		\item{Possibilità di definire "alert" in base ai livelli di soglia raggiunti dai nodi collegati alle previsioni;}
 		\item{Fornire i dati di bontà dei modelli di previsione: "Precision" e "Recall" per le SVM e "R\^{}2" per la RL;}
