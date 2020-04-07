@@ -4,27 +4,256 @@
 In questa sezione vengono resi noti i risultati dei test relativi al periodo di revisione dei documenti e requisiti, mediante l'utilizzo delle metriche descritte nelle sezioni precedenti.
 I risultati possono coincidere o meno con i valori desiderati dal gruppo, nel caso non coincidessero verrà fatta un ulteriore analisi per il miglioramento visibile nel punto §7.
 
-\subsection{Riassunto delle attività di verifica}%
-\label{sub:iso/riassunto_delle_attivita_di_verifica}
+\subsection{Periodo di Analisi}
+\label{sub:periodo_di_analisi}
+Durante questo periodo è stata sottoposta ad una precisa attività di verifica tutta la documentazione da presentare in ingresso in sede di Revisione dei Requisiti.
+I verificatori inizialmente hanno effettuato l'analisi utilizzando la tecnica di \glossario{Walkthrough} che hanno portato ad una serie di errori frequenti consultabili nella sezione §7 del documento.
+Successivamente dopo questa prima fasi, i verificatori mediante la tecnica dell'\glossario{Inspection} hanno analizzato i documenti in modo più mirato ricavando errori di diverso genere che non verranno trattati in quanto si trattano di piccolezze già facilmente risolte.
 
+\subsubsection{Esiti verifiche sui documenti}
+\label{sub:esiti_verifiche_sui_documenti}
+Sui documenti sono state utilizzate le metriche per:
+    \begin{itemize}
+        \item \textbf{Indice di Gulpease};
+        \item \textbf{Correttezza lessicale/ortografica}.
+    \end{itemize}
+Per evitare risultati errati nel calcole dell'Indice di Gulpease si è deciso di non tenere in considerazione:
+    \begin{itemize}
+        \item Il frontespizio di ogni documento;
+        \item Le tabelle presenti nei documenti;
+        \item Il diario delle modifiche all'interno di ogni documento.
+    \end{itemize}
+Per quanto riguarda la correttezza lessicale/ortografica, gli errori trovati non verranno classificati ma semplicemente conteggiati uniformemente includendo anche errori derivati dal mancato rispetto delle convenzioni scritte nelle \textsc{Norme di Progetto}.
+\\ Per ogni metrica di ogni documento verrà inoltre inserito l'esito dell'analisi che può avere risultato soddisfacente o non.
 
-\subsection{Risultati delle verifiche tramite analisi}%
-\label{sub:iso/risultati_delle_verifiche_tramite_analisi}
-Nelle seguenti tabelle vengono riportati i dati relativi ai risultati ottenuti applicando per ogni processo, le metriche in relazione agli obiettivi scelti.
+\paragraph{Norme di Progetto}
+\label{sub:norme_di_progetto}
+Pur essendo le \textsc{Norme di Progetto} un documento abbastanza corposo e ricco di pagine di spiegazione, il numero di errori trovati non è molto alto ed è progressivamente calato in base alle versioni del documento dopo ogni fase di verifica delle modifiche, grazie anche a una buona verifica da parte dei Verificatori e di tutto il team.
 
-\subsubsection{Qualità di processo}
-\label{sub:qualita_di_processo}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    Documento                   & Risultato indice & Errori presenti & Esito indice    & Esito errori \\ \hline
+    Norme di Progetto 1.0.0 &                  & 0               & Non soddisfatto & Soddisfatto 
+    \end{tabular}
+    \caption{Risultati metriche per le Norme di Progetto}
+    \label{tab:my-table}
+\end{table}
 
-\subsubsection{Qualità di prodotto}
-\label{sub:qualita_di_prodotto}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{img/erroriNorme.png}
+        \label{fig:scice_documenti}
+        \caption{Grafico errori per \textsc{Norme Di Progetto}}
+    \end{figure}
 
-\subsection{Consultivo di periodo}%
-\label{sub:consultivo_di_periodo}
+\paragraph{Studio di Fattibilità}
+\label{sub:studio_di_fattibilita}
+Essendo lo \textsc{Studio di Fattibilità} uno dei primi documenti redatti dal gruppo, il numero di errori è risultato alto rispetto al contenuto soprattutto per errori di dimenticanza nel rispettare quanto scritto nelle \textsc{Norme di Progetto}.
 
-\subsubsection{Analisi dei requisiti}
-\label{sub:analisi dei requisiti}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    Documento                   & Risultato indice & Errori presenti & Esito indice    & Esito errori \\ \hline
+    Studio di Fattibilità 1.0.0 &                  & 0               & Non soddisfatto & Soddisfatto 
+    \end{tabular}
+    \caption{Risultati metriche per lo Studio di Fattibilità}
+    \label{tab:my-table}
+\end{table}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{img/erroriStudio.png}
+        \label{fig:scice_documenti}
+        \caption{Grafico errori per \textsc{Studio di Fattibilità}}
+    \end{figure}
+
+\paragraph{Piano di Qualifica}
+\label{sub:piano_di_qualifica}
+Il \textsc{Piano di Qualifica} inizialmente presentava molti errori che però sono scesi drasticamente ad ogni fase di verifica effettuata sul documento.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    Documento                & Risultato indice & Errori presenti & Esito indice    & Esito errori \\ \hline
+    Piano di Qualifica 1.0.0 &                  & 0               & Non soddisfatto & Soddisfatto 
+    \end{tabular}
+    \caption{Risultati metriche per il Piano di Qualifica}
+    \label{tab:my-table}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{img/erroriPdQ.png}
+    \label{fig:scice_documenti}
+    \caption{Grafico errori per \textsc{Piano di Qualifica}}
+\end{figure}
+
+\paragraph{Piano di Progetto}
+\label{sub:piano_di_progetto}
+Il \textsc{Piano di Progetto} ha presentato parecchi errori inizialmente così come il \textsc{Piano di Qualifica} ma dopo ogni verifica il numero di errori è sceso in modo quasi lineare fino a raggiungere l'obiettivo di 0 errori prefissato.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    Documento               & Risultato indice & Errori presenti & Esito indice    & Esito errori \\ \hline
+    Piano di Progetto 1.0.0 &                  & 0               & Non soddisfatto & Soddisfatto 
+    \end{tabular}
+    \caption{Risultati metriche per il Piano di Progetto}
+    \label{tab:my-table}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{img/erroriPdP.png}
+    \label{fig:scice_documenti}
+    \caption{Grafico errori per \textsc{Piano di Progetto}}
+\end{figure}
+
+\paragraph{Analisi dei Requisiti}
+\label{sub:analisi_dei_requisiti}
+Come per le \textsc{Norme di Progetto} essendo anche l'\textsc{Analisi dei Requisiti} un documento abbastanza corposo il numero di errori rilevati durante le verifiche è stato elevato ma non eccessivo, inoltre si nota che dopo nella fasi di verifica che ha portato alla creazione della versione 0.3.0 il numero di errori è drasticamente calato. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    Documento                   & Risultato indice & Errori presenti & Esito indice    & Esito errori \\ \hline
+    Analisi dei Requisiti 1.0.0 &                  & 0               & Non soddisfatto & Soddisfatto 
+    \end{tabular}
+    \caption{Risultati metriche per l'Analisi dei Requisiti}
+    \label{tab:my-table}
+\end{table}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=10cm]{img/erroriAnalisi.png}
+        \label{fig:scice_documenti}
+        \caption{Grafico errori per \textsc{Analisi dei Requisiti}}
+    \end{figure}
+
+\subsubsection{Esiti verifiche sui processi}
+\label{sub:esiti_verifiche_sui_processi}
+In questa sezione vengono visualizzati gli esiti delle metriche prese in considerazione per quanto riguarda i processi produttivi.
+Come per i documenti, anche per queste metriche verrà fornito un esito che può essere soddisfacente o meno.
+
+\paragraph{Processo PRC001}
+\label{sub:processo_PRC001}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR001 Rispetto delle\\ scadenze della pianificazione\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR001 Varianza\\ dei tempi\end{tabular} &
+      1.31 &
+      Soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR001}
+    \label{tab:my-table}
+    \end{table}
+\textbf{Nota}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR002 Rispetto del\\ budget istanziato\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR002 Varianza\\ dei costi\end{tabular} &
+       &
+      Soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR002}
+    \label{tab:my-table}
+\end{table}
+\textbf{Nota}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR003 Rispetto del\\ ciclo di vita scelto\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR003 Aderenza\\ agli standard\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}Livello di maturità: 2\\ Valutazione attributi: L\end{tabular} &
+      Non soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR003}
+    \label{tab:my-table}
+\end{table}
+\textbf{Nota}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR004 Rispetto dei ruoli\\ e identificazione nei prodotti\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR004 Aderenza\\ ai ruoli\end{tabular} &
+      0 &
+      Soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR004}
+    \label{tab:my-table}
+\end{table}
+\textbf{Nota}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR005 Rispetto del\\ versionamento dei prodotti\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR005 Controllo\\ prodotti\end{tabular} &
+       &
+      Soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR005}
+    \label{tab:my-table}
+\end{table}
+\textbf{Nota}:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \hline
+    Prodotto/ Processo &
+      Metrica &
+      Risultato &
+      Esito \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPR010 Rispetto nella\\ redazione dei documenti\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPR011 Analisi\\ documenti\end{tabular} &
+      3 &
+      Soddisfatto
+    \end{tabular}
+    \caption{Risultati metrica MoPR011}
+    \label{tab:my-table}
+\end{table}
+\textbf{Nota}:
 
 \subsection{Conclusioni}%
 \label{sub:conclusioni}
+I dati analizzati esprimono un buon andamento del lavoro svolto dal team che si prefissa come obiettivo quello di continuare a migliorare sotto ogni aspetto relativo alle metriche.
 
 \end{document}
