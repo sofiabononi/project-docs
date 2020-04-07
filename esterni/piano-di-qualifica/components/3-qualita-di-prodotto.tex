@@ -1,0 +1,423 @@
+\documentclass[../piano-di-qualifica.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo}%
+\label{sec:scopo}
+Al fine di garantire la qualità del prodotto, il team CoffeeCode ha deciso di prendere come riferimento lo standard ISO/IEC 9126.
+Lo standard definisce un modello, per la qualità esterna ed interna, delle caratteristiche da tenere in considerazione per ottenere un prodotto di buona qualità.
+
+\subsection{Nomenclatura metriche e obiettivi di qualità}%
+\label{sub:nomenclatura_metriche_e_obiettivi_di_qualita}
+Vengono di seguito spiegati gli obiettivi, le metriche e come essi verranno identificati, in modo sintetico:
+\begin{itemize}
+    \item \textbf{Obiettivi}: 
+    \begin{center}
+        \centering
+        \textbf{QoPD[ID][Nome]-[Caratteristica]}%da rivedere
+    \end{center} 
+        \begin{itemize}
+            \item \textbf{QoPD}: sta per "Quality of Product" ossia qualità del prodotto;
+            \item \textbf{ID}: identificatore numerico a 3 cifre;
+            \item \textbf{Nome}: riassunto della descrizione del processo;
+            \item \textbf{Caratteristica}: indica in quale caratteristica appartiene l'obiettivo;
+        \end{itemize}
+        Per ogni obiettivo, dopo una breve descrizione, verrà segnalato il codice della metrica che valuterà il superamento dell'obiettivo e verranno inseriti i valori (singolo valore o range di valori) accettabili e desiderabili per definire le soglie imposte per l'obiettivo.
+    \item \textbf{Metriche}: 
+    \begin{center}
+        \centering
+        \textbf{MoPD[ID][Nome]-[Caratteristica]}%da rivedere
+    \end{center} 
+        \begin{itemize}
+            \item \textbf{MoPD}: sta per "Metric of Product" ossia metrica del processo;
+            \item \textbf{ID}: identificatore numerico a 3 cifre;
+            \item \textbf{Nome}: riassunto della descrizione della metrica;
+            \item \textbf{Caratteristica}: indica in quale caratteristica appartiene la metrica;
+        \end{itemize}
+\end{itemize}  
+Ulteriori informazioni sulle metriche e sul loro funzionamento sono reperibili nel documento Norme di progetto.
+
+\subsection{Caratteristiche}%
+\label{sub:caratteristiche}
+Vengono qui descritte le caratteristiche prese in considerazione dal gruppo di lavoro.
+
+\subsubsection{Funzionalità}%
+\label{sub:funzionalita}
+Indica la capacità del prodotto di fornire funzioni che soddisfano le esigenze dichiarate e implicite, ricavate dall'analisi dei requisiti, quando il software viene utilizzato in un determinato contesto.
+Il prodotto deve quindi fornire funzioni adeguate ed affidabili che siano in grado di essere verificate dalle metriche riportate nel seguente paragrafo per soddisfare gli obiettivi fissati.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD001 Completezza di implementazione - [Adeguatezza] ;
+    \item MoPD002 Coerenza di interfaccia - [Interoperabilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD001 Rispetto dell'implementazione funzionale - [Adeguatezza]}: realizzare lo stesso numero di funzioni ricavate dall'analisi iniziale;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD001;
+            \item \textbf{Valore accettabile}: discostamento, in negati o in positivo, di al più 2 funzioni;
+            \item \textbf{Valore desiderabile}: 0.
+        \end{itemize}
+    \item \textbf{QoPD002 Rispetto delle interfacce - [Interoperabilità]}: realizzare le interfacce del progetto come preventivato nell'analisi iniziale.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD002;
+            \item \textbf{Valore accettabile}: 85\% - 100\%;
+            \item \textbf{Valore desiderabile}: 95\% - 100\%.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Affidabilità}%
+\label{sub:affidabilita}
+È La capacità del prodotto software di mantenere un determinato livello di prestazioni quando utilizzato sotto specifiche condizioni.
+Nel caso quindi di errori o malfunzionamenti il prodotto deve riuscire a compiere le proprie funzioni normalmente.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD003 Copertura dei test - [Maturità];
+    \item MoPD004 Densità degli errori - [Affidabilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD003 Test completi sul codice - [Maturità]}: i test devono coprire tutto il codice sviluppato in modo da analizzare correttamente tutto il prodotto;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD003;
+            \item \textbf{Valore accettabile}: 90\% - 100\%;
+            \item \textbf{Valore desiderabile}: 100\%.
+        \end{itemize}
+    \item \textbf{QoPD004 Individuazione test falliti - [Affidabilità]}: rilevare il numero di test non andati a buon fine.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD004;
+            \item \textbf{Valore accettabile}: 0\% - 15\%;
+            \item \textbf{Valore desiderabile}: 0\% - 5\%.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Usabilità}%
+\label{sub:usabilita}
+L'usabilità indica come il software in questione, può essere compreso, appreso, utilizzato, attraente e conforme alle normative e linee guida sull'usabilità.
+Ricercare un'implementazione per facilitare l'utilizzo del prodotto da parte dell'utente deve essere uno degli obiettivi principali nella realizzazione di un progetto.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD005 Documentazione delle funzioni - [Comprensibilità];
+    \item MoPD006 Messaggi di errore - [Comprensibilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD005 Chiarezza del comportamento - [Comprensibilità]}: descrivere le funzioni implementate per informare l'utente su come esse lavorano;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD005;
+            \item \textbf{Valore accettabile}: 90\% - 100\%;
+            \item \textbf{Valore desiderabile}: 100\%.
+        \end{itemize}
+    \item \textbf{QoPD006 Chiarimento degli errori - [Comprensibilità]}: descrivere in modo chiaro gli errori che si possono presentare in modo ambiguo all'utente.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD006;
+            \item \textbf{Valore accettabile}: 0\% - 10\%;
+            \item \textbf{Valore desiderabile}: 0\% - 5\%.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Efficienza}%
+\label{sub:efficienza}
+L'efficienza è la capacità del prodotto software di fornire prestazioni adeguate, in relazione alla quantità di
+risorse utilizzate, in base alle condizioni indicate.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD008 Tempo medio di risposta - [Comportamento temporale].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD007 Velocità di esecuzione - [Comportamento temporale]}: riuscire ad ottenere il minor tempo di esecuzione possibile migliorando di conseguenza le prestazioni.
+    \\ Non potendo, per ovvi motivi, verificare la metrica mediante l'esecuzione del programma, i valori di riferimento saranno delle previsioni non del tutto affidabili al momento.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD007;
+            \item \textbf{Valore accettabile}: 10s;
+            \item \textbf{Valore desiderabile}: 5s.
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Manutenibilità}%
+\label{sub:manutenibilita}
+La manutenibilità è la capacità del prodotto di essere modificato in modo da migliorarlo, correggerlo o adattarlo al sistema, nei requisiti o nelle funzioni.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD008 Commenti sul codice - [Modifica].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD08 Comprensione del codice - [Modifica]}: capire facilmente cosa fa il codice implementato in modo da renderlo facilmente manipolabile dai programmatori;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD08;
+            \item \textbf{Valore accettabile}: 10\% o più;
+            \item \textbf{Valore desiderabile}: 20\% o più.
+        \end{itemize}
+\end{itemize}
+
+
+\subsubsection{Portabilità}%
+\label{sub:portabilita}
+La portabilità è capacità del prodotto software di essere trasferito e implementato da un ambiente a un altro.
+
+\paragraph{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD009 Browser supportati - [Adattabilità].
+\end{itemize}
+
+\paragraph{Obiettivi}
+\label{sub:obiettivi}
+\begin{itemize}
+    \item \textbf{QoPD009 Supporto ai diversi browser - [Adattabilità]}: riuscire ad adattare l'applicazione web di \glossario{ADDESTRAMENTO} ai diversi browser e alle diverse versioni di essi per eseguire tutte le funzioni del prodotto.
+        \\ In questo caso non ci saranno valori accettabili o desiderabili ma due diverse liste di browser da supportare, la lista minima accettabile con il numero minimo di browser da supportare e la lista minima desiderabile con i browser minimi da supportare per considera l'obiettivo raggiunto con la qualità desiderabile.
+        Ogni Browser viene identificato attraverso la dicitura: \textbf{(nome browser,versione browser)}.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD009;
+            \item \textbf{Lista minima accettabile}: {(Chrome,32) , (Firefox,27)};
+            \item \textbf{Lista minima desiderabile}: {(Chrome,32) , (Firefox,27) , (Opera,19) , (Explorer,10)}.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Documentazione}%
+\label{sub:documentazione}
+I documenti redatti e pubblicati devono essere leggibili e comprensibili già dopo una prima lettura, riuscendo comunque a contenere parole di carattere tecnico sull'argomento.
+
+\subsubsection{Metriche}
+\label{sub:metriche}
+\begin{itemize}
+    \item MoPD010 \glossario{INDICE DI GULPEASE} - [Documentazione];
+    \item MoPD011 Correttezza lessicale/ortografica - [Documentazione].
+\end{itemize}
+
+\subsubsection{Obiettivi}
+\label{sub:obiettivi}
+Le principali caratteristiche che verranno analizzate in ogni documento sono:
+\begin{itemize}
+    \item \textbf{QoPD010 Leggibilità del testo - [Documentazione]}: i documenti devono essere leggibili in modo fluido evitando quindi periodi troppo lunghi;
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD010;
+            \item \textbf{Valore accettabile}: 60;
+            \item \textbf{Valore desiderabile}: 70.
+        \end{itemize}
+    \item \textbf{QoPD011 Correttezza del testo - [Documentazione]}: in ogni documento non dovranno esserci errori ortografici.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPD011;
+            \item \textbf{Valore accettabile}: 0;
+            \item \textbf{Valore desiderabile}: 0.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Tabelle di qualità di prodotto}
+\label{sub:tabelle_di_qualita_di_prodotto}
+Gli obiettivi di qualità, discussi nelle precedenti sezioni, che devono essere parte integrante di ogni processo, verranno indicati in tabelle in questa sezione.
+Per ogni obiettivo viene indicato:
+
+\begin{itemize}
+   \item \textbf{Obiettivo}: indica il codice identificativo dell'obiettivo come descritto nella sezione §3.2;
+   \item \textbf{Metrica}: indica, se presente, la metrica adottata per la valutazione dell'obiettivo di qualità come descritto nella sezione §3.2;
+   \item \textbf{Valore accettabile}: rappresenta il valore minimo di qualità dell'obiettivo che CoffeCode intende ottenere. Non è presente in caso di mancanza della metrica associata all'obiettivo;
+   \item \textbf{Valore desiderato}: rappresenta il valore di qualità dell'obiettivo che CoffeCode intende ottenere una maggiore qualità rispetto a quella minima. Non è presente in caso di mancanza della metrica associata all'obiettivo;
+   \item \textbf{Descrizione}: descrizione generale dell'obiettivo.
+\end{itemize}
+%Tabelle
+
+\begin{center}
+    \centering
+    \textbf{Funzionalità}
+\end{center}
+\begin{longtable}[c]{cccc}
+    \hline
+    Obiettivo &
+      Metrica &
+      Valore accettabile &
+      Valore desiderabili \\ \hline
+    \endhead
+    %
+    \begin{tabular}[c]{@{}c@{}}QoPD001 Rispetto\\ dell’implementazione funzionale - \\ {[}Adeguatezza{]}\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPD001 Completezza \\ di implementazione - \\ {[}Adeguatezza{]}\end{tabular} &
+      Massimo 2 &
+      0 \\
+    \multicolumn{1}{l}{Descrizione:} &
+      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per ricercare una corretta implementazione nel prodotto e riuscire a\\ soddisfare tutti i requisiti prefissati è necessario che le funzioni\\ vengano realizzate seguendo quanto è stato ricavato dalla progettazione\\ di esse. Si rende quindi necessario riuscire a realizzare e implementare\\ lo stesso numero di funzioni preventivate o in caso, è tollerato un\\ discostamento di al massimo 2 funzioni aggiuntive.\end{tabular}} \\ \hline
+    \begin{tabular}[c]{@{}c@{}}QoPD002 Rispetto \\ delle interfacce -\\ {[}Interoperabilità{]}\end{tabular} &
+      \begin{tabular}[c]{@{}c@{}}MoPD002 Coerenza \\ di interfaccia -\\ {[}Interoperabilità{]}\end{tabular} &
+      85\% - 100\% &
+      95\% - 100\% \\
+    \multicolumn{1}{l}{Descrizione:} &
+      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Riuscire a realizzare le interfacce delle funzioni secondo le direttive\\ predefinite è un fattore importante nella riuscita di un prodotto di\\ qualità, per questo il team si aspetta di rispettare almeno l'85\% delle interfacce\end{tabular}} \\ \hline
+    \caption{Obiettivi e metriche di qualità per la funzionalità}
+    \label{tab:my-table}\\
+    \end{longtable}
+
+    \begin{center}
+        \centering
+        \textbf{Affidabilità}
+    \end{center}
+    \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD003 Test completi\\ sul codice -\\ {[}Maturità{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD003 Copertura \\ dei test -\\ {[}Maturità{]}\end{tabular} &
+          90\% - 100\% &
+          100\% \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Riuscire a coprire il codice con dei test è fondamentale per poter prevedere\\ ogni risultato proveniente dal codice. CoffeeCode preve di coprire con i\\ test almeno il 90\% del codice prodotto.\end{tabular}} \\ \hline
+        \begin{tabular}[c]{@{}c@{}}QoPD004 Individuazione\\ test falliti -\\ {[}Affidabilità{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD004 Densità\\ degli errori -\\ {[}Affidabilità{]}\end{tabular} &
+          0\% - 15\% &
+          0\% - 5\% \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per misurare l'attitudine del prodotto a evitare errori o anomalie verranno\\ osservati i numero di test non andati a buon fine, in particolare la soglia\\ di questi test deve rimanere almeno al di sotto del 15\%.\end{tabular}} \\ \hline
+        \caption{Obiettivi e metriche di qualità per l’affidabilità}
+        \label{tab:my-table}\\
+        \end{longtable}
+
+    \begin{center}
+        \centering
+        \textbf{Usabilità}
+    \end{center}
+    \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD005 Chiarezza\\ del comportamento -\\ {[}Comprensibilità{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD005 Documentazione\\ delle funzioni -\\ {[}Comprensibilità{]}\end{tabular} &
+          90\% - 100\% &
+          100\% \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per facilitare l'usabilità del prodotto almeno il 90\% delle funzioni\\ realizzate sarà documentato in modo da creare un manuale base\\ per la consultazione dell'utente.\end{tabular}} \\ \hline
+        \begin{tabular}[c]{@{}c@{}}QoPD006 Chiarimento \\ degli errori - \\ {[}Comprensibilità{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD006 Messaggi\\ di errore -\\ {[}Comprensibilità{]}\end{tabular} &
+          0\% - 10\% &
+          0\% - 5\% \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Descrivere in modo chiaro gli errori che si possono presentare\\ all'utente facilita la comprensione da parte di quest'ultimo, si\\ cercherà quindi di descrivere in modo chiaro gli errori tralasciandone\\ al massimo il 10\%.\end{tabular}} \\ \hline
+        \caption{Obiettivi e metriche di qualità per l’usabilità}
+        \label{tab:my-table}\\
+        \end{longtable}    
+
+
+    \begin{center}
+        \centering
+        \textbf{Efficienza}
+    \end{center}
+    \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD007 Velocità\\ di esecuzione -\\ {[}Comportamento temporale{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD008 Tempo medio\\ di risposta -\\ {[}Comportamento temporale{]}\end{tabular} &
+          10s &
+          5s \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Il team si prefigge come obiettivo quello di ridurre il più possibile\\ i tempi di risposta del software, ovviamente in questa prima fase i\\ valori di accettazione e desiderabili non sono del tutto affidabili data\\ la mancanza di test.\end{tabular}} \\ \hline
+        \caption{Obiettivi e metriche di qualità per l’usabilità}
+        \label{tab:my-table}\\
+        \end{longtable}
+        
+    \begin{center}
+        \centering
+        \textbf{Manutenibilità}
+    \end{center}
+    \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD08 Comprensione\\ del codice -\\ {[}Modifica{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD008 Commenti\\ sul codice -\\ {[}Modifica{]}\end{tabular} &
+          10\% o più &
+          20\% o più \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel\\ corso del ciclo di vita del prodotto, verranno inseriti dei commenti significati in\\ modo da comprendere cosa fa il codice commentato. Il numero di righe di commento\\ dovrà essere almeno il 10\% del codice totale.\end{tabular}} \\ \hline
+        \caption{Obiettivi e metriche di qualità per la manutenibilità}
+        \label{tab:my-table}\\
+        \end{longtable}
+
+    \begin{center}
+        \centering
+        \textbf{Portabilità}
+    \end{center}
+    \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD009 Supporto ai\\ diversi browser -\\ {[}Adattabilità{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD009 Browser\\ supportati -\\ {[}Adattabilità{]}\end{tabular} &
+          (Chrome,32) , (Firefox,27) &
+          \begin{tabular}[c]{@{}c@{}}(Chrome,32) , (Firefox,27) ,\\ (Opera,19) , (Explorer,10)\end{tabular} \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggiore portabilità del prodotto, il codice\\ verrà testato su diversi browser e versioni.\end{tabular}} \\ \hline
+        \caption{Obiettivi e metriche di qualità per la portabilità}
+        \label{tab:my-table}\\
+        \end{longtable}
+
+        \begin{center}
+          \centering
+          \textbf{Documentazione}
+      \end{center}
+
+      \begin{longtable}[c]{cccc}
+        \hline
+        Obiettivo &
+          Metrica &
+          Valore accettabile &
+          Valore desiderabili \\ \hline
+        \endhead
+        %
+        \begin{tabular}[c]{@{}c@{}}QoPD010 Leggibilità \\ del testo -\\ {[}Documentazione{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD010 Indice\\ di Gulpease -\\ {[}Documentazione{]}\end{tabular} &
+          60 &
+          70 \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}I documenti una volta redatti devono essere facilmente\\ leggibili in modo fluido per una maggior comprensione.\\ Per questo verrà utilizzato l'Indice di Gulpease con l'obiettivo\\ di raggiungere un punteggio compreso tra 60 e 70.\end{tabular}} \\ \hline
+        \begin{tabular}[c]{@{}c@{}}QoPD011 Correttezza\\ del testo -\\ {[}Documentazione{]}\end{tabular} &
+          \begin{tabular}[c]{@{}c@{}}MoPD011 Correttezza\\ lessicale/ortografica -\\ {[}Documentazione{]}\end{tabular} &
+          0 &
+          0 \\
+        \multicolumn{1}{l}{Descrizione:} &
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}All'interno dei documenti non dovranno esserci errori ortografici\\ o di sintassi, ciò comporterebbe a una minor comprensione del\\ testo e difficoltà nel capire le parti essenziali dei documenti.\end{tabular}}\\ \hline
+        \caption{Obiettivi e metriche di qualità per la documentazione}
+        \label{tab:my-table}\\
+        \end{longtable}
+
+
+\end{document}
