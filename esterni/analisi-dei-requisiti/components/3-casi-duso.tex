@@ -1,0 +1,32 @@
+\documentclass[../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Attori}
+\label{subs:attori}
+
+\subsubsection{Attori primari}
+\label{sssec:attori_primari}
+\begin{description}
+  \item[Utente generico:] È l'utilizzatore del prodotto, una persona autenticata e interessata ad interagire con Grafana per visualizzare le previsioni e/o le zone di criticità individuate dal plug-in;
+  \item[Utente amministratore:] È l'utente autenticato nel sistema nel ruolo di amministratore, che oltre ad avere la possibilità di intereagire con Grafana, gestisce il programma di addestramento per i modelli di machine learning e gestisce la configurazione del plug-in sul flusso di dati monitorati da Grafana.
+\end{description}
+
+\subsubsection{Attori secondari}
+\label{sssec:attori_secondari}
+\begin{description}
+  \item[Grafana:] Piattaforma che permette di essere estesa con dei plug-in, in essa infatti risiederà il nostro prodotto che permetterà all'utente di visualizzare le previsioni ottenute dal plug-in sviluppato dal team.
+\end{description}
+
+\subsection{Elenco dei casi d'uso}
+\label{subs:elenco_dei_casi_duso}
+
+\input{./casi-duso/uc1.tex}
+
+\input{./casi-duso/uc2.tex}
+
+\input{./casi-duso/uc3.tex}
+
+\input{./casi-duso/uc4.tex}
+
+\end{document}
