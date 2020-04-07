@@ -1,0 +1,65 @@
+\subsubsection{UC3 - Configurazione del plug-in}
+\label{sssec:uc3}
+\begin{description}
+  \item[Attore primario]: Utente amministratore.
+  \item[Attore secondario]: Grafana.
+  \item[Descrizione:] Configurazione del plug-in per ottenere delle previsioni.
+  \item[Precondizione:] L'amministratore ha abilitato il plug-in e si trova nella pagina di configurazione.
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore carica il file JSON contente i risultati dell'addestramento (UC3.1);
+    \item L'amministratore sceglie su quali nodi fare le previsioni (UC3.2);
+    \item L'amministratore scegli con quale modalità visualizzare i dati (UC3.3).
+  \end{enumerate}
+  \item[Postcondizione:] L'amministratore ha configurato il plug-in, il quale diventa pronto per essere avviato.
+\end{description}
+
+\subsubsection{UC3.1 - Caricamento risultati}
+\label{sssec:uc3.1}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'amministratore carica il file JSON contenente i risultati ottenuti dall'addestramento.
+  \item[Precondizione:] L'amministratore ha a disposizione un file con all'interno i risultati (UC1.5).
+  \item[Scenario principale:] L'amministratore carica il file JSON contenente i risultati ottenuti dall'addestramento.
+  \item[Postcondizione:] L'amministratore ha caricato il file contenente i risultati dell'addestramento avvenuto precedentemente.
+\end{description}
+
+\subsubsection{UC3.2 - Scelta dei nodi}
+\label{sssec:uc3.2}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'amministratore sceglie su che nodi effettuare la previsione.
+  \item[Precondizione:] L'amministratore ha il file di dati di addestramento (UC3.1).
+  \item[Scenario principale:] L'amministratore, data una lista di nodi, seleziona quali vuole aggiungere alla predizione.
+  \item[Postcondizione:] L'amministratore ha selezionato i nodi da aggiungere alla predizione.
+\end{description}
+
+\subsubsection{UC3.3 - Scelta della modalità di visualizzazione}
+\label{sssec:uc3.3}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'amministratore seleziona il tipo di visualizzazione.
+  \item[Precondizione:]  L'amministratore ha selezionato i nodi da utlizzare per la previsione (UC3.2).
+  \item[Scenario principale:] L'amministratore sceglie se visualizzare i dati generati dalla previsione per mezzo di un indicatore o di un grafico.
+  \item[Postcondizione:] L'amministratore ha scelto che modalità di visualizzazione usare.
+\end{description}
+
+\subsubsection{UC3.3.1 - Visualizzazione attraverso un indicatore}
+\label{sssec:uc3.3.1}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'indicatore viene scelto come modalità di visualizzazione dei dati.
+  \item[Precondizione:] L'amministratore ha a disposizione le due modalità.
+  \item[Scenario principale:] L'amministratore sceglie l'indicatore per visualizzare i dati generati dalla previsione.
+  \item[Postcondizione:] L'amministratore ha deciso di utilizzare l'indicatore.
+\end{description}
+
+\subsubsection{UC3.3.2 - Visualizzazione attraverso un grafico}
+\label{sssec:uc3.3.2}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] Il grafico viene scelto come modalità di visualizzazione dei dati.
+  \item[Precondizione:] L'amministratore ha a disposizione le due modalità.
+  \item[Scenario principale:] L'amministratore sceglie il grafico per visualizzare i dati generati dalla previsione.
+  \item[Postcondizione:] L'amministratore ha deciso di utilizzare il grafico.
+\end{description}
