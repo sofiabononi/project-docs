@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Documentazione}
 \subsubsection{Scopo}
-Lo scopo di questo processo è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero ciclo di vita del software.
+Lo scopo del processo di documentazione è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero ciclo di vita del software.
 
 \subsubsection{Aspettative}
 Le aspettative della corretta implementazione di questo processo sono:
@@ -19,8 +19,9 @@ Le aspettative della corretta implementazione di questo processo sono:
 Questa sezione descrive i dettagli su come deve essere redatta e verificata la documentazione. Al fine di ottenere l'uniformità e il rigore espositivo di tutti i documenti prodotti durante il ciclo di vita del software, ogni documento deve basarsi sulle regole descritte in questa sede.
 
 \subsubsection{Procedure}
+
 \paragraph{Ciclo di vita dei documenti}
-Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX sul quale basare la stesura di ogni documento. Questo assicura l'uniformità della struttura dei documenti, facilitando inoltre il versionamento. \\
+Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX sul quale basare la stesura di ogni documento. Questo assicura l'uniformità della struttura dei documenti, facilitando inoltre il \glossario{versionamento}. \\
 Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti attività:
 \begin{itemize}
   \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il Responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
@@ -29,7 +30,7 @@ Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti
 \end{itemize}
 
 \paragraph{Struttura dei documenti}
-Al fine di organizzare coerentemente e uniformamente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La repository contiene una \textit{directory} denominata \texttt{commons/} contenente:
+Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
 \begin{itemize}
   \item Il file \texttt{config.tex}, contenente le definizioni dei comandi \LaTeX;
   \item Il file \texttt{template.tex}, contenente il \textit{template} su cui si basano tutti i documenti;
@@ -56,11 +57,11 @@ Sono fornite anche altre informazioni essenziali, le quali sono:
 \subparagraph{Registro delle modifiche}
 Nella seconda pagina di ogni documento è presente il registro delle modifiche del documento, consistente in una tabella contentente, per ogni modifica:
 \begin{itemize}
-  \item \textbf{Versione}: versione del documento aggiornata alla modifica effettuata;
-  \item \textbf{Nominativo}: nome dell'autore della modifica;
-  \item \textbf{Ruolo}: ruolo dell'autore della modifica;
-  \item \textbf{Data}: data in cui è stata effettuata la modifica;
-  \item \textbf{Descrizione}: descrizione della modifica effettuata.
+  \item \textbf{Versione}: la versione del documento aggiornata alla modifica effettuata;
+  \item \textbf{Nominativo}: il nome dell'autore della modifica;
+  \item \textbf{Ruolo}: il ruolo dell'autore della modifica;
+  \item \textbf{Data}: la data in cui è stata effettuata la modifica;
+  \item \textbf{Descrizione}: la descrizione della modifica effettuata.
 \end{itemize}
 \subparagraph{Indice}
 L'indice riepiloga la struttura del documento. Ha una struttura standard: la numerazione ha struttura \begin{center}
@@ -107,6 +108,9 @@ I documenti prodotti appartengono a diverse categorie, secondo le quali sono cla
 \subparagraph{Documenti ufficiali}
 I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno.
 
+\subparagraph{Documenti ufficiosi}
+Il gruppo si avvale anche dello strumento Google Docs per la condivisione immediata di idee e proposte da parte dei componenti del gruppo. Questo meccanismo funge solo da supporto all'organizzazione delle idee del gruppo; nessun documento ufficioso deve essere utilizzato come documento ufficiale o come parte di esso.
+
 \subparagraph{Glossario}
 In accompagnamento ai documenti ufficiali viene fornito un Glossario, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il Glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
 Perché un termine venga incluso nel Glossario deve soddisfare almeno uno tra i seguenti requisiti:
@@ -120,7 +124,8 @@ Il Glossario possiede un'impostazione grafica identica agli altri documenti, con
 I termini appartenenti al Glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, al fine di evitare l'appesantimento visivo.
 
 \subparagraph{Verbali}
-I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o eserni, e quindi riferirsi a una riunione a cui partecipa anche l'azienda. La struttura del documento è identica a quella dei documenti ufficiali; ogni verbale è composto dai seguenti componenti:
+I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o eserni, e quindi riferirsi a una riunione a cui partecipa anche il proponente e/o il committente. La struttura del documento è identica a quella dei documenti ufficiali. \\
+Ogni verbale è composto dai seguenti componenti:
 \begin{itemize}
   \item \textbf{Informazioni generali}: informazioni dell'incontro, consistenti nella modalità, nella data e negli orari di inizio e fine, e i partecipanti all'incontro;
   \item \textbf{Ordine del giorno}: lista degli argomenti e dei temi di cui il gruppo ha deciso di discutere durante l'incontro;
@@ -133,14 +138,14 @@ La lettera di presentazione contiene anche l'elenco dei documenti rilasciati e i
 
 \paragraph{Norme tipografiche}
 \subparagraph{Nomi dei file}
-La nomenclatura di tutti i file segue la convenzione \textit{kebab case}, nota anche come \textit{lisp-case}. Le regole di questa convenzione sono le seguenti:
+La nomenclatura di tutti i file segue la convenzione \glossario{kebab case}, nota anche come \textit{lisp-case}. Le regole di questa convenzione sono le seguenti:
 \begin{itemize}
   \item Ogni file inizia con una lettera minuscola;
   \item Tra ogni parola viene inserito come separatore il tratto d'unione \textbf{-};
   \item In caso di presenza di apostrofo, esso verrà sostituito dal tratto d'unione;
   \item Le lettere accentate sono abolite, sostituite dalla semplice lettera senza accento.
 \end{itemize}
-L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali e tra la data e la versione. \\
+L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali e tra la data e la versione del documento. \\
 Tutti i nomi di file avranno quindi il seguente formato: \\ \begin{center}
   \centering
   \textbf{N-a-b-c[\_YYYY-MM-DD]\_vX.Y.Z.ext}
@@ -148,7 +153,7 @@ Tutti i nomi di file avranno quindi il seguente formato: \\ \begin{center}
 \begin{itemize}
   \item \textbf{N} è il numero di verbale nel caso in cui il documento sia un verbale; opzionalmente, può essere utilizzato per numerare ordinatamente i \textit{subfiles} di un determinato documento;
   \item Le parentesi quadre \textbf{[ ]} si applicano solo al caso dei verbali;
-  \item \textbf{a}, \textbf{b} e \textbf{c} sono parole singole. Il numero di parole singole non è limitato a tre ma si può aumentare o diminuire. Nel caso specifico dei verbali, la forma di questa porzione di nome è \begin{center}
+  \item \textbf{a}, \textbf{b} e \textbf{c} sono parole singole. Il numero di parole singole non è limitato a tre ma si può aumentare o diminuire. Nel caso specifico dei verbali, la forma di questa porzione di nome è \\ \begin{center}
     \centering
     \textbf{verbale-[interno/esterno]}
   \end{center};
@@ -170,10 +175,10 @@ Alcuni esempi di nomi di files legittimi sono quindi:
 \subparagraph{Stile del testo}
 Ogni diversa formattazione usata all'interno dei documenti ha un significato preciso, e ogni documento deve obbligatoriamente seguire questo stile. Gli stili sono:
 \begin{itemize}
-  \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana;
+  \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana non inclusi nel glossario;
   \item Utilizzo di testo in caratteri dattilografici per i nomi di file e delle \textit{directories}; queste ultime devono finire con il carattere barra \textbf{/};
-  \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi;
-  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiusola, per i termini appartenenti al Glossario;
+  \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi. Viene inoltre utilizzato per rimarcare concetti considerati importanti;
+  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario};
   \item Utilizzo di testo maiuscoletto per i nomi dei documenti all'interno dei documenti stessi.
 \end{itemize}
 
@@ -189,9 +194,10 @@ L'utilizzo di figure all'interno dei documenti è permesso; le immagini devono e
 Il logo del gruppo non segue queste regole, poiché non possiede né numero progressivo né descrizione.
 
 \subparagraph{Diagrammi UML}
-Tutti i diagrammi \glossario{UML} sono inseriti nei documenti come figure, e come tali figurano nell'Elenco delle Figure.
+Tutti i diagrammi UML sono inseriti nei documenti come figure, e come tali figurano nell'Elenco delle Figure.
 
 \subparagraph{Tabelle}
+L'utilizzo delle tabelle è permesso e incoraggiato nel caso in cui permettano una più facile visualizzazione di un insieme di dati. \\
 Le tabelle devono essere centrate nella pagina, ed essere seguite dalla seguente dicitura: \\ \begin{center}
   \centering
   \textbf{Tabella N: D}
@@ -205,15 +211,15 @@ La tabella del Registro delle modifiche non segue queste regole, poiché non pos
 \subparagraph{Formati comuni}
 I formati di data, ora e versione sono determinati e univoci per ogni documento. Nello specifico:
 \begin{itemize}
-  \item La data segue lo standard ISO 8601, e quindi è nel formato \\ \begin{center}
+  \item La data segue lo standard \textbf{ISO 8601}, e quindi è nel formato \\ \begin{center}
     \centering
     \textbf{YYYY-MM-DD}
   \end{center} dove:
   \begin{itemize}
     \item \textbf{YYYY} è l'anno, scritto per intero;
     \item \textbf{MM} è il mese, scritto per intero;
-    \item \textbf{DD} è il giorno, scritto per intero
-  \end{itemize};
+    \item \textbf{DD} è il giorno, scritto per intero;
+  \end{itemize}
   \item L'ora è nel formato \\ \begin{center}
   \centering
   \textbf{HH:MM}
@@ -223,6 +229,7 @@ I formati di data, ora e versione sono determinati e univoci per ogni documento.
     \item \textbf{MM} sono i minuti.
   \end{itemize}
 \end{itemize}
+
 \subparagraph{Sigle}
 All'interno della documentazione possono essere utilizzate delle sigle. Esse sono:
 \begin{itemize}
@@ -234,8 +241,12 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
     \item \textbf{PP}: Piano di Progetto;
     \item \textbf{PQ}: Piano di Qualifica;
     \item \textbf{Gl}: Glossario;
-    \item \textbf{MU}: Manuale Utente.
+    \item \textbf{MU}: Manuale Utente;
+    \item \textbf{MM}: Manuale Manutentore;
+    \item \textbf{ST}: Specifica Tecnica;
+    \item \textbf{DP}: Definizione di Prodotto.
   \end{itemize}
+
   \item \textbf{Fasi del progetto}:
   \begin{itemize}
   \item \textbf{RR}: Revisione dei Requisiti;
@@ -254,12 +265,12 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
   \end{itemize}
   \item \textbf{Altre sigle:}
   \begin{itemize}
-    \item \textbf{SVM}: \glossario{Support Vector Machines};
-    \item \textbf{RL}: \glossario{Regressione Lineare};
-    \item \textbf{ML}: \glossario{Machine Learning};
-    \item \textbf{JS}: \glossario{Javascript};
+    \item \textbf{SVM}: Support Vector Machines;
+    \item \textbf{RL}: Regressione Lineare;
+    \item \textbf{ML}: Machine Learning;
+    \item \textbf{JS}: JavaScript;
     \item \textbf{CLI}: \glossario{Command Line};
-    \item \textbf{IDE}: \glossario{Integrated Developement Environment};
+    \item \textbf{IDE}: Integrated Developement Environment;
     \item \textbf{ITS}: \glossario{Issue Tracking System}.
     %%% AGGIUNGERE QUI SIGLE %%%
   \end{itemize}
@@ -267,20 +278,33 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
 
 \subparagraph{Altre norme tipografiche}
 \subparagraph*{Elenchi}
-Gli elenchi presenti nella documentazione sono unicamente di tipo puntato, indicati cioè con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. \\
-Ogni parola appartenente a un elenco puntato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
+Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
+Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 %%% AGGIUNGERE QUI EVENTUALI ALTRE NORME TIPOGRAFICHE, OGNUNA CON UN subparagraph*
+
+\subsubsection{Strumenti}
+\paragraph{\LaTeX}
+Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
+\paragraph{Google Docs}
+Per la scrittura dei documenti ufficiosi viene utilizzato Google Docs. Questo strumento permette la condivisione istantanea e visualizzabile immediatamente da tutti i componenti di quanto viene scritto.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/docs.png}
+  \label{fig:github}
+  \caption{Google Docs visualizzato nel Browser.}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.2 - GESTIONE DELLA CONFIGURAZIONE %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gestione della configurazione}
 \subsubsection{Scopo}
-Lo scopo di questo processo è delineare le norme utili a predisporre il Workspace comune per il gruppo; esso definisce anzitutto tutto ciò che concerne il versionamento, comprese la memorizzazione e la manutenzione di quanto prodotto. Descrive inoltre la gestione delle attività che devono essere svolte durante il ciclo di vita del prodotto.
+Lo scopo di questo processo è delineare le norme utili a predisporre il \glossario{workspace} comune per il gruppo; esso definisce anzitutto tutto ciò che concerne il versionamento, comprese la memorizzazione e la manutenzione di quanto prodotto. Descrive inoltre la gestione delle attività che devono essere svolte durante il ciclo di vita del prodotto.
 
 \subsubsection{Versionamento}
-Ogni documento deve essere versionato, al fine di avere una cronologia delle modifiche e dell'importanza di queste sul contenuto del documento; fanno eccezione a questa regola i verbali, i quali per definizione non hanno bisogno di essere modificati dopo la stesura e la verifica, ma vanno direttamente approvati. Ad ogni versione del documento corrisponde una riga nel Registro delle modifiche. \\
-Ogni versione viene espressa nel seguente modo: \\ \begin{center}
+Ogni documento deve essere versionato, al fine di avere una cronologia delle modifiche e una stima dell'importanza di queste sul contenuto del documento; fanno eccezione a questa regola i verbali, i quali per definizione non hanno bisogno di essere modificati dopo la stesura e la verifica, ma vanno direttamente approvati. Ad ogni versione del documento corrisponde una riga nel Registro delle modifiche. \\
+La versione di un documento viene espressa nel seguente modo: \\ \begin{center}
   \centering
   \textbf{vX.Y.Z}
 \end{center} dove:
@@ -289,7 +313,7 @@ Ogni versione viene espressa nel seguente modo: \\ \begin{center}
   \begin{itemize}
     \item Inizia da 0;
     \item Viene incrementata dal Responsabile solo dopo l'approvazione del documento da parte sua;
-    \item La cifra massima coincide con il numero di Revisioni.
+    \item La cifra massima coincide con il numero di revisioni.
   \end{itemize}
   \item \textbf{Y}: indica una versione del documento ancora in fase di redazione ma comunque abbastanza stabile per poter essere verificato. L'incremento della cifra segue queste regole:
   \begin{itemize}
@@ -306,22 +330,22 @@ Ogni versione viene espressa nel seguente modo: \\ \begin{center}
 \end{itemize}
 
 \subsubsection{Repository}
-Una \textit{repository} è un ambiente in cui vengono memorizzati, mantenuti e versionati i file di un progetto software, durante il suo intero ciclo di vita. Il sistema di controllo che il gruppo utilizza è \glossario{Git}, e i file dell'intero progetto sono ospitati dalla piattaforma Github; viene inoltre utilizzato Git Commitizen per facilitare il controllo di quanto aggiunto o modificato di volta in volta sulla \textit{repository}.
+Una repository è un ambiente in cui vengono memorizzati, mantenuti e versionati i file di un progetto software, durante il suo intero ciclo di vita. Il sistema di controllo che il gruppo utilizza è \glossario{Git}, e i file dell'intero progetto sono ospitati dalla piattaforma \glossario{Github}; viene inoltre utilizzato \glossario{Git Commitizen} per facilitare il controllo di quanto aggiunto o modificato di volta in volta sulla repository.
 
 \paragraph{Struttura della repository e workflow}
-La struttura adottata sfrutta il meccanismo di \textit{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa \textit{repository}. \\
-La \textit{repository} utilizzata si suddivide nei seguenti \textit{branch}:
+La struttura adottata sfrutta il meccanismo di \glossario{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa repository. \\
+La repository utilizzata si suddivide nei seguenti \glossario{branch}:
 \begin{itemize}
   \item \texttt{master}: branch principale, sul quale vengono fatti le \glossario{major releases};
-  \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento riguardante le Norme di Progetto;
-  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento riguardante l'Analisi dei Requisiti;
-  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento Glossario;
-  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento riguardante il Piano di Progetto;
-  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento riguardante il Piano di Qualifica;
-  \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento riguardante lo Studio di Fattibilità;
+  \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Norme di Progetto};
+  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei Requisiti};
+  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario};
+  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto};
+  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica};
+  \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di Fattibilità};
   \item \texttt{verbali}:: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
 \end{itemize}
-Il workflow adottato è basato quindi su un principio della separazione dei documenti: questo, unito ai sistemi anti-collisione di git, permette che durante il periodo in cui un membro del gruppo è assegnato a un ruolo di redazione specifico, egli sia l'unico a lavorare su tale documento.
+Il \glossario{workflow} adottato è basato quindi su un principio della separazione dei documenti: questo, unito ai sistemi anti-collisione di git, permette che, durante il periodo in cui un membro del gruppo è assegnato a un ruolo di redazione specifico, egli sia l'unico a lavorare su tale documento.
 
 \subparagraph{Struttura dei branch}
 Ogni branch è costituito da file, cartelle e sotto-cartelle.
@@ -330,9 +354,9 @@ I file presenti in ogni branch hanno tipo fisso e predefinito; essi sono:
 \begin{itemize}
   \item File di configurazione di Github:
   \begin{itemize}
-    \item \texttt{.gitignore}: contiene la lista di file e directory spuri che possono essere presenti nelle \textit{repository} locali ma non nella \textit{repository} remota;
-    \item File \texttt{.yml}: contengono le istruzioni per l'esecuzione delle Github Actions;
-    \item \texttt{README.md}: file markdown contenente una breve descrizione della \textit{repository}.
+    \item \texttt{.gitignore}: contiene la lista di file e directory spuri che possono essere presenti nelle repository locali dei componenti del gruppo ma non nella repository remota;
+    \item File \texttt{.yml}: contengono le istruzioni per l'esecuzione delle \glossario{Github Actions};
+    \item \texttt{README.md}: file markdown contenente una breve descrizione della repository.
   \end{itemize}
   \item File di configurazione di Git Commitizen:
   \begin{itemize}
@@ -340,14 +364,14 @@ I file presenti in ogni branch hanno tipo fisso e predefinito; essi sono:
   \end{itemize}
   \item File di configurazione di \glossario{Visual Studio Code}
   \begin{itemize}
-    \item \texttt{.editorconfig}: contiene le impostazioni, definite dal gruppo, del Workspace di Visual Studio Code;
+    \item \texttt{.editorconfig}: contiene le impostazioni, definite dal gruppo, del workspace di Visual Studio Code;
     \item \texttt{settings.json}: contiene le impostazioni specifiche, definite dal gruppo, dell'editor Visual Studio Code;
-    \item \texttt{extensions.json}: contiene le estenzioni, consigliate per lo sviluppo del progetto, da includere in Visual Studio Code.
+    \item \texttt{extensions.json}: contiene le estensioni, consigliate per lo sviluppo del progetto, da includere in Visual Studio Code.
   \end{itemize}
   \item File di documentazione:
   \begin{itemize}
     \item File \texttt{.tex}: file \LaTeX contenenti il codice sorgente per la generazione dei documenti;
-    \item File \texttt{.png}: immagini che vengono incluse nei documenti.
+    \item File \texttt{.png} e \texttt{.jpg}: immagini che vengono incluse nei documenti.
   \end{itemize}
 \end{itemize}
 
@@ -357,8 +381,16 @@ Ogni branch presenta un insieme di cartelle predefinito:
 \item \texttt{.github/}: contiene i file propri di Github, tra cui i file \texttt{.yml} delle Github Actions;
   \item \texttt{.vscode/}: contiene i file di configurazione di Visual Studio Code;
   \item \texttt{commons/}: contiene i file template di \LaTeX;
-  \item \texttt{interni/}: contiene i documenti ad uso interno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, contenente i file sorgente \LaTeX dello specifico documento;
-  \item \texttt{esterni/}: contiene i documenti ad uso esterno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, contenente i file sorgente \LaTeX dello specifico documento;
+  \item \texttt{interni/}: contiene i documenti ad uso interno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, la quale a sua volta contiene:
+  \begin{itemize}
+  \item I file sorgente \LaTeX dello specifico documento;
+  \item Una cartella \texttt{components/}, contenente i subfiles del documento \LaTeX principale e una cartella \texttt{img/}, contenente le immagini incluse nel documento.
+  \end{itemize}
+  \item \texttt{esterni/}: contiene i documenti ad uso esterno. In ogni branch questa cartella contiene una sottocartella con lo stesso nome del branch, la quale a sua volta contiene:
+  \begin{itemize}
+  \item I file sorgente \LaTeX dello specifico documento;
+  \item Una cartella \texttt{components/}, contenente i subfiles del documento \LaTeX principale e una cartella \texttt{img/}, contenente le immagini incluse nel documento.
+  \end{itemize}
 \end{itemize}
 
 \paragraph{Strumenti}
@@ -371,7 +403,7 @@ La repository è ospitata dal servizio di \glossario{hosting} Github; per operar
   \item Visual Studio Code.
 \end{itemize}
 \subparagraph*{Portale Github.com}
-Il portale Github.com permette la consultazione immediata di quanto fatto e pubblicato, e la gestione delle Issues e delle Milestones.
+Il portale Github.com permette la consultazione immediata di quanto fatto e pubblicato, e la gestione delle \glossario{issues} e delle \glossario{milestones}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=10cm]{img/github.png}
@@ -380,21 +412,46 @@ Il portale Github.com permette la consultazione immediata di quanto fatto e pubb
 \end{figure}
 
 \subparagraph*{Git Commitizen}
-Per il \glossario{commit} delle modifiche ai file della repository viene utilizzato Git Commitizen tramite \glossario{Command Line}. Questo assicura l'uniformità dei commit e quindi una maggiore chiarezza di quanto viene versionato.
+Per il \glossario{commit} delle modifiche ai file della repository viene utilizzato Git Commitizen tramite Command Line, il quale assicura l'uniformità dei commit e quindi una maggiore chiarezza di quanto viene versionato. \\ Questo strumento permette di compilare in maniera guidata e uniforme il messaggio di commit, richiedendo nell'ordine:
+\begin{itemize}
+  \item Il tipo di commit che viene eseguito; questo può essere:
+  \begin{itemize}
+    \item \textbf{feat}: l'aggiunta di una nuova feature;
+    \item \textbf{fix}: il fix di un bug;
+    \item \textbf{docs}: un cambiamento riguardante esclusivamente la documentazione;
+    \item \textbf{style}: un cambiamento che non modifica il significato del codice, ad esempio piccoli cambi di formattazione;
+    \item \textbf{refactor}: un cambiamento nel codice che non risolve un bug e che non aggiunge una nuova feature;
+    \item \textbf{perf}: un cambiamento nel codice che migliora le performance;
+    \item \textbf{test}: l'aggiunta di test mancanti;
+    \item \textbf{chore}: uno o più cambiamenti al processo di build, a strumenti ausiliari o a librerie.
+  \end{itemize}
+  \item Quali sono i files della repository coinvolti nel cambiamento (opzionale);
+  \item Una descrizione breve del cambiamento, scritta in prima persona imperativo;
+  \item Una descrizione più lunga del cambiamento (opzionale);
+  \item Se il cambiamento fatto è importante o marginale (scelta sì/no);
+  \item Se il cambiamento coinvolge una o più issues aperte.
+\end{itemize}
 
 \subparagraph*{Visual Studio Code}
 Visual Studio Code è l'IDE che viene uniformemente usato da ogni componente del gruppo. Questo strumento software permette l'estensione delle funzionalità attraverso l'installazione di componenti aggiuntivi. Tra questi, due in particolare permettono di operare sulla repository:
 \begin{itemize}
   \item \textbf{Git Graph}: visualizzazione del grafo della repository e possibilità di svolgere azioni Git direttamente su di esso;
-  \item \textbf{GitHub Pull Requests}: strumento di revisione delle Pull Requests di Github.
+  \item \textbf{GitHub Pull Requests}: strumento di revisione delle \glossario{Pull Requests} di Github.
 \end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gitgraph.png}
+  \label{fig:github}
+  \caption{Estensione Git Graph nell'IDE Visual Studio Code.}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.3 - GESTIONE DELLA QUALITÀ %%% - %%% NECESSARIO PdQ %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gestione della qualità}
 \subsubsection{Scopo}
-Lo scopo di questo processo è quello di garantire che i prodotti software e i processi del ciclo di vita siano conformi ai requisiti concordati con il cliente, e che rispettino gli obiettivi di qualità.
+Lo scopo del processo di gestione della qualità è quello di garantire che i prodotti software e i processi del ciclo di vita siano conformi ai requisiti concordati con il cliente, e che rispettino gli obiettivi di qualità.
 \subsubsection{Aspettative}
 Le aspettative di questo processo sono le seguenti:
 \begin{itemize}
@@ -402,9 +459,23 @@ Le aspettative di questo processo sono le seguenti:
   \item Sviluppare un prodotto software di qualità, comprendente anche una documentazione completa e di facile fruizione;
 %%% DA AMPLIARE CON PdQ %%%
 \end{itemize}
-\subsubsection{Descrizione} %%% NECESSARIO PdQ
-\subsubsection{Attività}
-\subsubsection{Strumenti}
+\subsubsection{Descrizione}
+La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica}. In particolare, in tale documento:
+\begin{itemize}
+  \item Sono presentati gli standard di qualità utilizzati;
+  \item Di tali standard, sono individuati i processi di interesse per il particolare progetto;
+\end{itemize}
+Per ogni processo vengono descritti:
+\begin{itemize}
+  \item Le funzioni di tale processo;
+  \item Le metriche da utilizzare;
+  \item Gli obiettivi che tale processo persegue.
+\end{itemize}
+Per ogni prodotto, invece, vengono descritti:
+\begin{itemize}
+  \item Le metriche da utilizzare;
+  \item Gli obiettivi da perseguire.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%
 %%% 3.4 - VERIFICA %%%
@@ -412,7 +483,7 @@ Le aspettative di questo processo sono le seguenti:
 \subsection{Verifica}
 
 \subsubsection{Scopo}
-Lo scopo di questo processo è quello di verificare che il prodotto venga realizzato nel modo corretto, secondo delle regole stabilite. \\
+Lo scopo del processo di verifica è quello di verificare che il prodotto venga realizzato nel modo corretto, secondo delle regole stabilite. \\
 Il processo di verifica interessa sia il software che la documentazione prodotta, assicurando che il prodotto finale sia corretto e completo.
 
 \subsubsection{Aspettative}
@@ -443,8 +514,8 @@ L'attività di analisi si divide in due sottocategorie:
 L'analisi statica è l'attività di analisi che viene eseguita sul prodotto senza il bisogno che questo venga eseguito. Essa valuta la presenza o assenza di errori e/o difetti, la conformità alle regole definite e la coesione dei componenti. \\
 L'analisi statica si divide in due tipologie:
 \begin{itemize}
-  \item \textbf{Walkthrough}: i componenti del gruppo analizzano il prodotto nella sua interezza alla ricerca di difetti e di inconformità con le regole prescritte. Questa tecnica verrà utilizzata più intensamente durante l'inizio del progetto, per lasciare il tempo ai vari componenti di familizzare con le norme prescritte. Durante questa attività viene stipulata una lista di controllo contenente gli errori trovati;
-  \item \textbf{Inspection}: questa tipologia di analisi statica viene eseguita dal singolo Verificatore, che provvederà a ricercare gli errori segnalati nella lista di controllo all'interno di quanto prodotto; è quindi un'analisi più precisa e mirata agli errori che vengono più comunemente commessi.
+  \item \textbf{\glossario{Walkthrough}}: i componenti del gruppo analizzano il prodotto nella sua interezza alla ricerca di difetti e di inconformità con le regole prescritte. Questa tecnica verrà utilizzata più intensamente durante l'inizio del progetto, per lasciare il tempo ai vari componenti di familizzare con le norme prescritte. Durante questa attività viene stipulata una lista di controllo contenente gli errori trovati;
+  \item \textbf{\glossario{Inspection}}: questa tipologia di analisi statica viene eseguita dal singolo verificatore, che provvederà a ricercare gli errori segnalati nella lista di controllo all'interno di quanto prodotto; è quindi un'analisi più precisa e mirata agli errori che vengono più comunemente commessi.
 \end{itemize}
 Segue la lista di controllo parziale, contenente gli errori più comuni finora trovati. Questa lista verrà possibilmente ampliata al progredire degli eventuali errori trovati.
 
@@ -470,15 +541,47 @@ Elenchi                           & \begin{itemize}
 \subparagraph{Analisi Dinamica}
 L'analisi dinamica è la tipologia di analisi che viene eseguita sul prodotto eseguendolo. Essa viene effettuata tramite dei test, che controllano il corretto funzionamento del prodotto.
 
-\paragraph{Test} %%% NECESSARIO PdQ %%%
-\subsubsection{Strumenti}
+\paragraph{Test}
+L'attività di test fa parte dell'analisi dinamica; i test hanno come scopo principale la verifica del corretto funzionamento del codice, individuando eventuali errori di funzionamento. \\
+Per la corretta implementazione dei test, essi devono essere automatizzati e ripetibili; devono essere definiti a tale scopo:
+\begin{itemize}
+  \item L'ambiente di sviluppo, ossia il sistema sul quale viene eseguito il test;
+  \item Lo stato iniziale;
+  \item I dati di input;
+  \item I dati di output attesi;
+  \item Le istruzioni che vengono eseguite.
+\end{itemize}
+I test appartengono a diverse categorie; essi possono essere infatti:
+\begin{itemize}
+  \item \textbf{Test di unità};
+  \item \textbf{Test di regressione};
+  \item \textbf{Test di integrazione};
+  \item \textbf{Test di sistema};
+  \item \textbf{Test di accettazione}.
+\end{itemize}
+
+\subparagraph*{Test di unità}
+I test di unità sono quelli più piccoli in granularità: un test di unità testa infatti il funzionamento di una componente individuale del prodotto. Essendo queste ultime in gran numero, è opportuno sfruttare al massimo il parallelismo, in modo da eseguirne un gran numero contemporaneamente; per lo stesso motivo, il test delle unità più semplici è a cura dello stesso programmatore.
+
+\subparagraph*{Test di regressione}
+Il test di regressione comprende tutti i test che accertano che la modifica di un componente del sistema non vada a influenzare, causando errori, alcuna altra parte in relazione con essa. Essi vengono quindi eseguiti ogni volta che un'unità viene modificata, per assicurare che il cambiamento non induca una regressione di quanto fatto. \\
+A questo scopo, vengono quindi rieseguiti tutti i test delle componenti interessate.
+
+\subparagraph*{Test di integrazione}
+I test di integrazione testano il sistema dopo l'assemblamento di più componenti sviluppati in parallelo; essi assicurano quindi il corretto funzionamento di tutte queste componenti nel loro insieme.
+
+\subparagraph*{Test di sistema}
+Attraverso i test di sistema, l'intero sistema viene testato nella sua interezza, una volta cioè integrati tutti i componenti.
+
+\subparagraph*{Test di accettazione}
+I test di accettazione corrispondono con i test di sistema, con la differenza che essi vengono eseguiti con il supervisionamento del committente per dimostrare la conformità del prodotto con quanto richiesto; essi quindi accertano la copertura dei requisiti software concordati con il proponente.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.5 - VALIDAZIONE %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Validazione}
 \subsubsection{Scopo}
-Lo scopo di questo processo è determinare se il prodotto soddisfa i requisiti concordati con il proponente e l'utilizzo specifico per cui è stato creato. Il processo di validazione esegue quindi il test completo sul sistema, assicurando infine che le necessità del cliente siano state pienamente soddisfatte. \\ Il processo di validazione viene effettuato dopo il processo di verifica, per avere la certezza che tutte le componenti del sistema possano essere verificate.
+Lo scopo del processo di validazione è determinare se il prodotto soddisfa i requisiti concordati con il proponente e l'utilizzo specifico per cui è stato creato. Questo processo esegue quindi il test completo sul sistema, assicurando infine che le necessità del cliente siano state pienamente soddisfatte. \\ Il processo di validazione viene effettuato dopo il processo di verifica, per avere la certezza che tutte le componenti del sistema possano essere verificate.
 \subsubsection{Attività}
 Il processo di validazione consiste delle seguenti attività:
 \begin{itemize}
@@ -494,5 +597,4 @@ Il processo di validazione consiste delle seguenti attività:
     \item Se lo svoglimento dell'attività presenta problemi o inconformità con le richieste del cliente, questi devono essere risolti e, successivamente, i risultati devono essere consegnati al proponente.
   \end{itemize}
 \end{itemize}
-%%% QUESTA SEZIONE È COMPLETA MA SI PUÒ ESPANDERE %%%
 \end{document}

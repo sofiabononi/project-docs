@@ -66,7 +66,7 @@ Questo documento contiene le seguenti sezioni chiave:
   \item \textbf{Qualità di processo}: sono qui identificati dei processi scelti dagli standard, stabiliti degli obiettivi, ideate delle strategie per attuarli e, infine, individuate e documentate le metriche per misurarli;
   \item \textbf{Qualità di prodotto}: sono qui identificate le caratteristiche più rilevanti del prodotto. Vengono quindi definiti degli obiettivi per raggiungerne lo sviluppo e delle metriche per misurarli;
   %%% QUESTO È DA AGGIUNGERE NEL PdQ %%%
-  \item \textbf{Specifiche dei test}: è qui definito un insieme di test a cui sottoporre il prodotto per garantire il soddisfacimento dei requisiti;
+  \item \textbf{Specifiche dei test}: è qui definito un insieme di \glossario{test} a cui sottoporre il prodotto per garantire il soddisfacimento dei requisiti;
   \item \textbf{Standard di qualità}: vengono qui elencati e descritti gli standard ISO di qualità scelti dal gruppo;
   \item \textbf{Resoconto attività di verifica}: vengono qui resi noti i risultati dei test relativi al periodo di revisione dei documenti e dei requisiti, ottenuti mediante l'utilizzo delle metriche esposte nel documento;
   \item \textbf{Valutazioni per il miglioramento}: questa sezione elenca i problemi riscontrati nel corso del progetto.
@@ -142,8 +142,7 @@ Il documento corrispondente conterrà quindi:
 L'aspettativa di questo processo coincide con la creazione del documento \textsc{Analisi dei Requisiti}, il quale contiene appunto i requisiti richiesti dal proponente per la realizzazione del progetto.
 
 \subparagraph{Classificazione dei casi d'uso}
-I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica:
-
+I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica: \\
 \begin{center}
   \centering
   \textbf{UC[C].[CsC]}
@@ -159,7 +158,7 @@ Ogni caso d'uso deve contenere i seguenti campi:
 \end{itemize}
 
 \subparagraph{Classificazione dei requisiti}
-Anche i requisiti sono identificati secondo uno schema univoco; questo è così composto:
+Anche i requisiti sono identificati secondo uno schema univoco; questo è così composto: \\
 \begin{center}
   \centering
   \textbf{R[P]-[T]-[I]}
@@ -179,7 +178,7 @@ Anche i requisiti sono identificati secondo uno schema univoco; questo è così 
     \item \textbf{Q}: qualitativo;
     \item \textbf{V}: vincolo.
   \end{itemize}
-  \item \textbf{I}: indica l'identificativo del requisito nella forma
+  \item \textbf{I}: indica l'identificativo del requisito nella forma \\
   \begin{center}
     \centering
     \textbf{codicePadre.codiceFiglio}
@@ -192,11 +191,34 @@ Lo scopo di questa attività è quello di definire le caratteristiche del prodot
 \subparagraph{Aspettative}
 L'aspettativa di questa attività coincide con la realizzazione dell'architettura del sistema.
 \subparagraph{Descrizione}
-%%% IN ATTESA DELL'AdR O DI PARLARNE %%%
+Questa attività si divide nelle seguenti parti:
+\begin{itemize}
+  \item \textbf{\glossario{Technology Baseline}};
+  \item \textbf{\glossario{Product Baseline}}.
+\end{itemize}
+\subparagraph*{Technology Baseline}
+La Technology Baseline contiene:
+\begin{itemize}
+  \item Le specifiche della progettazione del prodotto;
+  \item I \glossario{diagrammi UML} utilizzati per la realizzazione dell'architettura;
+  \item I test di verifica;
+  \item Le tecnologie utilizzate.
+\end{itemize}
+I diagrammi UML consistono in diagrammi utilizzati per rendere più chiare le scelte progettuali; questi sono divisi in:
+\begin{itemize}
+  \item \textbf{Diagrammi delle classi}: rappresentano gli oggetti del sistema e le relazioni che sussistono tra essi;
+  \item \textbf{Diagrammi dei package}: rappresentano le dipendenze tra classi raggruppate in package;
+  \item \textbf{Diagrammi di attività}: descrivono un processo;
+  \item \textbf{Diagrammi di sequenza}: descrivono una sequenza di processi.
+\end{itemize}
+
+\subparagraph*{Product Baseline}
+La Product Baseline consiste nella specifica della progettazione nel dettaglio, e definisce i test necessari per la verifica.
+
 \paragraph{Codifica}
 \subparagraph{Scopo}
-Lo scopo di questa attività è quella di forire le regole per la scrittura del codice Javascript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei \glossario{Programmatori}, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
-Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a Javascript.
+Lo scopo di questa attività è quella di forire le regole per la scrittura del codice JavaScript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei \glossario{Programmatori}, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
+Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a JavaScript.
 \subparagraph{Aspettative}
 Le aspettative di questo processo sono:
 \begin{itemize}
@@ -246,7 +268,7 @@ Non è richiesto l'utilizzo di spazi precedenti e conseguenti agli operatori; è
 Tutti i capo riga dovranno essere LF (line feed); l'utilizzo di CRLF non è ammesso, poiché non riconosciuto da sistemi operativi diversi da Microsoft Windows.
 
 \subparagraph*{Punto e virgola}
-Ogni \textit{statement} deve finire con il carattere punto e virgola \textbf{;}. Sebbene l'utilizzo di questi sia opzionale in linguaggio Javascript, questa regola permette una comprensione più chiara degli \textit{statements}.
+Ogni \textit{statement} deve finire con il carattere punto e virgola \textbf{;}. Sebbene l'utilizzo di questi sia opzionale in linguaggio JavaScript, questa regola permette una comprensione più chiara degli \textit{statements}.
 
 \subparagraph*{Impostazione dei blocchi}
 I blocchi di codice devono seguire le seguenti regole:
