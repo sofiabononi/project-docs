@@ -1,14 +1,12 @@
 \subsubsection{UC13 - Visualizzazione messaggio di errore di tipo di visualizzazione non definita}
 \label{sssec:uc13}
 \begin{description}
+	\item[Attore primario:] Utente amministratore.
+	\item[Precondizione:] L'amministratore ha caricato il plug-in(UC3) senza aver segnato il tipo di visualizzazione da usare;
+	\item[Scenario Principale:] L'utente visualizza il messaggio di errore "visualizzazione non definita" impedendo il funzionamento del plug-in (UC7).
+	\item[Postcondizione:]
 	\begin{enumerate}
-		\item[Attore primario:] Utente amministratore.
-		\item[Precondizione:] L'amministratore ha caricato il plug-in(UC3) senza aver segnato il tipo di visualizzazione da usare.
-		\item[Scenario Principale:] L'utente visualizza il messaggio di errore "visualizzazione non definita" impedendo il funzionamento del plug-in (UC7).
-		\item[Postcondizione:]
-		\begin{enumerate}
-			\item L'utente visualizza il messaggio di errore "visualizzazione non definita" .
-			\item Il plug-in non entra in funzione.
-		\end{enumerate}
+		\item L'utente visualizza il messaggio di errore "visualizzazione non definita";
+		\item Il plug-in non entra in funzione.
 	\end{enumerate}
 \end{description}

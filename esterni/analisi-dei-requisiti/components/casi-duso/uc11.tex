@@ -1,14 +1,12 @@
 \subsubsection{UC11 - Visualizzazione messaggio di errore collegamento nodo}
 \label{sssec:uc11}
 \begin{description}
+	\item[Attore primario:] Utente amministratore.
+	\item[Precondizione:] L'amministratore ha configurato il plug-in(UC3) senza aver collegato nessun nodo valido.
+	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato" impedendo il funzionamento del plug-in(UC3.2) .
+	\item[Postcondizione:]
 	\begin{enumerate}
-		\item[Attore primario:] Utente amministratore.
-		\item[Precondizione:] L'amministratore ha configurato il plug-in(UC3) senza aver collegato nessun nodo valido.
-		\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato" impedendo il funzionamento del plug-in(UC3.2) .
-		\item[Postcondizione:]
-		\begin{enumerate}
-			\item L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato" .
-			\item Il pannello selezionato non viene eliminato.
-		\end{enumerate}
+		\item L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato";
+		\item Il pannello selezionato non viene eliminato.
 	\end{enumerate}
 \end{description}

@@ -1,18 +1,16 @@
 \subsubsection{UC8 - Visualizzazione messaggio di errore invalidazione dati file di addestramento}
 \label{sssec:uc8}
 \begin{description}
+	\item[Attore primario:] Utente amministratore.
+	\item[Precondizione:]
 	\begin{enumerate}
-		\item[Attore primario:] Utente amministratore.
-		\item[Precondizione:]
-		\begin{enumerate}
-			\item L'amministratore ha caricato i dati necessari per l'addestramento in un formato non valido(UC1.1).
-			\item L'amministratore ha avviato l'addestramento del predittore in Grafana(UC1).
-		\end{enumerate}
-		\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento" impedendo l'entrata a regime dell'addestramento.
-		\item[Postcondizione:]
-		\begin{enumerate}
-			\item L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento".
-			\item L'addestramento non entra in funzione.
-		\end{enumerate}
+		\item L'amministratore ha caricato i dati necessari per l'addestramento in un formato non valido(UC1.1);
+		\item L'amministratore ha avviato l'addestramento del predittore in Grafana(UC1).
+	\end{enumerate}
+	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento" impedendo l'entrata a regime dell'addestramento.
+	\item[Postcondizione:]
+	\begin{enumerate}
+		\item L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento";
+		\item L'addestramento non entra in funzione.
 	\end{enumerate}
 \end{description}
