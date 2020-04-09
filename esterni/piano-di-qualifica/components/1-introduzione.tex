@@ -14,19 +14,17 @@ Per raggiungere l'obiettivo prefissato verranno svolte continuamente verifiche s
 
 \subsection{Scopo del prodotto}%
 \label{sub:scopo_del_prodotto}
-Lo scopo del prodotto è la realizzazione di due \glossario{plug-in}, in \glossario{Javascript}, per ottenere delle elaborazioni su il flusso di dati raccolti dai sistemi dell’azienda,
-per poter poi prevedere i loro stati futuri così da inviare possibile segnalazioni o allarmi agli operatori del servizio cloud e alla linea di produzione del software.
-In particolare le previsioni che si desiderano ottenere sono di due tipi:
-\begin{itemize}
-    \item ”Classificazioni”: per valutare il gruppo di appartenenza degli eventi dei dati ”\glossario{predittori}”;
-    \item ”Regressioni”: nel caso in cui il valore cercato sia numerico e con campo continuo. 
-\end{itemize}
-I due plug-in devono estendere lo strumento di monitoraggio dei dati in \glossario{Grafana} applicando il \glossario{Machine Learning} attraverso le tecniche di 
-\glossario{Support Vector Machine} e di \glossario{Regressione Lineare} utilizzate per la predizione su dati.
+Lo scopo del prodotto è la realizzazione di un \glossario{plug-in}, scritto in linguaggio \glossario{Javascript}, per lo strumento \glossario{open source} \glossario{Grafana},
+che applichi le tecniche di \glossario{Machine Learning} della \glossario{Regressione Lineare} e del \glossario{Support Vector Machine} a un flusso di dati.
+Questo plug-in provvederà quindi a svolgere un'analisi sui dati e da questi, fornire una predizione al fine di monitorare la \glossario{liveliness} del sistema e di consigliare 
+interventi alla linea di produzione del software tramite specifici \glossario{alert}.
+Prima della realizzazione di tale plug-in, si dovrà sviluppare un programma comprendente un'interfaccia web, attraverso la quale verrà eseguito l'\glossario{addestramento} necessario al corretto
+funzionamento degli algoritmi di Machine Learning.
+I risultati ottenuti dovranno poi essere visualizzati, in forma di grafico, in una \glossario{dashboard} sulla piattaforma Grafana.
 
 \subsection{Glossario}%
 \label{sub:glossario}
-All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario} che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una sottolineatura e una G a pedice a fianco del termine.
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textit{Glossario v1.0.0}, che conterrà tali termini con il loro significato specifico. Per segnalare che il termine del testo è presente all'interno del glossario verrà segnalato con una sottolineatura e una G maiuscola come pedice a fianco del termine.
 
 \subsection{Riferimenti}%
 \label{sub:riferimenti}
