@@ -59,7 +59,7 @@ Il prodotto deve quindi fornire funzioni adeguate ed affidabili che siano in gra
     \item \textbf{QoPD001 Rispetto dell'implementazione funzionale - [Adeguatezza]}: realizzare lo stesso numero di funzioni ricavate dall'analisi iniziale;
         \begin{itemize}
             \item \textbf{Metrica di riferimento}: MoPD001;
-            \item \textbf{Valore accettabile}: discostamento, in negati o in positivo, di al più 2 funzioni;
+            \item \textbf{Valore accettabile}: discostamento, in negativo o in positivo, di al più 2 funzioni;
             \item \textbf{Valore desiderabile}: 0.
         \end{itemize}
     \item \textbf{QoPD002 Rispetto delle interfacce - [Interoperabilità]}: realizzare le interfacce del progetto come preventivato nell'analisi iniziale.
@@ -187,7 +187,7 @@ La portabilità è capacità del prodotto software di essere trasferito e implem
 \label{sub:obiettivi}
 \begin{itemize}
     \item \textbf{QoPD009 Supporto ai diversi browser - [Adattabilità]}: riuscire ad adattare l'applicazione web di addestramento ai diversi browser e alle diverse versioni di essi per eseguire tutte le funzioni del prodotto.
-        \\ In questo caso non ci saranno valori accettabili o desiderabili ma due diverse liste di browser da supportare, la lista minima accettabile con il numero minimo di browser da supportare e la lista minima desiderabile con i browser minimi da supportare per considera l'obiettivo raggiunto con la qualità desiderabile.
+        \\ In questo caso non ci saranno valori accettabili o desiderabili ma due diverse liste di browser da supportare, la lista minima accettabile con il numero minimo di browser da supportare e la lista minima desiderabile con i browser minimi da supportare per considerare l'obiettivo raggiunto con la qualità desiderabile.
         Ogni Browser viene identificato attraverso la dicitura: \textbf{(nome browser,versione browser)}.
         \begin{itemize}
             \item \textbf{Metrica di riferimento}: MoPD009;
@@ -248,7 +248,7 @@ Per ogni obiettivo viene indicato:
     Obiettivo &
       Metrica &
       Valore accettabile &
-      Valore desiderabili \\ \hline
+      Valore desiderabile \\ \hline
     \endhead
     %
     \begin{tabular}[c]{@{}c@{}}QoPD001 Rispetto\\ dell’implementazione funzionale - \\ {[}Adeguatezza{]}\end{tabular} &
@@ -276,7 +276,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD003 Test completi\\ sul codice -\\ {[}Maturità{]}\end{tabular} &
@@ -304,7 +304,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD005 Chiarezza\\ del comportamento -\\ {[}Comprensibilità{]}\end{tabular} &
@@ -333,7 +333,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD007 Velocità\\ di esecuzione -\\ {[}Comportamento temporale{]}\end{tabular} &
@@ -355,7 +355,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD08 Comprensione\\ del codice -\\ {[}Modifica{]}\end{tabular} &
@@ -363,7 +363,7 @@ Per ogni obiettivo viene indicato:
           10\% o più &
           20\% o più \\
         \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel\\ corso del ciclo di vita del prodotto, verranno inseriti dei commenti significati in\\ modo da comprendere cosa fa il codice commentato. Il numero di righe di commento\\ dovrà essere almeno il 10\% del codice totale.\end{tabular}} \\ \hline
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel\\ corso del ciclo di vita del prodotto, verranno inseriti dei commenti significativi in\\ modo da comprendere cosa fa il codice commentato. Il numero di righe di commento\\ dovrà essere almeno il 10\% del codice totale.\end{tabular}} \\ \hline
         \caption{Obiettivi e metriche di qualità per la manutenibilità}
         \label{tab:my-table}\\
         \end{longtable}
@@ -377,7 +377,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD009 Supporto ai\\ diversi browser -\\ {[}Adattabilità{]}\end{tabular} &
@@ -400,7 +400,7 @@ Per ogni obiettivo viene indicato:
         Obiettivo &
           Metrica &
           Valore accettabile &
-          Valore desiderabili \\ \hline
+          Valore desiderabile \\ \hline
         \endhead
         %
         \begin{tabular}[c]{@{}c@{}}QoPD010 Leggibilità \\ del testo -\\ {[}Documentazione{]}\end{tabular} &
@@ -414,7 +414,7 @@ Per ogni obiettivo viene indicato:
           0 &
           0 \\
         \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}All'interno dei documenti non dovranno esserci errori \\ ortografici, di sintassi o di mancanza del rispetto delle \\  norme interne, ciò comporterebbe a una minor comprensione del\\ testo e difficoltà nel capire le parti essenziali dei documenti.\end{tabular}}\\ \hline
+          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}All'interno dei documenti non dovranno esserci errori \\ ortografici, di sintassi o di mancanza del rispetto delle \\  norme interne, ciò comporterebbe una minor comprensione del\\ testo e difficoltà nel capire le parti essenziali dei documenti.\end{tabular}}\\ \hline
         \caption{Obiettivi e metriche di qualità per la documentazione}
         \label{tab:my-table}\\
         \end{longtable}
