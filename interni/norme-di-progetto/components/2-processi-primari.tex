@@ -127,7 +127,7 @@ Il processo di sviluppo si articola nelle seguenti attività, le quali corrispon
 \paragraph{Analisi dei requisiti}
 
 \subparagraph{Scopo}
-Lo scopo dell'\textsc{Analisi dei Requisiti}, redatto dagli Analisti, definisce e quindi elenca tutti i requisiti del capitolato. Questi vengono estrapolati da diverse fonti:
+Lo scopo dell'\textsc{Analisi dei Requisiti}, redatto dagli analisti, definisce e quindi elenca tutti i requisiti del capitolato. Questi vengono estrapolati da diverse fonti:
 \begin{itemize}
   \item Capitolato d'appalto e relativo approfondimento;
   \item Riunioni esterne con il proponente;
@@ -135,7 +135,9 @@ Lo scopo dell'\textsc{Analisi dei Requisiti}, redatto dagli Analisti, definisce 
 \end{itemize}
 Il documento corrispondente conterrà quindi:
 \begin{itemize}
-  \item %%% IN ATTESA DELL'AdR %%%
+  \item La descrizione generale del prodotto;
+  \item I casi d'uso;
+  \item Il tracciamento dei requisiti individuati a partire dalle richieste del cliente e dai casi d'uso.
 \end{itemize}
 
 \subparagraph{Aspettative}
@@ -145,38 +147,45 @@ L'aspettativa di questo processo coincide con la creazione del documento \textsc
 I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica: \\
 \begin{center}
   \centering
-  \textbf{UC[C].[CsC]}
+  \textbf{UC[P].[F].[FF].[FFF]}
 \end{center} dove:
 \begin{itemize}
   \item \textbf{UC}: indica che il codice è un caso d'uso;
   \item \textbf{C}: consistente in un numero progressivo, identifica il caso;
-  \item \textbf{CsC}: consistente in un numero progressivo, identifica il sottocaso.
+  \item \textbf{F}, \textbf{FF} e \textbf{FFF}: consistenti ognuno di un numero progressivo, identificano il sottocaso.
 \end{itemize}
-Ogni caso d'uso deve contenere i seguenti campi:
+Ogni caso d'uso è formato, non necessariamente integralmente, dai seguenti campi:
 \begin{itemize}
-  \item %%% IN ATTESA DELL'AdR %%%
+  \item \textbf{\glossario{Diagrammi UML}}: diagrammi esplicativi realizzati in linguaggio UML2.0;
+  \item \textbf{Attori primari}: attori primari del caso d'uso;
+  \item \textbf{Attori secondari}: attori secondari del caso d'uso;
+  \item \textbf{Descrizione}: descrizione del caso d'uso;
+  \item \textbf{Precondizione}: condizioni che devono essere soddisfatte perché gli eventi del caso d'uso si possano verificare;
+  \item \textbf{Scenario principale}: flusso degli eventi del caso d'uso;
+  \item \textbf{Postcondizione}: condizioni che devono essere soddisfatte dopo il verificarsi degli eventi;
+  \item \textbf{Estensioni}: estensioni coinvolte.
 \end{itemize}
 
 \subparagraph{Classificazione dei requisiti}
 Anche i requisiti sono identificati secondo uno schema univoco; questo è così composto: \\
 \begin{center}
   \centering
-  \textbf{R[P]-[T]-[I]}
+  \textbf{R[T]-[P]-[I]}
 \end{center} dove:
 \begin{itemize}
   \item \textbf{R}: indica che il codice è un requisito;
-  \item \textbf{P}: indica la priorità del requisito. Questa può essere:
-  \begin{itemize}
-    \item \textbf{A}: indica un requisito obbligatorio poiché necessario;
-    \item \textbf{B}: indica un requisito desiderabile, ma non necessario;
-    \item \textbf{C}: indica un requisito opzionale o contrattabile in corso d'opera del progetto.
-  \end{itemize}
   \item \textbf{T}: indica la tipologia del requisito. Il requisito può essere:
   \begin{itemize}
     \item \textbf{F}: funzionale;
     \item \textbf{P}: prestazionale;
     \item \textbf{Q}: qualitativo;
     \item \textbf{V}: vincolo.
+  \end{itemize}
+  \item \textbf{P}: indica la priorità del requisito. Questa può essere:
+  \begin{itemize}
+    \item \textbf{O}: indica un requisito obbligatorio poiché necessario;
+    \item \textbf{D}: indica un requisito desiderabile, ma non necessario;
+    \item \textbf{F}: indica un requisito opzionale o contrattabile in corso d'opera del progetto.
   \end{itemize}
   \item \textbf{I}: indica l'identificativo del requisito nella forma \\
   \begin{center}
@@ -200,7 +209,7 @@ Questa attività si divide nelle seguenti parti:
 La Technology Baseline contiene:
 \begin{itemize}
   \item Le specifiche della progettazione del prodotto;
-  \item I \glossario{diagrammi UML} utilizzati per la realizzazione dell'architettura;
+  \item I diagrammi UML utilizzati per la realizzazione dell'architettura;
   \item I test di verifica;
   \item Le tecnologie utilizzate.
 \end{itemize}
@@ -209,7 +218,7 @@ I diagrammi UML consistono in diagrammi utilizzati per rendere più chiare le sc
   \item \textbf{Diagrammi delle classi}: rappresentano gli oggetti del sistema e le relazioni che sussistono tra essi;
   \item \textbf{Diagrammi dei package}: rappresentano le dipendenze tra classi raggruppate in package;
   \item \textbf{Diagrammi di attività}: descrivono un processo;
-  \item \textbf{Diagrammi di sequenza}: descrivono una sequenza di processi.
+  \item \textbf{Diagrammi di sequenza}: descrivono una sequenza di processi. 
 \end{itemize}
 
 \subparagraph*{Product Baseline}
