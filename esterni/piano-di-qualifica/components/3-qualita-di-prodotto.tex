@@ -176,25 +176,8 @@ La manutenibilità è la capacità del prodotto di essere modificato in modo da 
 \subsubsection{Portabilità}%
 \label{sub:portabilita}
 La portabilità è capacità del prodotto software di essere trasferito e implementato da un ambiente a un altro.
-
-\paragraph{Metriche}
-\label{sub:metriche}
-\begin{itemize}
-    \item MoPD009 Browser supportati - [Adattabilità].
-\end{itemize}
-
-\paragraph{Obiettivi}
-\label{sub:obiettivi}
-\begin{itemize}
-    \item \textbf{QoPD009 Supporto ai diversi browser - [Adattabilità]}: riuscire ad adattare l'applicazione web di addestramento ai diversi browser e alle diverse versioni di essi per eseguire tutte le funzioni del prodotto.
-        \\ In questo caso non ci saranno valori accettabili o desiderabili ma due diverse liste di browser da supportare, la lista minima accettabile con il numero minimo di browser da supportare e la lista minima desiderabile con i browser minimi da supportare per considerare l'obiettivo raggiunto con la qualità desiderabile.
-        Ogni Browser viene identificato attraverso la dicitura: \textbf{(nome browser,versione browser)}.
-        \begin{itemize}
-            \item \textbf{Metrica di riferimento}: MoPD009;
-            \item \textbf{Lista minima accettabile}: {(Chrome,32) , (Firefox,27)};
-            \item \textbf{Lista minima desiderabile}: {(Chrome,32) , (Firefox,27) , (Opera,19) , (Explorer,10)}.
-        \end{itemize}
-\end{itemize}
+Il team ha deciso di non definire metriche e obiettivi riguardo la portabilità in quanto il prodotto da creare funzionerà sulla piattaforma Grafana che di per sé attua la portabilità.
+Si è quindi deciso di dare più importanza ad altre caratteristiche.
 
 \subsection{Documentazione}%
 \label{sub:documentazione}
@@ -365,28 +348,6 @@ Per ogni obiettivo viene indicato:
         \multicolumn{1}{l}{Descrizione:} &
           \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel\\ corso del ciclo di vita del prodotto, verranno inseriti dei commenti significativi in\\ modo da comprendere cosa fa il codice commentato. Il numero di righe di commento\\ dovrà essere almeno il 10\% del codice totale.\end{tabular}} \\ \hline
         \caption{Obiettivi e metriche di qualità per la manutenibilità}
-        \label{tab:my-table}\\
-        \end{longtable}
-
-    \begin{center}
-        \centering
-        \textbf{Portabilità}
-    \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD009 Supporto ai\\ diversi browser -\\ {[}Adattabilità{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD009 Browser\\ supportati -\\ {[}Adattabilità{]}\end{tabular} &
-          (Chrome,32) , (Firefox,27) &
-          \begin{tabular}[c]{@{}c@{}}(Chrome,32) , (Firefox,27) ,\\ (Opera,19) , (Explorer,10)\end{tabular} \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggiore portabilità del prodotto, il codice\\ verrà testato su diversi browser e versioni.\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per la portabilità}
         \label{tab:my-table}\\
         \end{longtable}
 
