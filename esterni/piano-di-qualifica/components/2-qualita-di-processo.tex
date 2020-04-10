@@ -266,141 +266,234 @@ Per ogni obiettivo viene indicato:
     \textbf{PRC001 Organizzazione e pianificazione del progetto e della sua struttura}
 \end{center}
 
-\begin{longtable}[c]{cccc}
-    \hline
-    Obiettivo &
-      Metrica &
-      Valore accettabile &
-      Valore desiderabile \\ \hline
-    \endhead
-    %
-    \begin{tabular}[c]{@{}c@{}}QoPR001 Rispetto delle scadenze\\  della pianificazione\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPR001 Varianza \\ dei tempi\end{tabular} &
-      Massimo 2 &
-      0 \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per le scadenze che sono riportate nel Piano di Progetto, il team \\ ha considerato di introdurre dei tempi di \glossario{slack},per prevenire\\ eventuali ritardi. Il completamento di un compito, che corrisponde\\ al completamento di una \glossario{issue} e alla sua chiusura, può accumulare\\ un ritardo massimo di 2 giorni.\end{tabular}} \\ \hline
-    \begin{tabular}[c]{@{}c@{}}QoPR002 Rispetto  del  budget \\ istanziato\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPR002 Varianza \\ dei costi\end{tabular} &
-      $\pm$ 5\% &
-      0\% \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per ogni ruolo all’interno del gruppo vi è una tariffa oraria fissa.\\ Può però accadere che durante il corso del progetto sia richiesta\\ una mole di lavoro differente da quella preventivata inizialmente. \\ Si è quindi deciso di tollerare un discostamento massimo del 5\%\\ in positivo o negativo.\end{tabular}} \\ \hline
-    \begin{tabular}[c]{@{}c@{}}QoPR003 Rispetto del \\ ciclo di vita scelto\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPR003 Aderenza\\ agli standard\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}Livello di maturità:  3\\ Valutazione attributi:  L\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}Livello di maturità:  3\\ Valutazione attributi:  L\end{tabular} \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Seguendo le valutazioni dello standard ISO/IEC 15504, CoffeeCode\\ intende raggiungere un livello di maturità dei processi pari a 3 e per\\ la valutazione di ogni attributo un livello pari a L ossia che gli attributi\\ sono stati soddisfatti almeno per il 75\% della loro interezza.\end{tabular}} \\ \hline
-    \begin{tabular}[c]{@{}c@{}}QoPR004 Rispetto dei ruoli \\ e identificazione nei prodotti\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPR004 Aderenza\\ ai ruoli\end{tabular} &
-      0 &
-      0 \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Le suddivisioni dei ruoli precedentemente definite, devono essere fisse\\ per ogni prodotto, per questo CoffeeCode prevede di avere 0 prodotti\\ nei quali i vari ruoli non sono stati rispettati.\end{tabular}} \\ \hline
-    \begin{tabular}[c]{@{}c@{}}QoPR005 Rispetto del \\ versionamento dei prodotti\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPR005 Controllo\\ prodotti\end{tabular} &
-      15+ &
-      20+ \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Visionare il numero di \glossario{commit} eseguiti sulla \glossario{repository} è un ottimo modo\\ per tenere traccia delle modifiche avvenute sui prodotti, in modo da ricavare\\ facilmente l’ultima versione di ogni prodotto. Si è quindi deciso che il numero\\ di commit da effettuare in media durante una settimana produttiva è di minimo\\ 15 per l’accettazione dell’obiettivo, mentre per una maggiore qualità del processo\\ intendiamo effettuare almeno 20 commit settimanali.\end{tabular}} \\ \hline
-    \caption{Obiettivi e metriche di qualità per il PRC001}
-    \label{tab:my-table}\\
-    \end{longtable}
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR001}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR001 Rispetto delle scadenze della pianificazione} & MoPR001 Varianza dei tempi & Massimo 2 & 0 \\
+\end{longtable}
+
+\textbf{Descrizione}: Per le scadenze che sono riportate nel \textsc{Piano di Progetto}, il team ha considerato di introdurre dei tempi di \glossario{slack},per prevenire eventuali ritardi.  Il completamento di un compito, che corrisponde al completamento di una \glossario{issue} e alla sua chiusura, può accumulare un ritardo massimo di 2 giorni.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR002}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR002 Rispetto del budget istanziato} & MoPR002 Varianza dei costi & $\pm$ 5\% & 0\% \\
+\end{longtable}
+
+\textbf{Descrizione}: Per ogni ruolo all’interno del gruppo vi è una tariffa oraria fissa. Può però accadere che durante il corso del progetto sia richiesta una mole di lavoro differente da quella preventivata inizialmente. Si è quindi deciso di tollerare un discostamento massimo del 5\% in positivo o negativo.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR003}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR003 Rispetto del ciclo di vita scelto} & MoPR003 Aderenza agli standard & Livello di maturità: 3 Valutazione attributi: L & Livello di maturità: 3 Valutazione attributi: L \\
+\end{longtable}
+
+\textbf{Descrizione}: Seguendo le valutazioni dello standard ISO/IEC 15504, CoffeeCode intende raggiungere un livello di maturità dei processi pari a 3 e per la valutazione di ogni attributo un livello pari a L ossia che gli attributi sono stati soddisfatti almeno per il 75\% della loro interezza.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR004}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR004 Rispetto dei ruoli e identificazione nei prodotti} & MoPR004 Aderenza ai ruoli & 0 & 0 \\
+\end{longtable}
+
+\textbf{Descrizione}: Le suddivisioni dei ruoli precedentemente definite, devono essere fisse per ogni prodotto, per questo CoffeeCode prevede di avere 0 prodotti nei quali i vari ruoli non sono stati rispettati.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR005}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR005 Rispetto del versionamento dei prodotti} & MoPR005 Controllo prodotti & 15+ & 20+ \\
+\end{longtable}
+
+\textbf{Descrizione}: Visionare il numero di \glossario{commit} eseguiti sulla \glossario{repository} è un ottimo modo per tenere traccia delle modifiche avvenute sui prodotti, in modo da ricavare facilmente l’ultima versione di ogni prodotto. Si è quindi deciso che il numero di commit da effettuare in media durante una settimana produttiva è di minimo 15 per l’accettazione dell’obiettivo, mentre per una maggiore qualità del processo intendiamo effettuare almeno 20 commit settimanali.
+
 
     \begin{center}
         \centering
         \textbf{PRC002 Analisi}
     \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPR006 Soddisfazione\\ dei requisiti obbligatori\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPR006 Verifica \\ requisiti obbligatori\end{tabular} &
-          100\% &
-          100\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}I requisiti obbligatori, concordati con il cliente devono essere\\ tutti soddisfatti entro la data di fine progetto prevista.\end{tabular}} \\ \hline
-        \begin{tabular}[c]{@{}c@{}}QoPR007 Soddisfazione dei requisiti \\ opzionali e desiderabili\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPR007 Verifica requisiti \\ opzionali\\ MoPR008 Verifica requisiti \\ desiderabili\end{tabular} &
-          30\% &
-          50\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Pur non essendo obbligatori i requisiti opzionali e desiderabili \\ il gruppo si prefigge l'obiettivo di realizzare almeno il 30\% di tali \\ requisiti presentati, per aumentare la qualità dell'intero prodotto finale.\end{tabular}} \\ \hline
-        QoPR008 Verifica dei rischi previsti &
-          \begin{tabular}[c]{@{}c@{}}MoPR009 Verifica rischi non \\ pervenuti\end{tabular} &
-          0 &
-          0 \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Durante il processo è probabile il verificarsi di imprevisti, questi devono\\ essere opportunamente rilevati già in fase di analisi. Si prevede quindi di\\ non avere ulteriori imprevisti rispetto a quelli preventivati\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per il PRC002}
-        \label{tab:my-table}\\
-        \end{longtable}
+
+    \rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR006}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR006 Soddisfazione dei requisiti obbligatori} & MoPR006 Verifica requisiti obbligatori & 100\% & 100\% \\
+\end{longtable}
+
+\textbf{Descrizione}: I requisiti obbligatori, concordati con il cliente devono essere tutti soddisfatti entro la data di fine progetto prevista.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR007}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR007 Soddisfazione dei requisiti opzionali e desiderabili} & MoPR007 Verifica requisiti opzionali \\ MoPR008 Verifica requisiti desiderabili & 30\% & 50\% \\
+\end{longtable}
+
+\textbf{Descrizione}: Pur non essendo obbligatori i requisiti opzionali e desiderabili il gruppo si prefigge l'obiettivo di realizzare almeno il 30\% di tali requisiti presentati, per aumentare la qualità dell'intero prodotto finale.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR008}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR008 Verifica dei rischi previsti} & MoPR009 Verifica rischi non pervenuti & 0 & 0 \\
+\end{longtable}
+
+\textbf{Descrizione}: Durante il processo è probabile il verificarsi di imprevisti, questi devono essere opportunamente rilevati già in fase di analisi. Si prevede quindi di non avere ulteriori imprevisti rispetto a quelli preventivati.
+
 
         \begin{center}
             \centering
             \textbf{PRC003 Produzione dei documenti}
         \end{center}
-        \begin{longtable}[c]{cccc}
-            \hline
-            Obiettivo &
-              Metrica &
-              Valore accettabile &
-              Valore desiderabile \\ \hline
-            \endhead
-            %
-            \begin{tabular}[c]{@{}c@{}}QoPR09  Rispetto delle fasi del \\ ciclo di vita\end{tabular} &
-              \begin{tabular}[c]{@{}c@{}}MoPR010 Analisi Way \\ of Working\end{tabular} &
-              / &
-              / \\
-            \multicolumn{1}{l}{Descrizione:} &
-              \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Ogni documento attraversa determinate fasi del ciclo di vita del prodotto. \\ I verificatori hanno il compito di verificare la corretta attuazione del\\ way of working nel documento in ogni sua fase.\end{tabular}} \\ \hline
-            \begin{tabular}[c]{@{}c@{}}QoPR010 Rispetto nella redazione \\ dei documenti\end{tabular} &
-              MoPR011 Analisi documenti &
-              3 &
-              4+ \\
-            \multicolumn{1}{l}{Descrizione:} &
-              \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per mantenere un corretto aggiornamento e una corretta verifica delle \\ modifiche sui documenti, ogni documento dovrà essere visionato e \\ verificato almeno 3 volte da parte dei verificatori.\end{tabular}} \\ \hline
-            \caption{Obiettivi e metriche di qualità per il PRC003}
-            \label{tab:my-table}\\
-            \end{longtable}
+
+        \rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR009}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR09 Rispetto delle fasi del ciclo di vita} & MoPR010 Analisi Way of Working & / & / \\
+\end{longtable}
+
+\textbf{Descrizione}: Ogni documento attraversa determinate fasi del ciclo di vita del prodotto. I verificatori hanno il compito di verificare la corretta attuazione del way of working nel documento in ogni sua fase.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPR010}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPR010 Rispetto nella redazione dei documenti} & MoPR011 Analisi documenti & 3 & 4+ \\
+\end{longtable}
+
+\textbf{Descrizione}: Per mantenere un corretto aggiornamento e una corretta verifica delle modifiche sui documenti, ogni documento dovrà essere visionato e verificato almeno 3 volte da parte dei verificatori.
 
         \begin{center}
             \centering
             \textbf{PRC004 Verifica}
         \end{center}
-        \begin{longtable}[c]{cccc}
-            \hline
-            Obiettivo &
-              Metrica &
-              Valore accettabile &
-              Valore desiderabile \\ \hline
-            \endhead
-            %
-            \begin{tabular}[c]{@{}c@{}}QoPR011 Attuare una verifica \\ costante\end{tabular} &
-              \begin{tabular}[c]{@{}c@{}}MoPR012 Frequenza di \\ controlli\end{tabular} &
-              / &
-              / \\
-            \multicolumn{1}{l}{Descrizione:} &
-              \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Il \glossario{Verificatore} deve controllare il prodotto frequentemente, in modo\\  da correggerlo nella sua forma, contenuto e nelle funzionalità.\end{tabular}} \\ \hline
-            \begin{tabular}[c]{@{}c@{}}QoPR012 Comunicare costantemente\\ durante la verifica\end{tabular} &
-               &
-              / &
-              / \\
-            \multicolumn{1}{l}{Descrizione:} &
-              \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Durante la realizzazione del progesso è necessario avere una\\ collaborazione e una comunicazione costante all'interno del\\ gruppo, in modo da evitare problemi di ogni genere e per\\ sincronizzarsi sul lavoro da svolgere.\end{tabular}} \\ \hline
-            \begin{tabular}[c]{@{}c@{}}QoPR013 Rispettare le fasi \\ di verifica\end{tabular} &
-              \begin{tabular}[c]{@{}c@{}}MoPR010 Analisi\\ Way of Working\end{tabular} &
-              / &
-              / \\
-            \multicolumn{1}{l}{Descrizione:} &
-              \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Come per i documenti anche per ogni prodotto realizzato deve\\ essere sottoposto a verifiche da parte del Verificatore in modo\\ da controllare che i prodotti rispettino le norme indicate e per\\ disporre sempre di risultati verificati, attendibili ed analizzabili.\end{tabular}} \\ \hline
-            \caption{Obiettivi e metriche di qualità per il PRC004}
-            \label{tab:my-table}\\
-            \end{longtable}
+
+        \rowcolors{2}{white!80!lightgray!90}{white}
+        \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+        \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+            \caption{Tabella obiettivo: QoPR011}%
+            \label{tab:requisiti_funzionali} \\
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endfirsthead%
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endhead%
+          \textbf{QoPR011 Attuare una verifica costante} & MoPR012 Frequenza di controlli & / & / \\
+        \end{longtable}
+        
+        \textbf{Descrizione}: Il \glossario{Verificatore} deve controllare il prodotto frequentemente, in modo da correggerlo nella sua forma, contenuto e nelle funzionalità.
+        
+        \rowcolors{2}{white!80!lightgray!90}{white}
+        \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+        \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+            \caption{Tabella obiettivo: QoPR012}%
+            \label{tab:requisiti_funzionali} \\
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endfirsthead%
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endhead%
+          \textbf{QoPR012 Comunicare costantemente durante la verifica} &  & / & / \\
+        \end{longtable}
+        
+        \textbf{Descrizione}: Durante la realizzazione del progetto è necessario avere una collaborazione e una comunicazione costante all'interno del gruppo, in modo da evitare problemi di ogni genere e per sincronizzarsi sul lavoro da svolgere.
+        
+        \rowcolors{2}{white!80!lightgray!90}{white}
+        \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+        \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+            \caption{Tabella obiettivo: QoPR013}%
+            \label{tab:requisiti_funzionali} \\
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endfirsthead%
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endhead%
+          \textbf{QoPR013 Rispettare le fasi di verifica} & MoPR010 Analisi Way of Working & / & / \\
+        \end{longtable}
+        
+        \textbf{Descrizione}: Come per i documenti anche per ogni prodotto realizzato deve essere sottoposto a verifiche da parte del Verificatore in modo da controllare che i prodotti rispettino le norme indicate e per disporre sempre di risultati verificati, attendibili ed analizzabili.
+        
 \end{document}

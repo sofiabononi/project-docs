@@ -136,7 +136,7 @@ risorse utilizzate, in base alle condizioni indicate.
 \paragraph{Metriche}
 \label{sub:metriche}
 \begin{itemize}
-    \item MoPD008 Tempo medio di risposta - [Comportamento temporale].
+    \item MoPD007 Tempo medio di risposta - [Comportamento temporale].
 \end{itemize}
 
 \paragraph{Obiettivi}
@@ -186,23 +186,23 @@ I documenti redatti e pubblicati devono essere leggibili e comprensibili già do
 \subsubsection{Metriche}
 \label{sub:metriche}
 \begin{itemize}
-    \item MoPD010 \glossario{Indice di Gulpease} - [Documentazione];
-    \item MoPD011 Correttezza lessicale/ortografica - [Documentazione].
+    \item MoPD009 \glossario{Indice di Gulpease} - [Documentazione];
+    \item MoPD010 Correttezza lessicale/ortografica - [Documentazione].
 \end{itemize}
 
 \subsubsection{Obiettivi}
 \label{sub:obiettivi}
 Le principali caratteristiche che verranno analizzate in ogni documento sono:
 \begin{itemize}
-    \item \textbf{QoPD010 Leggibilità del testo - [Documentazione]}: i documenti devono essere leggibili in modo fluido evitando quindi periodi troppo lunghi;
+    \item \textbf{QoPD009 Leggibilità del testo - [Documentazione]}: i documenti devono essere leggibili in modo fluido evitando quindi periodi troppo lunghi;
         \begin{itemize}
-            \item \textbf{Metrica di riferimento}: MoPD010;
+            \item \textbf{Metrica di riferimento}: MoPD009;
             \item \textbf{Valore accettabile}: 60;
             \item \textbf{Valore desiderabile}: 70.
         \end{itemize}
-    \item \textbf{QoPD011 Correttezza del testo - [Documentazione]}: in ogni documento non dovranno esserci errori ortografici e/o errori dovuti al mancato rispetto delle norme interne.
+    \item \textbf{QoPD010 Correttezza del testo - [Documentazione]}: in ogni documento non dovranno esserci errori ortografici e/o errori dovuti al mancato rispetto delle norme interne.
         \begin{itemize}
-            \item \textbf{Metrica di riferimento}: MoPD011;
+            \item \textbf{Metrica di riferimento}: MoPD010;
             \item \textbf{Valore accettabile}: 0;
             \item \textbf{Valore desiderabile}: 0.
         \end{itemize}
@@ -226,159 +226,193 @@ Per ogni obiettivo viene indicato:
     \centering
     \textbf{Funzionalità}
 \end{center}
-\begin{longtable}[c]{cccc}
-    \hline
-    Obiettivo &
-      Metrica &
-      Valore accettabile &
-      Valore desiderabile \\ \hline
-    \endhead
-    %
-    \begin{tabular}[c]{@{}c@{}}QoPD001 Rispetto\\ dell’implementazione funzionale - \\ {[}Adeguatezza{]}\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPD001 Completezza \\ di implementazione - \\ {[}Adeguatezza{]}\end{tabular} &
-      Massimo 2 &
-      0 \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per ricercare una corretta implementazione nel prodotto e riuscire a\\ soddisfare tutti i requisiti prefissati è necessario che le funzioni\\ vengano realizzate seguendo quanto è stato ricavato dalla progettazione\\ di esse. Si rende quindi necessario riuscire a realizzare e implementare\\ lo stesso numero di funzioni preventivate o in caso, è tollerato un\\ discostamento di al massimo 2 funzioni aggiuntive.\end{tabular}} \\ \hline
-    \begin{tabular}[c]{@{}c@{}}QoPD002 Rispetto \\ delle interfacce -\\ {[}Interoperabilità{]}\end{tabular} &
-      \begin{tabular}[c]{@{}c@{}}MoPD002 Coerenza \\ di interfaccia -\\ {[}Interoperabilità{]}\end{tabular} &
-      85\% - 100\% &
-      95\% - 100\% \\
-    \multicolumn{1}{l}{Descrizione:} &
-      \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Riuscire a realizzare le interfacce delle funzioni secondo le direttive\\ predefinite è un fattore importante nella riuscita di un prodotto di\\ qualità, per questo il team si aspetta di rispettare almeno l'85\% delle interfacce\end{tabular}} \\ \hline
-    \caption{Obiettivi e metriche di qualità per la funzionalità}
-    \label{tab:my-table}\\
-    \end{longtable}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPD001}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPD001 Rispetto dell’implementazione funzionale - {[}Adeguatezza{]}} & MoPD001 Completezza di implementazione - {[}Adeguatezza{]} & Massimo 2 & 0 \\
+\end{longtable}
+
+\textbf{Descrizione}: Per ricercare una corretta implementazione nel prodotto e riuscire a soddisfare tutti i requisiti prefissati è necessario che le funzioni vengano realizzate seguendo quanto è stato ricavato dalla progettazione di esse. Si rende quindi necessario riuscire a realizzare e implementare lo stesso numero di funzioni preventivate o in caso, è tollerato un discostamento di al massimo 2 funzioni aggiuntive.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPD002}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPD002 Rispetto delle interfacce - {[}Interoperabilità{]}} & MoPD002 Coerenza di interfaccia - {[}Interoperabilità{]} & 85\% - 100\% & 95\% - 100\% \\
+\end{longtable}
+
+\textbf{Descrizione}: Riuscire a realizzare le interfacce delle funzioni secondo le direttive predefinite è un fattore importante nella riuscita di un prodotto di qualità, per questo il team si aspetta di rispettare almeno l'85\% delle interfacce.
 
     \begin{center}
         \centering
         \textbf{Affidabilità}
     \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD003 Test completi\\ sul codice -\\ {[}Maturità{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD003 Copertura \\ dei test -\\ {[}Maturità{]}\end{tabular} &
-          90\% - 100\% &
-          100\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Riuscire a coprire il codice con dei test è fondamentale per poter prevedere\\ ogni risultato proveniente dal codice. CoffeeCode preve di coprire con i\\ test almeno il 90\% del codice prodotto.\end{tabular}} \\ \hline
-        \begin{tabular}[c]{@{}c@{}}QoPD004 Individuazione\\ test falliti -\\ {[}Affidabilità{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD004 Densità\\ degli errori -\\ {[}Affidabilità{]}\end{tabular} &
-          0\% - 15\% &
-          0\% - 5\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per misurare l'attitudine del prodotto a evitare errori o anomalie verranno\\ osservati i numero di test non andati a buon fine, in particolare la soglia\\ di questi test deve rimanere almeno al di sotto del 15\%.\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per l’affidabilità}
-        \label{tab:my-table}\\
-        \end{longtable}
+
+    \rowcolors{2}{white!80!lightgray!90}{white}
+    \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+    \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+        \caption{Tabella obiettivo: QoPD003}%
+        \label{tab:requisiti_funzionali} \\
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endfirsthead%
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endhead%
+      \textbf{QoPD003 Test completi sul codice - {[}Maturità{]}} & MoPD003 Copertura dei test - {[}Maturità{]} &  90\% - 100\% & 100\% \\
+    \end{longtable}
+    
+    \textbf{Descrizione}: Riuscire a coprire il codice con dei test è fondamentale per poter prevedere ogni risultato proveniente dal codice. CoffeeCode prevede di coprire con i test almeno il 90\% del codice prodotto.
+    
+    \rowcolors{2}{white!80!lightgray!90}{white}
+    \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+    \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+        \caption{Tabella obiettivo: QoPD004}%
+        \label{tab:requisiti_funzionali} \\
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endfirsthead%
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endhead%
+      \textbf{QoPD004 Individuazione test falliti - {[}Affidabilità{]}} & MoPD004 Densità degli errori - {[}Affidabilità{]} &  0\% - 15\% &  0\% - 5\% \\
+    \end{longtable}
+    
+    \textbf{Descrizione}: Per misurare l'attitudine del prodotto a evitare errori o anomalie verranno osservati i numero di test non andati a buon fine, in particolare la soglia di questi test deve rimanere almeno al di sotto del 15\%.
+    
 
     \begin{center}
         \centering
         \textbf{Usabilità}
     \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD005 Chiarezza\\ del comportamento -\\ {[}Comprensibilità{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD005 Documentazione\\ delle funzioni -\\ {[}Comprensibilità{]}\end{tabular} &
-          90\% - 100\% &
-          100\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per facilitare l'usabilità del prodotto almeno il 90\% delle funzioni\\ realizzate sarà documentato in modo da creare un manuale base\\ per la consultazione dell'utente.\end{tabular}} \\ \hline
-        \begin{tabular}[c]{@{}c@{}}QoPD006 Chiarimento \\ degli errori - \\ {[}Comprensibilità{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD006 Messaggi\\ di errore -\\ {[}Comprensibilità{]}\end{tabular} &
-          0\% - 10\% &
-          0\% - 5\% \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Descrivere in modo chiaro gli errori che si possono presentare\\ all'utente facilita la comprensione da parte di quest'ultimo, si\\ cercherà quindi di descrivere in modo chiaro gli errori tralasciandone\\ al massimo il 10\%.\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per l’usabilità}
-        \label{tab:my-table}\\
-        \end{longtable}    
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPD005}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPD005 Chiarezza del comportamento - {[}Comprensibilità{]}} & MoPD005 Documentazione delle funzioni - {[}Comprensibilità{]} & 90\% - 100\% &  100\% \\
+\end{longtable}
+
+\textbf{Descrizione}: Per facilitare l'usabilità del prodotto almeno il 90\% delle funzioni realizzate sarà documentato in modo da creare un manuale base per la consultazione dell'utente.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+    \caption{Tabella obiettivo: QoPD006}%
+    \label{tab:requisiti_funzionali} \\
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+  \endhead%
+  \textbf{QoPD006 Chiarimento degli errori - {[}Comprensibilità{]}} & MoPD006 Messaggi di errore - {[}Comprensibilità{]} & 0\% - 10\% &  0\% - 5\% \\
+\end{longtable}
+
+\textbf{Descrizione}: Descrivere in modo chiaro gli errori che si possono presentare all'utente facilita la comprensione da parte di quest'ultimo, si cercherà quindi di descrivere in modo chiaro gli errori tralasciandone al massimo il 10\%.
 
 
     \begin{center}
         \centering
         \textbf{Efficienza}
     \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD007 Velocità\\ di esecuzione -\\ {[}Comportamento temporale{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD008 Tempo medio\\ di risposta -\\ {[}Comportamento temporale{]}\end{tabular} &
-          10s &
-          5s \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Il team si prefigge come obiettivo quello di ridurre il più possibile\\ i tempi di risposta del software, ovviamente in questa prima fase i\\ valori di accettazione e desiderabili non sono del tutto affidabili data\\ la mancanza di test.\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per l’usabilità}
-        \label{tab:my-table}\\
-        \end{longtable}
+
+    \rowcolors{2}{white!80!lightgray!90}{white}
+    \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+    \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+        \caption{Tabella obiettivo: QoPD007}%
+        \label{tab:requisiti_funzionali} \\
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endfirsthead%
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endhead%
+      \textbf{QoPD007 Velocità di esecuzione - {[}Comportamento temporale{]}} & MoPD007 Tempo medio di risposta - {[}Comportamento temporale{]} & 10s & 5s \\
+    \end{longtable}
+    
+    \textbf{Descrizione}: Il team si prefigge come obiettivo quello di ridurre il più possibile i tempi di risposta del software, ovviamente in questa prima fase i valori di accettazione e desiderabili non sono del tutto affidabili data la mancanza di test.    
         
     \begin{center}
         \centering
         \textbf{Manutenibilità}
     \end{center}
-    \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD08 Comprensione\\ del codice -\\ {[}Modifica{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD008 Commenti\\ sul codice -\\ {[}Modifica{]}\end{tabular} &
-          10\% o più &
-          20\% o più \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel\\ corso del ciclo di vita del prodotto, verranno inseriti dei commenti significativi in\\ modo da comprendere cosa fa il codice commentato. Il numero di righe di commento\\ dovrà essere almeno il 10\% del codice totale.\end{tabular}} \\ \hline
-        \caption{Obiettivi e metriche di qualità per la manutenibilità}
-        \label{tab:my-table}\\
-        \end{longtable}
+
+    \rowcolors{2}{white!80!lightgray!90}{white}
+    \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+    \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+        \caption{Tabella obiettivo: QoPD008}%
+        \label{tab:requisiti_funzionali} \\
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endfirsthead%
+      \rowcolor{lightgray}
+      {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+      \endhead%
+      \textbf{QoPD08 Comprensione del codice - {[}Modifica{]}} & MoPD008 Commenti sul codice - {[}Modifica{]} & 10\% o più & 20\% o più \\
+    \end{longtable}
+    
+    \textbf{Descrizione}: Per una maggior chiarezza, comprensione e per facilitare eventuali modifiche nel corso del ciclo di vita del prodotto, verranno inseriti dei commenti significativi in modo da comprendere cosa fa il codice commentato. Il numero di righe di commento dovrà essere almeno il 10\% del codice totale.    
 
         \begin{center}
           \centering
           \textbf{Documentazione}
       \end{center}
 
-      \begin{longtable}[c]{cccc}
-        \hline
-        Obiettivo &
-          Metrica &
-          Valore accettabile &
-          Valore desiderabile \\ \hline
-        \endhead
-        %
-        \begin{tabular}[c]{@{}c@{}}QoPD010 Leggibilità \\ del testo -\\ {[}Documentazione{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD010 Indice\\ di Gulpease -\\ {[}Documentazione{]}\end{tabular} &
-          60 &
-          70 \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}I documenti una volta redatti devono essere facilmente\\ leggibili in modo fluido per una maggior comprensione.\\ Per questo verrà utilizzato l'Indice di Gulpease con l'obiettivo\\ di raggiungere un punteggio compreso tra 60 e 70.\end{tabular}} \\ \hline
-        \begin{tabular}[c]{@{}c@{}}QoPD011 Correttezza\\ del testo -\\ {[}Documentazione{]}\end{tabular} &
-          \begin{tabular}[c]{@{}c@{}}MoPD011 Correttezza\\ lessicale/ortografica -\\ {[}Documentazione{]}\end{tabular} &
-          0 &
-          0 \\
-        \multicolumn{1}{l}{Descrizione:} &
-          \multicolumn{3}{l}{\begin{tabular}[c]{@{}l@{}}All'interno dei documenti non dovranno esserci errori \\ ortografici, di sintassi o di mancanza del rispetto delle \\  norme interne, ciò comporterebbe una minor comprensione del\\ testo e difficoltà nel capire le parti essenziali dei documenti.\end{tabular}}\\ \hline
-        \caption{Obiettivi e metriche di qualità per la documentazione}
-        \label{tab:my-table}\\
-        \end{longtable}
+      \rowcolors{2}{white!80!lightgray!90}{white}
+      \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+      \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+          \caption{Tabella obiettivo: QoPD009}%
+          \label{tab:requisiti_funzionali} \\
+        \rowcolor{lightgray}
+        {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+        \endfirsthead%
+        \rowcolor{lightgray}
+        {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+        \endhead%
+        \textbf{QoPD009 Leggibilità del testo - {[}Documentazione{]}} & MoPD009 Indice di Gulpease -{[}Documentazione{]} & 60 & 70 \\
+      \end{longtable}
+      
+      \textbf{Descrizione}: I documenti una volta redatti devono essere facilmente leggibili in modo fluido per una maggior comprensione. Per questo verrà utilizzato l'Indice di Gulpease con l'obiettivo di raggiungere un punteggio compreso tra 60 e 70.
+      
+      \rowcolors{2}{white!80!lightgray!90}{white}
+      \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+      \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+          \caption{Tabella obiettivo: QoPD010}%
+          \label{tab:requisiti_funzionali} \\
+        \rowcolor{lightgray}
+        {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+        \endfirsthead%
+        \rowcolor{lightgray}
+        {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+        \endhead%
+        \textbf{QoPD010 Correttezza del testo - {[}Documentazione{]}} & MoPD011 Correttezza lessicale/ortografica - {[}Documentazione{]} & 0 & 0 \\
+      \end{longtable}
+      
+      \textbf{Descrizione}: All'interno dei documenti non dovranno esserci errori ortografici, di sintassi o di mancanza del rispetto delle norme interne, ciò comporterebbe una minor comprensione del testo e difficoltà nel capire le parti essenziali dei documenti.      
 
 
 \end{document}
