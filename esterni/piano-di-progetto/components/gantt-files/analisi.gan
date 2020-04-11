@@ -45,7 +45,7 @@
             </task>
             <task id="12" name="Normazione" meeting="false" start="2020-03-12" duration="4" complete="0" expand="true"/>
             <task id="15" name="Pianificazione della qualità" meeting="false" start="2020-03-12" duration="4" complete="0" expand="true"/>
-            <task id="14" name="Studio di fattibilità" meeting="false" start="2020-03-11" duration="4" complete="0" expand="true"/>
+            <task id="14" name="Studio di fattibilità" meeting="false" start="2020-03-13" duration="2" complete="0" expand="true"/>
             <task id="16" name="Verifica" color="#66ff00" meeting="false" start="2020-03-11" duration="6" complete="0" thirdDate="2020-03-09" thirdDate-constraint="0" expand="true"/>
         </task>
         <task id="18" name="II periodo" meeting="false" start="2020-03-17" duration="8" complete="0" expand="true">
@@ -75,7 +75,7 @@
             <depend id="44" type="2" difference="0" hardness="Strong"/>
             <task id="40" name="Analisi dei requisiti" meeting="false" start="2020-04-01" duration="6" complete="0" expand="true"/>
             <task id="42" name="Ricerca degli strumenti" meeting="false" start="2020-04-02" duration="5" complete="0" expand="true"/>
-            <task id="41" name="Resoconto" meeting="false" start="2020-04-05" duration="3" complete="0" expand="true"/>
+            <task id="41" name="Consuntivo" color="#8cb6ce" meeting="false" start="2020-04-05" duration="3" complete="0" thirdDate="2020-04-05" thirdDate-constraint="0" expand="true"/>
             <task id="48" name="Glossario" meeting="false" start="2020-04-04" duration="3" complete="0" expand="true"/>
             <task id="43" name="Verifica" color="#66ff00" meeting="false" start="2020-04-04" duration="5" complete="0" thirdDate="2020-03-25" thirdDate-constraint="0" expand="true"/>
         </task>
