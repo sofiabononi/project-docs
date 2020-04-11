@@ -282,6 +282,16 @@ Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trat
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 %%% AGGIUNGERE QUI EVENTUALI ALTRE NORME TIPOGRAFICHE, OGNUNA CON UN subparagraph*
 
+\paragraph{Comprensione}
+\subparagraph{Scopo}
+Vengono adottate delle metriche per monitorare la qualità della documentazione, al fine di garantire una documentazione comprensibile.
+\subparagraph{Metriche}
+Le metriche adottate sono le seguenti:
+\begin{itemize}
+  \item MoPD010 \glossario{Indice di Gulpease};
+  \item MoPD011 Correttezza lessicale/ortografica.
+\end{itemize}
+
 \subsubsection{Strumenti}
 \paragraph{\LaTeX}
 Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
@@ -462,7 +472,7 @@ Le aspettative di questo processo sono le seguenti:
 La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica}. In particolare, in tale documento:
 \begin{itemize}
   \item Sono presentati gli standard di qualità utilizzati;
-  \item Di tali standard, sono individuati i processi di interesse per il particolare progetto;
+  \item Di tali standard, sono individuati i processi di interesse per il particolare progetto.
 \end{itemize}
 Per ogni processo vengono descritti:
 \begin{itemize}
@@ -474,6 +484,69 @@ Per ogni prodotto, invece, vengono descritti:
 \begin{itemize}
   \item Le metriche da utilizzare;
   \item Gli obiettivi da perseguire.
+\end{itemize}
+\subsubsection{Codifica}
+Nel documento \textsc{Piano di Qualifica} vengono utilizzate le seguenti codifiche.
+\subparagraph*{Processi}
+I processi sono codificati in tal modo: \\
+\begin{center}
+  \centering
+  \textbf{PRC[ID][Nome]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{PRC} indica "Processo";
+  \item \textbf{ID} è un indicatore numerico a tre cifre;
+  \item \textbf{Nome} è il riassunto della funzione del processo.
+\end{itemize}
+
+\subparagraph*{Obiettivi di qualità dei processi}
+Gli obiettivi di qualità vengono codificati in tal modo: \\
+\begin{center}
+  \centering
+  \textbf{QoPR[ID][Nome]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{QoPR} indica \textit{Quality of process};
+  \item \textbf{ID} è un indicatore numerico a tre cifre;
+  \item \textbf{Nome} è il riassunto della descrizione del processo.
+\end{itemize}
+
+\subparagraph*{Metriche di qualità dei processi}
+Le metriche di qualità dei processi sono codificate in tal modo: \\
+\begin{center}
+  \centering
+  \textbf{MoPR[ID][Nome]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{QoPR} indica \textit{Metric of process};
+  \item \textbf{ID} è un indicatore numerico a tre cifre;
+  \item \textbf{Nome} è il riassunto della descrizione della metrica.
+\end{itemize}
+
+\subparagraph*{Obiettivi di qualità dei prodotti}
+Gli obiettivi di qualità dei prodotti sono codificati nel seguente modo: \\
+\begin{center}
+  \centering
+  \textbf{QoPD[ID][Nome]-[Caratteristica]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{QoPD} indica \textit{Quality of product};
+  \item \textbf{ID} è un indicatore numerico a tre cifre;
+  \item \textbf{Nome} è il riassunto della descrizione del processo;
+  \item \textbf{Caratteristica} indica a quale caratteristica appartiene l'obiettivo.
+\end{itemize}
+
+\subparagraph*{Metriche di qualità dei prodotti}
+Le metriche di qualità dei prodotti sono codificate nel seguente modo:
+\begin{center}
+  \centering
+  \textbf{MoPD[ID][Nome]-[Caratteristica]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{MoPD} indica \textit{Metric of product};
+  \item \textbf{ID} è un indicatore numerico a tre cifre;
+  \item \textbf{Nome} è il riassunto della descrizione della metrica;
+  \item \textbf{Caratteristica} indica a quale caratteristica appartiene la metrica.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%
