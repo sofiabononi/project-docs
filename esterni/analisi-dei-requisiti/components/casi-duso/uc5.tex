@@ -1,10 +1,19 @@
 \subsubsection{UC5 - Configurazione alert}
 \label{sssec:uc5}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=10cm]{uc5.png}\\
+    \caption{UC5 - Configurazione alert}%
+    \label{fig:uc5}
+  \end{center}
+  \end{figure}
+
 \begin{description}
 	\item[Attore primario:] Utente amministratore.
 	\item[Attore secondario:] Grafana.
 	\item[Descrizione:] L'amministratore imposta degli alert con delle soglie di massima utilizzando i meccanismi offerti da Grafana.
-	\item[Precondizione:] 
+	\item[Precondizione:]
 	\begin{enumerate}
 		\item L'amministratore ha configurato il plug-in correttamente(UC4);
 		\item L'amministratore avvia il plug-in (UC4.1).
@@ -13,7 +22,7 @@
 	\item[Postcondizione:] L'amministratore ha impostato correttamente le soglie dei alert aggiunti tramite Grafana.
 \end{description}
 
-\subsubsection{UC5.1 - Creazione alert}
+\paragraph{UC5.1 - Creazione alert}
 \label{sssec:uc5.1}
 \begin{description}
 	\item[Attore primario:] Utente amministratore.
@@ -23,7 +32,7 @@
 	\item[Postcondizione:] L'amministratore visualizza la pagina delle impostazione del pannello con la possibilità di aggiungere alert definiti da Grafana.
 \end{description}
 
-\subsubsection{UC5.2 - Definizione soglia massimale}
+\paragraph{UC5.2 - Definizione soglia massimale}
 \label{sssec:uc5.2}
 \begin{description}
 	\item[Attore primario:] Utente amministratore.
@@ -31,4 +40,5 @@
 	\item[Precondizione:] L'amministratore ha selezionato l'opzione di inserimento di una soglia tramite l'opzione "Crea alert"(UC5.1).
 	\item[Scenario Principale:] L'amministratore tramite Grafana definisce la soglia per l'alert e invia la conferma della creazione del suddetto.
 	\item[Postcondizione:] L'amministratore ha impostato la soglia tale che parte l'alert impostato tramite Grafana.
+	\item[Estensioni]: UC5.2 viene esteso nel caso d'uso UC14 con la visualizzazione di un messaggio di errore quando viene superata la soglia.
 \end{description}
