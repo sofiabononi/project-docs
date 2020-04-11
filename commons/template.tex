@@ -52,19 +52,19 @@
 \newpage
 \pagestyle{nopage}
 
+\setcounter{table}{-1}
+
 \section*{Registro delle modifiche}%
 \label{sec:registro_delle_modifiche}
 
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
-\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{6.5cm}}
-  \caption{Registro delle modifiche}%
-  \label{tab:registro_delle_modifiche}                                                    \\
+\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{4cm} >{\centering}m{3cm} >{\centering}m{1.5cm} >{\centering\arraybackslash}m{5cm}}
   \rowcolor{lightgray}
-  {\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+  {\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
   \endfirsthead%
   \rowcolor{lightgray}
-  {\textbf{Versione}} & {\textbf{Nominativo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
+  {\textbf{Versione}} & {\textbf{Nominativo}}  & {\textbf{Ruolo}} & {\textbf{Data}} & {\textbf{Descrizione}}  \\
   \endhead%
   \modifiche{}%
 \end{longtable}

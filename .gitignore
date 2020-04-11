@@ -189,6 +189,9 @@ _minted*
 *.sympy
 sympy-plots-for-*.tex/
 
+# system
+**/.DS_Store
+
 # pdfcomment
 *.upa
 *.upb
