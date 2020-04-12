@@ -5,57 +5,57 @@
 \subsection{Informazioni generali}%
 \label{sub:informazioni_generale}
 \begin{description}
-  \item Nome: Predire in Grafana
-  \item Proponente: Zucchetti Spa
-  \item Committente: prof. Tullio Vardanega e prof. Riccardo Cardin
+  \item \textbf{Nome}: Predire in Grafana.
+  \item \textbf{Proponente}: Zucchetti S.p.a..
+  \item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
 \end{description}
 
 \subsection{Descrizione}%
 \label{sub:descrizione}
-Zucchetti chiede lo sviluppo di un software che applichi il \glossario{Machine Learning} al flusso dei dati raccolti dai sistemi dell’azienda per poter prevedere i loro stati futuri così da poter intervenire in tempo se necessario.
+Zucchetti chiede lo sviluppo di un software che applichi il \glossario{machine learning} al flusso dei dati raccolti dai sistemi dell’azienda per poter prevedere i loro stati futuri così da poter intervenire in tempo se necessario.
 
 \subsection{Finalità del progetto}%
 \label{sub:finalita_del_progetto}
 Il progetto ha come obiettivo la realizzazione di un \glossario{plug-in} per lo strumento di monitoraggio di \glossario{Grafana}.
 Il software dovrà soddisfare almeno i seguenti requisiti:
 \begin{itemize}
-  \item Produrre un file \glossario{JSON} dai dati di addestramento con i \glossario{parametri} per le previsioni con \glossario{SVM} per le classificazioni o la \glossario{Regressione Lineare} 
-  \item Leggere la definizione del \glossario{predittore} dal file in formato \glossario{JSON}
-  \item Associare i \glossario{predittori} letti dal file \glossario{JSON} al flusso di dati presente in \glossario{Grafana}
-  \item Applicare la previsione e fornire i nuovi dati ottenuti al sistema di \glossario{Grafana}
-  \item Rendere disponibili i dati al sistema di creazione di grafici e \glossario{dashboard} per la loro visualizzazione   
+  \item Produrre un file JSON dai dati di addestramento con i \glossario{parametri} per le previsioni con \glossario{SVM} per le classificazioni o la \glossario{Regressione Lineare};
+  \item Leggere la definizione del \glossario{predittore} dal file in formato \glossario{JSON};
+  \item Associare i predittori letti dal file JSON al flusso di dati presente in Grafana;
+  \item Applicare la previsione e fornire i nuovi dati ottenuti al sistema di Grafana;
+  \item Rendere disponibili i dati al sistema di creazione di grafici e \glossario{dashboard} per la loro visualizzazione.
 \end{itemize}
 Una volta soddisfatti i requisiti obbligatori si potranno implementare le seguenti caratteristiche:
 \begin{itemize}
-  \item Possibilità di definire \glossario{''alert''} in base a livelli di soglia raggiunti dai nodi collegati alle previsioni
-  \item Fornire i dati di bontà dei \glossario{modelli di previsione}. \glossario{''Precision''} e \glossario{''Recall''} per le \glossario{SVM} e \glossario{\(R^{2}\)} per la \glossario{Regressione Lineare}
+  \item Possibilità di definire \glossario{''alert''} in base a livelli di soglia raggiunti dai nodi collegati alle previsioni;
+  \item Fornire i dati di bontà dei \glossario{modelli di previsione}. \glossario{''Precision''} e \glossario{''Recall''} per le SVM e R\textsuperscript{2} per la Regressione Lineare;
   \item Possibilità di applicare delle trasformazioni alle misure lette dal campo per ottenere delle \glossario{regressioni} esponenziali o logaritmiche e non solo lineari
-  \item Possibilità di addestrare la \glossario{SVM} o la \glossario{Regressione Lineare} direttamente in \glossario{Grafana}
-  \item Implementare dei meccanismi di apprendimento di flusso, in modo da poter disporre di sistemi di previsione in costante adattamento ai dati rilevati sul campo
-  \item Utilizzare anche altri metodi di previsione, tra cui la versione delle \glossario{SVM} adattate alla \glossario{regressione} o piccole \glossario{Reti Neurali} per la classificazione   
+  \item Possibilità di addestrare la SVM o la Regressione Lineare direttamente in Grafana;
+  \item Implementare dei meccanismi di apprendimento di flusso, in modo da poter disporre di sistemi di previsione in costante adattamento ai dati rilevati sul campo;
+  \item Utilizzare anche altri metodi di previsione, tra cui la versione delle SVM adattate alla regressione o piccole \glossario{Reti Neurali} per la classificazione.
 \end{itemize}
 
 \subsection{Tecnologie interessate}%
 \label{sub:tecnologie_interessate}
 \begin{itemize}
-  \item \glossario{Grafana}: un software \glossario{Open Source} utilizzato per monitorare infrastrutture provvedendo grafici, diagrammi e allarmi.
-  \item \glossario{JavaScript}: il linguaggio di programmazione richiesto per lo sviluppo del \glossario{plug-in} di \glossario{Grafana}
-  \item \glossario{Modelli di apprendimento}: \glossario{SVM} e \glossario{Regressione Lineare}
-  \item \glossario{Java JMX}: uno strumento utilizzato per il monitoraggio di applicazioni sviluppate in \glossario{Java}
-  \item \glossario{Java JMeter}: uno strumento utilizzato per verificare il comportamento di \glossario{applicazioni web}
+  \item Grafana: un software \glossario{Open Source} utilizzato per monitorare infrastrutture provvedendo grafici, diagrammi e allarmi;
+  \item \glossario{JavaScript}: il linguaggio di programmazione richiesto per lo sviluppo del plug-in di Grafana;
+  \item \glossario{Modelli di apprendimento}: SVM e Regressione Lineare
+  \item \glossario{Java JMX}: uno strumento utilizzato per il monitoraggio di applicazioni sviluppate in \glossario{Java};
+  \item \glossario{Java JMeter}: uno strumento utilizzato per verificare il comportamento di \glossario{applicazioni web}.
 \end{itemize}
 
 \subsection{Aspetti positivi}%
 \label{sub:aspetti_positivi}
 \begin{itemize}
-  \item Le conoscenze di \glossario{Machine Learning} vengono sempre più richieste dalle imprese quindi sarebbe un’opportunità poterle imparare
-  \item L’azienda è ampiamente disponibile a fornire la formazione sugli algoritmi e tecnologie di \glossario{Machine Learning}
+  \item Le conoscenze di machine learning vengono sempre più richieste dalle imprese quindi sarebbe un’opportunità poterle imparare;
+  \item L’azienda è ampiamente disponibile a fornire la formazione sugli algoritmi e tecnologie di machine learning.
 \end{itemize}
 
 \subsection{Rischi}%
 \label{sub:rischi}
 \begin{itemize}
-  \item Il corso di studi della laurea triennale non copre il \glossario{Machine Learning} quindi si dovrà utilizzare una tecnologia a noi poco familiare
+  \item Il corso di studi della laurea triennale non copre il machine learning quindi si dovrà utilizzare una tecnologia a noi poco familiare.
 \end{itemize}
 
 \subsection{Conclusione}%

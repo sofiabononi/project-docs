@@ -5,86 +5,75 @@
 \subsection{Informazioni generali}%
 \label{sub:informazioni_generale}
 \begin{description}
-  \item Nome: Etherless
-  \item Proponente: Red Babel
-  \item Committente: prof. Tullio Vardanega e prof. Riccardo Cardin
+  \item \textbf{Nome}: Etherless.
+  \item \textbf{Proponente}: Red Babel.
+  \item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
 \end{description}
 
 \subsection{Descrizione}%
 \label{sub:descrizione}
 \textit{Etherless} è una piattaforma \glossario{cloud} che permette agli sviluppatori di caricare delle funzioni Javascript e consente
-agli utenti finali di pagare per la loro esecuzione. Si basa sul concetto di \textit{Computation-as-a-Service} (o \textit{CaaS}).
+agli utenti finali di pagare per la loro esecuzione. Si basa sul concetto di \glossario{Computation-as-a-Service} (o \textit{CaaS}).
 Una parte di questo pagamento viene trattenuta dalla piattaforma come pagamento per il servizio.
 
 \subsection{Finalità del progetto}%
 \label{sub:finalita_del_progetto}
-Il progetto consiste nel creare una piattaforma \glossario{cloud} composta nella seguente maniera:
+Il progetto consiste nel creare una piattaforma cloud strutturata nella seguente maniera:
 \begin{itemize}
-  \item \textit{etherless-cli}: è il modulo che permette agli \textit{sviluppatori} di interagire con la piattaforma.
-  Supporta i vari comandi utili agli \textit{sviluppatori} quali:
+  \item \textbf{etherless-cli}: è il modulo che permette agli sviluppatori di interagire con la piattaforma.
+  Supporta i vari comandi utili agli sviluppatori quali:
   \begin{itemize}
-    \item Configurare conto Ethereum
-    \item Caricare codice eseguibile
-    \item Visualizzare la lista delle funzioni caricate
-    \item Eseguire una funzione e riceverne il valore di return
-    \item Vedere i log delle esecuzioni
+    \item Configurare conto \glossario{Ethereum};
+    \item Caricare codice eseguibile;
+    \item Visualizzare la lista delle funzioni caricate;
+    \item Eseguire una funzione e riceverne il valore di return;
+    \item Vedere i log delle esecuzioni.
   \end{itemize}
-  \item \textit{etherless-smart}: è un set di \textit{Smart Contracts} che permettono di gestire la comunicazione tra 
-        \textit{etherless-cli} e \textit{etherless-server}, così come il pagamento del servizio in ETH (Ethereum).
-  \item \textit{etherless-server}: il modulo che esegue le funzioni e attraverso \textit{etherless-smart} comunica
+  \item \textbf{etherless-smart}: è un set di \glossario{Smart Contracts} che permettono di gestire la comunicazione tra
+        \textit{etherless-cli} e \textit{etherless-server}, così come il pagamento del servizio in ETH (\textit{Ethereum}).
+  \item \textbf{etherless-server}: il modulo che esegue le funzioni e attraverso \textit{etherless-smart} comunica
         con \textit{etherless-cli}. Quando la funzione restituisce un valore di ritorno oppure incontra un'eccezione
-        emette un evento nella Blockchain, tale evento verrà ricevuto da \textit{etherless-cli} che mostrerà il risultato
-        allo \textit{sviluppatore}.
+        emette un evento nella \glossario{Blockchain}, tale evento verrà ricevuto da \textit{etherless-cli} che mostrerà il risultato
+        allo sviluppatore.
 \end{itemize}
 
 Inoltre il progetto richiede i seguenti vincoli:
 \begin{itemize}
-      \item \textit{etherless-cli} deve essere installato utilizzando il node package manager (\textit{npm}) utilizzando
-            il comando 
-            
-            \texttt{npm install -g etherless-cli}.
-      \item Una volta installato lo sviluppatore deve essere in grado di eseguire i comandi per fare le seguenti
-            azioni: inizializzare ed accedere ad un conto \textit{Ethereum}, caricare, eliminare ed eseguire una funzione,
-            visualizzare la lista delle funzioni caricate.
-      \item Gli \textit{Smart Contracts} devono poter essere ampliati.
-      \item \textit{Etherless} deve essere sviluppato utilizzando \glossario{Typescript} 3.6.
-      \item Devono essere utilizzati \textit{typescript-eslint} ed \glossario{ESLint} durante il processo.
-      \item \textit{etherless-server} deve essere implementato utilizzando un \glossario{Framework} \glossario{Serverless}.
+      \item \textit{etherless-cli} deve essere installato utilizzando il \glossario{node package manager} (\textit{npm}) utilizzando
+            il comando \texttt{npm install -g etherless-cli};
+      \item Una volta installato lo sviluppatore deve essere in grado di eseguire i comandi per fare le seguenti azioni: inizializzare ed accedere ad un conto \textit{Ethereum}, caricare, eliminare ed eseguire una funzione,
+            visualizzare la lista delle funzioni caricate;
+      \item Gli \textit{Smart Contracts} devono poter essere ampliati;
+      \item \textit{Etherless} deve essere sviluppato utilizzando \glossario{Typescript} 3.6;
+      \item Devono essere utilizzati \glossario{typescript-eslint} ed \glossario{ESLint} durante il processo;
+      \item \textit{etherless-server} deve essere implementato utilizzando un \glossario{framework serverless}.
 \end{itemize}
 
 
 \subsection{Tecnologie interessate}%
 \label{sub:tecnologie_interessate}
 \begin{itemize}
-  \item \textbf{Ethereum} è una piattaforma che permette agli utenti di scriviere agevolmente applicazioni decentralizzate
-        (ĐApps) utilizzando la Blockchain.
-  \item \textbf{Blockchain} è un database condiviso che tiene traccia di tutti i movimenti di criptovaluta utilizzando
-        una struttura a blocchi. Una volta che un blocco è stato verificato esso viene inserito irreversibilmente nella 
-        Blockchain.
-  \item \textbf{EVM (Ethereum Virtual Machine)} è una macchina virtuale decentralizzata che permette di eseguire script.
-  \item \textbf{Smart Contracts}, sono codice che viene eseguito dalla \textbf{EVM}, può contenere \textit{ETH}, dati o
-        una combinazione di essi.
-  \item \textbf{Solidity} è un linguaggio utilizzato per scrivere gli \textit{Smart Contracts}.
-  \item \textbf{AWS Lambda} è una piattaforma di calcolo \textit{\glossario{Serverless}} guidata dagli eventi. Può eseguire del codice 
-        in risposta a degli eventi.
-  \item \textbf{TypeScript} è un linguaggio che estende le potenzialità di Javascript aggiungendo o rendendo più
-        flessibili le sue caratteristiche.
-
-        Viene consigliata la versione 3.6.
+  \item \textbf{Ethereum}: è una piattaforma che permette agli utenti di scrivere agevolmente \glossario{applicazioni decentralizzate} (ĐApps) utilizzando la \textit{Blockchain};
+  \item \textbf{Blockchain}: è un database condiviso che tiene traccia di tutti i movimenti di \glossario{criptovaluta} utilizzando una struttura a blocchi. Una volta che un blocco è stato verificato esso viene inserito irreversibilmente nella \textit{Blockchain};
+  \item \textbf{EVM (Ethereum Virtual Machine)}: è una macchina virtuale decentralizzata che permette di eseguire script;
+  \item \textbf{Smart Contracts}: sono codice che viene eseguito dalla \textbf{EVM}, può contenere \textit{ETH}, dati o una combinazione di essi;
+  \item \textbf{Solidity}: è un linguaggio utilizzato per scrivere gli \textit{Smart Contracts};
+  \item \textbf{AWS Lambda}: è una piattaforma di calcolo \textit{Serverless} guidata dagli eventi. Può eseguire del codice in risposta a degli eventi;
+  \item \textbf{TypeScript}: è un linguaggio che estende le potenzialità di Javascript aggiungendo o rendendo più flessibili le sue caratteristiche. Viene consigliata la versione 3.6.
 \end{itemize}
 
 \subsection{Aspetti positivi}%
 \label{sub:aspetti_positivi}
-Il capitolato risulta interessante perchè utilizza tecnologie relativamente recenti quali la \glossario{Blockchain}
-e il \glossario{Framework} \glossario{Serverless} non trattate dal nostro piano di studi.  
+Il capitolato risulta interessante perchè utilizza tecnologie relativamente recenti quali la \textit{Blockchain}
+e il \textit{}{framework serverless} non trattate dal nostro piano di studi.
 
 \subsection{Rischi}%
 \label{sub:rischi}
-Il gruppo non ha conoscenze approfondite delle tecnologie necessarie per lo sviluppo del capitolato. Richiederebbe 
+Il gruppo non ha conoscenze approfondite delle tecnologie necessarie per lo sviluppo del capitolato. Richiederebbe
 quindi uno studio approfondito che, visti in tempi ristretti potrebbe inficiare sulla parte di sviluppo.
 
 \subsection{Conclusione}%
 \label{sub:conclusione}
-Dopo aver valutato il capitolato il gruppo ha deciso di non considerarlo come prima scelta. 
+Dopo aver valutato il capitolato il gruppo ha deciso di non considerarlo come prima scelta.
 
 \end{document}
