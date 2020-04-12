@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Documentazione}
 \subsubsection{Scopo}
-Lo scopo del processo di documentazione è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero ciclo di vita del software.
+Lo scopo del processo di documentazione è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero \glossario{ciclo di vita} del software.
 
 \subsubsection{Aspettative}
 Le aspettative della corretta implementazione di questo processo sono:
@@ -48,7 +48,7 @@ Il frontespizio fornisce tutti i dati principali del documento. Esso presenta il
 Sono fornite anche altre informazioni essenziali, le quali sono:
 \begin{itemize}
   \item \textbf{Versione}: versione attuale del documento;
-  \item \textbf{Approvazione}: stato di approvazione del documento, che può essere "In redazione" o recare il nome del responsabile che ha approvato il documento;
+  \item \textbf{Approvazione}: stato di approvazione del documento, che può essere "In redazione" o indicare il nome del responsabile che ha approvato il documento;
   \item \textbf{Redazione}: redattori del documento;
   \item \textbf{Verifica}: verificatori del documento;
   \item \textbf{Uso}: destinazione del documento, che può essere "Interno" o "Esterno";
@@ -124,7 +124,7 @@ Il \textsc{Glossario} possiede un'impostazione grafica identica agli altri docum
 I termini appartenenti al \textsc{Glossario} sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, al fine di evitare l'appesantimento visivo.
 
 \subparagraph{Verbali}
-I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o eserni, e quindi riferirsi a una riunione a cui partecipa anche il proponente e/o il committente. La struttura del documento è identica a quella dei documenti ufficiali. \\
+I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o esterni, e quindi riferirsi a una riunione a cui partecipa anche il proponente e/o il committente. La struttura del documento è identica a quella dei documenti ufficiali. \\
 Ogni verbale è composto dai seguenti componenti:
 \begin{itemize}
   \item \textbf{Informazioni generali}: informazioni dell'incontro, consistenti nella modalità, nella data e negli orari di inizio e fine, e i partecipanti all'incontro;
@@ -346,14 +346,14 @@ Una repository è un ambiente in cui vengono memorizzati, mantenuti e versionati
 La struttura adottata sfrutta il meccanismo di \glossario{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa repository. \\
 La repository utilizzata si suddivide nei seguenti \glossario{branch}:
 \begin{itemize}
-  \item \texttt{master}: branch principale, sul quale vengono fatti le \glossario{major releases};
+  \item \texttt{master}: branch principale, sul quale vengono fatte le \glossario{major releases};
   \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Norme di Progetto};
   \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei Requisiti};
   \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario};
   \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto};
   \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica};
   \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di Fattibilità};
-  \item \texttt{verbali}:: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
+  \item \texttt{verbali}: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
 \end{itemize}
 Il \glossario{workflow} adottato è basato quindi su un principio della separazione dei documenti: questo, unito ai sistemi anti-collisione di git, permette che, durante il periodo in cui un membro del gruppo è assegnato a un ruolo di redazione specifico, egli sia l'unico a lavorare su tale documento.
 
@@ -433,7 +433,7 @@ Per il \glossario{commit} delle modifiche ai file della repository viene utilizz
     \item \textbf{refactor}: un cambiamento nel codice che non risolve un bug e che non aggiunge una nuova feature;
     \item \textbf{perf}: un cambiamento nel codice che migliora le performance;
     \item \textbf{test}: l'aggiunta di test mancanti;
-    \item \textbf{chore}: uno o più cambiamenti al processo di build, a strumenti ausiliari o a librerie.
+    \item \textbf{chore}: uno o più cambiamenti al processo di build, a strumenti ausiliari o a \glossario{librerie}.
   \end{itemize}
   \item Quali sono i files della repository coinvolti nel cambiamento (opzionale);
   \item Una descrizione breve del cambiamento, scritta in prima persona imperativo;
