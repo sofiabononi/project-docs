@@ -14,7 +14,7 @@ Garantiscono che i requisiti richiesti identificati nel documento \textsc{Analis
 %inizio tabella test di sistema
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % 
-\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{8cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{3.5cm}}
+\begin{longtable}[H]{>{\centering\bfseries}m{2.5cm} >{\centering}m{8cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{3.5cm}}
   \caption{Tabella test di sistema}%
   \label{tab:tabella_test_di_sistema}                                                    \\
   \rowcolor{lightgray}
@@ -29,7 +29,9 @@ Garantiscono che i requisiti richiesti identificati nel documento \textsc{Analis
   \endlastfoot%
   \textbf{TSRFO1} & L'amministratore deve poter addestrare il sistema inserendo i dati tramite degli appositi pulsanti. & Obbligatorio & Non Implementato \\
 
-  \textbf{TSRFD1.2.1} & Si verifica che l’amministratore venga notificato con un messaggio d’errore nel caso si carichino i dati di addestramento con un formato non supportato. & Desiderabile & Non Implementato \\
+  \textbf{TSRFD1.1.1} & Si verifica che si venga notificati con un messaggio d’errore nel caso si carichino i dati di addestramento in un formato non valido. & Desiderabile & Non Implementato \\
+
+  \textbf{TSRFD1.2.1} & Si verifica che l’amministratore venga notificato con un messaggio d’errore nel caso si carichi un predittore in un formato non valido. & Desiderabile & Non Implementato \\
   
   \textbf{TSRFO1.3} & L’amministratore deve poter scegliere il modello di machine learning per l'addestramento. & Obbligatorio & Non Implementato \\
 
