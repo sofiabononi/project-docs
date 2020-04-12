@@ -1,0 +1,23 @@
+\subsection{Riepilogo}
+\label{sub:riepilogo}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{3cm} >{\centering}m{3cm} >{\centering}m{3cm} >{\centering}m{3cm} >{\centering\arraybackslash}m{3cm}}
+  \caption{Riepilogo}%
+  \label{tab:riepilogo}                                                    \\
+  \rowcolor{lightgray}
+  {\textbf{Tipologia}} & {\textbf{Obbligatorio}} & {\textbf{Facoltativo}} & {\textbf{Desiderabile}} & {\textbf{Totale}} \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Tipologia}} & {\textbf{Obbligatorio}} & {\textbf{Facoltativo}} & {\textbf{Desiderabile}} & {\textbf{Totale}}   \\
+  \endhead%
+  \rowcolor{white}
+  \multicolumn{5}{c}{\textit{Continua alla pagina successiva}}
+  \endfoot%
+  \endlastfoot%
+  \textbf{Funzionale} & 18 & 11 & 12 & 41 \\
+  \textbf{Qualità} & 7 & 0 & 2 & 9 \\
+  \textbf{Vincolo} & 8 & 0 & 0 & 8 \\
+
+\end{longtable}
