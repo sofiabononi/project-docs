@@ -1,0 +1,39 @@
+\documentclass[../analisi-dei-requisiti.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo del documento}%
+\label{subs:scopo_del_documento}
+Il presente documento ha come scopo quello di analizzare in maniera dettagliata i requisiti e i casi d'uso individuati dal team per lo sviluppo del \glossario{capitolato} \emph{Predire in Grafana}. Tale documento farà da base di partenza per poter progettare l'\glossario{architettura} software richiesta e per garantire un \glossario{prodotto} adeguato alle aspettative concordate con il proponente Zucchetti S.p.a.
+
+\subsection{Scopo del prodotto}%
+\label{subs:scopo_del_prodotto}
+L'obiettivo del prodotto è quello di creare un \glossario{plug-in} per lo strumento di monitoraggio \glossario{Grafana}, prodotto utilizzato dal proponente per sorvegliare i propri servizi. Lo scopo del plug-in è quello di effettuare delle \glossario{previsioni} al flusso dei dati raccolti da Grafana utilizzando due modelli di \glossario{machine learning}: \glossario{SVM} e \glossario{RL}, i quali verranno opportunamente \glossario{addestrati} attraverso un'applicazione. I valori prodotti dal plug-in verranno aggiunti al flusso del monitoraggio e resi disponibili al sistema di creazione di grafici e \glossario{dashboard} per la loro visualizzazione. Con questo plug-in si cerca di monitorare la \glossario{"liveliness"} del sistema e consigliare gli interventi o le zone di intervento alla linea di produzione del software.
+
+\subsection{Glossario}
+\label{subs:glossario}
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un documento di nome \textsc{Glossario v1.0.0} che conterrà tali termini con il loro significato specifico. Per indicare che il termine del testo è presente all'interno del glossario verrà segnalato con una sottolineatura e una G a pedice.
+
+\subsection{Riferimenti}
+\label{subs:riferimenti}
+
+\subsubsection{Normativi}%
+\label{sssec:normativi}
+
+\begin{itemize}
+  \item \textbf{Norme di progetto}: \textsc{Norme di progetto v1.0.0};
+  \item \textbf{Capitolato d'appalto C4}: \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf};
+  \item \textbf{Verbale esterno}: \textsc{Verbale esterno 2020-03-25 v1.0.0}.
+\end{itemize}
+
+\subsubsection{Informativi}%
+\label{sssec:informativi}
+
+\begin{itemize}
+  \item \textbf{Studio di fattibilità}: \textsc{Studio di fattibilità v1.0.0};
+  \item \textbf{Slide del corso di Ingegneria del Software}: \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L08.pdf};
+  \item \textbf{Slide del corso di Ingegneria del Software}: \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/E03.pdf};
+  \item \textbf{Sito informativo riguardante la realizzazione del plug-in in Grafana}: \url{https://grafana.com/docs/grafana/latest/plugins/}.
+\end{itemize}
+
+\end{document}

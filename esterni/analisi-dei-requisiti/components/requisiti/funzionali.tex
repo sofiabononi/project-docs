@@ -1,0 +1,62 @@
+\subsection{Requisiti di funzionalità}
+\label{sub:requisiti_di_funzionalita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{2cm} >{\centering}m{9cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}
+  \caption{Requisiti funzionali}%
+  \label{tab:requisiti_funzionali}                                                    \\
+  \rowcolor{lightgray}
+  {\textbf{Requisito}} & {\textbf{Descrizione}} & {\textbf{Priorità}} & {\textbf{Fonte}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Requisito}} & {\textbf{Descrizione}} & {\textbf{Priorità}} & {\textbf{Fonte}}  \\
+  \endhead%
+  \rowcolor{white}
+  \multicolumn{4}{c}{\textit{Continua alla pagina successiva}}
+  \endfoot%
+  \endlastfoot%
+  \textbf{RFO1} & Il sistema deve essere addestrato dall'amministratore. & Obbligatorio & UC1 \\
+  \textbf{RFO1.1} & Il sistema deve mostrare un pulsante che permetta all'amministratore di caricare il file CSV contenente i dati di addestramento.  & Obbligatorio & UC1.1 \\
+  \textbf{RFD1.1.1} & Il sistema potrebbe notificare un messaggio di errore nel caso in cui venga fornito un file di addestramento non valido. & Desiderabile & UC8 \\
+  \textbf{RFO1.2} & Il sistema deve mostrare un pulsante che permetta all'amministratore di caricare il predittore allenato in precedenza, se ne è in possesso. & Obbligatorio & UC1.2 \\
+  \textbf{RFD1.2.1} & Il sistema potrebbe notificare all'amministratore un messaggio d'errore nel caso in cui si tenti di caricare un predittore in formato non valido. & Desiderabile & UC16 \\
+  \textbf{RFO1.3} & Il sistema deve permettere all'amministratore di scegliere un modello di machine learning da utilizzare per l'allenamento. & Obbligatorio & UC1.3 \\
+  \textbf{RFO1.3.1} & Il sistema deve permettere all'amministratore di selezionare il modello SVM per l'allenamento. & Obbligatorio & UC1.3.1 \\
+  \textbf{RFO1.3.2} & Il sistema deve permettere all'amministratore di selezionare il modello RL per l'allenamento. & Obbligatorio & UC1.3.2 \\
+  \textbf{RFF1.3.2.1} & Il sistema può permettere all'amministratore di selezionare la trasformazione esponenziale per l'allenamento. & Facoltativo & UC1.3.2.1 \\
+  \textbf{RFF1.3.2.2} & Il sistema può permettere all'amministratore di selezionare la trasformazione logaritmica per l'allenamento. & Facoltativo & UC1.3.2.2 \\
+  \textbf{RFF1.3.3} & Il sistema può permettere all'amministratore di selezionare il modello Rete Neurale per l'allenamento. & Facoltativo & UC1.3.3 \\
+  \textbf{RFO1.4} & Il sistema deve permettere all'amministratore di avviare l'addestramento. & Obbligatorio & UC1.4 \\
+  \textbf{RFO1.5} & Il sistema deve mettere a disposizione all’amministratore un pulsante per il caricamento del file JSON contenente il predittore allenato in precedenza. & Obbligatorio & UC1.5 \\
+  \textbf{RFF2} & Il sistema può mettere a disposizione all'amministratore un metodo per l’addestramento direttamente in Grafana. & Facoltativo & UC2 \\
+  \textbf{RFF2.1} & Il sistema può permettere all’amministratore di avviare l’addestramento in Grafana. & Facoltativo & UC2 \\
+  \textbf{RFF2.2} & Il sistema può permettere all'amministratore di selezionare un flusso di dati a cui applicare la predizione. & Facoltativo & UC2.1 \\
+  \textbf{RFF2.4} & Il sistema può permettere all’amministratore di selezionare il modello di previsione desiderato. & Facoltativo & UC2.2 \\
+  \textbf{RFO3} & Il sistema deve permettere all’amministratore di configurare il plug-in. & Obbligatorio & UC3 \\
+  \textbf{RFO3.1} & Il sistema deve mettere a disposizione all’amministratore un metodo per caricare il modello addestrato. & Obbligatorio & UC3.1 \\
+  \textbf{RFD3.1.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga caricato un file contenente il modello addestrato non valido. & Desiderabile & UC9 \\
+  \textbf{RFD3.1.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga caricato nessun file. & Desiderabile & UC10 \\
+  \textbf{RFO3.2} & Il sistema deve consentire all’amministratore di selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & UC3.2 \\
+  \textbf{RFD3.2.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga selezionato un nodo non valido. & Desiderabile & UC11 \\
+  \textbf{RFD3.2.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun nodo. & Desiderabile & UC12 \\
+  \textbf{RFO3.3} & Il sistema deve permettere all’amministratore la selezione del tipo di visualizzazione della predizione. & Obbligatorio & UC3.3 \\
+  \textbf{RFO3.3.1} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & UC3.3.1 \\
+  \textbf{RFO3.3.2} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & UC3.3.2 \\
+  \textbf{RFD3.3.3} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & UC13 \\
+  \textbf{RFO4} & Il sistema deve mettere a disposizione dell’utente un metodo per l’avvio e l’interruzione della predizione. & Obbligatorio & UC4 \\
+  \textbf{RFO4.1} & Il sistema deve mettere a disposizione dell’amministratore un pulsante per l’avvio della predizione. & Obbligatorio & UC4.1 \\
+  \textbf{RFO4.2} & Il sistema deve mettere a disposizione dell’amministratore un pulsante per interrompere la predizione. & Obbligatorio & UC4.2 \\
+  \textbf{RFF5} & Il sistema può mettere a disposizione dell’amministratore un metodo per l’impostazione degli alert. & Facoltativo & UC5 \\
+  \textbf{RFF5.1} & Il sistema può mostrare un pulsante che permetta all'amministratore di creare un alert. & Facoltativo & UC5.1 \\
+  \textbf{RFF5.2} & Il sistema può mettere a disposizione un sistema per inserire una soglia di alert. & Facoltativo & UC5.2 \\
+  \textbf{RFF5.2.1} & Il sistema può mettere a disposizione dell’amministratore un pulsante per confermare la soglia dell’alert desiderata. & Facoltativo & UC5.2 \\
+  \textbf{RFD5.2.1.1} & Il sistema, utilizzando un alert, potrebbe notificare un messaggio di errore nel caso in cui venga superata la soglia impostata. & Desiderabile & UC14 \\
+  \textbf{RFD6} & Il sistema potrebbe permettere all'utente di eliminare il pannello di monitoraggio. & Desiderabile & UC6 \\
+  \textbf{RFD6.1} & Il sistema potrebbe permettere all'utente di selezionare il pannello di monitoraggio da rimuovere. & Desiderabile & UC6 \\
+  \textbf{RFD6.2} & Il sistema potrebbe permettere grazie alle impostazioni, la rimozione del pannello di monitoraggio. & Desiderabile & UC6 \\
+  \textbf{RFD6.3} & Il sistema potrebbe visualizzare un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & UC15 \\
+  \textbf{RFO7} & Il sistema deve mettere a disposizione all'utente un metodo per la visualizzazione delle previsioni. & Obbligatorio & UC7 \\
+
+
+\end{longtable}

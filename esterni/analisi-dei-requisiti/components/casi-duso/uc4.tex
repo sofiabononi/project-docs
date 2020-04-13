@@ -1,0 +1,51 @@
+\subsubsection{UC4 - Utilizzo del plug-in}
+\label{sssec:uc4}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=10cm]{uc4.png}\\
+    \caption{UC4 - Utilizzo del plug-in}%
+    \label{fig:uc4}
+  \end{center}
+  \end{figure}
+
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Attore secondario:] Grafana.
+  \item[Descrizione:] L'amministratore sceglie se utilizzare il plug-in per la predizione oppure interromperlo.
+  \item[Precondizione:] Il plug-in è stato configurato correttamente (UC3).
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore avvia la predizione (UC4.1);
+    \item L'amministratore interrompe la predizione (UC4.2).
+  \end{enumerate}
+  \item[Postcondizione:] L'amministratore ha deciso se avviare o interrompere la predizione sui nodi.
+\end{description}
+
+\paragraph{UC4.1 - Avvio plug-in}
+\label{sssec:uc4.1}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'amministratore ha deciso di avviare il plug-in. La predizione verrà eseguita sui nodi selezionati precedentemente.
+  \item[Precondizione:] L'amministratore ha configurato correttamente il plug-in (UC3).
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore ha deciso di avviare la predizione;
+    \item La conferma del corretto avvio della predizione viene visualizzata per mezzo di un messaggio.
+  \end{enumerate}
+  \item[Postcondizione:] È stata svolta la predizione sui nodi scelti in precedenza.
+\end{description}
+
+\paragraph{UC4.2 - Interruzione del plug-in}
+\label{sssec:uc4.2}
+\begin{description}
+  \item[Attore primario:] Utente amministratore.
+  \item[Descrizione:] L'amministratore ha deciso di interrompere la predizione.
+  \item[Precondizione:] L'amministratore ha configurato correttamente il plug-in (UC3).
+  \item[Scenario principale:]
+  \begin{enumerate}
+    \item L'amministratore ha deciso di interrompe la predizione;
+    \item La conferma dell'interruzione della predizione viene visualizzato per mezzo di un messaggio.
+  \end{enumerate}
+  \item[Postcondizione:] È stata interrotta la predizione.
+\end{description}

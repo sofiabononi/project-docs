@@ -1,0 +1,16 @@
+\subsubsection{UC16 - Visualizzazione messaggio di errore nel file del predittore allenato}
+\label{sssec:uc16}
+\begin{description}
+	\item[Attore primario:] Utente amministratore.
+	\item[Precondizione:]
+	\begin{enumerate}
+		\item L'amministratore ha caricato un predittore allenato in un formato non riconosciuto dal sistema (UC1.2);
+		\item L'amministratore ha avviato l'addestramento del predittore in Grafana(UC1).
+	\end{enumerate}
+	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "file in ingresso non valido" impedendo il funzionamento del plug-in.
+	\item[Postcondizione:]
+	\begin{enumerate}
+		\item L'amministratore visualizza l'errore "file in ingresso non valido";
+		\item L'addestramento del predittore non viene avviato.
+	\end{enumerate}
+\end{description}

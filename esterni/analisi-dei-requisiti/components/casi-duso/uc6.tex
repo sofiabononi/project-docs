@@ -1,0 +1,15 @@
+\subsubsection{UC6 - Rimozione del pannello selezionato}
+\label{sssec:uc6}
+\begin{description}
+	\item[Attore primario:] Utente amministratore.
+	\item[Attore secondario:] Grafana.
+	\item[Descrizione:] L'amministratore seleziona il pannello che vuole rimuovere usando i meccanismi di Grafana.
+	\item[Precondizione:]
+	\begin{enumerate}
+		\item L'amministratore deve aver impostato correttamente il pannello di monitoraggio(UC3.1);
+		\item L'amministratore deve aver avviato correttamente il plug-in(UC4.1).
+	\end{enumerate}
+	\item[Scenario Principale:] L'amministratore seleziona il pannello di monitoraggio da eliminare ed usando le impostazioni di Grafana lo rimuove.
+	\item[Postcondizione:] L'amministratore rimuove il pannello di monitoraggio selezionato.
+	\item[Estensioni:] UC6 viene esteso nel caso d'uso UC15 con la visualizzazione del messaggio di errore quando si tenta di rimuovere un pannello senza che venga interrotta la predizione.
+\end{description}
