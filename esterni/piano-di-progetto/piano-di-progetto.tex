@@ -1,0 +1,73 @@
+\documentclass{article}
+
+\input{../../commons/config}
+
+%Qui ci andrà il percorso delle immagini da includere in analisi dei requisiti
+\appendToGraphicspath{../../commons/img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Piano di Progetto}
+
+\setVersione{1.0.0}
+
+\setResponsabile{Ian Nicolas Di Menna}
+
+\setRedattori{Nicholas Miazzo \\ &
+              Alessandro Franchin \\ &
+              Ian Nicolas Di Menna}
+
+\setVerificatori{
+Nicholas Miazzo \\ &
+Enrico Galdeman \\ & 
+Ian Nicolas Di Menna \\ &
+Marco Nardelotto \\ &
+Enrico Buratto
+}                
+\setUso{Esterno}
+
+\setDescrizione{Descrizione della pianificazione delle attività del gruppo \emph{CoffeeCode} nella realizzazione del progetto \emph{Predire in Grafana}.}
+
+\setModifiche{
+v1.0.0    & Ian Nicolas Di Menna & Responsabile   & 2020-04-10 & Approvazione documento                       \\ 
+v0.4.0    & Marco Nardelotto    & Verificatore   & 2020-04-08 & Verifica \S6, appendice A e B               \\ 
+v0.3.3    & Sofia Bononi        & Amministratore & 2020-04-07 & Fine stesura appendice B                     \\ 
+v0.3.2    & Alessandro Franchin & Responsabile   & 2020-04-06 & Stesura appendice A                       \\ 
+v0.3.1    & Alessandro Franchin & Responsabile   & 2020-04-05 & Stesura \S6                                 \\ 
+v0.3.0    & Enrico Buratto      & Verificatore   & 2020-04-02 & Verifica \S3                                \\ 
+v0.2.6    & Ian Nicolas Di Menna & Verificatore   & 2020-04-01 & Verifica \S4.4, \S4.4, \S5.5 e \S5.5     \\ 
+v0.2.5    & Enrico Buratto      & Verificatore   & 2020-03-31 & Verifica \S4.2, \S4.3, \S5.2 e \S5.3     \\ 
+v0.2.4    & Nicholas Miazzo     & Responsabile   & 2020-03-29 & Stesura \S4.5 e \S5.5, completamento \S3    \\ 
+v0.2.3    & Nicholas Miazzo     & Responsabile   & 2020-03-28 & Stesura \S4.4 e \S5.4                      \\ 
+v0.2.2    & Nicholas Miazzo     & Responsabile   & 2020-03-27 & Stesura \S4.3 e \S5.3                      \\ 
+v0.2.1    & Nicholas Miazzo     & Responsabile   & 2020-03-26 & Stesura \S4.2 e \S5.2                      \\ 
+v0.2.0    & Enrico Galdeman     & Verificatore   & 2020-03-21 & Verifica \S1, \S2                          \\ 
+v0.1.2    & Ian Nicolas Di Menna & Responsabile   & 2020-03-20 & Stesura \S2                                 \\ 
+v0.1.1    & Ian Nicolas Di Menna & Responsabile   & 2020-03-19 & Stesura \S1                                 \\ 
+v0.1.0    & Nicholas Miazzo     & Verificatore   & 2020-03-11 & Verifica \S3, \S4.1, appendice A           \\ 
+v0.0.4    & Alessandro Franchin & Responsabile   & 2020-03-11 & Modifica \S4.1 e \S5.1                     \\ 
+v0.0.3    & Sofia Bononi        & Amministratore & 2020-03-11 & Inizio stesura appendice B                   \\ 
+v0.0.2    & Alessandro Franchin & Responsabile   & 2020-03-10 & Inizio stesura \S3, stesura \S4.1 e \S5.1 \\ 
+v0.0.1    & Alessandro Franchin & Responsabile   & 2020-03-10 & Creazione del documento }
+
+\begin{document}
+
+\input{../../commons/template}
+
+\subfile{components/1-introduzione.tex}
+\newpage
+\subfile{components/2-analisi-dei-rischi.tex}
+\newpage
+\subfile{components/3-modello-di-sviluppo.tex}
+\newpage
+\subfile{components/4-pianificazione.tex}
+\newpage
+\subfile{components/5-preventivo.tex}
+\newpage
+\subfile{components/6-consuntivo.tex}
+\appendix
+\newpage
+\subfile{components/A-rischi-riscontrati.tex}
+\newpage
+\subfile{components/B-organigramma.tex}
+
+\end{document}
