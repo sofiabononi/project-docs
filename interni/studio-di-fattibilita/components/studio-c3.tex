@@ -1,0 +1,50 @@
+\documentclass[../studio-di-fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:informazioni_generale}
+\begin{description}
+  \item \textbf{Nome}: NaturalAPI.
+  \item \textbf{Proponente}: teal.blue.
+  \item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{descrizione}
+Le difficoltà comunicative tra i diversi \glossario{Stakeholder} è uno dei principali problemi durante la realizzazione di un progetto software, provocando fraintendimenti e ritardi che di conseguenza aumentano i costi del progetto. Gherkin è lo standard che permette di descrivere scenari in linguaggio naturale secondo un modello standard che viene poi collegato al codice dell'applicazione. Il \glossario{Behaviour-Driven Development (BDD)} ha come scopo l'utilizzo del linguaggio naturale per chiarire la comunicazione tra i vari stakeholders usando modelli di linguaggio standardizzati evitando così fraintendimenti. Il linguaggio naturale e il codice rimangono ancora collegati solo dall'intervento dello sviluppatore, che deve stabilire la firma del metodo dell'API a cui vine passato come parametro lo scenario scritto in linguaggio naturale.
+
+\subsection{Finalità del progetto}%
+\label{finalita_del_progetto}
+L'obiettivo è quello di creare un \glossario{toolkit} \glossario{Proof-of-Concept} chiamato NaturalAPI che permette di ridurre il divario tra le specifiche del progetto in linguaggio naturale e le API. Questa finalità permette agli sviluppatori futuri di scrivere API più gestibili, prevedibili e coerenti partendo dai requisiti del progetto. NaturalAPI dovrà quindi essere composto di 3 elementi:
+\begin{itemize}
+  \item \textbf{NaturalAPI Discover}: un \glossario{Business Domain Language} (BDL) \textit{extractor}, in grado di individuare i termini più usati dentro uno specifico tipo di business e le relazioni tra di loro (nomi, predicati, verbi);
+  \item \textbf{NaturalAPI Develop}: un esportatore di linguaggio che converte il \glossario{Business Application Language} (BAL) in test e API in uno dei linguaggio e framework disponibili all'applicazione supportando la creazioni di nuove \glossario{Repository} di codice e l'aggiornamento di quelle esistenti;
+  \item \textbf{NaturalAPI Design}: un \glossario{parser} di scenari e funzionalità che crea un'API BAL a partire dai documenti Gherkin e un BDL.
+\end{itemize}
+
+\subsection{Tecnologie interessate}%
+\label{tecnologie_interessate}
+\begin{itemize}
+  \item \textbf{Natural language processing}: processo di elaborazione automatico delle informazioni scritte o parlate in una lingua naturale;
+  \item \textbf{Gherkin}: standard per produrre user case in formato BDD;
+  \item \textbf{OpenApi}: formato per rappresentare API;
+  \item \textbf{Cucumberm} o \textbf{Heaptest}: strumenti software per supportare il BDD;
+  \item \textbf{Swagger}: software Framework per creare API basato sul formato OpenAPI;
+  \item \textbf{Standard Parser}: parser open source;
+  \item \textbf{Behavioural Driven Development}.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{aspetti_positivi}
+Tale progetto è particolarmente interessante per le proprie finalità. La comunicazione infatti è uno degli aspetti più importanti durante un progetto ed avere uno strumento per standardizzare il linguaggio naturale usato dagli Stakeholders provocherebbe sicuramente un incremento in termini di efficacia. Questo capitolato risulta stimolante e permetterebbe di approfondire nuove tecnologie interessanti quali le BDD.
+
+\subsection{Rischi}%
+\label{rischi}
+Il più grande rischio riscontrato nel capitolato è la mancata conoscenza dei componenti del team delle tecnologie di Natural language processisg, BDD, Gherkin e Cucumber; Richiederebbe dunque un approfondito studio preliminare affinché il team abbia la possibilità di sfruttare i concetti richiesti nel capitolato mettendoli in pratica.
+
+\subsection{Conclusione}%
+\label{sub:conclusione}
+Il capitolato non è stato preso in considerazione perchè concordato dal team che lo studio premilinare delle tecnologie e concetti risulta di impatto troppo alto sui tempi del progetto, decidendo quindi di non proporsi per il capitolato.
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[../studio-di-fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:informazioni_generale}
+\begin{description}
+  \item \textbf{Nome}: Stalker.
+  \item \textbf{Proponente}: Imola Informatica.
+  \item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:descrizione}
+A seguito della normativa vigente in materia di sicurezza che regolamenta la gestione delle presenze nei locali pubblici ed aperti al pubblico si vuole realizzare un sistema che permetta di monitorare il numero di persone presenti in un determinato luogo. Questo sistema che può, inoltre, essere utile anche in ambito lavorativo per segnalare la propria presenza.
+
+\subsection{Finalità del progetto}%
+\label{sub:finalita_del_progetto}
+Il progetto consiste nella realizzazione di una applicazione (Android o iOS). Tale applicazione deve permettere all'amministratore di:
+\begin{itemize}
+  \item Loggarsi all'interno del server con un'utenza personale;
+  \item Creare, modificare o eliminare organizzazioni;
+  \item Aggiungere, modificare e rimuovere luoghi;
+  \item Configurare il server \glossario{LDAP} che le applicazioni dovranno utilizzare per registrarsi all'organizzazione;
+  \item Inviare agli utenti una richiesta di aggiornamento per fargli scaricare la lista aggiornata delle organizzazioni e dei luoghi;
+  \item Monitorare in ogni momento il numero di dipendenti presenti nei luoghi;
+  \item Effettuare ricerche sugli accessi di uno specifico dipendente;
+  \item Creare un report con le informazioni degli utenti.
+\end{itemize}
+Al dipendente l'applicazione deve poter permettere di:
+\begin{itemize}
+  \item Recuperare la lista organizzazioni;
+  \item Loggarsi nelle organizzazioni in maniera autonoma o autenticandosi;
+  \item Avere lo storico degli accessi;
+  \item Avere una visualizzazione in tempo reale della propria presenza o meno all'interno di un luogo monitorato e la possibilità di sapere il tempo trascorso al suo interno.
+\end{itemize}
+L'applicazione deve inoltre avere:
+\begin{itemize}
+  \item \glossario{Test di carico} che dimostrino il corretto funzionamento in situazioni normali, di carico e di sovraccarico;
+  \item Copertura di test >= 80\% correlata di report
+  \item Report dei test effettuati relativamente all'ottimizzazione della precisione dell'applicazione rispetto al consumo della batteria dei cellulari;
+  \item Documentazione su:
+  \begin{itemize}
+    \item Scelte implementative e progettuali effettuate e relative motivazioni;
+    \item Problemi aperti e eventuali soluzioni proposte da esplorare.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Tecnologie interessate}%
+\label{sub:tecnologie_interessate}
+\begin{itemize}
+  \item Java (versione 8 o superiori), Python o Node.js per lo sviluppo del server back-end;
+  \item Protocolli asincroni per le comunicazioni app mobile-server;
+  \item Pattern di Publisher/Subscriber;
+  \item \glossario{Infrastructure-as-a-service} (IAAS) Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server, nonché per la gestione della scalabilità orizzontale.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:aspetti_positivi}
+Tale progetto, presentato in maniera comprensibile, con obiettivi chiari e con libertà di scelta degli strumenti di sviluppo, si presenta come un'ottima soluzione ai problemi di gestione delle presenze in luoghi pubblici  e per garantire un controllo dei dipendenti in ambito lavorativo.
+
+\subsection{Rischi}%
+\label{sub:rischi}
+Il rischio riscontrato in questo capitolato è quello di riuscire a fornire la giusta posizione dell'individuo che utilizza l'applicazione per ottenere un buon sistema di monitoraggio. Questo problema richiede quindi una precisa analisi della posizione dell'utente ottenuto dai servizi di geolocalizzazione offerta dal proprio dispositivo mobile, che molte volte risulta essere non troppo precisa.
+
+\subsection{Conclusione}%
+\label{sub:conclusione}
+Il capitolato non è stato preso in considerazione perchè non era più disponibile per la scelta.
+
+\end{document}

@@ -1,0 +1,83 @@
+\documentclass[../studio-di-fattibilita.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Informazioni generali}%
+\label{sub:informazioni_generale}
+\begin{description}
+  \item \textbf{Nome}: Autonomous Highlights Platform.
+  \item \textbf{Proponente}: Zero12.
+  \item \textbf{Committente}: prof. Tullio Vardanega e prof. Riccardo Cardin.
+\end{description}
+
+\subsection{Descrizione}%
+\label{sub:descrizione}
+Il capitolato C1 prevede la creazione di una \glossario{piattaforma web} che mediante l'inserimento di un video relativo ad un evento sportivo identificato, riesca a produrre un ulteriore video della durata massima di 5 minuti, contenente i momenti salienti (\glossario{highlights}) del video precedentemente inserito.
+
+\subsection{Finalità del progetto}%
+\label{sub:finalita_del_progetto}
+Il \glossario{progetto} consiste nel creare una piattaforma web dotata di un sistema di Machine Learning in grado di identificare ogni momento importante di un evento.
+Le principali funzionalità che la piattaforma deve offrire sono:
+\begin{itemize}
+  \item Caricamento del video scelto;
+  \item Identificazione dei momenti salienti all'interno del video;
+  \item Estrazione delle corrispondenti parti di video;
+  \item Generazione della sintesi del video.
+\end{itemize}
+Mentre i vincoli obbligatori del progetto sono:
+\begin{itemize}
+  \item L'utilizzo di \glossario{Sage Maker};
+  \item Realizzare l'\glossario{architettura} basata a \glossario{micro-servizi}, in modo da dividere il progetto in diverse funzionalità ognuna indipendente dalle altre;
+  \item Caricamento dei video da elaborare tramite riga di comando;
+  \item Realizzazione di una console web per l'analisi e il controllo degli stati di elaborazione del video.
+\end{itemize}
+
+
+\subsection{Tecnologie interessate}%
+\label{sub:tecnologie_interessate}
+Per il progetto viene consigliato di usare la tecnologia di \glossario{Amazon Web Services} e in particolare i seguenti servizi:
+\begin{itemize}
+  \item \textbf{Elastic  Container  Service}  o  \textbf{Elastic  Kubernetes  Service}: servizio  di  orchestrazione  di  contenitori  altamente  dimensionabile  ad  elevate prestazioni;
+  \item \glossario{DynamoDB}: database \glossario{NoSQL} dalle alte performance ideale per la conservazione di tag o altre informazioni a supporto dell'applicativo;
+  \item \glossario{AWS Transcode}: servizio gestito per la conversione ed elaborazione di diversi formati video;
+  \item \textbf{Sage Maker}: servizio completamente gestito che copre l'intero flusso di lavoro dell'apprendimento automatico per:
+  \begin{itemize}
+    \item Etichettare e preparare i dati;
+    \item Scegliere un algoritmo;
+    \item Formare il \glossario{modello} e ottimizzarlo per la distribuzione;
+    \item Effettuare previsioni;
+    \item Intraprendere azioni.
+  \end{itemize}
+  \item \glossario{AWS Rekognition video}: servizio di analisi video basato su apprendimento approfondito, in grado di:
+  \begin{itemize}
+    \item Riconoscere i movimenti delle persone in un fotogramma;
+    \item Riconoscere soggetti, volti, oggetti, celebrità e contenuti inappropriati.
+  \end{itemize}
+\end{itemize}
+Come linguaggi di programmazione vengono consigliati:
+\begin{itemize}
+    \item \glossario{Node.js}: per lo sviluppo di \glossario{\textit{API Restful}} JSON a supporto dell’applicativo;
+    \item \glossario{Python}: per lo sviluppo delle componenti di Machine Learning.
+\end{itemize}
+Per la realizzazione dell'interfaccia web vengono consigliati:
+\begin{itemize}
+  \item \glossario{HTML5};
+  \item \glossario{CSS3};
+  \item \glossario{Javascript}, utilizzando un \glossario{framework} \glossario{\textit{responsive}} come \glossario{Twitter}.
+\end{itemize}
+
+\subsection{Aspetti positivi}%
+\label{sub:aspetti_positivi}
+Il progetto presenta adeguatamente l'idea generale del software da realizzare, fornendo le informazioni e la documentazione necessaria per
+comprendere ogni singola tecnologia di sviluppo da utilizzare e specificando i documenti e i prodotti richiesti dall'azienda nelle fasi di pre-implementazione e post-implementazione.
+Si presenta inoltre come un buon sistema per velocizzare l'acquisizione dei momenti salienti di un evento sportivo appena concluso.
+
+\subsection{Rischi}%
+\label{sub:rischi}
+L’impiego di numerose tecnologie richiede un impegno non indifferente che potrebbe comportare a ritardi nella consegna del software e a una non corretta implementazione delle funzionalità richieste, oltre al fatto che non tutte le funzionalità della piattaforma vengono chiaramente esplicitate.
+
+\subsection{Conclusione}%
+\label{sub:conclusione}
+Il capitolato non è stato preso in considerazione per la non disponibilità a ulteriori gruppi di lavoro da parte del proponente.
+
+\end{document}
