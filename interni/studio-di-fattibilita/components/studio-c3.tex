@@ -13,12 +13,13 @@
 \subsection{Descrizione}%
 \label{descrizione}
 Le difficoltà comunicative tra i diversi \glossario{Stakeholder} è uno dei principali problemi durante la realizzazione di un progetto software, provocando fraintendimenti e ritardi che di conseguenza aumentano i costi del progetto. Gherkin è lo standard che permette di descrivere scenari in linguaggio naturale secondo un modello standard che viene poi collegato al codice dell'applicazione. Il \glossario{Behaviour-Driven Development (BDD)} ha come scopo l'utilizzo del linguaggio naturale per chiarire la comunicazione tra i vari stakeholders usando modelli di linguaggio standardizzati evitando così fraintendimenti. Il linguaggio naturale e il codice rimangono ancora collegati solo dall'intervento dello sviluppatore, che deve stabilire la firma del metodo dell'API a cui vine passato come parametro lo scenario scritto in linguaggio naturale.
+
 \subsection{Finalità del progetto}%
 \label{finalita_del_progetto}
 L'obiettivo è quello di creare un \glossario{toolkit} \glossario{Proof-of-Concept} chiamato NaturalAPI che permette di ridurre il divario tra le specifiche del progetto in linguaggio naturale e le API. Questa finalità permette agli sviluppatori futuri di scrivere API più gestibili, prevedibili e coerenti partendo dai requisiti del progetto. NaturalAPI dovrà quindi essere composto di 3 elementi:
 \begin{itemize}
-  \item \textbf{NaturalAPI Discover}: un \glossario{Business Domain Language (BDL)} extractor, in grado di individuare i termini più usati dentro uno specifico tipo di business e le relazioni tra di loro (nomi, predicati, verbi);
-  \item \textbf{NaturalAPI Develop}: un esportatore di linguaggio che converte il \glossario{Business Application Language} (BAL) in test e API in uno dei linguaggio e \glossario{Framework} disponibili all'applicazione supportando la creazioni di nuove \glossario{Repository} di codice e l'aggiornamento di quelle esistenti;
+  \item \textbf{NaturalAPI Discover}: un \glossario{Business Domain Language} (BDL) \textit{extractor}, in grado di individuare i termini più usati dentro uno specifico tipo di business e le relazioni tra di loro (nomi, predicati, verbi);
+  \item \textbf{NaturalAPI Develop}: un esportatore di linguaggio che converte il \glossario{Business Application Language} (BAL) in test e API in uno dei linguaggio e framework disponibili all'applicazione supportando la creazioni di nuove \glossario{Repository} di codice e l'aggiornamento di quelle esistenti;
   \item \textbf{NaturalAPI Design}: un \glossario{parser} di scenari e funzionalità che crea un'API BAL a partire dai documenti Gherkin e un BDL.
 \end{itemize}
 
