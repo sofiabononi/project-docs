@@ -55,19 +55,19 @@ Il progetto \emph{Predire in Grafana} si pone come obiettivo finale la realizzaz
 	\label{sssec:plug-in_di_previsione}
 		Il plug-in che verrà realizzato dal team caricherà il file JSON, prodotto dai dati di addestramento con i parametri per le previsioni con SVM per la classificazione o la RL, leggerà la definizione del predittore e successivamente assocerà tali predittori al flusso dei dati presenti in Grafana. In seguito i risultati verranno resi disponibili al sistema di creazione di grafici e dashboard per la loro visualizzazione. Il sistema, grazie a previsioni accompagnate da motivazioni e dal livello di qualità del valore ottenuto, permetterà al sistemista di analizzare la situazione e verificare se è necessario un intervento o se si tratti di una situazione sopravvalutata.
 
-subsection{Vincoli generali}
+\subsection{Vincoli generali}
 \label{subs:vincoli_generali}
 	L'implementazione deve rispettare i seguente vincoli:
 	\begin{itemize}
 		\item{Utilizzo del linguaggio JavaScript per lo sviluppo del plug-in:}
 		\begin{itemize}
 			\item{Il proponente consiglia l'uso di una libreria creata da Davide Ghiotto, presente al seguente indirizzo:
-			\newline \url{https://www.npmjs.com/package/ml-modules};
+			\newline \url{https://www.npmjs.com/package/ml-modules};}
 			\item{Il proponente consiglia anche l'uso di due librerie per l'implementazione dei modelli d'addestramento SVM e RL rispettivamente nei seguenti indirizzi:
 			\newline \url{https://github.com/karpathy/svmjs};
-			\newline \url{https://github.com/Tom-Alexander/regression-js};
+			\newline \url{https://github.com/Tom-Alexander/regression-js};}
 			\item{Per le \glossario{reti neurali} in JavaScript, il proponente consiglia l'uso della libreria presente al seguente link:
-			\newline \url{https://cd.standford.edu/people/karpathy/convnetis}.
+			\newline \url{https://cd.standford.edu/people/karpathy/convnetis}.}
 		\end{itemize}
 		\item{L'addestramento dei modelli SVM e RL deve essere eseguito in un applicazione esterna a cui vengono forniti i dati di test:}
 		\begin{itemize}
