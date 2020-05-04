@@ -4,10 +4,10 @@
 In questa sezione vengono resi noti i risultati dei test relativi al periodo di revisione dei documenti e requisiti, mediante l'utilizzo delle metriche descritte nelle sezioni precedenti.
 I risultati possono coincidere o meno con i valori desiderati dal gruppo, nel caso non coincidessero verrà fatta un ulteriore analisi per il miglioramento visibile nel punto §7.
 
-\subsection{Periodo di Analisi}
-\label{sub:periodo_di_analisi}
+\subsection{Primo periodo (RR)}
+\label{sub:primo_periodo}
 Durante questo periodo è stata sottoposta ad una precisa attività di verifica tutta la documentazione da presentare in ingresso in sede di Revisione dei Requisiti.
-I verificatori inizialmente hanno effettuato l'analisi utilizzando la tecnica di \glossario{Walkthrough} che ha portato ad una serie di errori frequenti consultabili nella sezione §7 del documento.
+I verificatori inizialmente hanno effettuato l'analisi utilizzando la tecnica di \glossario{Walkthrough} che ha portato ad una serie di errori frequenti consultabili nella sezione appendice §C del documento.
 Successivamente dopo questa prima fase, i verificatori mediante la tecnica dell'\glossario{Inspection} hanno analizzato i documenti in modo più mirato ricavando errori di diverso genere che non verranno trattati in quanto si trattano di piccolezze già facilmente risolte.
 
 \subsubsection{Esiti verifiche sui documenti}
@@ -285,9 +285,144 @@ Come per i documenti, anche per queste metriche verrà fornito un esito che può
 \end{longtable}
 \textbf{Nota}: tutti i documenti più corposi e discorsivi sono stati verificati almeno 3 volte, mentre per i documenti più esili di contenuti sono bastate 1 o 2 fasi di verifica. Nonostante tutto il team ritiene l'obiettivo comunque soddisfatto soprattutto per il fatto che non sono stati rilasciati documenti con errori.
 
-\subsection{Conclusioni}%
+\subsubsection{Conclusioni}%
 \label{sub:conclusioni}
 I dati analizzati esprimono un buon andamento del lavoro svolto dal team che si prefissa come obiettivo quello di continuare a migliorare sotto ogni aspetto relativo alle metriche e agli obiettivi prefissati.
 Nei periodi prossimi di realizzazione del progetto il team cercherà di mantenere questi risultati e, se possibile, migliorarli specialmente negli obiettivi più carenti rilevati in questa fase iniziale.
 
+\subsection{Secondo periodo (RP)}
+\label{sub:secondo_periodo}
+Nella seconda parte del progetto si è attuata una verifica più approfondita sui documenti, correggendo eventuali errori concettuali individuati nella prima fase di Revisione dei Requisiti.
+Sono quindi state attuate verifiche e modifiche più specifiche ai documenti, e verifiche sul software, in particolare sul codice scritto per il \glossario{Proof of Concept}.
+Come per il primo periodo, gli errori rilevati verranno trattati nella sezione appendice §C del documento.
+
+\subsubsection{Esiti verifiche sui documenti}
+\label{sub:esiti_verifiche_sui_documenti}
+Sui documenti sono state utilizzate le metriche per:
+    \begin{itemize}
+        \item \textbf{Indice di Gulpease};
+        \item \textbf{Correttezza lessicale/ortografica}.
+    \end{itemize}
+Per evitare risultati errati nel calcole dell'Indice di Gulpease si è deciso di non tenere in considerazione:
+    \begin{itemize}
+        \item Il frontespizio di ogni documento;
+        \item Le tabelle presenti nei documenti;
+        \item Il diario delle modifiche all'interno di ogni documento.
+    \end{itemize}
+Per quanto riguarda la correttezza lessicale/ortografica, gli errori trovati non verranno classificati ma semplicemente conteggiati uniformemente includendo anche errori derivati dal mancato rispetto delle convenzioni scritte nelle \textsc{Norme di Progetto v2.0.0}.
+\\ Per ogni metrica di ogni documento verrà inoltre inserito l'esito dell'analisi che può avere risultato soddisfacente o non.
+
+\paragraph{Norme di Progetto}
+\label{sub:norme_di_progetto}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Norme di Progetto v2.0.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per le Norme di Progetto v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\paragraph{Studio di Fattibilità}
+\label{sub:studio_di_fattibilita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Studio di Fattibilità v2.0.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per lo Studio di Fattibilità v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\paragraph{Piano di Qualifica}
+\label{sub:piano_di_qualifica}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Piano di Qualifica v2.0.0} &                 & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Piano di Qualifica v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\paragraph{Piano di Progetto}
+\label{sub:piano_di_progetto}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Piano di Progetto v1.0.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Piano di Progetto v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\paragraph{Analisi dei Requisiti}
+\label{sub:analisi_dei_requisiti}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Analisi dei Requisiti v2.0.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per l'Analisi dei Requisiti v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\paragraph{Glossario}
+\label{sub:glossario}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Glossario v2.0.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Glossario v2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+
+\subsubsection{Esiti verifiche sui processi}
+\label{sub:esiti_verifiche_sui_processi}
+
+\subsubsection{Conclusioni}%
+\label{sub:conclusioni}
 \end{document}
