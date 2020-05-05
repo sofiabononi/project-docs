@@ -632,6 +632,21 @@ Come per i documenti, anche per queste metriche verrà fornito un esito che può
 \end{longtable}
 \textbf{Nota}:
 
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR014 Soddisfare i test richiesti} & MoPR013 Percentuale di test soddisfatti &  &  \\
+  \caption{Risultati QoPR14}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}:
+
 \subsubsection{Esiti verifiche sui prodotti}
 \label{sub:esiti_verifiche_sui_prodotti}
 In questa sezione vengono visualizzati gli esiti delle metriche prese in considerazione per quanto riguarda i prodotti realizzati. Come per i documenti, anche per queste metriche verrà fornito un esito che può essere soddisfacente o meno.

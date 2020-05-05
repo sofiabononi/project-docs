@@ -208,20 +208,23 @@ Il processo segue di pari passo il ciclo di vita di ogni documento, come spiegat
 Durante tutto lo svolgimento del progetto, il processo di verifica sarà attivo con l'obiettivo principale quello di valutare la correttezza dei prodotti generati per: 
 \begin{itemize}
     \item Individuare eventuali errori;
-    \item Decidere se rispettano gli standard di qualità prefissati.
+    \item Decidere se rispettano gli standard di qualità prefissati;
+    \item Verificare il soddisfacimento dei test descritti nella sezione §4.
 \end{itemize}
 
 \paragraph{Funzioni}
 \label{sub:funzioni_4}
 \begin{itemize}
     \item \textbf{Verificare i requisiti dei prodotti}: viene verificato che i prodotti soddisfino i requisiti richiesti concordati;
-    \item \textbf{Verificare l'aderenza alle Norme di Progetto}: viene verificato il rispetto del \textit{Way Of Working}, contenuto nelle \textsc{Norme di Progetto v1.0.0}.
+    \item \textbf{Verificare l'aderenza alle Norme di Progetto}: viene verificato il rispetto del \textit{Way Of Working}, contenuto nelle \textsc{Norme di Progetto v1.0.0};
+    \item \textbf{Verificare la realizzazione dei test}: viene verificato il grado di soddisfacimento dei test descritti.
 \end{itemize}
 
 \paragraph{Metriche}
 \label{sub:metriche_4}
 \begin{itemize}
-    \item \textbf{MoPR012 Frequenza di controlli}.
+    \item \textbf{MoPR012 Frequenza di controlli};
+    \item \textbf{MoPR013 Percentuale di test soddisfatti}.
 \end{itemize}
 
 \paragraph{Obiettivi}
@@ -239,11 +242,17 @@ Durante tutto lo svolgimento del progetto, il processo di verifica sarà attivo 
         \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
         \item \textbf{Valore desiderabile}: /.
     \end{itemize}
-    \item \textbf{QoPR013 Rispettare le fasi di verifica}: si esegue la fase di verifica in modo iterativo, rispettando sempre ciò che è stato deciso all'interno delle \textsc{Norme di Progetto v1.0.0}, in modo da rendere coerenti i risultati ottenuti.
+    \item \textbf{QoPR013 Rispettare le fasi di verifica}: si esegue la fase di verifica in modo iterativo, rispettando sempre ciò che è stato deciso all'interno delle \textsc{Norme di Progetto v1.0.0}, in modo da rendere coerenti i risultati ottenuti;
         \begin{itemize}
             \item \textbf{Metrica di riferimento}: MoPR010 rientra in questa metrica perché l'attività di verifica fa parte del ciclo di vita del prodotto;
             \item \textbf{Valore accettabile}: /; %definire meglio nelle norme
             \item \textbf{Valore desiderabile}: /.
+        \end{itemize}
+    \item \textbf{QoPR014 Soddisfare i test richiesti}: viene verificato costantemente il soddisfacimento dei test definiti.
+        \begin{itemize}
+            \item \textbf{Metrica di riferimento}: MoPR013;
+            \item \textbf{Valore accettabile}: 85\%; %definire meglio nelle norme
+            \item \textbf{Valore desiderabile}: 90\%.
         \end{itemize}
 \end{itemize}
 
@@ -495,5 +504,21 @@ Per ogni obiettivo viene indicato:
         \end{longtable}
         
         \textbf{Descrizione}: Come per i documenti anche i prodotti realizzati devono essere sottoposti a verifiche da parte del Verificatore in modo da controllare che i prodotti rispettino le norme indicate e per disporre sempre di risultati verificati, attendibili ed analizzabili.
+
+        \rowcolors{2}{white!80!lightgray!90}{white}
+        \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+        \begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+            \caption{Tabella obiettivo: QoPR014}%
+            \label{tab:obiettivo_qopr013} \\
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endfirsthead%
+          \rowcolor{lightgray}
+          {\textbf{Obiettivo}} & {\textbf{Metriche}} & {\textbf{Valore accettabile}} & {\textbf{Valore desiderabile}}  \\
+          \endhead%
+          \textbf{QoPR014 Soddisfare i test richiesti} & MoPR013 Percentuale di test soddisfatti & 85\% & 90\% \\
+        \end{longtable}
+        
+        \textbf{Descrizione}: I test definiti nella sezione §4 devono essere realizzati, verificando l'andamento della loro realizzazione.
         
 \end{document}
