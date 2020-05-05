@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{listings}
-
+\usepackage{verbatim}
 \input{../../commons/config}
 %Qui ci andrà il percorso delle immagini da includere in analisi dei requisiti
 \appendToGraphicspath{../../commons/img/}
@@ -8,7 +8,7 @@
 %Tutti questi set permettono di modificare in modo adatto i placeholder nel template
 \setTitle{Norme di Progetto}
 
-\setVersione{v1.0.0}
+\setVersione{v2.0.0}
 
 \setResponsabile{Nicholas Miazzo}
 
@@ -70,5 +70,11 @@ v0.0.1 & Alessandro Franchin & Responsabile & 2020-03-11 & Creazione del documen
 \section{Processi organizzativi}%
 \label{sec:processi-organizzativi}
 \subfile{components/4-processi-organizzativi.tex}
+
+\newpage
+
+\appendix
+\section{Standard di Qualità}
+\subfile{components/A-standard-di-qualita.tex}
 
 \end{document}
