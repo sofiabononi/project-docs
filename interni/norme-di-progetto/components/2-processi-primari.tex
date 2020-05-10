@@ -148,7 +148,7 @@ Il documento corrispondente conterrà quindi:
 \end{itemize}
 
 \subparagraph{Aspettative}
-L'aspettativa di questo processo coincide con la creazione del documento \textsc{Analisi dei Requisiti}, il quale contiene appunto i requisiti richiesti dal proponente per la realizzazione del progetto.
+L'aspettativa di questo processo è l'analisi dei requisiti concordati con il proponente; parallelamente, questi vengono documentati nell'\textsc{Analisi dei Requisiti}, il quale contiene appunto i requisiti richiesti per la realizzazione del progetto.
 
 \subparagraph{Classificazione dei casi d'uso}
 I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica: \\
@@ -204,13 +204,13 @@ Anche i requisiti sono identificati secondo uno schema univoco; questo è così 
 
 \paragraph{Progettazione}
 \subparagraph{Scopo}
-L'attività di progettazione si colloca temporalmente tra l'analisi dei requisiti e la codifica; durante questa attività i progettisti definiscono una soluzione al problema di partenza per soddisfare i requisiti definiti. \\
+L'attività di progettazione si colloca temporalmente tra l'analisi dei requisiti e la codifica; durante questa attività i \glossario{Progettisti} definiscono una soluzione al problema di partenza per soddisfare i requisiti definiti. \\
 Lo scopo della progettazione è quindi comprendere le caratteristiche del prodotto richiesto e definire l'architettura logica di quanto si deve sviluppare, garantendo l'efficacia del prodotto e l'efficienza nella realizzazione di questo.
 
 \subparagraph{Aspettative}
 L'aspettativa di questa attività coincide con la realizzazione dell'architettura logica del sistema, la quale dovrà perseguire i seguenti obiettivi di qualità:
 \begin{itemize}
-  \item \textbf{Sufficienza}: la capacità di soddisfare tutti i requisiti rilevati;
+  \item \textbf{Sufficienza}: capacità di soddisfare tutti i requisiti rilevati;
   \item \textbf{Comprensibilità}: deve essere comprensibile da tutti gli \glossario{stakeholder};
   \item \textbf{Modularità}: deve essere suddivisibile in parti chiare e distinte, il più possibile non sovrapponibili tra loro;
   \item \textbf{Robustezza}: deve essere in grado di gestire input diversi da parte dell'utente;
@@ -219,7 +219,7 @@ L'aspettativa di questa attività coincide con la realizzazione dell'architettur
   \item \textbf{Affidabilità}: deve eseguire quello per cui è progettata nella maniera corretta;
   \item \textbf{Disponibilità}: il sistema non deve influire eccessivamente sull'utenza quando si trova in manutenzione e, quindi, non disponibile;
   \item \textbf{Sicurezza}: non deve essere vulnerabile alle intrusioni e non deve presentare gravi malfunzionamenti;
-  \item \textbf{Semplicità}: deve soddisfare i requisiti necessari senza possedere funzionalità superflue;
+  \item \textbf{Semplicità}: deve soddisfare i requisiti necessari senza possedere funzionalità superflue e inutili;
   \item \textbf{Incapsulamento}: deve nascondere correttamente la struttura interna rendendola quanto più possibile indipendente dall'esterno, in modo da rendere invisibili eventuali modifiche;
   \item \textbf{Coesione}: deve essere composta da componenti raggruppate per funzionalità e il meno possibile interdipendenti tra loro;
   \item \textbf{Basso accoppiamento}: deve essere composta da parti distinte, il meno possibile dipendenti l'una dall'altra.
@@ -306,7 +306,7 @@ I diagrammi delle classi rappresentano i tipi di oggetti che fanno parte del sis
 \end{itemize}
 
 \subparagraph*{Diagrammi dei package}
-Un package è un raggruppamento di un numero arbitrario di elementi UML in un'unità di livello più alto. I diagrammi dei package documentano le dipendenze fra le classi, e ciò consente l'individuazione di dipendenze tra le classi. In particolar modo, essi permettono di individuare eventuali dipendenze circolari tra classi, permettendo la loro rimozione.
+Un package è un raggruppamento di un numero arbitrario di elementi UML in un'unità di livello più alto. I diagrammi dei package documentano le dipendenze fra le classi, e ciò consente l'individuazione di dipendenze tra queste. In particolar modo, essi permettono di individuare eventuali dipendenze circolari, permettendo la loro rimozione se possibile.
 
 \subparagraph*{Diagrammi di attività}
 I diagrammi di attività descrivono la logica procedurale dei processi che compongono il software. Essi aiutano a descrivere gli aspetti dinamici dei casi d'uso, mostrando le attività che possono accadere e le sequenze di azioni con cui vengono svolte. \\
@@ -323,7 +323,7 @@ Questi diagrammi sono composti da:
 I diagrammi di sequenza descrivono delle sequenze di azioni in cui tutte le scelte sono già state effettuate; in esso non compaiono quindi scelte o flussi alternativi. \\
 I diagrammi di sequenza si presentano come una serie di oggetti che si scambiano messaggi, collocati in linee parallele che indicano l'avanzare del tempo; essi sono costituiti da:
 \begin{itemize}
-  \item \textbf{Partecipanti}: entità che detengono il flusso del caso d'uso. I partecipanti sono composti da:
+  \item \textbf{Partecipanti}: entità che detengono il flusso del caso d'uso. Ogni partecipante è composto da:
   \begin{itemize}
     \item \textbf{Nome};
     \item \textbf{Barra di attivazione}: opzionale, indica in quale momento un partecipante è attivo.
@@ -519,12 +519,12 @@ Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiest
   \item \textbf{Unità di misura}: numero puro (numero di rischi);
   \item \textbf{Formula}: la formula per questa metrica è la seguente:
   \begin{displaymath}
-    RTA - RPA
+    \#RTA - \#RPA
   \end{displaymath}
   dove:
   \begin{itemize}
-    \item $ RTA $: numero di rischi totali avvenuti;
-    \item $ RPA $: numero di rischi preventivati avvenuti.
+    \item $ \#RTA $: numero di rischi totali avvenuti;
+    \item $ \#RPA $: numero di rischi preventivati avvenuti.
   \end{itemize}
 \end{itemize}
 
@@ -574,7 +574,7 @@ Si vuole monitorare la capacità del prodotto software di mantenere un determina
 \begin{itemize}
   \item \textbf{Descrizione}: questa metrica visualizza la copertura dei test in relazione al codice;
   \item \textbf{Unità di misura}: percentuale;
-  \item \textbf{Formula}: il calcolo di questa metrica è ad opera dello strumento Travis CI.
+  \item \textbf{Formula}: il calcolo di questa metrica è ad opera dello strumento \glossario{Travis CI}.
 \end{itemize}
 
 \subparagraph{MoPD004 Densità degli errori}
