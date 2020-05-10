@@ -284,42 +284,53 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
 Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 
+%METRICHEPDQ3
 \subsubsection{Metriche}
-Vengono adottate delle metriche per monitorare la qualità della documentazione, al fine di garantire una documentazione comprensibile.
-\paragraph{Comprensione}
+\paragraph{PRC003 Produzione dei documenti}
+Questo processo farà uso delle seguenti metriche:
+\begin{itemize}
+  \item MoPR010 Analisi way of working;
+  \item MoPR011 Analisi documenti.
+\end{itemize}
+\subparagraph{MoPR010 Analisi way of working}
+\begin{itemize}
+  \item \textbf{Descrizione}: i membri del gruppo sono incaricati di verificare di volta in volta la corretta attuazione del way of working.
+\end{itemize}
+
+\subparagraph{MoPR011 Analisi documenti}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica indica il numero di volte che un documento viene analizzato e verificato;
+  \item \textbf{Unità di misura}: numero puro;
+  \item \textbf{Formula}: la seguente metrica viene calcolata unicamente sul numero delle verifiche dei documenti.
+\end{itemize}
+
+\paragraph{Portabilità}
 Vengono utilizzate le seguenti metriche per la comprensione del testo:
 \begin{itemize}
   \item MoPD009 \glossario{Indice Gulpease};
-  \item MoPD011 Correttezza lessicale/ortografica.
+  \item MoPD010 Correttezza lessicale/ortografica.
 \end{itemize}
 \subparagraph{MoPD009 Indice Gulpease}
-L'indice Gulpease fornisce una misura della leggibilità di un documento. Esso viene calcolato mediante la seguente formula:
-\begin{center}
-  \centering
-  \begin{displaymath}
-    G=89+\frac{300*nFrasi - 10*nLettere}{nParole}
-  \end{displaymath}
-\end{center}
-I risultati sono compresi tra 0 e 100, dove il valore 0 indica la leggibilità più bassa e 100 indica la leggibilità più alta. \\
-Ogni documento viene così valutato:
 \begin{itemize}
-  \item Se \textbf{G\textless 80}, il testo è difficile da leggere per chi ha la licenza elementare;
-  \item Se \textbf{G\textless 60}, il testo è difficile da leggere per chi la la licenza media;
-  \item Se \textbf{G\textless 40}, il testo è difficile da leggere per chi ha la licenza superiore.
+  \item \textbf{Descrizione}: l'indice Gulpease fornisce una misura della leggibilità di un documento;
+  \item \textbf{Unità di misura}: numero puro;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    G=89+\frac{300*\#F - 10*\#L}{\#P}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#F $: numero di frasi nel documento;
+    \item $ \#L $: numero di lettere nel documento;
+    \item $ \#P $: numero di parole nel documento.
+  \end{itemize}
 \end{itemize}
 
-\subparagraph{MoPD011 Correttezza lessicale/ortografica}
-La correttezza lessicale/ortografica fornisce una misura di correttezza lessicografica di un documento. Essa viene calcolata mediante la seguente formula:
-\begin{center}
-  \centering
-  \begin{displaymath}
-    C=numero\ di\ errori\ ortografici
-  \end{displaymath}
-\end{center}
-I risultati possono essere uguali o maggiori di 0, dove:
+\subparagraph{MoPD010 Correttezza lessicale/ortografica}
 \begin{itemize}
-  \item \textbf{C=0} indica l'assenza di errori ortografici nel documento;
-  \item \textbf{C\textgreater 0} indica la presenza di errori ortografici nel documento.
+  \item \textbf{Descrizione}: la correttezza lessicale/ortografica fornisce una misura di correttezza lessicografica di un documento;
+  \item \textbf{Unità di misura}: numero puro;
+  \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento.
 \end{itemize}
 
 \subsubsection{Strumenti}
@@ -350,77 +361,15 @@ Lo scopo di questo processo è delineare le norme utili a predisporre il \glossa
 L'aspettativa di questo processo coincide con la realizzazione di un ambiente di lavoro usabile e controllato, al fine di semplificare il coordinamento del lavoro tra i diversi componenti del gruppo.
 
 \subsubsection{Attività}
-\paragraph{Versionamento}
-\subparagraph{Documenti}
-Ogni documento deve essere versionato, al fine di avere una cronologia delle modifiche e una stima dell'importanza di queste sul contenuto del documento. Ad ogni versione del documento corrisponde una riga nel Registro delle modifiche. \\
-La versione di un documento viene espressa nel seguente modo: \\ \begin{center}
-  \centering
-  \textbf{vX.Y.Z}
-\end{center} dove:
-\begin{itemize}
-  \item \textbf{X}: indica una versione stabile del documento. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Inizia da 0;
-    \item Viene incrementata dal Responsabile solo dopo l'approvazione del documento da parte sua per il rilascio finale prima di una revisione;
-    \item La cifra massima coincide con il numero di revisioni.
-  \end{itemize}
-  \item \textbf{Y}: indica una versione del documento ancora in fase di redazione ma comunque abbastanza stabile per poter essere verificato. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Inizia da 0 ad ogni incremento di X;
-    \item Viene incrementata dal verificatore in seguito alla verifica;
-    \item Non ha cifra massima.
-  \end{itemize}
-  \item \textbf{Z}: indica una versione del documento ancora in fase di lavorazione da parte dei redattori e che, per scarsa quantità di modifiche, non necessita ancora di verifica. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Inizia da 0 ad ogni incremento di Y;
-    \item Viene incrementata dal redattore del documento a ogni modifica, seppur minima;
-    \item Non ha cifra massima.
-  \end{itemize}
-\end{itemize}
-
-\subparagraph{Componenti software}
-Al pari della documentazione, anche i file delle componenti software del prodotto devono essere versionati. \\
-Il versionamento del software ricalca la codifica \glossario{Semantic Versioning 2.0.0} leggermente modificata per adattarsi meglio ai fini del progetto. Il versionamento dei componenti software segue quindi la seguente codifica:  \\
-\begin{center}
-  \centering
-  \textbf{vX.Y.Z-{s}}
-\end{center} dove:
-\begin{itemize}
-  \item \textbf{X}: indica una versione pronta per il rilascio finale, ossia una \glossario{Major Release}. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Inizia da 0 ad;
-    \item Viene incrementata dopo l'implementazione di tutti i requisiti obbligatori;
-    \item Non ha cifra massima.
-  \end{itemize}
-  \item \textbf{Y}: indica una versione pronta per il rilascio intermedio, ossia una \glossario{Minor Release}. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Iniza da 0 ad ogni incremento di X;
-    \item Viene incrementata dopo l'implementazione di uno o più requisiti;
-    \item Non ha cifra massima.
-  \end{itemize}
-  \item \textbf{Z}: indica una \glossario{Patch}. L'incremento della cifra segue queste regole:
-  \begin{itemize}
-    \item Inizia da 0 ad ogni incremento di Y o X;
-    \item Viene incrementata a ogni modifica o cambio di configurazione del software;
-    \item Non ha cifra massima.
-  \end{itemize}
-  \item \textbf{s}: indica lo stato a cui si trova il software, il quale può essere:
-  \begin{itemize}
-    \item \textbf{stable}: software stabile e che soddisfa tutti i requisiti, pronto ad essere rilasciato in produzione;
-    \item \textbf{rc}: \textit{release candidate}, ossia software funzionante e che soddisfa gran parte dei requisiti, pronto per essere rilasciato dopo qualche lieve miglioria;
-    \item \textbf{dev}: ancora in via di sviluppo. Software funzionante ma ancora incompleto.
-  \end{itemize}
-\end{itemize}
-
-
 \paragraph{Repository}
-Una repository è un ambiente in cui vengono memorizzati, mantenuti e versionati i file di un progetto software, durante il suo intero ciclo di vita. Il sistema di controllo che il gruppo utilizza è \glossario{Git}, e i file dell'intero progetto sono ospitati dalla piattaforma \glossario{Github}; viene inoltre utilizzato \glossario{Git Commitizen} per facilitare il controllo di quanto aggiunto o modificato di volta in volta sulla repository, e \glossario{gitflow} per un più flessibile approccio al lavoro condiviso sulla repository contenente il codice. \\
-I file del progetto sono divisi in due repository per maggior chiarezza:
+Una repository è un ambiente in cui vengono memorizzati, mantenuti e versionati i file di un progetto software, durante il suo intero ciclo di vita. Il sistema di controllo che il gruppo utilizza è \glossario{Git}, e i file dell'intero progetto sono ospitati dalla piattaforma \glossario{Github}; viene inoltre utilizzato \glossario{Git Commitizen} per facilitare il controllo di quanto aggiunto o modificato di volta in volta sulla repository, e \glossario{gitflow} per un più flessibile approccio al lavoro condiviso sulle repository contenenti il codice. \\
+I file del progetto sono divisi in tre repository per maggior chiarezza:
 \begin{itemize}
   \item \texttt{project-docs}: repository contenente la documentazione;
-  \item \texttt{swe-code}: repository contenente il prodotto software, ossia i sorgenti e i file di configurazione necessari allo sviluppo del software.
+  \item \texttt{swe-training-app}: repository contenente i sorgenti e i file di configurazione necessari allo sviluppo del programma di addestramento;
+  \item \texttt{swe-grafana-plugin}: repository contenente i sorgenti e i file di configurazione necessari allo sviluppo del plug-in di Grafana.
 \end{itemize}
-Poiché però il prodotto che viene offerto consiste nella somma di software e documentazione, le due repository sono unite in un'unica repository pubblica contenitrice, chiamata \texttt{swe-predire-in-grafana} e disponibile al seguente indirizzo: \href{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}. \\
+Poiché però il prodotto che viene offerto consiste nella somma di software e documentazione, le tre repository sono unite in un'unica repository pubblica contenitrice, chiamata \texttt{swe-predire-in-grafana} e disponibile al seguente indirizzo: \href{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}. \\
 Tale repository fa uso del meccanismo dei \glossario{git submodules} per combinare più repository in una unica.
 
 \subparagraph{Repository \texttt{project-docs}}
@@ -481,8 +430,8 @@ Ogni branch presenta un insieme di cartelle predefinito:
   \end{itemize}
 \end{itemize}
 
-\subparagraph{Repository \texttt{swe-code}}
-La struttura adottata nella repository \texttt{swe-code} sfrutta il meccanismo di branching in unione al workflow gitflow; questo permette lo sviluppo parallelo di più funzionalità e il lavoro parallelo sulla stessa repository. La repository utilizzata si compone di due branch principali, persistenti durante tutta la durata del progetto:
+\subparagraph{Repository \texttt{swe-training-app} e \texttt{swe-grafana-plugin}}
+La struttura adottata nelle repositories \texttt{swe-training-app} e \texttt{swe-grafana-plugin} sfrutta il meccanismo di branching in unione al workflow gitflow; questo permette lo sviluppo parallelo di più funzionalità e il lavoro parallelo sulla stessa repository. Le repositories utilizzate si compongono di due branch principali, persistenti durante tutta la durata del progetto:
 \begin{itemize}
   \item \texttt{master}: branch principale, aggiornato prima di ogni revisione appena il lavoro necessario all'ingresso in questa è concluso;
   \item \texttt{develop}: branch secondario, aggiornato ad ogni aggiunta di funzionalità o correzione di bug.
@@ -502,13 +451,127 @@ In aggiunta a questi due branch, un nuovo branch viene creato a partire da \text
   \end{itemize}
   \item \textbf{name} è il nome significativo del branch.
 \end{itemize}
-Al fine di evitare l'introduzione di codice non funzionante o malformato nei branch principali, la repository \texttt{swe-code} fa ampio uso del meccanismo delle Pull Requests. Ogni qualvolta una funzionalità in un branch secondario viene ultimata, il componente del gruppo responsabile di tale funzionalità ha il compito di aprire una pull request da tale branch verso \texttt{develop}; i verificatori controlleranno quindi la correttezza di quanto aggiunto e provvederanno a eseguire il \glossario{merge} sul branch principale o, nel caso in cui riscontrassero degli errori, a segnalarli tempestivamente all'autore.
+Al fine di evitare l'introduzione di codice non funzionante o malformato nei branch principali, la due repository fanno ampio uso del meccanismo delle Pull Requests. Ogni qualvolta una funzionalità in un branch secondario viene ultimata, il componente del gruppo responsabile di tale funzionalità ha il compito di aprire una pull request da tale branch verso \texttt{develop}; i verificatori controlleranno quindi la correttezza di quanto aggiunto e provvederanno a eseguire il \glossario{merge} sul branch principale o, nel caso in cui riscontrassero degli errori, a segnalarli tempestivamente all'autore.
+
+\paragraph{Versionamento}
+Sebbene il progetto si sviluppi su più repositories, il prodotto che il gruppo deve fornire al proponente deve essere un prodotto unico e coeso; è quindi opportuno che il versionamento dei componenti di questo sia coerente e indichi uno sviluppo complessivo e globale del prodotto. \\
+Viene quindi adottato un sistema di versionamento comune a documentazione e componenti software, con delle opportune specializzazioni per entrambi. Un numero di versione di qualsiasi componente si presenta nel seguente modo:
+\begin{center}
+  \centering
+  \textbf{vX.Y-A.B.C-[stato]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{vX.Y} indica il procedere globale del prodotto, ed è comune quindi a tutti i componenti nello stesso istante temporale. Nello specifico:
+  \begin{itemize}
+    \item \textbf{X}: indica il numero di revisione di avanzamento a cui il prodotto si trova. Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0;
+      \item Viene incrementato a ogni superamento di una revisione di avanzamento;
+      \item La cifra massima corrisponde al numero massimo di revisioni di avanzamento che il gruppo completerà.
+    \end{itemize}
+    \item \textbf{Y}: indica il numero di incremento in cui si trova il prodotto. Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0;
+      \item Viene incrementato ad ogni completamento di un incremento, corrispondente a una milestone del progetto;
+      \item la cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto}.
+    \end{itemize}
+  \end{itemize}
+  \item \textbf{A.B.C} indica la versione propria del componente singolo. Le cifre da cui è composta questa sezione hanno significato diverso per la documentazione e per il codice, ma in entrambi i casi si segue la logica del \glossario{Semantic Versioning 2.0.0}. Nelle successive sezioni verranno approfondite le regole che queste cifre seguono;
+  \item \textbf{[stato]} indica lo stato di sviluppo presso cui si trova un componente software. Anche questa sezione verrà approfondita nelle sezioni successive.
+\end{itemize}
+
+\subparagraph{Documenti}
+Ogni documento deve essere versionato, al fine di avere una cronologia delle modifiche e una stima dell'importanza di queste sul contenuto del documento. Ad ogni versione del documento corrisponde una riga nel Registro delle modifiche. \\
+Il versionamento di un documento segue le regole sopra riportate; il numero di versione di un documento segue quindi il seguente schema:
+\begin{center}
+  \centering
+  \textbf{vX.Y-A.B.C}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{vX.Y} segue il comportamento sopra riportato;
+  \item \textbf{A.B.C}, nel caso specifico dei documenti, assume il seguente significato:
+  \begin{itemize}
+    \item \textbf{A}: indica un cambiamento radicale nel documento, ossia:
+    \begin{itemize}
+      \item L'introduzione di un numero di capitoli pari o maggiore a tre;
+      \item La rimozione di un numero di capitoli pari o maggiore a tre.
+    \end{itemize}
+    Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0;
+      \item Viene incrementata ad ogni cambiamento radicale nel documento. L'incremento è ad opera del responsabile o di uno strumento da lui approvato che ne faccia le veci, previa naturalmente la verifica di tutte le sezioni del documento da parte dei verificatori;
+      \item Non ha numero massimo e non viene mai resettata.
+    \end{itemize}
+    \item \textbf{B}: indica un cambiamento importante nel documento, ossia:
+    \begin{itemize}
+      \item L'introduzione di due o meno capitoli;
+      \item La rimozione di due o meno capitoli;
+      \item La modifica di uno o più capitoli che abbia ripercussioni sul way of working del gruppo.
+    \end{itemize}
+    Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0 ad ogni incremento di A;
+      \item Viene incrementata ad ogni cambiamento importante nel documento. L'incremento è ad opera del responsabile o di uno strumento da lui approvato che ne faccia le veci, previa naturalmente la verifica di tutte le sezioni del documento da parte dei verificatori;
+      \item Non ha numero massimo.
+    \end{itemize}
+    \item \textbf{C}: indica un cambiamento generico nel documento, ossia:
+    \begin{itemize}
+      \item La modifica di una piccola parte di documento;
+      \item Lo spostamento di una sezione in un'altra posizione dello stesso documento;
+      \item Una correzione di tipo ortografico o grammaticale.
+    \end{itemize}
+    Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0 ad ogni incremento di B o A;
+      \item Viene incrementata ad ogni cambiamento generico nel documento. L'incremento è ad opera di un verificatore.
+      \item Non ha numero massimo.
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+
+\subparagraph{Componenti software}
+Al pari della documentazione, anche i file delle componenti software del prodotto devono essere versionati. \\
+Il versionamento del codice segue le regole sopra riportate; il numero di versione di un componente software segue quindi il seguente schema:
+\begin{center}
+  \centering
+  \textbf{vX.Y-A.B.C-stato}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{vX.Y} segue il comportamento sopra riportato;
+  \item \textbf{A.B.C}, nel caso specifico dei componenti software, assume il seguente significato:
+  \begin{itemize}
+    \item \textbf{A}: corrisponde a una \glossario{Major Release}, e indica quindi l'implementazione di tutti i requisiti richiesti. Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0;
+      \item Viene incrementata al completamento di tutti i requisiti richiesti.
+    \end{itemize}
+    \item \textbf{B}: corrisponde a una \glossario{Minor Release}, e indica quindi l'implementazione di uno o più requisiti richiesti. Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Inizia da 0 a ogni incremento di A;
+      \item Viene incrementata al completamento di uno o più requisiti;
+      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei Requisiti}.
+    \end{itemize}
+    \item \textbf{C}: corrisponde a una \glossario{Patch}, e indica quindi la modifica a uno o più requisiti. Questa cifra segue le seguenti regole:
+    \begin{itemize}
+      \item Iniza da 0 ad ogni incremento di B o di A;
+      \item Viene incrementata alla modifica verificata di uno o più requisiti;
+      \item Non ha numero massimo.
+    \end{itemize}
+  \end{itemize}
+  \item \textbf{stato} indica lo stato a cui si trova il software, il quale può essere:
+  \begin{itemize}
+    \item \textbf{stable}: software stabile e che soddisfa tutti i requisiti, pronto ad essere rilasciato in produzione;
+    \item \textbf{rc}: \textit{release candidate}, ossia software funzionante e che soddisfa gran parte dei requisiti, pronto per essere rilasciato dopo qualche lieve miglioria;
+    \item \textbf{dev}: ancora in via di sviluppo. Software funzionante ma ancora incompleto.
+  \end{itemize}
+\end{itemize}
 
 \paragraph{Continuous Integration}
 Il gruppo fa uso della pratica di \glossario{Continuous Integration} al fine di ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
 \begin{itemize}
-  \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice;
-  \item \textbf{\glossario{Travis CI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v2.0.0}.
+  \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice (\glossario{Continuous Inspection});
+  \item \textbf{\glossario{Travis CI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v2.0.0} e il supporto al versionamento dei documenti e delle componenti software.
 \end{itemize}
 
 \subsubsection{Strumenti}
@@ -556,7 +619,7 @@ Il meccanismo dei Git submodules consiste nel collegamento di più repository in
 Il gruppo utilizza lo strumento gitflow per la creazione di branch \textit{ad hoc}, seguendo le regole precedentemente descritte.
 
 \paragraph{Sonarcloud}
-La repository \texttt{swe-code} integra lo strumento di Continuous Integration Sonarcloud; questo permette l'analisi automatica del codice creato ogniqualvolta viene aperta una Pull Request da un branch secondario a un branch principale. \\
+La repository \texttt{swe-code} integra lo strumento di Continuous Inspection Sonarcloud; questo permette l'analisi automatica del codice creato ogniqualvolta viene aperta una Pull Request da un branch secondario a un branch principale. \\
 Lo strumento identifica:
 \begin{itemize}
   \item Eventuali bug nel codice;
@@ -725,7 +788,7 @@ Le metriche di qualità dei processi sono codificate in tal modo: \\
   \item \textbf{Nome} è il riassunto della descrizione della metrica.
 \end{itemize}
 
-\paragraph{Classificazione dei prodotti}
+\paragraph{Classificazione di qualità dei prodotti}
 Gli obiettivi di qualità dei prodotti sono codificati nel seguente modo: \\
 \begin{center}
   \centering
@@ -862,6 +925,34 @@ I Test di sistema vengono codificati nel seguente modo:
 \begin{itemize}
   \item \textbf{TS} indica Test di Sistema;
   \item \textbf{Id} si riferisce alla codifica del requisito funzionale al quale il test di sistema si applica.
+\end{itemize}
+
+%METRICHEPDQ4
+\subsubsection{Metriche}
+\paragraph{PRC004 Verifica}
+Questo processo farà uso delle seguenti metriche:
+\begin{itemize}
+  \item MoPR012 Frequenza dei controlli;
+  \item MoPR013 Percentuale di test soddisfatti.
+\end{itemize}
+\subparagraph{MoPR012 Frequenza dei controlli}
+\begin{itemize}
+  \item \textbf{Descrizione}: i verificatori devono costantemente controllare l'andamento dello sviluppo dei prodotti e validarli secondo le norme.
+\end{itemize}
+
+\subparagraph{MoPR013 Percentuale di test soddisfatti}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica}.
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per tale metrica è la seguente:
+  \begin{displaymath}
+    \frac{\#TI * 100}{\#TT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#TI $: numero di test implementati;
+    \item $ \#TT $: numero totale di test documentati.
+  \end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%

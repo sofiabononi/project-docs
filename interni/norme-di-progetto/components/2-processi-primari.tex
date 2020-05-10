@@ -185,7 +185,6 @@ Anche i requisiti sono identificati secondo uno schema univoco; questo è così 
   \item \textbf{T}: indica la tipologia del requisito. Il requisito può essere:
   \begin{itemize}
     \item \textbf{F}: funzionale;
-    \item \textbf{P}: prestazionale;
     \item \textbf{Q}: qualitativo;
     \item \textbf{V}: vincolo.
   \end{itemize}
@@ -458,6 +457,208 @@ Electron è un framework open-source che combina il \glossario{motore di renderi
 
 \subparagraph{React}
 \glossario{React} è una libreria Javascript per lo sviluppo di applicazioni web e interfacce utente. Esso viene usato per lo sviluppo del plug-in di Grafana richiesto dal capitolato.
+
+%METRICHEPDQ2
+\subsubsection{Metriche}
+\paragraph{PRC002 Analisi}
+Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiesti e concordati con il proponente per determinare il grado di completamento. Vengono quindi definite le seguenti metriche:
+\begin{itemize}
+  \item MoPR006 Verifica requisiti obbligatori;
+  \item MoPR007 Verifica requisiti opzionali;
+  \item MoPR008 Verifica requisiti desiderabili;
+  \item MoPR009 Verifica rischi non pervenuti.
+\end{itemize}
+\subparagraph{MoPR006 Verifica requisiti obbligatori}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura quanti requisiti obbligatori sono stati soddisfatti;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{RoS * 100}{RoT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ RoS $: numero di requisiti obbligatori soddisfatti;
+    \item $ RoT $: numero di requisiti obbligatori totali.
+  \end{itemize}
+\end{itemize}
+
+\subparagraph{MoPR007 Verifica requisiti opzionali}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura quanti requisiti opzionali sono stati soddisfatti. Essa è strettamente correlata alla metrica MoPR008 Verifica requisiti desiderabili; per entrambe vengono infatti calcolati i requisiti soddisfatti e, successivamente, vengono sommate le percentuali.
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{RS * 100}{RT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ RS $: numero di requisiti totali soddisfatti, ossia $ opzionali + desiderabili $;
+    \item $ RT $: numero di requisiti totali.
+  \end{itemize}
+\end{itemize}
+
+\subparagraph{MoPR008 Verifica requisiti desiderabili}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura quanti requisiti desiderabili sono stati soddisfatti. Essa è strettamente correlata alla metrica MoPR007 Verifica requisiti opzionali; per entrambe vengono infatti calcolati i requisiti soddisfatti e, successivamente, vengono sommate le percentuali.
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{RS * 100}{RT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ RS $: numero di requisiti totali soddisfatti, ossia $ opzionali + desiderabili $;
+    \item $ RT $: numero di requisiti totali.
+  \end{itemize}
+\end{itemize}
+
+\subparagraph{MoPR009 Verifica rischi non pervenuti}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura il numero di rischi non previsti nel \textsc{Piano di Progetto} che si sono verificati;
+  \item \textbf{Unità di misura}: numero puro (numero di rischi);
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    RTA - RPA
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ RTA $: numero di rischi totali avvenuti;
+    \item $ RPA $: numero di rischi preventivati avvenuti.
+  \end{itemize}
+\end{itemize}
+
+
+\paragraph{Funzionalità}
+Si vuole monitorare il soddisfacimento delle esigenze ricavate dall'analisi dei requisiti tramite funzioni adeguate ed affidabili. Vengono quindi utilizzate le seguenti metriche:
+\begin{itemize}
+  \item MoPD001 Completezza di implementazione;
+  \item MoPD002 Coerenza di interfaccia.
+\end{itemize}
+\subparagraph{MoPD001 Completezza di implementazione}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura il numero di funzioni realizzate rispetto a quelle preventivate;
+  \item \textbf{Unità di misura}: numero puro;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \#FR - \#FP
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#FR $: numero di funzioni realizzate;
+    \item $ \#FP $: numero di funzioni previste.
+  \end{itemize}
+\end{itemize}
+\subparagraph{MoPD002 Coerenza di interfaccia}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica calcola la percentuale di interfacce di funzioni realizzate in confronto a quanto analizzato;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \#IC - \#IR
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#IC $: numero di interfacce correttamente implementate;
+    \item $ \#IR $: numero di interfacce richieste.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Affidabilità}
+Si vuole monitorare la capacità del prodotto software di mantenere un determinato livello di prestazioni quando utilizzato sotto specifiche condizioni, in particolare il prodotto deve riuscire a compiere le proprie funzioni in caso di errori o malfunzionamenti. Vengono quindi definite le seguenti metriche:
+\begin{itemize}
+  \item MoPD003 Copertura dei test;
+  \item MoPD004 Densità degli errori.
+\end{itemize}
+\subparagraph{MoPD003 Copertura dei test}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica visualizza la copertura dei test in relazione al codice;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: il calcolo di questa metrica è ad opera dello strumento Travis CI.
+\end{itemize}
+
+\subparagraph{MoPD004 Densità degli errori}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura l'attitudine del prodotto ad evitare errori o anomalie;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{\#TF * 100}{\#TE}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#TF $: numero di test eseguiti e falliti;
+    \item $ \#TE $: numero di test eseguiti;
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Usabilità}
+Si vuole ottenere un software comprensibile, utilizzabile, attraente e conforme alle normative sull'usabilità. Sono quindi definite le seguenti metriche:
+\begin{itemize}
+  \item MoPD005 Documentazione delle funzioni;
+  \item MoPD006 Messaggi di errore.
+\end{itemize}
+\subparagraph{MoPD005 Documentazione delle funzioni}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica riporta la percentuale del numero di funzioni descritte nella documentazione del prodotto;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{\#FD * 100}{\#FT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#FD $: numero di funzioni descritte;
+    \item $ \#FT $: numero di funzioni totali.
+  \end{itemize}
+\end{itemize}
+
+\subparagraph{MoPD006 Messaggi di errore}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura la percentuale di messaggi di errore ambigui sul totale del numero di messaggi;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{\#MeA * 100}{\#MeT}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#MeA $: numero di messaggi di errore ambigui;
+    \item $ \#MeT $: numero di messaggi di errore totale.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Efficienza}
+Si vuole che il prodotto software fornisca prestazioni adeguate in relazione alla quantità di risorse utilizzate. Vengono quindi definite le seguenti metriche:
+\begin{itemize}
+  \item MoPD007 Tempo medio di risposta.
+\end{itemize}
+\subparagraph{MoPD007 Tempo medio di risposta}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura il tempo di risposta del programma;
+  \item \textbf{Unità di misura}: millisecondi;
+  \item \textbf{Formula}: questa metrica coincide con il numero di millisecondi trascorsi tra l'ordine di avvio e l'avvio vero e proprio del programma.
+\end{itemize}
+\paragraph{Manutenibilità}
+Il prodotto software deve essere modificabile in ottica di miglioramento, e quanto più possibile adattabile a diversi sistemi. Sono quindi definite le seguenti metriche:
+\begin{itemize}
+  \item MoPD008 Commenti sul codice.
+\end{itemize}
+\subparagraph{MoPD008 Commenti sul codice}
+\begin{itemize}
+  \item \textbf{Descrizione}: questa metrica misura la percentuale di righe di commenti all'interno del codice;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula per questa metrica è la seguente:
+  \begin{displaymath}
+    \frac{\#RC * 100}{\#RCo}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ \#RC $: numero di linee di commento;
+    \item $ \#RCo $: numero di linee di codice totale.
+  \end{itemize}
+\end{itemize}
+
 
 \newpage
 

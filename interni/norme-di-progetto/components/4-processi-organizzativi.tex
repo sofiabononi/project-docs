@@ -147,11 +147,11 @@ Viene inoltre utilizzata la piattaforma \glossario{Skype} per le comunicazioni d
 
 \paragraph{Incontri}
 \subparagraph{Incontri interni}
-In caso se ne presenti il bisogno, il gruppo può riunirsi in via telematica attraverso la piattaforma Discord. Gli incontri interni del gruppo sono indetti dal responsabile, in accordo con tutto il gruppo. Per fissare un appuntamento il responsabile chiede, attraverso i già citati strumenti per le comunicazioni, la disponibilità di una data e di un orario; il gruppo conferma la disponibilità e ogni membro è tenuto ad essere presente all'orario stabilito. \\
+In caso se ne presenti il bisogno, il gruppo può riunirsi in via telematica attraverso la piattaforma Discord. Gli incontri interni del gruppo sono indetti dal responsabile, in accordo con tutto il gruppo. Per fissare un appuntamento il responsabile chiede, attraverso i già citati strumenti per le comunicazioni, la disponibilità di una data e di un orario; il gruppo conferma la disponibilità e l'incontro viene calendarizzato sulla piattaforma Google Calendar. Ogni componente del gruppo è quindi poi tenuto a partecipare. \\
 Ogni incontro interno viene verbalizzato; a turno viene quindi individuato un segretario da parte del responsabile, che sarà tenuto a redigere un verbale contenente le informazioni generali dell'incontro, l'ordine del giorno e le discussioni fatte tra i componenti del gruppo.
 
 \subparagraph{Incontri esterni}
-Il responsabile, tra i cui compiti è presente anche quello di interfacciare il gruppo con i soggetti esterni, provvede a raccogliere le disponibilità dei componenti del gruppo e, successivamente, a mediare la data e l'orario con i terzi. Una volta fissato l'appuntamento, tutti i componenti del gruppo che hanno dato la disponibilità sono tenuti a presentarsi all'orario stabilito. \\
+Il responsabile, tra i cui compiti è presente anche quello di interfacciare il gruppo con i soggetti esterni, provvede a raccogliere le disponibilità dei componenti del gruppo e, successivamente, a mediare la data e l'orario con i terzi. Una volta fissato l'appuntamento, il responsabile lo calendarizza sulla piattaforma Google Calendar e tutti i componenti del gruppo che hanno dato la disponibilità sono tenuti a presentarsi all'orario stabilito. \\
 Anche in questo caso, ogni incontro viene verbalizzato; le modalità di verbalizzazione sono le stesse di quelle adottate per gli incontri interni.
 
 \paragraph{Gestione degli strumenti di coordinamento}
@@ -212,6 +212,9 @@ Lo sviluppo dell'intero prodotto è eseguito nell'IDE Visual Studio Code, con l'
   \item \textbf{PowerShell}: permette di sviluppare codice in linguaggio PowerShell.
 \end{itemize}
 
+\paragraph{Google Calendar}
+Viene utilizzata la piattaforma di Google Calendar per fissare e ricordare gli appuntamenti del gruppo, in particolar modo gli incontri interni ed esterni. Il calendario utilizzato risiede sull'account Google del gruppo.
+
 \paragraph{Altri strumenti}
 Gli altri strumenti di cui il gruppo fa uso, già documentati nelle \textsc{Norme di Progetto}, sono:
 \begin{itemize}
@@ -234,8 +237,80 @@ Ogni strumento utilizzato dal gruppo è compatibile con ogni piattaforma; i sist
   \item Manjaro Linux.
 \end{itemize}
 
+%METRICHEPDQ1
 \subsubsection{Metriche}
-
+\paragraph{PRC001 Organizzazione e pianificazione del progetto e della sua struttura}
+Si vuole misurare la copertura delle risorse disponibili per il progetto, in particorale si vuole assicurare che l'utilizzo di queste sia coerente con quanto annunciato nel \textsc{Piano di Progetto}. \\
+Si fa quindi uso delle seguenti metriche:
+\begin{itemize}
+  \item MoPR001 Varianza dei tempi;
+  \item MoPR002 Varianza dei costi;
+  \item MoPR003 Aderenza agli standard;
+  \item MoPR004 Aderenza ai ruoli;
+  \item MoPR005 Controllo prodotti.
+\end{itemize}
+\subparagraph{MoPR001 Varianza dei tempi}
+\begin{itemize}
+  \item \textbf{Descrizione}: la varianza dei tempi indica il ritardo nel rispetto delle scadenze previste internamente al gruppo;
+  \item \textbf{Unità di misura}: numero di giorni;
+  \item \textbf{Formula}: la formula della metrica è la seguente:
+    \begin{displaymath}
+    \sum \frac{(Y_i - X_i)}{n}
+    \end{displaymath}
+    dove:
+    \begin{itemize}
+      \item $ Y_i $: giorno di completamento della scadenza;
+      \item $ X_i $: giorni di scadenza prefissato.
+    \end{itemize}
+\end{itemize}
+\subparagraph{MoPR002 Varianza dei costi}
+\begin{itemize}
+  \item \textbf{Descrizione}: la varianza dei costi indica il discostamento del totale finale rispeto al totale del preventivo iniziale;
+  \item \textbf{Unità di misura}: percentuale;
+  \item \textbf{Formula}: la formula della metrica è la seguente:
+  \begin{displaymath}
+    tot + d
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ tot $: totale preventivo iniziale;
+    \item $ d $: discostamento calcolato.
+  \end{itemize}
+\end{itemize}
+\subparagraph{MoPR003 Aderenza agli standard}
+\begin{itemize}
+  \item \textbf{Descrizione}: l'aderenza agli standard indica quanto il progetto stia proseguendo nel rispetto degli standard. Questa metrica è verificabile attraverso le valutazioni del processo di SPICE;
+  \item \textbf{Unità di misura}: valutazione degli attributi;
+  \item \textbf{Formula}: il valore viene controllato sulla base di quanto descritto negli standard di qualità definiti.
+\end{itemize}
+\subparagraph{MoPR004 Aderenza ai ruoli}
+\begin{itemize}
+  \item \textbf{Descrizione}: l'aderenza ai ruoli indica il numero di documenti nei quali non sono stati definiti correttamente i ruoli;
+  \item \textbf{Unità di misura}: numero puro (numero di prodotti);
+  \item \textbf{Formula}: la formula della metrica è la seguente:
+  \begin{displaymath}
+    N - X
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ N $: numero totale di prodotti realizzati;
+    \item $ X $: numero di prodotti nei quali i ruoli non sono stati definiti adeguatamente.
+  \end{itemize}
+\end{itemize}
+\subparagraph{MoPR005 Controllo prodotti}
+\begin{itemize}
+  \item \textbf{Descrizione}: il controllo prodotti verifica il numero medio di commit totali eseguiti ogni settimana durante la realizzazione dei prodotti;
+  \item \textbf{Unità di misura}: numero puro (numero di commit);
+  \item \textbf{Formula}: la formula della metrica è la seguente:
+  \begin{displaymath}
+    \sum \frac{C_i}{n}
+  \end{displaymath}
+  dove:
+  \begin{itemize}
+    \item $ C_i $: numero di commit nella settimana $ i $;
+    \item $ n $: numero di settimane di lavoro.
+  \end{itemize}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 %%% 4.2 - FORMAZIONE %%%
