@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Documentazione}
 \subsubsection{Scopo}
-Lo scopo del processo di documentazione è quello di fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero \glossario{ciclo di vita} del software.
+Lo scopo del processo di documentazione è fornire i dettagli e le regole su cui deve essere basata la redazione e la manutenzione di tutta la documentazione durante l'intero \glossario{ciclo di vita} del software.
 
 \subsubsection{Aspettative}
 Le aspettative della corretta implementazione di questo processo sono:
@@ -136,7 +136,7 @@ Ogni verbale è composto dai seguenti componenti:
 
 \subparagraph*{Lettere}
 Le lettere, tra cui quella di presentazione, seguono il formato classico di una lettera: esse includono quindi uno o più mittenti e uno o più destinatari, il logo e il nome del gruppo. \\
-La lettera di presentazione contiene anche l'elenco dei documenti rilasciati e il preventivo per lo svolgimento del progetto.
+La lettera di presentazione contiene l'elenco dei documenti rilasciati e il preventivo per lo svolgimento del progetto. Le successive lettere di richiesta di ingresso a una revisione di avanzamento riporteranno l'elenco dei documenti presentati e l'eventuale modifica al preventivo.
 
 \subparagraph*{Documenti ufficiosi}
 Il gruppo si avvale anche dello strumento Google Docs per la condivisione immediata di idee e proposte da parte dei componenti del gruppo. Questo meccanismo funge solo da supporto all'organizzazione delle idee del gruppo; nessun documento ufficioso deve essere utilizzato come documento ufficiale o come parte di esso.
@@ -153,7 +153,7 @@ La nomenclatura di tutti i file segue la convenzione \glossario{kebab case}, not
 L'unica eccezione che è stata adottata è l'utilizzo del segno di interpunzione "trattino basso" \textbf{\_} tra il nome del documento e la data di redazione nei nomi dei verbali e tra la data e la versione del documento. \\
 Tutti i nomi di file avranno quindi il seguente formato: \\ \begin{center}
   \centering
-  \textbf{N-a-b-c[\_YYYY-MM-DD]\_vX.Y.Z.ext}
+  \textbf{N-a-b-c[\_YYYY-MM-DD]\_versione.ext}
 \end{center} dove:
 \begin{itemize}
   \item \textbf{N} è il numero di verbale nel caso in cui il documento sia un verbale; opzionalmente, può essere utilizzato per numerare ordinatamente i \textit{subfiles} di un determinato documento;
@@ -162,7 +162,7 @@ Tutti i nomi di file avranno quindi il seguente formato: \\ \begin{center}
     \centering
     \textbf{verbale-[interno/esterno]}
   \end{center};
-  \item \textbf{vX.Y.Z} indicano la versione attuale del documento;
+  \item \textbf{versione} indica la versione attuale del documento;
   \item \textbf{ext} è l'estensione del file.
 \end{itemize}
 Alcuni esempi di nomi di files legittimi sono quindi:
@@ -288,7 +288,23 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
 Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 
-%METRICHEPDQ3
+
+\subsubsection{Strumenti}
+\paragraph{\LaTeX}
+Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
+\paragraph{Google Docs}
+Per la scrittura dei documenti ufficiosi viene utilizzato Google Docs. Questo strumento permette la condivisione istantanea e visualizzabile immediatamente da tutti i componenti di quanto viene scritto.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/docs.png}
+  \label{fig:github}
+  \caption{Google Docs visualizzato nel Browser.}
+\end{figure}
+
+\paragraph{Google Drive}
+I documenti e le presentazioni sviluppati e redatti durante tutta la durata del progetto sono memorizzati in opportune cartelle pubbliche su Google Drive.
+
 \subsubsection{Metriche}
 \paragraph{PRC003 Produzione dei documenti}
 Questo processo farà uso delle seguenti metriche:
@@ -336,23 +352,6 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
   \item \textbf{Unità di misura}: numero puro;
   \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento.
 \end{itemize}
-
-\subsubsection{Strumenti}
-\paragraph{\LaTeX}
-Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
-\paragraph{Google Docs}
-Per la scrittura dei documenti ufficiosi viene utilizzato Google Docs. Questo strumento permette la condivisione istantanea e visualizzabile immediatamente da tutti i componenti di quanto viene scritto.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=15cm]{img/docs.png}
-  \label{fig:github}
-  \caption{Google Docs visualizzato nel Browser.}
-\end{figure}
-
-\paragraph{Google Drive}
-I documenti e le presentazioni sviluppati e redatti durante tutta la durata del progetto sono memorizzati in opportune cartelle pubbliche su Google Drive.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.2 - GESTIONE DELLA CONFIGURAZIONE %%%
@@ -842,10 +841,10 @@ Le attività di questo processo sono di due tipologie:
 \paragraph{Analisi}
 L'attività di analisi si divide in due sottocategorie:
 \begin{itemize}
-  \item Analisi Statica;
-  \item Analisi Dinamica.
+  \item Analisi statica;
+  \item Analisi dinamica.
 \end{itemize}
-\subparagraph{Analisi Statica}
+\subparagraph{Analisi statica}
 L'analisi statica è l'attività di analisi che viene eseguita sul prodotto senza il bisogno che questo venga eseguito. Essa valuta la presenza o assenza di errori e/o difetti, la conformità alle regole definite e la coesione dei componenti. \\
 L'analisi statica si divide in due tipologie:
 \begin{itemize}
@@ -873,7 +872,7 @@ Elenchi                           & \begin{itemize}
 \caption{Errori frequenti nella documentazione.}
 \end{table}
 
-\subparagraph{Analisi Dinamica}
+\subparagraph{Analisi dinamica}
 L'analisi dinamica è la tipologia di analisi che viene eseguita sul prodotto eseguendolo. Essa viene effettuata tramite dei test, che controllano il corretto funzionamento del prodotto.
 
 \paragraph{Test}
