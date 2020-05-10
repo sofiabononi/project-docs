@@ -127,7 +127,11 @@ Ogni verbale è composto dai seguenti componenti:
   \item \textbf{Informazioni generali}: informazioni dell'incontro, consistenti nella modalità, nella data e negli orari di inizio e fine, e i partecipanti all'incontro;
   \item \textbf{Ordine del giorno}: lista degli argomenti e dei temi di cui il gruppo ha deciso di discutere durante l'incontro;
   \item \textbf{Resoconto}: riassunto di quanto detto durante l'incontro punto per punto;
-  \item \textbf{Tracciamento delle decisioni}: tabella contenente il riassunto delle decisioni prese dal gruppo durante l'incontro.
+  \item \textbf{Tracciamento delle decisioni}: tabella contenente il riassunto delle decisioni prese dal gruppo durante l'incontro. Questa tabella è composta da due colonne:
+  \begin{itemize}
+    \item \textbf{Codice}: codice della decisione, consistente del nome del verbale seguito da un numero che incrementa all'aumentare delle decisioni prese all'interno della riuinione;
+    \item \textbf{Descrizione}: descrizione della decisione presa.
+  \end{itemize}
 \end{itemize}
 
 \subparagraph*{Lettere}
@@ -471,13 +475,13 @@ Viene quindi adottato un sistema di versionamento comune a documentazione e comp
     \end{itemize}
     \item \textbf{Y}: indica il numero di incremento in cui si trova il prodotto. Questa cifra segue le seguenti regole:
     \begin{itemize}
-      \item Inizia da 0;
+      \item Inizia da 0 ad ogni incremento di X;
       \item Viene incrementato ad ogni completamento di un incremento, corrispondente a una milestone del progetto;
-      \item la cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto}.
+      \item La cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto}.
     \end{itemize}
   \end{itemize}
   \item \textbf{A.B.C} indica la versione propria del componente singolo. Le cifre da cui è composta questa sezione hanno significato diverso per la documentazione e per il codice, ma in entrambi i casi si segue la logica del \glossario{Semantic Versioning 2.0.0}. Nelle successive sezioni verranno approfondite le regole che queste cifre seguono;
-  \item \textbf{[stato]} indica lo stato di sviluppo presso cui si trova un componente software. Anche questa sezione verrà approfondita nelle sezioni successive.
+  \item \textbf{[stato]} indica lo stato di sviluppo presso cui si trova un componente software. Anche questa sezione verrà approfondita successivamente.
 \end{itemize}
 
 \subparagraph{Documenti}
@@ -693,15 +697,9 @@ Il processo farà uso di uno schema di categorizzazione dei cambiamenti, consist
 Il numero identificativo è codificato nel seguente modo: \\
 \begin{center}
   \centering
-  \textbf{CM[P][N]}
+  \textbf{CM[N]}
 \end{center} dove:
 \begin{itemize}
-  \item \textbf{P} è la priorità del problema, la quale può essere:
-  \begin{itemize}
-    \item \textbf{A}: alta, richiede una risoluzione immediata;
-    \item \textbf{M}: media, ossia non urgente ma con un'alta probabilità di degenerare nel tempo;
-    \item \textbf{B}: bassa, ossia non urgente e con una bassa probabilità di degenerare nel tempo.
-  \end{itemize}
   \item \textbf{N} è il numero progressivo, il quale segue le seguenti regole:
   \begin{itemize}
     \item Parte da 1;
