@@ -1,12 +1,10 @@
-\subsubsection{UC12 - Visualizzazione messaggio di errore nessun nodo collegato}
+\subsubsection{UC12 - Avvio plug-in}
 \label{sssec:uc12}
-\begin{description}
-	\item[Attore primario:] Utente amministratore.
-	\item[Precondizione:] L'amministratore ha configurato il plug-in(UC3) senza aver collegato nessun nodo.
-	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "nessun nodo collegato" impedendo il funzionamento del plug-in(UC3.2).
-	\item[Postcondizione:]
-	\begin{enumerate}
-		\item L'amministratore visualizza il messaggio di errore "nessun nodo collegato";
-		\item Il plug-in non entra in funzione.
-	\end{enumerate}
-\end{description}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Attore secondario}: Grafana;
+  \item \textbf{Descrizione}: L'utente ha deciso di avviare il plug-in;
+  \item \textbf{Precondizione}: L'utente ha configurato correttamente il plug-in(UC3);
+  \item \textbf{Scenario principale}: L'utente ha deciso di avviare il plug-in per ottenere la predizione;
+  \item \textbf{Postcondizione}: L'utente ha ottenuto la previsione, utilizzando il plug-in, sui dati scelti in precedenza.
+\end{itemize}

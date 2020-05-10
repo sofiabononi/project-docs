@@ -2,21 +2,47 @@
 
 \begin{document}
 
-\subsection{Attori}
+\subsection{Struttura}%
+\label{subs:struttura}
+I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica:
+\begin{center}
+  \centering
+  \textbf{UC[P].[F].[FF].[FFF]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{UC}: Indica che il codice è un caso d'uso;
+  \item \textbf{P}: Consistente in un numero progressivo, identifica il caso;
+  \item \textbf{F}, \textbf{FF} e \textbf{FFF}: Consistenti ognuno di un numero progressivo, identificano il sottocaso.
+\end{itemize}
+Ogni caso d'uso è formato, non necessariamente integralmente, dai seguenti campi:
+\begin{itemize}
+  \item \textbf{\glossario{Diagrammi UML}}: Diagrammi esplicativi realizzati in linguaggio UML2.0;
+  \item \textbf{Attori primari}: Attori primari del caso d'uso;
+  \item \textbf{Attori secondari}: Attori secondari del caso d'uso;
+  \item \textbf{Descrizione}: Descrizione del caso d'uso;
+  \item \textbf{Precondizione}: Condizioni che devono essere soddisfatte perché gli eventi del caso d'uso si possano verificare;
+  \item \textbf{Scenario principale}: Flusso degli eventi del caso d'uso;
+  \item \textbf{Postcondizione}: Condizioni che devono essere soddisfatte dopo il verificarsi degli eventi;
+  \item \textbf{Estensioni}: Estensioni coinvolte;
+  \item \textbf{Generalizzazioni}: Generalizzazioni coinvolte.
+\end{itemize}
+
+\subsection{Attori}%
 \label{subs:attori}
 
-\subsubsection{Attori primari}
+\subsubsection{Attori primari}%
 \label{sssec:attori_primari}
-\begin{description}
-  \item[Utente generico:] È l'utilizzatore del prodotto, una persona autenticata e interessata ad interagire con Grafana per visualizzare le previsioni e/o le zone di criticità individuate dal plug-in;
-  \item[Utente amministratore:] È l'utente autenticato nel sistema nel ruolo di amministratore, che oltre ad avere la possibilità di interagire con Grafana, gestisce il programma di addestramento per i modelli di machine learning e gestisce la configurazione del plug-in sul flusso di dati monitorati da Grafana.
-\end{description}
+\begin{itemize}
+  \item \textbf{Utente}: Si fa riferimento all'utente generico che ha intenzione di associare i predittori ad un flusso dati per monitorare un'applicazione.
+\end{itemize}
 
 \subsubsection{Attori secondari}
 \label{sssec:attori_secondari}
-\begin{description}
-  \item[Grafana:] Piattaforma che permette di essere estesa con dei plug-in, in essa infatti risiederà il nostro prodotto che permetterà all'utente di visualizzare le previsioni ottenute dal plug-in sviluppato dal team.
-\end{description}
+\begin{itemize}
+  \item \textbf{Grafana}: Piattaforma che permette di essere estesa con dei plug-in, in essa infatti risiederà il nostro prodotto che permetterà all'utente di visualizzare le previsioni ottenute dal plug-in sviluppato dal team.
+\end{itemize}
+
+\newpage
 
 \subsection{Elenco dei casi d'uso}
 \label{subs:elenco_dei_casi_duso}
@@ -52,5 +78,23 @@
 \input{./casi-duso/uc15.tex}
 
 \input{./casi-duso/uc16.tex}
+
+\input{./casi-duso/uc17.tex}
+
+\input{./casi-duso/uc18.tex}
+
+\input{./casi-duso/uc19.tex}
+
+\input{./casi-duso/uc20.tex}
+
+\input{./casi-duso/uc21.tex}
+
+\input{./casi-duso/uc22.tex}
+
+\input{./casi-duso/uc23.tex}
+
+\input{./casi-duso/uc24.tex}
+
+\input{./casi-duso/uc25.tex}
 
 \end{document}

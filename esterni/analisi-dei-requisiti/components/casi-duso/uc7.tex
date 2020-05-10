@@ -1,15 +1,13 @@
-\subsubsection{UC7 - Visualizzazione dei pannelli di previsione attivati}
+\subsubsection{UC7 - Scelto modello regressione lineare}%
 \label{sssec:uc7}
-\begin{description}
-	\item[Attore primario:] Utente.
-	\item[Descrizione:] L'utente visualizza le specifiche del pannello attivo selezionato.
-	\item[Precondizione:]
-	\begin{enumerate}
-		\item L'amministratore deve aver impostato correttamente il plug-in(UC3);
-		\item L'amministratore deve aver avviato correttamente il plug-in(UC4.1);
-		\item L'utente esegue l'accesso alla sezione di visualizzazione dei pannelli di previsione attivati;
-		\item L'utente seleziona il pannello di previsione di cui vuole visualizzare i dati.
-	\end{enumerate}
-	\item[Scenario Principale:] L'utente, dopo aver eseguito l'accesso alla visualizzazione dei pannelli, visualizza le specifiche del pannello attivo selezionato.
-	\item[Postcondizione:] L'utente visualizza le specifiche del pannello: indicatore, grafico di previsione e affidabilità della previsione.
-\end{description}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Descrizione}: L'utente ha scelto come modello la regressione lineare;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'inserimento dei dati è avvenuto correttamente (UC1);
+    \item L'utente deve scegliere un modello di machine learning.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente ha selezionato la RL come algoritmo per svolgere l'addestramento;
+  \item \textbf{Postcondizione}: L'utente ha scelto come modello la RL.
+\end{itemize}
