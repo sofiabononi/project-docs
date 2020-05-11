@@ -16,7 +16,16 @@
   \subfile{5-1-analisi.tex}
   \subfile{5-2-consolidamento.tex}
   \subfile{5-3-Progettazione.tex}
-  \subfile{5-5-codifica.tex}
+  \subfile{5-3-1-incr.tex}
+  \subfile{5-3-2-incr.tex}
+  \subfile{5-3-3-incr.tex}
+  \subfile{5-3-4-incr.tex}
+  \subfile{5-4-5-incr.tex}
+  \subfile{5-4-6-incr.tex}
+  \subfile{5-4-7-incr.tex}
+  \subfile{5-4-8-incr.tex}
+  \subfile{5-4-9-incr.tex}
+
   \subfile{5-6-verifica.tex}
 
   \subsection{Riepilogo}
@@ -28,15 +37,16 @@
     \centering
     \begin{tabular}{lccccccc}
       \rowcolor{lightgray}
-      \textbf{Nominativo}        & \textbf{Re} & \textbf{Am}  & \textbf{An} & \textbf{Pt}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Ore totali} \\
-    Sofia Bononi              & 12          & 13           & 18           & 21           & 33           & 46           & 143          \\
-    Enrico Buratto            & 7           & 23           & 17           & 22           & 31           & 42           & 142          \\
-    Ian Nicolas Di Menna      & 13          & 13           & 17           & 20           & 31           & 47           & 141          \\
-    Alessandro Franchin       & 13          & 16           & 18           & 20           & 31           & 45           & 143          \\
-    Enrico Galdeman           & 7           & 12           & 22           & 24           & 32           & 46           & 143          \\
-    Nicholas Miazzo           & 16          & 14           & 18           & 20           & 27           & 47           & 142          \\
-    Marco Nardelotto          & 10          & 14           & 14           & 26           & 29           & 50           & 143          \\
-    \textbf{Ore totali ruolo} & \textbf{78} & \textbf{105} & \textbf{124} & \textbf{153} & \textbf{214} & \textbf{323} & \textbf{997}
+\textbf{Nominativo}       & \textbf{Re} & \textbf{Am}  & \textbf{An}  & \textbf{Pt}  & \textbf{Pr}  & \textbf{Ve}  & \textbf{Ore totali} \\
+Sofia Bononi              & 12          & 13           & 18           & 21           & 31           & 48           & 143                 \\
+Enrico Buratto            & 7           & 23           & 17           & 22           & 29           & 44           & 142                 \\
+Ian Nicolas Di Menna      & 13          & 13           & 17           & 20           & 29           & 49           & 141                 \\
+Alessandro Franchin       & 13          & 16           & 18           & 20           & 29           & 47           & 143                 \\
+Enrico Galdeman           & 7           & 12           & 22           & 24           & 28           & 50           & 143                 \\
+Nicholas Miazzo           & 16          & 14           & 18           & 20           & 25           & 49           & 142                 \\
+Marco Nardelotto          & 10          & 14           & 14           & 26           & 27           & 52           & 143                 \\
+\textbf{Ore totali ruolo} & \textbf{78} & \textbf{105} & \textbf{124} & \textbf{153} & \textbf{198} & \textbf{339} & \textbf{997}       
+
     \end{tabular}
     \caption{Distribuzione oraria nel totale delle ore investite e rendicontate}
     \end{table}
@@ -55,14 +65,14 @@
       \centering
       \begin{tabular}{lcc}
         \rowcolor{lightgray}
-        \textbf{Ruolo}  & \textbf{Ore previste} & \textbf{Costo}  \\        
-        Responsabile    & 78           & € 2.340,00           \\
-        Amministratore  & 105          & € 2.100,00           \\
-        Analista        & 124          & € 3.100,00           \\
-        Progettista     & 153          & € 3.366,00           \\
-        Programmatore   & 214          & € 3.210,00           \\
-        Verificatore    & 323          & € 4.845,00           \\
-        \textbf{Totale} & \textbf{997} & \textbf{€ 18.961,00}
+\textbf{Ruolo}  & \textbf{Ore previste} & \textbf{Costo}       \\
+Responsabile    & 78                    & € 2.340,00           \\
+Amministratore  & 105                   & € 2.100,00           \\
+Analista        & 124                   & € 3.100,00           \\
+Progettista     & 153                   & € 3.366,00           \\
+Programmatore   & 198                   & € 2.970,00           \\
+Verificatore    & 339                   & € 5.085,00           \\
+\textbf{Totale} & \textbf{997}          & \textbf{€ 18.961,00}
       \end{tabular}
       \caption{Prospetto economico totale delle ore investite e rendicontate}
     \end{table}
@@ -85,15 +95,16 @@
       \centering
       \begin{tabular}{lccccccc}
         \rowcolor{lightgray}
-        \textbf{Nominativo}        & \textbf{Re} & \textbf{Am}  & \textbf{An} & \textbf{Pt}  & \textbf{Pr}   & \textbf{Ve} & \textbf{Ore totali} \\
-        Sofia Bononi              & 9           & 5           & 4           & 21           & 33           & 33           & 105          \\
-        Enrico Buratto            & 7           & 9           & 6           & 22           & 31           & 30           & 105          \\
-        Ian Nicolas Di Menna      & 4           & 7           & 8           & 20           & 31           & 35           & 105          \\
-        Alessandro Franchin       & 4           & 13          & 5           & 20           & 31           & 32           & 105          \\
-        Enrico Galdeman           & 7           & 5           & 4           & 24           & 32           & 33           & 105          \\
-        Nicholas Miazzo           & 6           & 14          & 4           & 20           & 27           & 34           & 105          \\
-        Marco Nardelotto          & 7           & 5           & 5           & 26           & 29           & 33           & 105          \\
-        \textbf{Ore totali ruolo} & \textbf{44} & \textbf{58} & \textbf{36} & \textbf{153} & \textbf{214} & \textbf{230} & \textbf{735}
+        \textbf{Nominativo}       & \textbf{Re} & \textbf{Am} & \textbf{An} & \textbf{Pt}  & \textbf{Pr}  & \textbf{Ve}  & \textbf{Ore totali} \\
+Sofia Bononi              & 9           & 5           & 4           & 21           & 31           & 35           & 105                 \\
+Enrico Buratto            & 7           & 9           & 6           & 22           & 29           & 32           & 105                 \\
+Ian Nicolas Di Menna      & 4           & 7           & 8           & 20           & 29           & 37           & 105                 \\
+Alessandro Franchin       & 4           & 13          & 5           & 20           & 29           & 34           & 105                 \\
+Enrico Galdeman           & 7           & 5           & 4           & 24           & 28           & 37           & 105                 \\
+Nicholas Miazzo           & 6           & 14          & 4           & 20           & 25           & 36           & 105                 \\
+Marco Nardelotto          & 7           & 5           & 5           & 26           & 27           & 35           & 105                 \\
+\textbf{Ore totali ruolo} & \textbf{44} & \textbf{58} & \textbf{36} & \textbf{153} & \textbf{198} & \textbf{246} & \textbf{735}       
+
       \end{tabular}
       \caption{Distribuzione oraria nel totale delle ore rendicontate}
       \end{table}
@@ -112,14 +123,14 @@
         \centering
         \begin{tabular}{lcc}
           \rowcolor{lightgray}
-          \textbf{Ruolo}  & \textbf{Ore previste} & \textbf{Costo}  \\
-          Responsabile    & 44           & € 1.320,00           \\
-          Amministratore  & 58           & € 1.160,00           \\
-          Analista        & 36           & € 900,00             \\
-          Progettista     & 153          & € 3.366,00           \\
-          Programmatore   & 214          & € 3.210,00           \\
-          Verificatore    & 230          & € 3.450,00           \\
-          \textbf{Totale} & \textbf{735} & \textbf{€ 13.406,00}
+\textbf{Ruolo}  & \textbf{Ore previste} & \textbf{Costo}       \\
+Responsabile    & 44                    & € 1.320,00           \\
+Amministratore  & 58                    & € 1.160,00           \\
+Analista        & 36                    & € 900,00             \\
+Progettista     & 153                   & € 3.366,00           \\
+Programmatore   & 198                   & € 2.970,00           \\
+Verificatore    & 246                   & € 3.690,00           \\
+\textbf{Totale} & \textbf{735}          & \textbf{€ 13.406,00}
         \end{tabular}
         \caption{Prospetto economico totale delle ore rendicontate}
       \end{table}
