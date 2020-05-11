@@ -9,7 +9,7 @@ I test di accettazione si relazionano con i test di sistema e vengono eseguiti d
 
 \subsection{Test di sistema}
 \label{sub:test_di_sistema}
-Garantiscono che i requisiti richiesti identificati nel documento \textsc{Analisi dei Requisiti v1.0.0} vengano soddisfatti.
+Garantiscono che i requisiti richiesti identificati nel documento \textsc{Analisi dei Requisiti v1.4-1.2.1} vengano soddisfatti.
 
 %inizio tabella test di sistema
 \rowcolors{2}{white!80!lightgray!90}{white}
@@ -27,51 +27,93 @@ Garantiscono che i requisiti richiesti identificati nel documento \textsc{Analis
   \multicolumn{4}{c}{\textit{Continua alla pagina successiva}}
   \endfoot%
   \endlastfoot%
-  \textbf{TSRFO1} & L'\glossario{amministratore} deve poter addestrare il sistema inserendo i dati tramite degli appositi pulsanti. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO1} & L'utente deve poter addestrare il sistema inserendo i dati tramite degli appositi pulsanti. & Obbligatorio & Non Implementato \\
 
   \textbf{TSRFD1.1.1} & Si verifica che si venga notificati con un messaggio d’errore nel caso si carichino i dati di addestramento in un formato non valido. & Desiderabile & Non Implementato \\
 
-  \textbf{TSRFD1.2.1} & Si verifica che l’amministratore venga notificato con un messaggio d’errore nel caso si carichi un predittore in un formato non valido. & Desiderabile & Non Implementato \\
+  \textbf{TSRFD1.2.1} & Si verifica che l’utente venga notificato con un messaggio d’errore nel caso si carichi un predittore in un formato non valido. & Desiderabile & Non Implementato \\
   
-  \textbf{TSRFO1.3} & L’amministratore deve poter scegliere il modello di machine learning per l'addestramento. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO1.3} & L’utente deve poter scegliere il modello di machine learning per l'addestramento. & Obbligatorio & Non Implementato \\
 
-  \textbf{TSRFO1.4} & L'amministratore deve poter avviare l'addestramento & Obbligatorio & Non Implementato \\
-  \textbf{TSRFO1.5} & L’amministratore deve aver a disposizione un pulsante per il caricamento di un file \glossario{JSON} contenente il \glossario{predittore} allenato in precedenza. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO1.4} & L'utente deve poter avviare l'addestramento & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO1.5} & L’utente deve aver a disposizione un pulsante per il caricamento di un file \glossario{JSON} contenente il \glossario{predittore} allenato in precedenza. & Obbligatorio & Non Implementato \\
   
-  \textbf{TSRFF2} & L’amministratore deve potere addestrare il sistema direttamente da Grafana & Facoltativo & Non Implementato \\
+  \textbf{TSRFF2} & L’utente deve potere addestrare il sistema direttamente da Grafana & Facoltativo & Non Implementato \\
 
-  \textbf{TSRFO3} & L'amministratore deve poter configurare il plug-in. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO3} & L'utente deve poter configurare il plug-in. & Obbligatorio & Non Implementato \\
   
-  \textbf{TSRFO3.1} & L’amministratore deve poter avere a disposizione un metodo per caricare un modello addestrato. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO3.1} & L’utente deve poter avere a disposizione un metodo per caricare un modello addestrato. & Obbligatorio & Non Implementato \\
   \textbf{TSRFD3.1.1} & Si verifica che si visualizzi un messaggio di errore nel caso in cui venga caricato un file contenente il modello addestrato non valido o non venga caricato nessun file. & Desiderabile & Non Implementato \\
 
-  \textbf{TSRFO3.2} & L’amministratore deve poter selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO3.2} & L’utente deve poter selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & Non Implementato \\
   \textbf{TSRFD3.2.1} & Si verifica che si visualizzi un messaggio di errore nel caso in cui venga selezionato un nodo non valido o non venga selezionato nessun nodo. & Desiderabile & Non Implementato \\
 
-  \textbf{TSRFO3.3} & L’amministratore deve poter scegliere se visualizzare la predizione utilizzando un indicatore o un grafico. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO3.3} & L’utente deve poter selezionare il tipo della visualizzazione della predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFD3.3.1} & Si verifica che si venga notificati con un messaggio d’errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & Non Implementato \\
 
-  \textbf{TSRFD3.3.3} & Si verifica che si venga notificati con un messaggio di errore nel caso in cui non venga selezionato alcun tipo di visualizzazione & Desiderabile & Non Implementato \\
-  
-  \textbf{TSRFO4} & L'utente deve aver a disposizione un metodo per l’avvio e l’interruzione della predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO4} & Si verifica che il sistema metta a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & Non Implementato \\
 
-  \textbf{TSRFF5} & L'amministratore deve poter aver a disposizione metodi per impostare gli alert. & Facoltativo & Non Implementato \\
+  \textbf{TSRFO5} & Si verifica che il sistema metta a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & Non Implementato \\
   
-  \textbf{TSRFD6} & L'utente deve poter eliminare il pannello di monitoraggio. & Desiderabile & Non Implementato \\
-  \textbf{TSRFD6.3} & Si verifica che si visualizzi un messaggio di errore senza interrompere la \glossario{previsione} quando si elimina il pannello & Desiderabile & Non Implementato \\
-  
-  \textbf{TSRFO7} & L’utente deve poter visualizzare le previsioni. & Obbligatorio & Non Implementato \\
+  \textbf{TSRFO6} & L'utente deve poter selezionare il modello SVM per l’allenamento. & Obbligatorio & Non Implementato \\
 
+  \textbf{TSRFO7} & L'utente deve poter selezionare il modello RL per l’allenamento. & Obbligatorio & Non Implementato \\
+
+  \textbf{TSRFF8} & L'utente deve poter selezionare la regressione esponenziale per l’allenamento. & Facoltativo & Non Implementato \\
+
+  \textbf{TSRFF9} & L'utente deve poter selezionare la regressione logaritmica per l’allenamento. & Facoltativo & Non Implementato \\
+  
+  \textbf{TSRFF10} & L'utente deve poter selezionare il modello rete neurale per l’allenamento. & Facoltativo & Non Implementato \\
+
+  \textbf{TSRFF11} & L'utente deve poter selezionare il modello SVM adattata alla regressione per l’allenamento. & Facoltativo & Non Implementato \\
+
+  \textbf{TSRFO12} & L'utente deve poter avere a disposizione un pulsante per l’avvio della predizione. & Obbligatorio & Non Implementato \\
+
+  \textbf{TSRFO13} & L'utente deve poter avere a disposizione un pulsante per interrompere la predizione. & Obbligatorio & Non Implementato \\
+
+  \textbf{TSRFF14} & L'utente deve avere a disposizione un metodo per l’impostazione degli alert. & Facoltativo & Non Implementato \\
+
+  \textbf{TSRFD14.2.1} & Si verifica che il sistema, utilizzando un alert, notifichi un messaggio di errore nel caso in cui venga superata la soglia impostata. & Desiderabile & Non Implementato \\
+
+  \textbf{TSRFD15} & L'utente deve poter eliminare il pannello di monitoraggio. & Desiderabile & Non Implementato \\
+
+  \textbf{TSRFD15.1} & SI verifica che il sistema visualizzi un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & Non Implementato \\
+
+  \textbf{TSRFO16} & L'utente deve avere a disposizione un metodo per la visualizzazione delle previsioni. & Obbligatorio & Non Implementato \\
 
 \end{longtable}
 
 \subsection{Test di integrazione}
 \label{sub:test_di_integrazione}
 Garantiscono il corretto funzionamento di ogni componente del sistema quando viene integrata con le altre.
-Questi test verranno stabiliti durante il periodo di Progettazione Logica in quanto sarebbe improbabile riuscire a stabilire con certezza dei test adeguati in questo momento.
+
+%inizio tabella test di integrazione
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % 
+\begin{longtable}[H]{>{\centering\bfseries}m{2.5cm} >{\centering}m{7.5cm} >{\centering\arraybackslash}m{3.5cm}}
+  \caption{Tabella test di integrazione}%
+  \label{tab:tabella_test_di_integrazione}                                                    \\
+  \rowcolor{lightgray}
+  {\textbf{Test}} & {\textbf{Descrizione}} & {\textbf{Implementazione}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Test}} & {\textbf{Descrizione}} & {\textbf{Implementazione}}  \\
+  \endhead%
+  \rowcolor{white}
+  \multicolumn{3}{c}{\textit{Continua alla pagina successiva}}
+  \endfoot%
+  \endlastfoot%
+  \textbf{TI1} & Si verifica il corretto caricamento del file CSV nel programma. & Non Implementato \\
+  \textbf{TI2} & Si verifica la correttezza del grafico che viene visualizzato una volta caricato i dati. & Non Implementato \\
+  \textbf{TI3} & Si verifica la correttezza dei coefficenti calcolati. & Non Implementato \\
+  \textbf{TI4} & Si verifica la correttezza della struttura del file JSON una volta salvato. & Non Implementato \\
+  \textbf{TI5} & Si verifica che il plug-in di Grafana carichi correttamente i dati. & Non Implementato \\
+
+\end{longtable}
 
 \subsection{Test di unità}
 \label{sub:test_di_unita}
 Garantiscono il corretto funzionamento di ogni minimo componente autonomo del sistema.
-I test in questione verranno stabiliti durante il periodo di Progettazione di dettaglio e codifica.
+I test in questione devono ancora essere stabiliti.
 
 \end{document}
