@@ -1,0 +1,53 @@
+\documentclass[../piano-di-progetto.tex]{subfiles}
+
+\begin{document}
+
+\subsection{I incremento}
+
+Di seguito vengono riportate le ore di lavoro effettive durante il periodo del primo incremento:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lccccccc}
+      \rowcolor{lightgray}
+      \textbf{Nominativo}       & \textbf{Re}      & \textbf{Am} & \textbf{An}      & \textbf{Pt} & \textbf{Pr} & \textbf{Ve} & \textbf{Ore totali} \\
+Sofia Bononi              & -          & -               & -          & 4          & -          & -               & 4           \\
+Enrico Buratto            & 2          & -               & -          & -          & -          & 2               & 4           \\
+Ian Nicolas Di Menna      & -          & -               & -          & -          & 3          & 2               & 5           \\
+Alessandro Franchin       & -          & 3               & -          & -          & -          & -               & 3           \\
+Enrico Galdeman           & -          & -               & -          & -          & -          & 3 (-1)          & 3 (-1)      \\
+Nicholas Miazzo           & -          & 2 (+1)          & -          & 1          & -          & 2               & 5 (+1)      \\
+Marco Nardelotto          & -          & -               & 3          & -          & -          & -               & 3           \\
+\textbf{Ore totali ruolo} & \textbf{2} & \textbf{5 (+1)} & \textbf{3} & \textbf{5} & \textbf{3} & \textbf{9 (-1)} & \textbf{28}
+    \end{tabular}
+    \caption{Resoconto orario effettivo del periodo del primo incremento}
+  \end{table}
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{lcccccc}
+      \rowcolor{lightgray}
+      \textbf{Ruolo}  & \textbf{Ore previste} & \textbf{Ore effettive} & \textbf{Costo previsto} & \textbf{Costo effettivo} & \textbf{Differenza} \\
+Responsabile    & 2           & 2           & € 60,00           & € 60,00           & € 0,00          \\
+Amministratore  & 4           & 5           & € 80,00           & € 100,00          & € 20,00         \\
+Analista        & 3           & 3           & € 75,00           & € 75,00           & € 0,00          \\
+Progettista     & 5           & 5           & € 110,00          & € 110,00          & € 0,00          \\
+Programmatore   & 3           & 3           & € 45,00           & € 45,00           & € 0,00          \\
+Verificatore    & 10          & 9           & € 150,00          & € 135,00          & -€ 15,00        \\
+\textbf{Totale} & \textbf{27} & \textbf{27} & \textbf{€ 520,00} & \textbf{€ 525,00} & \textbf{€ 5,00}
+
+    \end{tabular}
+    \caption{Resoconto economico effettivo del periodo del primo incremento}
+  \end{table}
+
+
+\subsubsection{Conclusioni}
+In questo periodo è stato rispettato il monte ore complessivo ma è stato necessario modificare la suddivisione oraria tra i ruoli, in particolare:
+\begin{itemize}
+    \item \textbf{Amministratore}: questo ruolo ha richiesto un'ora in più a causa di alcune difficoltà riscontrate durante la configurazione sei servizi Travis-CI e \glossario{SonarCloud};
+    \item \textbf{Verificatore}: grazie all'attento lavoro svolto dagli altri ruoli, è stato possibile risparmiare un'ora nella verifica;
+\end{itemize}
+In conclusione, in questo periodo, sono stati spesi € 5,00 in più rispetto al preventivo.
+\subsubsection{Preventivo a finire}
+Il bilancio economico viene chiuso in negativo di € 15,00, considerando i € 20,00 risparmiati nei periodi precedenti. Ciò ci permetterà di poter investire questa cifra nei successivi periodi, qualora ce ne fosse bisogno oppure per l'implementazione di requisiti non obbligatori.
+
+\end{document}
