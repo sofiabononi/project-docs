@@ -1,16 +1,13 @@
-\subsubsection{UC8 - Visualizzazione messaggio di errore invalidazione dati file di addestramento}
+\subsubsection{UC8 - Scelto modello regressione esponenziale}
 \label{sssec:uc8}
-\begin{description}
-	\item[Attore primario:] Utente amministratore.
-	\item[Precondizione:]
-	\begin{enumerate}
-		\item L'amministratore ha caricato i dati necessari per l'addestramento in un formato non valido(UC1.1);
-		\item L'amministratore ha avviato l'addestramento del predittore in Grafana(UC1).
-	\end{enumerate}
-	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento" impedendo l'entrata a regime dell'addestramento.
-	\item[Postcondizione:]
-	\begin{enumerate}
-		\item L'amministratore visualizza il messaggio di errore "file non valido per l'addestramento";
-		\item L'addestramento non entra in funzione.
-	\end{enumerate}
-\end{description}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Descrizione}: L'utente ha scelto come modello la regressione esponenziale;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'inserimento dei dati è avvenuto correttamente (UC1);
+    \item L'utente deve scegliere un modello di machine learning.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente seleziona la regressione esponenziale come algoritmo per svolgere l'addestramento;
+  \item \textbf{Postcondizione}: L'utente ha scelto come modello la regressione esponenziale.
+\end{itemize}

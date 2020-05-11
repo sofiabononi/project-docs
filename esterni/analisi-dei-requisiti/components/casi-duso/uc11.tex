@@ -1,12 +1,14 @@
-\subsubsection{UC11 - Visualizzazione messaggio di errore collegamento nodo}
+\subsubsection{UC11 - Scelto modello SVM adattata alla regressione}
 \label{sssec:uc11}
-\begin{description}
-	\item[Attore primario:] Utente amministratore.
-	\item[Precondizione:] L'amministratore ha configurato il plug-in(UC3) senza aver collegato nessun nodo valido.
-	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato" impedendo il funzionamento del plug-in(UC3.2).
-	\item[Postcondizione:]
-	\begin{enumerate}
-		\item L'amministratore visualizza il messaggio di errore "nessun nodo valido collegato";
-		\item Il pannello selezionato non viene eliminato.
-	\end{enumerate}
-\end{description}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Descrizione}: L'utente ha scelto come modello la SVM adattata alla regressione;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'inserimento dei dati è avvenuto correttamente (UC1);
+    \item L'utente deve scegliere un modello di machine learning.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente seleziona la SVM adattata alla regressione come algoritmo per svolgere l'addestramento;
+  \item \textbf{Postcondizione}: L'utente ha scelto come modello la SVM adattata alla regressione.
+  \item \textbf{Estensione}: UC11 viene esteso dai casi d'uso UC7, UC8 e UC9.
+\end{itemize}

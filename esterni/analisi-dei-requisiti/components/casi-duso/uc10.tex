@@ -1,12 +1,13 @@
-\subsubsection{UC10 - Visualizzazione messaggio di errore nessun file di addestramento}
+\subsubsection{UC10 - Scelto modello rete neurale}
 \label{sssec:uc10}
-\begin{description}
-	\item[Attore primario:] Utente amministratore.
-	\item[Precondizione:] L'amministratore ha configurato il plug-in(UC3) senza aver dato in ingresso un file di addestramento.
-	\item[Scenario Principale:] L'amministratore visualizza il messaggio di errore "nessun file di addestramento dato" impedendo il funzionamento del plug-in(UC3.1).
-	\item[Postcondizione:]
-	\begin{enumerate}
-		\item L'amministratore visualizza il messaggio di errore "nessun file di addestramento dato";
-		\item Il plug-in non entra in funzione.
-	\end{enumerate}
-\end{description}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Descrizione}: L'utente ha scelto come modello la rete neurale;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'inserimento dei dati è avvenuto correttamente (UC1);
+    \item L'utente deve scegliere un modello di machine learning.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente seleziona la rete neurale come algoritmo per svolgere l'addestramento;
+  \item \textbf{Postcondizione}: L'utente ha scelto come modello la rete neurale.
+\end{itemize}

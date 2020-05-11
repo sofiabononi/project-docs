@@ -1,0 +1,9 @@
+@startuml stylesheet
+left to right direction
+skinparam {
+  Monochrome true
+  Linetype polyline
+  Shadowing false
+}
+
+@enduml

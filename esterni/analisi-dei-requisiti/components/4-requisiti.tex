@@ -2,6 +2,33 @@
 
 \begin{document}
 
+\subsection{Struttura}
+I requisiti sono identificati secondo uno schema univoco; questo è così composto: \\
+\begin{center}
+  \centering
+  \textbf{R[T]-[P]-[I]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{R}: Indica che il codice è un requisito;
+  \item \textbf{T}: Indica la tipologia del requisito. Il requisito può essere:
+  \begin{itemize}
+    \item \textbf{F}: Funzionale;
+    \item \textbf{Q}: Qualitativo;
+    \item \textbf{V}: Vincolo.
+  \end{itemize}
+  \item \textbf{P}: Indica la priorità del requisito. Questa può essere:
+  \begin{itemize}
+    \item \textbf{O}: Indica un requisito obbligatorio poiché necessario;
+    \item \textbf{D}: Indica un requisito desiderabile, ma non necessario;
+    \item \textbf{F}: Indica un requisito opzionale o contrattabile in corso d'opera del progetto.
+  \end{itemize}
+  \item \textbf{I}: Indica l'identificativo del requisito nella forma \\
+  \begin{center}
+    \centering
+    \textbf{codicePadre.codiceFiglio}
+  \end{center} dove entrambi i codici sono numeri progressivi.
+\end{itemize}
+
 \input{./requisiti/funzionali.tex}
 
 \newpage

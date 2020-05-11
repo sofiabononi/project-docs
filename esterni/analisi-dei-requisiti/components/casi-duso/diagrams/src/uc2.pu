@@ -1,0 +1,41 @@
+@startuml uc2
+!include ../style.pu
+
+skinparam RectangleFontSize 48
+skinparam UsecaseFontSize 40
+skinparam ActorFontSize 48
+
+actor :Utente: as A
+actor :Grafana: as A1
+
+rectangle "UC2 - Addestramento del predittore"{
+    usecase (UC2.1) as "UC2.1\n Scelta del flusso di dati"
+    usecase (UC2.2) as "UC2.2\n Scelta del modello"
+    together {
+      usecase (UC6)
+      usecase (UC7)
+      usecase (UC8)
+      usecase (UC9)
+      usecase (UC10)
+      usecase (UC11)
+  }
+}
+
+:A: -- (UC2.1)
+:A: -- (UC2.2)
+
+(UC2.1) ------- :A1:
+
+(UC2.2) <|-right- (UC6)
+(UC2.2) <|-right- (UC7)
+(UC2.2) <|-right- (UC8)
+(UC2.2) <|-right- (UC9)
+(UC2.2) <|-right- (UC10)
+(UC2.2) <|-up- (UC11)
+(UC6)-[hidden]-(UC7)
+(UC7)-[hidden]-(UC8)
+(UC8)-[hidden]-(UC9)
+(UC9)-[hidden]-(UC10)
+(UC10)-[hidden]-(UC11)
+
+@enduml
