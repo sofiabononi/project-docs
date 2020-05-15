@@ -1,0 +1,80 @@
+language: generic
+dist: bionic
+
+before_install:
+- wget https://raw.githubusercontent.com/NikolasMiz/Dropbox-Uploader/master/dropbox_uploader.enc
+- openssl aes-256-cbc -K $encrypted_cd65562716f9_key -iv $encrypted_cd65562716f9_iv
+  -in dropbox_uploader.enc -out dropbox_uploader -d
+
+
+install:
+- mkdir texlive
+- cd texlive
+- wget https://raw.githubusercontent.com/NikolasMiz/travis-ci-latex-pdf/master/4-texlive/texlive/texlive_install.sh
+- wget https://raw.githubusercontent.com/NikolasMiz/travis-ci-latex-pdf/master/4-texlive/texlive/texlive_packages
+- wget https://raw.githubusercontent.com/NikolasMiz/travis-ci-latex-pdf/master/4-texlive/texlive/texlive.profile
+- cd ..
+- source ./texlive/texlive_install.sh
+- wget https://raw.githubusercontent.com/NikolasMiz/Dropbox-Uploader/master/dropbox_uploader.sh
+- chmod +x dropbox_uploader.sh
+cache:
+  directories:
+  - "/tmp/texlive"
+  - "$HOME/.texlive"
+jobs:
+  include:
+  - script:
+    - cd esterni/analisi-dei-requisiti
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape analisi-dei-requisiti.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload esterni/analisi-dei-requisiti/analisi-dei-requisiti.pdf
+      ${TRAVIS_BRANCH}/esterni/analisi-dei-requisiti.pdf"
+    name: Analisi dei requisiti
+  - script:
+    - cd esterni/glossario
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape glossario.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload esterni/glossario/glossario.pdf ${TRAVIS_BRANCH}/esterni/glossario.pdf"
+    name: Glossario
+  - script:
+    - cd interni/norme-di-progetto
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape norme-di-progetto.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload interni/norme-di-progetto/norme-di-progetto.pdf
+      ${TRAVIS_BRANCH}/interni/norme-di-progetto.pdf"
+    name: Norme di progetto
+  - script:
+    - cd esterni/piano-di-progetto
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape piano-di-progetto.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload esterni/piano-di-progetto/piano-di-progetto.pdf
+      ${TRAVIS_BRANCH}/esterni/piano-di-progetto.pdf"
+    name: Piano di progetto
+  - script:
+    - cd esterni/piano-di-qualifica
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape piano-di-qualifica.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload esterni/piano-di-qualifica/piano-di-qualifica.pdf
+      ${TRAVIS_BRANCH}/esterni/piano-di-qualifica.pdf"
+    name: Piano di qualifica
+  - script:
+    - cd interni/studio-di-fattibilita
+    - lualatex --synctex=1 --interaction=nonstopmode -shell-escape studio-di-fattibilita.tex
+    - cd ../..
+    - "./dropbox_uploader.sh upload interni/studio-di-fattibilita/studio-di-fattibilita.pdf
+      ${TRAVIS_BRANCH}/interni/studio-di-fattibilita.pdf"
+    name: Studio di fattibilita
+  - script:
+    - cd esterni/verbali
+    - for f in *.tex; do lualatex --synctex=1 --interaction=nonstopmode -shell-escape
+      $f; done
+    - cd ../..
+    - "./dropbox_uploader.sh upload esterni/verbali/*.pdf ${TRAVIS_BRANCH}/esterni/verbali/"
+    name: Verbali esterni
+  - script:
+    - cd interni/verbali
+    - for f in *.tex; do lualatex --synctex=1 --interaction=nonstopmode -shell-escape
+      $f; done
+    - cd ../..
+    - "./dropbox_uploader.sh upload interni/verbali/*.pdf ${TRAVIS_BRANCH}/interni/verbali/"
+    name: Verbali interni
