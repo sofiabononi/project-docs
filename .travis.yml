@@ -88,3 +88,4 @@ jobs:
     - cd ../..
     - "./dropbox_uploader.sh upload interni/verbali/*.pdf ${TRAVIS_BRANCH}/interni/verbali/"
     name: Verbali interni
+
