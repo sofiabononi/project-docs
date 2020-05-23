@@ -1,6 +1,8 @@
 @startuml uc1
 !include ../style.pu
 
+skinparam RectangleFontSize 24
+
 actor :Utente: as A
 
 rectangle "UC1 - Addestramento del sistema"{
@@ -12,12 +14,12 @@ rectangle "UC1 - Addestramento del sistema"{
     usecase (UC1.5) as "UC1.5\n Salvataggio dei risultati ottenuti"
     usecase (UC17) as "UC17\n Visualizzazione messaggio di errore\n invalidazione dati file di addestramento"
     usecase (UC25) as "UC25\n  Visualizzazione messaggio di errore\n nel file del predittore allenato"
-    usecase (UC6)
-    usecase (UC7)
-    usecase (UC8)
-    usecase (UC9)
-    usecase (UC10)
-    usecase (UC11)
+    usecase (UC6) as "UC6\n Scelto modello Support Vector Machine"
+    usecase (UC7) as "UC7\n Scelto modello regressione lineare"
+    usecase (UC8) as "UC8\n Scelto modello regressione esponenziale"
+    usecase (UC9) as "UC9\n Scelto modello regressione logaritmica"
+    usecase (UC10) as "UC10\n Scelto modello rete neurale"
+    usecase (UC11) as "UC11\n Scelto modello SVM adattata alla regressione"
   }
 }
 
