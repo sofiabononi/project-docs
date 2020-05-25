@@ -1,0 +1,67 @@
+\documentclass{article}
+
+\input{../../commons/config}
+%Qui ci andrà il percorso delle immagini da includere in analisi dei requisiti
+\appendToGraphicspath{../../commons/img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Manuale Utente}
+
+\setVersione{
+}
+
+\setResponsabile{
+}
+
+\setRedattori{
+}
+
+\setVerificatori{
+}
+
+\setUso{Esterno}
+
+\setDescrizione{Documento contenente una guida per il progetto \textit{Predire in Grafana} del gruppo \emph{CoffeeCode}.
+}
+
+\setModifiche{
+}
+
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/1-introduzione.tex}
+
+\newpage
+
+\section{Requisiti di sistema}%
+\label{sec:requisiti di sistema}
+\subfile{components/2-requisiti.tex}
+
+\newpage
+
+\section{Installazione}%
+\label{sec:installazione}
+\subfile{components/3-installazione.tex}
+
+\newpage
+
+\section{Utilizzo training app}%
+\label{sec:utilizzo-training-app}
+\subfile{components/4-utilizzo-training-app.tex}
+
+\newpage
+\appendix
+\setcounter{secnumdepth}{1} % No section number
+\section{Glossario}%
+\label{sec:glossario}
+\subfile{components/A-glossario}
+
+
+
+\end{document}
