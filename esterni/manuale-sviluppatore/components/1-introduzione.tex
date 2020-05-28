@@ -1,0 +1,19 @@
+\documentclass[../manuale-sviluppatore.tex]{subfiles}
+
+\begin{document}
+
+\subsection{Scopo del documento}%
+\label{subs:scopo_del_documento}
+Il presente documento ha la finalità di guidre gli sviluppatori all'attività di estensione e manutenzione del software \emph{Predire in Grafana}. Sono presenti le tecnologie utilizzate per il \glossario{plug-in} che per il programma di \glossario{addestramento}, le scelte progettuali e l'architettura, contenendo suggerimenti per l'estensione del software e le modalità con cui sono stati effetuati i test.
+
+\subsection{Scopo del prodotto}%
+\label{subs:scopo_del_prodotto}
+Il \glossario{capitolato} C4 - "Predire in Grafana" ha come obiettivo la realizzazione di un plug-in, scritto in linguaggio \glossario{JavaScript} per lo strumento \glossario{open source} \glossario{Grafana}, che applichi le tecniche di \glossario{Machine Learning} \glossario{Regressione Lineare} e \glossario{Support Vector Machines} ad un flusso di dati. Questo plug-in provvederà quindi a svolgere un'analisi dei dati e, da questi, fornire una predizione al fine di monitorare la \glossario{liveliness} del sistema e di consigliare interventi alla linea di produzione del software tramite specifici \glossario{alert}. \\
+Prima della realizzazione di tale plug-in si dovrà sviluppare un programma comprendente un'interfaccia web con l'utilizzo del \glossario{framework} \glossario{Electron}, attraverso la quale verrà eseguito l'addestramento necessario al corretto funzionamento degli algoritmi di Machine Learning. \\
+I risultati ottenuti dovranno poi essere visualizzati, in forma di grafico, in una \glossario{dashboard} sulla piattaforma Grafana.
+
+\subsection{Glossario}
+\label{subs:glossario}
+All'interno del documento sono presenti termini che possono avere dei significati ambigui a seconda del contesto. Per evitare questa ambiguità è stato creato un glossario, il quale si trova nell'appendice §A, che conterrà tali termini con il loro significato specifico. Per indicare che il termine del testo è presente all'interno del glossario verrà segnalato con una sottolineatura e una G a pedice.
+
+\end{document}

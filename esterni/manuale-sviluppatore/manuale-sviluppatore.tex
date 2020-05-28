@@ -1,0 +1,79 @@
+\documentclass{article}
+
+\input{../../commons/config}
+%Qui ci andrà il percorso delle immagini da includere in manuale dello sviluppatore
+\appendToGraphicspath{../../commons/img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Manuale dello sviluppatore}
+
+\setVersione{
+}
+
+\setResponsabile{
+}
+
+\setRedattori{
+}
+
+\setVerificatori{
+}
+
+\setUso{Esterno}
+
+\setDescrizione{Documento contenente una guide per il progetto \emph{Predire in Grafana} del gruppo \emph{CoffeCode} .}
+
+\setModifiche{
+  }
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/1-introduzione.tex}
+
+\newpage
+
+\section{Tecnologie interessate}
+\label{sec:tecnologie_interessate}
+\subfile{components/2-tecnologie_interessate.tex}
+
+\newpage
+
+\section{Prerequisiti}
+\label{sec:prerecuisiti}
+\subfile{components/3-prerecuisiti.tex}
+
+\newpage
+
+\section{Installazione}
+\label{sec:installazione}
+\subfile{components/4-installazione.tex}
+
+\section{Architettura addestramento}
+\label{sec:architettura_addestramento}
+\subfile{components/5-architettura_addestramento.tex}
+
+\section{Architettura plug-in}
+\label{sec:architettura_plugin}
+\subfile{components/6-architettura_plugin.tex}
+
+\section{Estensione funzionalità}
+\label{sec:estensione_funzionalita}
+\subfile{components/7-estensione_funzionalita.tex}
+
+\section{Test}
+\label{sec:test}
+\subfile{components/8-test.tex}
+
+\newpage
+\appendix
+\setcounter{secnumdepth}{1} % No section number
+\section{Glossario}%
+\label{sec:glossario}
+\subfile{components/A-glossario}
+
+
+\end{document}
