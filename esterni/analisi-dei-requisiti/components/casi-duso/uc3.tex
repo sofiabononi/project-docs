@@ -1,70 +1,45 @@
-\newpage
-\subsubsection{UC3 - Configurazione del plug-in per la predizione}
-\label{sssec:uc3}
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[width=18cm]{uc3.png}\\
-    \caption{UC3 - Configurazione del plug-in per la predizione}%
-    \label{fig:uc3}
-  \end{center}
-  \end{figure}
-
-  \begin{itemize}
-    \item \textbf{Attore primario}: Utente;
-    \item \textbf{Attore secondario}: Grafana;
-    \item \textbf{Descrizione}: Configurazione del plug-in per ottenere le previsioni;
-    \item \textbf{Precondizione}: L'utente ha abilitato il plug-in e si trova nella pagina di configurazione;
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-      \item L'utente carica il file JSON contente i risultati dell'addestramento (UC3.1);
-      \item L'utente sceglie su quali nodi fare le previsioni (UC3.2);
-      \item L'utente sceglie con quale modalità visualizzare i dati (UC3.3).
-    \end{enumerate}
-    \item \textbf{Postcondizione}: L'utente ha configurato il plug-in, il quale diventa pronto per essere avviato.
-  \end{itemize}
-
-\paragraph{UC3.1 - Caricamento risultati}
-\label{para:uc3.1}
+\subsubsection{UC3 - Attivazione apprendimento di flusso costante}
+\label{sssec:UC3}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
   \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente carica il file JSON contenente i risultati ottenuti dall'addestramento;
-  \item \textbf{Precondizione}: Il sistema permette di leggere un file JSON, l'utente ha a disposizione un file con all'interno i risultati (UC1.5);
-  \item \textbf{Scenario principale}: Vengono caricati i risultati dell'addestramento presenti in un file JSON;
-  \item \textbf{Postcondizione}: Vengono caricati i risultati dell'addestramento avvenuto precedentemente e salvati in un file JSON;
-  \item \textbf{Estensioni}:
+  \item \textbf{Descrizione}: L'utente decide di attivare l'apprendimento in costante adattamento ai dati rilevati sul campo. Questo porta ad avere un aggiornamento automatico del predittore in base ai nuovi dati ricevuti;
+  \item \textbf{Precondizione}:
   \begin{enumerate}
-    \item UC3.1 viene esteso nel caso d'uso UC18 con la visualizzazione del messaggio di errore quando viene fornito un predittore in un formato non valido;
-    \item UC3.1 viene esteso nel caso d'uso UC19 con la visualizzazione del messaggio di errore quando l'utente non inserisce alcun file per l'addestramento.
-    \end{enumerate}
+    \item L'utente ha abilitato correttamente il plug-in dalle impostazioni di Grafana;
+    \item L'utente ha scelto di attivare l'apprendimento continuo accedendo al pannello dedicato a questo.
+  \end{enumerate}
+  \item \textbf{Scenario principale}:
+  \begin{enumerate}
+    \item L'utente seleziona quale algoritmo utilizzare per attivare l'apprendimento costante (UC3.1);
+    \item L'utente seleziona su quale sorgente dati effettuare l'apprendimento costante (UC3.2).
+  \end{enumerate}
+  \item \textbf{Postcondizione}: E' stata attivita la modalità di apprendimento continuo.
 \end{itemize}
 
-\paragraph{UC3.2 - Scelta dei nodi}
+\paragraph{UC3.1 - Scelta dell'algoritmo da utilizzare}
+\label{para:uc3.1}
+\begin{itemize}
+  \item \textbf{Attore primario}: Utente;
+  \item \textbf{Descrizione}: L'utente seleziona l'algoritmo da utilizzare per l'addestramento costante, scegliendo tra RL e SVM;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'utente ha selezionato il pannello dedicato all'apprendimento di flusso costante;
+    \item L'utente ha a disposizione due algoritmi per effettuare l'apprendimento costante.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente seleziona l'algoritmo da utilizzare per l'apprendimento costante;
+  \item \textbf{Postcondizione}: L'utente ha selezionato l'algoritmo per effettuare l'apprendimento costante, scegliendo tra RL e SVM;
+  \item \textbf{Estensione}: UC3.1 viene generalizzato dai casi d'uso UC6 e UC7.
+\end{itemize}
+
+\paragraph{UC3.2 - Scelta della sorgente dati da utilizzare}
 \label{para:uc3.2}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
   \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente sceglie su che nodi effettuare la previsione;
-  \item \textbf{Precondizione}: L'utente ha caricato il file con i dati di addestramento (UC3.1);
-  \item \textbf{Scenario principale}: L'utente, data una lista di nodi, seleziona su quali vuole ottenere la predizione;
-  \item \textbf{Postcondizione}: L'utente ha selezionato su che nodi effettuare la predizione;
-  \item \textbf{Estensioni}:
-  \begin{enumerate}
-    \item UC3.1 viene esteso nel caso d'uso UC20 con la visualizzazione del messaggio di errore quando non viene selezionato nessun nodo valido;
-    \item UC3.1 viene esteso nel caso d'uso UC21 con la visualizzazione del messaggio di errore quando non viene selezionato alcun nodo.
-    \end{enumerate}
+  \item \textbf{Descrizione}: L'utente seleziona quale sorgente dati utilizzare;
+  \item \textbf{Precondizione}: L'utente ha a disposizione un'insieme di dati;
+  \item \textbf{Scenario principale}: L'utente sceglie quale sorgente di dati utilizzare per l'apprendimento di flusso costante;
+  \item \textbf{Postcondizione}: L'utente ha selezionato quale sorgente di dati utilizzare per l'apprendimento di flusso costante.
 \end{itemize}
 
-\paragraph{UC3.3 - Visualizzazione della previsione}%
-\label{para:uc3.3}
-\begin{itemize}
-  \item \textbf{Attore primario}: Utente;
-  \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente vuole visualizzare una dashboard con all'interno le informazioni sulla previsione;
-  \item \textbf{Precondizione}: L'utente ha selezionato i nodi da utilizzare per la previsione (UC3.2);
-  \item \textbf{Scenario principale}: L'utente sceglie se visualizzare la previsione con un grafico o con un indicatore;
-  \item \textbf{Postcondizione}: L'utente ha scelto la modalità per visualizzare la previsione;
-  \item \textbf{Estensioni}: UC3.3 viene esteso nel caso d'uso UC22 con la visualizzazione del messaggio di errore quando non viene scelta una modalità di visualizzazione;
-  \item \textbf{Generalizzazione}: UC3.3 viene generalizzato dai casi d'uso UC4 e UC5.
-\end{itemize}

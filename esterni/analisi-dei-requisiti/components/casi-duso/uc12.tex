@@ -1,10 +1,13 @@
-\subsubsection{UC12 - Avvio plug-in}
+\subsubsection{UC12 - Scelto modello rete neurale}
 \label{sssec:uc12}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente ha deciso di avviare il plug-in;
-  \item \textbf{Precondizione}: L'utente ha configurato correttamente il plug-in(UC3);
-  \item \textbf{Scenario principale}: L'utente ha deciso di avviare il plug-in per ottenere la predizione;
-  \item \textbf{Postcondizione}: L'utente ha ottenuto la previsione, utilizzando il plug-in, sui dati scelti in precedenza.
+  \item \textbf{Descrizione}: L'utente ha scelto come modello la rete neurale;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+    \item L'inserimento dei dati è avvenuto correttamente (UC1.1);
+    \item L'utente deve scegliere un modello di machine learning.
+  \end{enumerate}
+  \item \textbf{Scenario principale}: L'utente seleziona la rete neurale come algoritmo per svolgere l'addestramento;
+  \item \textbf{Postcondizione}: L'utente ha scelto come modello la rete neurale.
 \end{itemize}

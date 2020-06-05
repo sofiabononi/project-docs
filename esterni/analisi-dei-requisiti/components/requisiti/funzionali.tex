@@ -18,9 +18,9 @@
   \endlastfoot%
   \textbf{RFO1} & Il sistema deve essere addestrato dall'utente. & Obbligatorio & UC1 \\
   \textbf{RFO1.1} & Il sistema deve mostrare un pulsante che permetta all'utente di caricare il file CSV contenente i dati di addestramento.  & Obbligatorio & UC1.1 \\
-  \textbf{RFD1.1.1} & Il sistema potrebbe notificare un messaggio di errore nel caso in cui venga fornito un file di addestramento non valido. & Desiderabile & UC17 \\
+  \textbf{RFD1.1.1} & Il sistema potrebbe notificare un messaggio di errore nel caso in cui venga fornito un file di addestramento non valido. & Desiderabile & UC22 \\
   \textbf{RFO1.2} & Il sistema deve mostrare un pulsante che permetta all'utente di caricare il predittore allenato in precedenza, se ne è in possesso. & Obbligatorio & UC1.2 \\
-  \textbf{RFD1.2.1} & Il sistema potrebbe notificare all'utente un messaggio d'errore nel caso in cui si tenti di caricare un predittore in formato non valido. & Desiderabile & UC25 \\
+  \textbf{RFD1.2.1} & Il sistema potrebbe notificare all'utente un messaggio d'errore nel caso in cui si tenti di caricare un predittore in formato non valido. & Desiderabile & UC30 \\
   \textbf{RFO1.3} & Il sistema deve permettere all'utente di scegliere un modello di machine learning da utilizzare per l'allenamento. & Obbligatorio & UC1.3 \\
   \textbf{RFO1.4} & Il sistema deve permettere all'utente di avviare l'addestramento. & Obbligatorio & UC1.4 \\
   \textbf{RFO1.5} & Il sistema deve mettere a disposizione all’utente un pulsante per il caricamento del file JSON contenente il predittore allenato in precedenza. & Obbligatorio & UC1.5 \\
@@ -28,31 +28,35 @@
   \textbf{RFF2.1} & Il sistema può permettere all’utente di avviare l’addestramento in Grafana. & Facoltativo & UC2 \\
   \textbf{RFF2.2} & Il sistema può permettere all'utente di selezionare un flusso di dati a cui applicare la predizione. & Facoltativo & UC2.1 \\
   \textbf{RFF2.3} & Il sistema può permettere all’utente di selezionare il modello di previsione desiderato. & Facoltativo & UC2.2 \\
-  \textbf{RFO3} & Il sistema deve permettere all’utente di configurare il plug-in. & Obbligatorio & UC3 \\
-  \textbf{RFO3.1} & Il sistema deve mettere a disposizione all’utente un metodo per caricare il modello addestrato. & Obbligatorio & UC3.1 \\
-  \textbf{RFD3.1.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga caricato un file contenente il modello addestrato non valido. & Desiderabile & UC18 \\
-  \textbf{RFD3.1.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga caricato nessun file. & Desiderabile & UC19 \\
-  \textbf{RFO3.2} & Il sistema deve consentire all’utente di selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & UC3.2 \\
-  \textbf{RFD3.2.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga selezionato un nodo non valido. & Desiderabile & UC20 \\
-  \textbf{RFD3.2.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun nodo. & Desiderabile & UC21 \\
-  \textbf{RFO3.3} & Il sistema deve permettere all’utente di selezionare il tipo di visualizzazione della predizione. & Obbligatorio & UC3.3 \\
-  \textbf{RFD3.3.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & UC22 \\
-  \textbf{RFO4} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & UC4 \\
-  \textbf{RFO5} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & UC5 \\
-  \textbf{RFO6} & Il sistema deve permettere all'utente di selezionare il modello SVM per l'allenamento. & Obbligatorio & UC6 \\
-  \textbf{RFO7} & Il sistema deve permettere all'utente di selezionare il modello RL per l'allenamento. & Obbligatorio & UC7 \\
-  \textbf{RFF8} & Il sistema può permettere all'utente di selezionare la regressione esponenziale per l'allenamento. & Facoltativo & UC8 \\
-  \textbf{RFF9} & Il sistema può permettere all'utente di selezionare la regressione logaritmica per l'allenamento. & Facoltativo & UC9 \\
-  \textbf{RFF10} & Il sistema può permettere all'utente di selezionare il modello rete neurale per l'allenamento. & Facoltativo & UC10 \\
-  \textbf{RFF11} & Il sistema può permettere all'utente di selezionare il modello SVM adattata alla regressione per l'allenamento. & Facoltativo & UC11 \\
-  \textbf{RFO12} & Il sistema deve mettere a disposizione dell’utente un pulsante per l’avvio della predizione. & Obbligatorio & UC12 \\
-  \textbf{RFO13} & Il sistema deve mettere a disposizione dell’utente un pulsante per interrompere la predizione. & Obbligatorio & UC13 \\
-  \textbf{RFF14} & Il sistema può mettere a disposizione dell’utente un metodo per l’impostazione degli alert. & Facoltativo & UC14 \\
-  \textbf{RFF14.1} & Il sistema può mostrare un pulsante che permetta all'utente di creare un alert. & Facoltativo & UC14.1 \\
-  \textbf{RFF14.2} & Il sistema può mettere a disposizione un sistema per inserire una soglia di alert. & Facoltativo & 14.2 \\
-  \textbf{RFD14.2.1} & Il sistema, utilizzando un alert, potrebbe notificare un messaggio di errore nel caso in cui venga superata la soglia impostata. & Desiderabile & UC23 \\
-  \textbf{RFD15} & Il sistema potrebbe permettere all'utente di eliminare il pannello di monitoraggio. & Desiderabile & UC15 \\
-  \textbf{RFD15.1} & Il sistema potrebbe visualizzare un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & UC24 \\
-  \textbf{RFO16} & Il sistema deve mettere a disposizione all'utente un metodo per la visualizzazione delle previsioni. & Obbligatorio & UC16 \\
-
+  \textbf{RFF3} & Il sistema può permettere all'utente di avviare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & UC3 \\
+  \textbf{RFF4} & Il sistema può permettere all'utente di disattivare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & UC4 \\
+  \textbf{RFO5} & Il sistema deve permettere all’utente di configurare il plug-in. & Obbligatorio & UC5 \\
+  \textbf{RFO5.1} & Il sistema deve mettere a disposizione all’utente un metodo per caricare il modello addestrato. & Obbligatorio & UC5.1 \\
+  \textbf{RFD5.1.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga caricato un file contenente il modello addestrato non valido. & Desiderabile & UC23 \\
+  \textbf{RFD5.1.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga caricato nessun file. & Desiderabile & UC24 \\
+  \textbf{RFO5.2} & Il sistema deve consentire all’utente di selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & UC5.2 \\
+  \textbf{RFD5.2.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui venga selezionato un nodo non valido. & Desiderabile & UC25 \\
+  \textbf{RFD5.2.2} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun nodo. & Desiderabile & UC26 \\
+  \textbf{RFO5.3} & Il sistema deve permettere all’utente di selezionare il tipo di visualizzazione della predizione. & Obbligatorio & UC5.3 \\
+  \textbf{RFD5.3.1} & Il sistema potrebbe notificare un messaggio d'errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & UC27 \\
+  \textbf{RFO6} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & UC6 \\
+  \textbf{RFO7} & Il sistema deve mettere a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & UC7 \\
+  \textbf{RFO8} & Il sistema deve permettere all'utente di selezionare il modello SVM per l'allenamento. & Obbligatorio & UC8 \\
+  \textbf{RFO9} & Il sistema deve permettere all'utente di selezionare il modello RL per l'allenamento. & Obbligatorio & UC9 \\
+  \textbf{RFF10} & Il sistema può permettere all'utente di selezionare la regressione esponenziale per l'allenamento. & Facoltativo & UC10 \\
+  \textbf{RFF11} & Il sistema può permettere all'utente di selezionare la regressione logaritmica per l'allenamento. & Facoltativo & UC11 \\
+  \textbf{RFF12} & Il sistema può permettere all'utente di selezionare il modello rete neurale per l'allenamento. & Facoltativo & UC12 \\
+  \textbf{RFF13} & Il sistema può permettere all'utente di selezionare il modello SVM adattata alla regressione per l'allenamento. & Facoltativo & UC13 \\
+  \textbf{RFO14} & Il sistema deve mettere a disposizione dell’utente un pulsante per l’avvio della predizione. & Obbligatorio & UC14 \\
+  \textbf{RFO15} & Il sistema deve mettere a disposizione dell’utente un pulsante per interrompere la predizione. & Obbligatorio & UC15 \\
+  \textbf{RFF16} & Il sistema può mostrare all'utente il pannello contenente le informazioni riguardanti la bontà della previsione. & Facoltativo & UC16 \\
+  \textbf{RFF17} & Il sistema può mostrare all'utente il pannello contenente la bontà di previsione dell'algoritmo SVM descritta dal parametro F-Measure. & Facoltativo & UC17 \\
+  \textbf{RFF18} & Il sistema può mostrare all'utente il pannello contenente la bontà di previsione dell'algoritmo RL descritta dal parametro R\textsuperscript{2}. & Facoltativo & UC18 \\
+  \textbf{RFF19} & Il sistema può mettere a disposizione dell’utente un metodo per l’impostazione degli alert. & Facoltativo & UC19 \\
+  \textbf{RFF19.1} & Il sistema può mostrare un pulsante che permetta all'utente di creare un alert. & Facoltativo & UC19.1 \\
+  \textbf{RFF19.2} & Il sistema può mettere a disposizione un sistema per inserire una soglia di alert. & Facoltativo & 19.2 \\
+  \textbf{RFD19.2.1} & Il sistema, utilizzando un alert, potrebbe notificare un messaggio di errore nel caso in cui venga superata la soglia impostata. & Desiderabile & UC28 \\
+  \textbf{RFD20} & Il sistema potrebbe permettere all'utente di eliminare il pannello di monitoraggio. & Desiderabile & UC20 \\
+  \textbf{RFD20.1} & Il sistema potrebbe visualizzare un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & UC29 \\
+  \textbf{RFO21} & Il sistema deve mettere a disposizione all'utente un metodo per la visualizzazione delle previsioni. & Obbligatorio & UC21 \\
 \end{longtable}

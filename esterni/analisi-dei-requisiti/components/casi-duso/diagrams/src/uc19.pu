@@ -1,0 +1,19 @@
+@startuml uc19
+!include ../style.pu
+
+actor :Utente: as A
+actor :Grafana: as A1
+
+rectangle "UC19 - Configurazione alert"{
+  together {
+    usecase (UC19.1) as "UC19.1\n Creazione alert"
+    usecase (UC19.2) as "UC19.2\n Definizione soglia massimale"
+  }
+}
+
+:A: -- (UC19.1)
+:A: -- (UC19.2)
+(UC19.1) -- :A1:
+(UC19.2) -- :A1:
+
+@endluml

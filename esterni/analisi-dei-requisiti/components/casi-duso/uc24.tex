@@ -1,17 +1,13 @@
-\subsubsection{UC24 - Visualizzazione messaggio di errore del plug-in di predizione non interrotta}
+\subsubsection{UC24 - Visualizzazione messaggio di errore nessun file di addestramento}
 \label{sssec:uc24}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di interruzzione della predizione prima della procedura di rimozioni di un pannello;
-  \item \textbf{Precondizione}:
-  \begin{enumerate}
-		\item L'utente ha selezionato la rimozione di un pannello(UC15);
-		\item Il plug-in di predizione non si interrompe.
-	\end{enumerate}
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "previsione non interrotta" impedendo l'eliminazione del pannello scelto;
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento;
+  \item \textbf{Precondizione}: L'utente ha configurato il plug-in(UC5) senza aver dato in ingresso un file di addestramento;
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento dato" impedendo il funzionamento del plug-in(UC5.1);
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza il messaggio di errore "previsione non interrotta";
-		\item Il pannello selezionato non viene eliminato.
+		\item L'utente visualizza il messaggio di errore "nessun file di addestramento dato";
+		\item Il plug-in non entra in funzione.
 	\end{enumerate}
 \end{itemize}

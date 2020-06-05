@@ -1,13 +1,10 @@
-\subsubsection{UC18 - Visualizzazione messaggio di errore file di addestramento invalido}
+\subsubsection{UC18 - Bontà della RL: R\textsuperscript{2}}
 \label{sssec:uc18}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento valido;
-  \item \textbf{Precondizione}: L'utente ha caricato il plug-in(UC3) senza aver dato in ingresso un file di addestramento valido;
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento valido" impedendo il funzionamento del plug-in (UC3.1);
-  \item \textbf{Postcondizione}:
-  \begin{enumerate}
-		\item L'utente visualizza il messaggio di errore "nessun file di addestramento valido";
-		\item Il plug-in non entra in funzione.
-	\end{enumerate}
+  \item \textbf{Attore secondario}: Grafana;
+  \item \textbf{Descrizione}: L'utente visualizza la bontà della R\textsuperscript{2};
+  \item \textbf{Precondizione}: L'utente ha effettuato la previsione utilizzando RL;
+  \item \textbf{Scenario principale}: L'utente visualizza il pannello contenente la bontà della previsione identificata con R\textsuperscript{2};
+  \item \textbf{Postcondizione}: L'utente visualizza la bontà della previsone ottenuta dal plug-in.
 \end{itemize}

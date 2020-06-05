@@ -1,13 +1,15 @@
-\subsubsection{UC21 - Visualizzazione messaggio di errore nessun nodo collegato}
+\subsubsection{UC21 - Visualizzazione dei pannelli di previsione attivati}
 \label{sssec:uc21}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di nodi selezionati;
-  \item \textbf{Precondizione}: L'utente ha configurato il plug-in(UC3) senza aver collegato nessun nodo;
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun nodo collegato" impedendo il funzionamento del plug-in(UC3.2);
-  \item \textbf{Postcondizione}:
+  \item \textbf{Descrizione}: L'utente visualizza le specifiche del pannello attivo selezionato;
+  \item \textbf{Precondizione}:
   \begin{enumerate}
-		\item L'utente visualizza il messaggio di errore "nessun nodo collegato";
-		\item Il plug-in non entra in funzione.
+		\item L'utente deve aver impostato correttamente il plug-in(UC5);
+		\item L'utente deve aver avviato correttamente il plug-in(UC14);
+		\item L'utente esegue l'accesso alla sezione di visualizzazione dei pannelli di previsione attivati;
+		\item L'utente seleziona il pannello di previsione di cui vuole visualizzare i dati.
 	\end{enumerate}
+  \item \textbf{Scenario principale}: L'utente, dopo aver eseguito l'accesso alla visualizzazione dei pannelli, visualizza le specifiche del pannello attivo selezionato;
+  \item \textbf{Postcondizione}: L'utente visualizza le specifiche del pannello: indicatore, grafico di previsione e affidabilità della previsione.
 \end{itemize}
