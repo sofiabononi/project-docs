@@ -1,0 +1,531 @@
+
+\subsubsection{Esiti verifiche sui documenti}
+\label{sub:esiti_verifiche_sui_documenti}
+Sui documenti sono state utilizzate le metriche per:
+    \begin{itemize}
+        \item \textbf{Indice di Gulpease};
+        \item \textbf{Correttezza lessicale/ortografica}.
+    \end{itemize}
+Per evitare risultati errati nel calcole dell'Indice di Gulpease si è deciso di non tenere in considerazione:
+    \begin{itemize}
+        \item Il frontespizio di ogni documento;
+        \item Le tabelle presenti nei documenti;
+        \item Il diario delle modifiche all'interno di ogni documento.
+    \end{itemize}
+Per quanto riguarda la correttezza lessicale/ortografica, gli errori trovati non verranno classificati ma semplicemente conteggiati uniformemente includendo anche errori derivati dal mancato rispetto delle convenzioni scritte nelle \textsc{Norme di Progetto v1.4-2.2.2}.
+\\ Per ogni metrica di ogni documento verrà inoltre inserito l'esito dell'analisi che può avere risultato soddisfacente o non.
+
+\paragraph{Norme di Progetto}
+\label{sub:norme_di_progetto}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Norme di Progetto v1.4-2.2.2} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per le Norme di Progetto v1.4-2.2.2}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriNdPv1.4-2.2.2.png}
+  \label{fig:errori_ndp}
+  \caption{Grafico errori per \textsc{Norme di Progetto v1.4-2.2.2}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeaseNdPv1.4-2.2.2.png}
+  \label{fig:gulpease_ndp}
+  \caption{Grafico indice di Gulpease per \textsc{Norme di Progetto v1.4-2.2.2}}
+\end{figure}
+
+
+\paragraph{Piano di Qualifica}
+\label{sub:piano_di_qualifica}
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Piano di Qualifica v1.4-2.0.0} &                 & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Piano di Qualifica v1.4-2.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriPdQV1.4-2.0.0.png}
+  \label{fig:errori_pdq}
+  \caption{Grafico errori per \textsc{Piano di Qualifica v1.4-2.0.0}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/GulpeasePdQV1.4-2.0.0.png}
+  \label{fig:gulpease_pdq}
+  \caption{Grafico indice di Gulpease per \textsc{Piano di Qualifica v1.4-2.0.0}}
+\end{figure}
+
+
+\paragraph{Piano di Progetto}
+\label{sub:piano_di_progetto}
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Piano di Progetto v1.4-3.1.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Piano di Progetto v1.4-3.1.0}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriPdPv1.4-3.1.0.png}
+  \label{fig:errori_pdq}
+  \caption{Grafico errori per \textsc{Piano di Progetto v1.4-3.1.0}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeasePdPv1.4-3.1.0.png}
+  \label{fig:gulpease_pdq}
+  \caption{Grafico indice di Gulpease per \textsc{Piano di Progetto v1.4-3.1.0}}
+\end{figure}
+
+
+\paragraph{Analisi dei Requisiti}
+\label{sub:analisi_dei_requisiti}
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Analisi dei Requisiti v1.4-1.2.1} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per l'Analisi dei Requisiti v1.4-1.2.1}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriAdRv1.4-1.2.1.png}
+  \label{fig:errori_adr}
+  \caption{Grafico errori per \textsc{Analisi dei Requisiti v1.4-1.2.1}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeaseAdrv1.4-1.2.1.png}
+  \label{fig:gulpease_adr}
+  \caption{Grafico indice di Gulpease per \textsc{Analisi dei Requisiti v1.4-1.2.1}}
+\end{figure}
+
+
+\paragraph{Glossario}
+\label{sub:glossario}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Glossario v1.4-1.2.0} &                  & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Glossario v1.4-1.2.0}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriGlosv1.4-1.2.0.png}
+  \label{fig:errori_glos}
+  \caption{Grafico errori per \textsc{Glossario v1.4-1.2.0}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeaseGlosv1.4-1.2.0.png}
+  \label{fig:gulpease_glos}
+  \caption{Grafico indice di Gulpease per \textsc{Glossario v1.4-1.2.0}}
+\end{figure}
+
+\subsubsection{Esiti verifiche sui processi}
+\label{sub:esiti_verifiche_sui_processi}
+In questa sezione vengono visualizzati gli esiti delle metriche prese in considerazione per quanto riguarda i processi produttivi.
+Come per i documenti, anche per queste metriche verrà fornito un esito che può essere soddisfacente o meno.
+
+\paragraph{Processo PRC001}
+\label{sub:processo_PRC001}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR001 Rispetto delle scadenze della pianificazione} & MoPR001 Varianza dei tempi &   & Soddisfatto  \\
+  \caption{Risultati metrica MoPR001}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR002 Rispetto del budget istanziato} & MoPR002 Varianza dei costi &  & Soddisfatto  \\
+  \caption{Risultati metrica MoPR002}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR003 Rispetto del ciclo di vita scelto} & MoPR003 Aderenza agli standard &  &  Non soddisfatto \\
+  \caption{Risultati metrica MoPR003}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR004 Rispetto dei ruoli e identificazione nei prodotti} & MoPR004 Aderenza ai ruoli & 0 & Soddisfatto \\
+  \caption{Risultati metrica MoPR004}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: In ogni documento prodotto i ruoli sono stati identificati e rispettati.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR005 Rispetto del versionamento dei prodotti} & MoPR005 Controllo prodotti &  & Soddisfatto \\
+  \caption{Risultati metrica MoPR005}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Processo PRC002}
+\label{sub:processo_PRC002}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR006 Soddisfazione dei requisiti obbligatori} & MoPR006 Verifica requisiti obbligatori &  & Non soddisfatto \\
+  \caption{Risultati metrica MoPR006}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR007 Soddisfazione dei requisiti opzionali e desiderabili} & MoPR007 Verifica requisiti opzionali \\ MoPR008 Verifica requisiti desiderabili &  & Non soddisfatto \\
+  \caption{Risultati metrica MoPR007 e metrica MoPR008}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR008 Verifica dei rischi previsti} & MoPR009 Verifica rischi non pervenuti &  & Soddisfatto \\
+  \caption{Risultati metrica MoPR009}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Processo PRC003}
+\label{sub:processo_PRC003}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR09 Rispetto delle fasi del ciclo di vita} & MoPR010 Analisi Way of Working & / & Soddisfatto \\
+  \caption{Risultati metrica MoPR010}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: I componenti del gruppo svolgono costantemente un aggiornamento in base alle modifiche fatte alle \textsc{Norme di Progetto v1.4-2.2.2}.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR010 Rispetto nella redazione dei documenti} & MoPR011 Analisi documenti &  & Soddisfatto \\
+  \caption{Risultati metrica MoPR011}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Processo PRC004}
+\label{sub:processo_PRC004}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR011 Attuare una verifica costante} & MoPR012 Frequenza di controlli & / & Soddisfatto \\
+  \caption{Risultati metrica MoPR012}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: I verificatori stanno continuando ad effettuare delle verifiche costanti ai prodotti.
+
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR013 Rispettare le fasi di verifica} & MoPR010 Analisi Way of Working & / & Soddisfatto \\
+  \caption{Risultati QoPR13}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: Le fasi di verifica dei prodotti stanno vedendo rispettate secondo le indicazioni interne al gruppo.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPR014 Soddisfare i test richiesti} & MoPR013 Percentuale di test soddisfatti &  & Non soddisfatto \\
+  \caption{Risultati MoPR013}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\subsubsection{Esiti verifiche sui prodotti}
+\label{sub:esiti_verifiche_sui_prodotti}
+In questa sezione vengono visualizzati gli esiti delle metriche prese in considerazione per quanto riguarda i prodotti realizzati. Come per i documenti, anche per queste metriche verrà fornito un esito che può essere soddisfacente o meno.
+
+\paragraph{Funzionalità}
+\label{sub:funzionalita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD001 Rispetto dell’implementazione funzionale - [Adeguatezza]} & MoPD001 Completezza di implementazione - [Adeguatezza] &  & Non Soddisfatto \\
+  \caption{Risultati metrica MoPD001}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD002 Rispetto delle interfacce - [Interoperabilità]} & MoPD002 Coerenza di interfaccia - [Interoperabilità] &  & Non soddisfatto \\
+  \caption{Risultati metrica MoPD002}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Affidabilità}
+\label{sub:affidabilita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD003 Test completi sul codice - [Maturità]} & MoPD003 Copertura dei test- [Maturità] &  & Non soddisfatto \\
+  \caption{Risultati metrica MoPD003}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD004 Individuazione test falliti - [Affidabilità]} & MoPD004 Densità degli errori - [Affidabilità] &  & Non Soddisfatto \\
+  \caption{Risultati metrica MoPD004}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Usabilità}
+\label{sub:usabilita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD005 Chiarezza del comportamento - [Comprensibilità]} & MoPD005 Documentazione delle funzioni - [Comprensibilità] &   & Non soddisfatto \\
+  \caption{Risultati metrica MoPD005}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD006 Chiarimento degli errori - [Comprensibilità]} & MoPD006 Messaggi di errore - [Comprensibilità] &  & Soddisfatto \\
+  \caption{Risultati metrica MoPD006}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+
+\paragraph{Efficienza}
+\label{sub:efficienza}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD007 Velocità di esecuzione - [Comportamento temporale]} & MoPD007 Tempo medio di risposta - [Comportamento temporale] & minore di 1 sec. & Soddisfatto \\
+  \caption{Risultati metrica MoPD007}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+\paragraph{Manutenibilità}
+\label{sub:manutenibilita}
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{5cm} >{\centering}m{5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
+  \endhead%
+  \textbf{QoPD08 Comprensione del codice - [Modifica]} & MoPD008 Commenti sul codice - [Modifica] &  & Non soddisfatto \\
+  \caption{Risultati metrica MoPD006}
+  \label{tab:my-table}
+\end{longtable}
+\textbf{Nota}: 
+\subsubsection{Conclusioni}%
+\label{sub:conclusioni}
