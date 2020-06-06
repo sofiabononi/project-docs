@@ -154,7 +154,7 @@ Il documento corrispondente conterrà quindi:
 L'aspettativa di questo processo è l'analisi dei requisiti concordati con il proponente; parallelamente, questi vengono documentati nell'\textsc{Analisi dei Requisiti v1.4-1.2.1}, il quale contiene appunto i requisiti richiesti per la realizzazione del progetto.
 
 \subparagraph{Classificazione dei casi d'uso}
-I casi d'uso vengono classificati e identificati secondo uno schema univoco, al fine di facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica: \\
+I casi d'uso vengono classificati e identificati secondo uno schema univoco, in modo da facilitarne la lettura e la comprensione. La classificazione segue la seguente codifica: \\
 \begin{center}
   \centering
   \textbf{UC[P].[F].[FF].[FFF]}
@@ -241,6 +241,15 @@ Sono definite due \glossario{milestone}:
   \item La \textbf{\glossario{Product Baseline}}.
 \end{itemize}
 
+Durante il processo di progettazione il gruppo dovrà seguire le seguenti regole, al fine di ottenere la qualità della progettazione architetturale e, quindi, del prodotto:
+\begin{itemize}
+  \item Ogni attività deve essere coerente con quanto documentato nell'\textsc{Analisi dei Requisiti v1.4-333};
+  \item L'utilizzo di \glossario{Design Pattern} è fortemente consigliato laddove sia possibile implementarne uno o più;
+  \item L'ereditarietà tra classi concrete deve quanto più possibile essere evitata, limitandone l'uso a dove si rende indispensabile (\underline{e.g.} l'ereditarietà tra classi predefinite di \glossario{React});
+  \item Fare il più possibile uso dell'\glossario{incapsulamento} e dell'\glossario{information hiding};
+  \item Evitare le dipendenze circolari tra classi; i componenti inoltre dovranno avere il minor grado di dipendenza possibile.
+\end{itemize}
+
 \subparagraph*{Technology Baseline}
 La Technology Baseline ha come scopo:
 \begin{itemize}
@@ -253,8 +262,7 @@ Nella Product Baseline vengono presentati:
 \begin{itemize}
   \item La \glossario{baseline} architetturale del prodotto;
   \item La descrizione dei \glossario{design pattern} utilizzati nella definizione dell'architettura;
-  \item I diagrammi UML, che rendono più chiare le soluzioni progettuali adottate;
-  \item I test di unità.
+  \item I diagrammi UML, che rendono più chiare le soluzioni progettuali adottate.
 \end{itemize}
 I diagrammi UML e i design pattern saranno inclusi in un \textsc{Allegato Tecnico} opportunamente redatto e consegnato.\\
 I diagrammi UML consistono in diagrammi utilizzati per rendere più chiare le scelte progettuali; questi sono divisi in:
@@ -309,7 +317,12 @@ I diagrammi delle classi rappresentano i tipi di oggetti che fanno parte del sis
 \end{itemize}
 
 \subparagraph*{Diagrammi dei package}
-Un package è un raggruppamento di un numero arbitrario di elementi UML in un'unità di livello più alto. I diagrammi dei package documentano le dipendenze fra le classi, e ciò consente l'individuazione di dipendenze tra queste. In particolar modo, essi permettono di individuare eventuali dipendenze circolari, permettendo la loro rimozione se possibile.
+Un package è un raggruppamento di un numero arbitrario di elementi UML in un'unità di livello più alto. I diagrammi dei package documentano le dipendenze fra le classi, e ciò consente l'individuazione di dipendenze tra queste. In particolar modo, essi permettono di individuare eventuali dipendenze circolari, permettendo la loro rimozione se possibile. \\
+Ogni package è composto da:
+\begin{itemize}
+  \item Un'etichetta che ne identifica il nome;
+  \item Una o più classi, ognuna caratterizzata dalla visibilità che possiede nei confronti degli altri package.
+\end{itemize}
 
 \subparagraph*{Diagrammi di attività}
 I diagrammi di attività descrivono la logica procedurale dei processi che compongono il software. Essi aiutano a descrivere gli aspetti dinamici dei casi d'uso, mostrando le attività che possono accadere e le sequenze di azioni con cui vengono svolte. \\
@@ -359,8 +372,8 @@ I diagrammi di sequenza si presentano come una serie di oggetti che si scambiano
 
 \paragraph{Codifica}
 \subparagraph{Scopo}
-Lo scopo di questa attività è quella di fornire le regole per la scrittura del codice JavaScript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei \glossario{Programmatori}, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
-Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a JavaScript.
+Lo scopo di questa attività è quella di fornire le regole per la scrittura del codice JavaScript e TypeScript. La codifica coincide con la programmazione stessa del prodotto; è quindi a opera dei \glossario{Programmatori}, i quali dovranno seguire le seguenti regole al fine di ottenere un prodotto coerente e uniforme in tutte le sue componenti. \\
+Tale sezione potrà poi venire ampliata nel caso in cui il gruppo senta l'esigenza di ulteriori norme in tale senso, o si renda necessario l'utilizzo di altri linguaggi di programmazione in aggiunta a JavaScript e TypeScript.
 \subparagraph{Aspettative}
 Le aspettative di questo processo sono:
 \begin{itemize}
@@ -374,9 +387,6 @@ Le aspettative di questo processo sono:
 \end{itemize}
 \subparagraph{Descrizione}
 Il codice dovrà essere scritto rispettando quanto documentato; nello specifico, esso dovrà perseguire gli obiettivi di qualità definiti nel documento \textsc{Piano di Qualifica v1.4-2.0.0}.
-
-\subparagraph{Versione del linguaggio}
-Il codice JavaScript dovrà essere scritto seguendo la specifica tecnica \glossario{ECMAScript 6}, conosciuto anche come ES6 o ES-2015.
 
 \subparagraph{Intestazione}
 Ogni file contenente codice deve possedere la seguente intestazione:
@@ -422,6 +432,16 @@ I blocchi di codice devono seguire le seguenti regole:
   \item \textbf{Parentesi}: i blocchi di codice consistenti di più di una riga devono essere racchiusi tra parentesi graffe, le quali devono cominciare nella stessa riga del codice. I blocchi di codice consistenti di un'unica riga possono essere scritti senza parentesi. \\ Nel caso degli \textit{statements} \textbf{if-else-if} e dei cicli iterativi, le keyword \textbf{else} ed \textbf{else if} devono essere inserite nella stessa riga della parentesi graffa che chiude il blocco \textbf{if}.
 \end{itemize}
 
+\subparagraph{Versione del linguaggio}
+Il codice JavaScript dovrà essere scritto seguendo la specifica tecnica \glossario{ECMAScript 6}, conosciuto anche come ES6 o ES-2015. Lo stesso vincolo si impone anche al codice TypeScript. \\
+Vengono specificate quindi delle linee guida per lo sviluppo di codice TypeScript:
+\begin{itemize}
+  \item Dichiarare le variabili con le parole chiave \textbf{const} per le costanti e \textbf{let} per le variabili visibili all'interno dei blocchi di codice. È sconsigliato l'utilizzo della keyword \textbf{var} per la dichiarazione di variabili locali, poiché queste rischiano di inquinare il namespace delle classi;
+  \item Utilizzare il metodo \textbf{Array.Push()} per l'aggiunta di valori agli array;
+  \item Utilizzare l'operatore \textbf{spread/rest ...} per la copia degli array;
+  \item Utilizzare, dove se ne rende possibile e comodo l'utilizzo, le \glossario{arrow functions} (=>) per le funzioni anonime.
+\end{itemize}
+
 \subsubsection{Strumenti}
 Durante il processo di sviluppo verranno utilizzati diversi strumenti software.
 
@@ -448,8 +468,22 @@ Viene utilizzato lo strumento PlantUML per lo sviluppo dei grafici UML dei casi 
 \paragraph{Grafana}
 Grafana è un software open-source per l'analisi dati e l'interazione con questi. Questo strumento viene utilizzato dal gruppo come sistema sul quale sviluppare il plug-in richiesto dall'azienda proponente.
 
-\paragraph{Docker}
-Docker è un software che permette la creazione di \glossario{container} GNU/Linux. Questo strumento verrà utilizzato dal gruppo per la configurazione dell'ambiente di Grafana e, quindi, lo sviluppo del plug-in richiesto dal capitolato.
+\paragraph{InfluxDB}
+InfluxDB è un \glossario{database} di tipo \textit{time-series}. Esso viene utilizzato dal gruppo per fornire i dati in input al plug-in di Grafana e per salvare i dati processati da quest'ultimo.
+
+\paragraph{Firefox e Google Chrome}
+Firefox e Google Chrome sono \glossario{browser web}; essi vengono utilizzati per accedere alla piattaforma Grafana.
+
+\paragraph{Linguaggi di Programmazione}
+\subparagraph{JavaScript}
+JavaScript è un linguaggio di programmazione \glossario{object-oriented} ed \glossario{event-driven} utilizzato comunemente nella programmazione Web lato client e sempre più anche lato server. Esso viene utilizzato dal gruppo per lo sviluppo del programma di addestramento.
+
+\subparagraph{TypeScript}
+TypeScript è un linguaggio di programmazione sviluppato da \glossario{Microsoft}; esso è un \glossario{super-set} di JavaScript, basato sulle caratteristiche ECMAScript 6 di quest'utilimo. Questo linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia in grado di funzionare anche con TypeScript senza bisogno di alcuna modifica. \\
+Esso viene utilizzato dal gruppo per lo sviluppo del plug-in di Grafana, poiché permette la definizione dei tipi delle variabili e delle costanti, rendendo più rigorosa e facilitando quindi la programmazione.
+
+\subparagraph{HTML e CSS}
+HTML, acronimo di \textit{HyperText Markup Language}, è un linguaggio di markup per la definizione di pagine e documenti web; CSS, acronimo di \textit{Cascade StyleSheet}, è un linguaggio usato per definire la formattazione di documenti HTML e XML. Questi due linguaggi vengono usati per la definizione dell'interfaccia grafica del programma di addestramento e del plug-in.
 
 \paragraph{Estensioni del linguaggio}
 \subparagraph{Node.js}
@@ -458,8 +492,11 @@ Docker è un software che permette la creazione di \glossario{container} GNU/Lin
 \subparagraph{Electron}
 Electron è un framework open-source che combina il \glossario{motore di rendering} \glossario{Chromium} e la runtime Node.js, che permette lo sviluppo della \glossario{GUI} di applicazioni desktop utilizzando tecnologie web. Esso viene usato dal gruppo per lo sviluppo del programma di addestramento.
 
-\subparagraph{React}
-\glossario{React} è una libreria Javascript per lo sviluppo di applicazioni web e interfacce utente. Esso viene usato per lo sviluppo del plug-in di Grafana richiesto dal capitolato.
+\subparagraph{ReactJS}
+\glossario{React} è una libreria Javascript per lo sviluppo di applicazioni web e interfacce utente. Esso viene usato per lo sviluppo del plug-in di Grafana richiesto dal capitolato, poiché il framework \glossario{AngularJS} è ormai deprecato per la piattaforma Grafana.
+
+\subparagraph{Plot.ly}
+È di particolare rilevanza la libreria JavaScript Plot.ly, che permette la visualizzazione di grafici interattivi e ben formattati all'interno del plug-in per Grafana.
 
 %METRICHEPDQ2
 \subsubsection{Metriche}
