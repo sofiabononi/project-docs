@@ -1,4 +1,4 @@
-\documentclass[../norme-di-progetto.tex]{subfiles}
+documentclass[../norme-di-progetto.tex]{subfiles}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Gestione dei processi}
 \subsubsection{Scopo}
-Il processo di gestione dei processi ha come scopo quello di:
+Il processo di gestione dei processi ha la scopo di:
 \begin{itemize}
   \item Creare un modello organizzativo al fine di identificare i possibili rischi;
   \item Definire un modello di sviluppo da seguire;
@@ -86,7 +86,7 @@ Il programmatore è colui che si occupa della codifica del progetto. Nello speci
 
 \subparagraph{Verificatore}
 Il verificatore è la figura che si occupa delle attività di controllo di quanto svolto dagli altri componenti del gruppo. Per fare ciò, il verificatore deve rifarsi alle \textsc{Norme di Progetto v1.4-2.2.2} per controllare che quanto prodotto, sia esso documentazione o codice, segua correttamente tutte le norme documentate. \\
-Nel caso in cui trovi un errore di qualunque natura, il Verificatore non è autorizzato alla correzione di esso; deve bensì contattare colui che ha commesso il possibile errore e comunicarglielo. Sarà poi compito del redattore correggere eventualmente quanto svolto. \\
+Nel caso in cui trovi un errore di qualunque natura, il verificatore non è autorizzato alla correzione di esso; deve bensì contattare colui che ha commesso il possibile errore e comunicarglielo. Sarà poi compito del redattore correggere eventualmente quanto svolto. \\
 Riassumendo, il verificatore:
 \begin{itemize}
   \item Ispeziona i prodotti in fase di revisione, facendo capo a quanto scritto nelle \textsc{Norme di Progetto v1.4-2.2.2};
@@ -118,6 +118,8 @@ La piattaforma Slack viene utilizzata per le comunicazioni scritte ufficiali; è
   \item \textbf{\#studio-di-fattibilità}: canale per le comunicazioni riguardanti il documento \textsc{Studio di Fattibilità v1.0.0-old};
   \item \textbf{\#technology-and-tool-faq}: canale che raccoglie tutte le domande che i componenti del gruppo pongono in merito alle tecnologie utilizzate;
   \item \textbf{\#predire-in-grafana}: canale collegato alla repository Github; ogni operazione svolta sulla repository viene qui riportata dal sistema automatico \textbf{Github for Slack};
+  \item \textbf{\#backend}: canale per le comunicazioni riguardanti lo sviluppo delle componenti di back-end degli applicativi appartenenti al progetto;
+  \item \textbf{\#frontend}: canale per le comunicazioni riguardanti lo sviluppo delle componenti di front-end degli applicativi appartenenti al progetto;
   \item \textbf{\#random}: canale riguardante le comunicazioni che non rientrano in nessuno dei precedenti argomenti.
 \end{itemize}
 
@@ -148,7 +150,7 @@ Viene inoltre utilizzata la piattaforma \glossario{Skype} per le comunicazioni d
 \paragraph{Incontri}
 \subparagraph{Incontri interni}
 In caso se ne presenti il bisogno, il gruppo può riunirsi in via telematica attraverso la piattaforma Discord. Gli incontri interni del gruppo sono indetti dal responsabile, in accordo con tutto il gruppo. Per fissare un appuntamento il responsabile chiede, attraverso i già citati strumenti per le comunicazioni, la disponibilità di una data e di un orario; il gruppo conferma la disponibilità e l'incontro viene calendarizzato sulla piattaforma Google Calendar. Ogni componente del gruppo è quindi poi tenuto a partecipare. \\
-Ogni incontro interno viene verbalizzato; a turno viene quindi individuato un segretario da parte del responsabile, che sarà tenuto a redigere un verbale contenente le informazioni generali dell'incontro, l'ordine del giorno e le discussioni fatte tra i componenti del gruppo.
+Ogni incontro interno viene verbalizzato; a turno viene quindi individuato un segretario da parte del responsabile, che sarà tenuto a redigere un verbale contenente le informazioni generali dell'incontro, l'ordine del giorno, le discussioni svolte tra i componenti del gruppo e il tracciamento delle decisioni prese durante la riunione.
 
 \subparagraph{Incontri esterni}
 Il responsabile, tra i cui compiti è presente anche quello di interfacciare il gruppo con i soggetti esterni, provvede a raccogliere le disponibilità dei componenti del gruppo e, successivamente, a mediare la data e l'orario con i terzi. Una volta fissato l'appuntamento, il responsabile lo calendarizza sulla piattaforma Google Calendar e tutti i componenti del gruppo che hanno dato la disponibilità sono tenuti a presentarsi all'orario stabilito. \\
@@ -208,8 +210,9 @@ Lo sviluppo dell'intero prodotto è eseguito nell'IDE Visual Studio Code, con l'
   \item \textbf{GitLens}: permette di visualizzare la paternità di ogni porzione di codice all'interno dell'editor;
   \item \textbf{Spell Right}: \glossario{spellchecker} multilingue e offline, permette il controllo grammaticale di quanto scritto;
   \item \textbf{Todo Tree}: permette la redazione di \glossario{TODO lists};
-  \item \textbf{Prettier - Code formatter}: formatta il codice in maniera più leggibile e più immediata;
-  \item \textbf{PowerShell}: permette di sviluppare codice in linguaggio PowerShell.
+  \item \textbf{Prettier - Code formatter}: permette di definire ulteriori regole di \glossario{linting} per una formattazione uniforme del codice;
+  \item \textbf{PowerShell}: permette di sviluppare codice in linguaggio PowerShell;
+  \item \textbf{PlantUML}: permette di sviluppare codice per la creazione di diagrammi UML all'interno di Visual Studio Code.
 \end{itemize}
 
 \paragraph{Google Calendar}
@@ -337,12 +340,16 @@ Vengono forniti di seguito i link presso cui trovare la documentazione necessari
   \item \textbf{\LaTeX}: \href{https://www.latex-project.org/help/documentation/}{https://www.latex-project.org/help/documentation/};
   \item \textbf{JavaScript}: \href{https://devdocs.io/javascript/}{https://devdocs.io/javascript/};
   \item \textbf{JavaScript ES6}: \href{http://es6-features.org/}{http://es6-features.org/};
+  \item \textbf{TypeScript}: \href{https://www.typescriptlang.org/docs/home.html}{https://www.typescriptlang.org/docs/home.html};
   \item \textbf{HTML e CSS}: \href{https://www.w3schools.com/html/}{https://www.w3schools.com/html/}.
 \end{itemize}
 
 \subparagraph*{Tecnologie}
 \begin{itemize}
   \item \textbf{Framework Electron}: \href{https://www.electronjs.org/docs}{https://www.electronjs.org/docs};
+  \item \textbf{Node.js}: \href{https://nodejs.org/it/docs/}{https://nodejs.org/it/docs/};
+  \item \textbf{Framework ReactJS}: \href{https://it.reactjs.org/docs/getting-started.html}{https://it.reactjs.org/docs/getting-started.html};
+  \item \textbf{Plot.ly}: \href{https://www.npmjs.com/package/plotly.js/v/1.47.4}{https://www.npmjs.com/package/plotly.js/v/1.47.4};
   \item \textbf{Grafana}: \href{https://grafana.com/docs/grafana/latest/}{https://grafana.com/docs/grafana/latest/};
   \item \textbf{Git}: \href{https://git-scm.com/doc}{https://git-scm.com/doc};
   \item \textbf{Github}: \href{https://help.github.com/en}{https://help.github.com/en};
@@ -358,4 +365,8 @@ Vengono forniti di seguito i link presso cui trovare la documentazione necessari
   \item \textbf{Regressione Lineare}: \href{https://it.wikipedia.org/wiki/Regressione_lineare}{https://it.wikipedia.org/wiki/Regressione\_lineare};
   \item \textbf{Support Vector Machines}: \href{https://lorenzogovoni.com/support-vector-machine/}{https://lorenzogovoni.com/support-vector-machine/}.
 \end{itemize}
+
+\subsubsection{Metriche}
+Il processo di formazione non fa uso di metriche di qualità.
+
 \end{document}
