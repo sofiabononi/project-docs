@@ -24,13 +24,13 @@ Questa sezione descrive i dettagli su come deve essere redatta e verificata la d
 Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX\ sul quale basare la stesura di ogni documento. Questo assicura l'uniformità della struttura dei documenti, facilitando inoltre il \glossario{versionamento}. \\
 Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti attività:
 \begin{itemize}
-  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il Responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
-  \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai Verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al Responsabile, che farà avanzare il documento all'approvazione finale, o ai Redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai Verificatori;
-  \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei Verificatori, il Responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
+  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
+  \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al responsabile, che farà avanzare il documento all'approvazione finale, o ai redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai verificatori;
+  \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei verificatori, il responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
 \end{itemize}
 
 \subparagraph{Struttura dei documenti}
-Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
+Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} \texttt{project-docs} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
 \begin{itemize}
   \item Il file \texttt{config.tex}, contenente le definizioni dei comandi \LaTeX;
   \item Il file \texttt{template.tex}, contenente il \textit{template} su cui si basano tutti i documenti;
@@ -45,13 +45,13 @@ Basandosi su un \textit{template}, ogni documento ha quindi una struttura fissa 
 
 \subparagraph*{Frontespizio}
 Il frontespizio fornisce tutti i dati principali del documento. Esso presenta il logo del gruppo, centrato, seguito dal nome del gruppo e dal titolo del progetto; sotto di questo è presente il titolo del documento. \\
-Sono fornite anche altre informazioni essenziali, le quali sono:
+Sono fornite anche altre informazioni essenziali, che sono:
 \begin{itemize}
   \item \textbf{Versione}: versione attuale del documento;
   \item \textbf{Approvazione}: stato di approvazione del documento, che può essere "In redazione" o indicare il nome del responsabile che ha approvato il documento;
   \item \textbf{Redazione}: redattori del documento;
   \item \textbf{Verifica}: verificatori del documento;
-  \item \textbf{Uso}: destinazione del documento, che può essere "Interno" o "Esterno";
+  \item \textbf{Uso}: destinazione del documento, il quale può essere "Interno" o "Esterno";
   \item \textbf{Destinato a}: destinazione specifica del documento.
 \end{itemize}
 \subparagraph*{Registro delle modifiche}
@@ -106,7 +106,7 @@ Nello spazio compreso tra la riga orizzontale e il numero di pagina si articola 
 I documenti prodotti appartengono a diverse categorie, secondo le quali sono classificati.
 
 \subparagraph*{Documenti ufficiali}
-I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. I documenti ufficiali sono i seguenti:
+I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. Seguono i documenti ufficiali.
 
 \subparagraph*{Glossario}
 In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.4-1.2.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
@@ -274,6 +274,7 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
     \item \textbf{RL}: Regressione Lineare;
     \item \textbf{ML}: Machine Learning;
     \item \textbf{JS}: JavaScript;
+    \item \textbf{TS}: TypeScript;
     \item \textbf{CLI}: \glossario{Command Line};
     \item \textbf{IDE}: Integrated Developement Environment;
     \item \textbf{ITS}: \glossario{Issue Tracking System};
@@ -288,10 +289,10 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
 Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 
-
 \subsubsection{Strumenti}
 \paragraph{\LaTeX}
 Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
+
 \paragraph{Google Docs}
 Per la scrittura dei documenti ufficiosi viene utilizzato Google Docs. Questo strumento permette la condivisione istantanea e visualizzabile immediatamente da tutti i componenti di quanto viene scritto.
 
@@ -374,6 +375,13 @@ I file del progetto sono divisi in tre repository per maggior chiarezza:
 \end{itemize}
 Poiché però il prodotto che viene offerto consiste nella somma di software e documentazione, le tre repository sono unite in un'unica repository pubblica contenitrice, chiamata \texttt{swe-predire-in-grafana} e disponibile al seguente indirizzo: \href{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}. \\
 Tale repository fa uso del meccanismo dei \glossario{git submodules} per combinare più repository in una unica.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/git-submodules.png}
+  \label{fig:errori_pdq}
+  \caption{Struttura delle repository del progetto.}
+\end{figure}
 
 \subparagraph{Repository \texttt{project-docs}}
 La struttura adottata nella repository \texttt{project-docs} sfrutta il meccanismo di \glossario{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa repository. \\
@@ -531,7 +539,7 @@ Il versionamento di un documento segue le regole sopra riportate; il numero di v
     \end{itemize}
   \end{itemize}
 \end{itemize}
-
+Viene ribadita la necessità della verifica come condizione necessaria per l'incremento di una cifra; non possono dunque esistere incrementi di una qualsiasi cifra antecedenti alla verifica della porzione di documento modificata.
 
 \subparagraph{Componenti software}
 Al pari della documentazione, anche i file delle componenti software del prodotto devono essere versionati. \\
