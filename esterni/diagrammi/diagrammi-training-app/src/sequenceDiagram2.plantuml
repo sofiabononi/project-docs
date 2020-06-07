@@ -1,0 +1,66 @@
+@startuml
+Utente -> View: inserimento file
+
+View -> View: Event(getPath)
+View -> Controller: handle(path)
+
+Controller -> Model: readFromCVS(path)
+
+Model --> CVSFile: <<create>>
+
+Model --> Controller: sendData
+Controller --> View: sendData
+
+View -> View: buildPage()
+
+Utente -> View: inserimento predittore
+
+View -> View: Event(getPath)
+View -> Controller: handle(path)
+
+Controller -> Model: loadPredictor(path)
+
+Model --> JsonFile: <<create>>
+
+Controller -> Model: getNotes
+Model -> Controller: sendNotes
+
+Controller -> View: setNotes(notes)
+
+Utente -> View: Scelta modello
+
+View -> View: changeSelect
+View -> View: updateChart()
+
+Utente -> View: Scelta opzioni e invio
+
+View -> View: bindFormSubmit(handler)
+View -> Controller: handler(data, meta)
+
+Controller -> Controller:handleFormSubmit(keys, meta)
+Controller -> Model: getDataByFilter(keys)
+
+Model -> Model: filterAndGroup(param)
+Model --> Controller: risposta
+
+Controller -> Model: calculatePredictor(data, meta)
+
+alt Modello selezionato: RL
+Model --> RLadapter: <<create>>
+RLadapter -> RLadapter: executeTraining(data)
+
+else Modello selezionato: SVM
+Model --> SVMadapter: <<create>>
+SVMadapter -> SVMadapter: executeTraining(data)
+end
+
+
+Model --> Controller: return output
+
+Controller -> Model: savePredictor(pred)
+
+Model -> IpcRenderer: send('save', pred)
+
+IpcRender --> Utente: return file
+
+@enduml
