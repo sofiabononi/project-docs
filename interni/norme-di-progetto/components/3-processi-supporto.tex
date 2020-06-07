@@ -599,8 +599,36 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
 Il gruppo fa uso della pratica di \glossario{Continuous Integration} al fine di ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
 \begin{itemize}
   \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice (\glossario{Continuous Inspection});
-  \item \textbf{\glossario{Travis CI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.4-2.0.0} e il supporto al versionamento dei documenti e delle componenti software.
+  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.4-2.0.0} e il supporto al versionamento dei documenti e delle componenti software.
 \end{itemize}
+\subparagraph{SonarCloud}
+SonarCloud è uno strumento di Continuous Inspection del codice. Questo strumento viene utilizzato dal gruppo per il controllo della qualità del codice delle diverse componenti software. Le misure che vengono rilevate sono le seguenti:
+\begin{itemize}
+  \item Affidabilità;
+  \item Sicurezza;
+  \item Manutenibilità;
+  \item \glossario{Code Coverage};
+  \item Duplicazioni del codice.
+\end{itemize}
+
+Il controllo con questo strumento viene effettuato ad ogni pull request da un branch secondario a un branch principale (\texttt{master} o \texttt{develop}); i risultati vengono riportati in forma di commento della Pull Request e in una dashboard reperibile al sito \href{https://sonarcloud.io/}{https://sonarcloud.io/}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/sonarcloud.png}
+  \label{fig:github}
+  \caption{Dashboard di SonarCloud per un componente software del progetto.}
+\end{figure}
+
+\subparagraph{TravisCI}
+TravisCI è uno strumento di Continuous Integration utilizzato dal gruppo per il \textit{build} automatico delle componenti software del progetto. Esso è integrato nelle repository di tali componenti, e impostato tramite un file di configurazione presente in queste. \\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/travis.png}
+  \label{fig:github}
+  \caption{Dashboard di SonarCloud per un componente software del progetto.}
+\end{figure}
 
 \subsubsection{Strumenti}
 Le attività di gestione della configurazione sono coadiuvate dall'utilizzo di strumenti software, che permettono il perseguimento del giusto workflow e l'applicazione delle norme.
@@ -1015,7 +1043,6 @@ SonarCloud è un servizio web di Continuous Inspection che permette di eseguire 
   \item Presenza di \textit{code smells};
   \item Presenza di codice inutilmente duplicato.
 \end{itemize}
-Il controllo con questo strumento viene eseguito ad ogni pull request di un branch su un branch principale (\texttt{master} o \texttt{develop}).
 
 \paragraph{Analisi dinamica del codice}
 \subparagraph{TravisCI}
@@ -1026,8 +1053,7 @@ Il controllo con questo strumento viene eseguito ad ogni pull request di un bran
   swe-training-app  &   JavaScript \\
 \end{tabular}
 \end{table}
-Il gruppo fa uso dello strumento di Continuous Integration TravisCI anche per l'analisi dinamica del codice JavaScript; questo strumento permette infatti la definizione e l'esecuzione automatica di test di unità e di integrazione sul codice caricato nella repository. \\
-I test di controllo vengono eseguiti da questo strumento ad ogni push su un qualsiasi branch della repository e ad ogni pull request di un branch su un branch principale (\texttt{master} o \texttt{develop}).
+Il gruppo fa uso dello strumento di Continuous Integration TravisCI anche per l'analisi dinamica del codice JavaScript; questo strumento permette infatti la definizione e l'esecuzione automatica di test di unità e di integrazione sul codice caricato nella repository.
 
 \subparagraph{Jest}
 \begin{table}[H]
@@ -1090,4 +1116,8 @@ Il processo di validazione consiste delle seguenti attività:
 \end{itemize}
 \paragraph{Test}
 Nel processo di validazione vengono eseguiti i test di accettazione, i quali corrispondono con i test di sistema con la differenza che essi vengono eseguiti con il supervisionamento del committente per dimostrare la conformità del prodotto con quanto richiesto; essi quindi accertano la copertura dei requisiti software concordati con il proponente.
+
+\subsubsection{Metriche}
+Il processo di validazione non adotta metriche di qualità.
+
 \end{document}
