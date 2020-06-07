@@ -12,18 +12,39 @@ Per installare il prodotto è neccessario seguire i seguenti passaggi descritti 
 \label{subs:installazione-training-app}
 Per installare ed avviare il modulo di addestramento è necessario:
 \begin{itemize}
-  \item Scaticare la cartella presente nella \glossario{Repository}: \\
+  \item Scaricare la cartella contenente la Training App presente nella \glossario{Repository}: \\
   \centerline{\url{https://github.com/CoffeeCodeSWE/swe-training-app}}
   \item Aprire il Prompt dei comandi (Windows) o il terminale (Linux/Mac);
   \item Posizionarsi nella cartella appena scaricata tramite: \\
   \centerline{cd / percorso}
   \item Solo per il primo utilizzo eseguire: \\
   \centerline{yarn install}
+  \centerline{npm install}
   \item Per avviare è sufficiente eseguire: \\
   \centerline{yarn start}
+  \centerline{npm start}
 \end{itemize}
 
 \subsection{Installazione plug-in}%
 \label{subs:installazione-plug-in}
+Per installare ed avviare il plug in è neccessario:
+\begin{itemize}
+  \item Scaricare la cartella contenente il plug-in presente nella Repository: \\
+  \centerline{\url{https://github.com/CoffeeCodeSWE/swe-grafana-plugin}}
+  \item Estrarre i file nella cartella ../grafana/plugins presente nella root di Grafana;
+  \item Aprire il Prompt dei comandi (Windows) o il terminale (Linux/Mac);
+  \item Posizionarsi nella cartella appena scaricata tramite: \\
+  \centerline{cd / percorso}
+  \item Solo per il primo utilizzo eseguire: \\
+  \centerline{yarn install}
+  \centerline{npm install}
+  \item Per avviare è sufficiente eseguire: \\
+  \centerline{yarn build}
+  \centerline{npm build} \\
+  \newline
+  Alternativamente è possibile rendere il plug-in operativo, dopo il processo di installazione e sempre nel terminale nella cartella dove è stato installato il plug-in, eseguendo il seguente comando: \\
+  \newline
+  \centerline{yarn dev}
+\end{itemize}
 
 \end{document}
