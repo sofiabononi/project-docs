@@ -23,7 +23,7 @@ Controller -> Model: loadPredictor(path)
 Model --> JsonFile: <<create>>
 
 Controller -> Model: getNotes
-Model -> Controller: sendNotes
+Model --> Controller: sendNotes
 
 Controller -> View: setNotes(notes)
 
