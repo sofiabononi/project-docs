@@ -1,8 +1,20 @@
 @startuml
 
-interface ModelTrain
-ModelTrain : executeTraining()
+class CVSFile{
+    constructor(path)
+    get parsedCSV(): Object
+    read(): void
+}
 
+class JSONFile{
+  constructor(json)
+  get json(): Object
+  filterAndGroup(param): Object
+  {static} fromPath(path): JSON
+  {static} fromCVS(csv): JSON
+}
+
+package Object_adapter <<Rectangle>>{
 class RLadapter{
     constructor(options)
     executeTraining(data): Object
@@ -21,20 +33,13 @@ class SVMadapter{
 class Regression
 class SVM
 
-class CVSFile{
-    constructor(path)
-    get parsedCSV(): Object
-    read(): void
+
+interface ModelTrain
+ModelTrain : executeTraining()
 }
 
-class JSONFile{
-  constructor(json)
-  get json(): Object
-  filterAndGroup(param): Object
-  {static} fromPath(path): JSON
-  {static} fromCVS(csv): JSON
-}
-
+package MVC <<Rectangle>> {
+together {
 class Model{
     readFromCVS(path): void
     convertCVStoJSON(): void
@@ -45,6 +50,7 @@ class Model{
     calculatePredictor(data, meta): Object
     savePredictor(pred): void
 }
+
 
 class Controller{
     constructor(model, view)
@@ -84,9 +90,11 @@ class View{
     setChartData(x, y, target, xLabel, yLabel): void
     
 }
+}
 
 interface Observer
 abstract class Subject
+}
 
 SVMadapter -- ModelTrain
 RLadapter -- ModelTrain
