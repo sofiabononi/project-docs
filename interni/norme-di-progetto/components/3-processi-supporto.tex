@@ -345,13 +345,20 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
     \item $ \#L $: numero di lettere nel documento;
     \item $ \#P $: numero di parole nel documento.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: per il calcolo della metrica in oggetto si fa uso dello strumento "farfalla project", consistente della seguente pagina web: \href{https://farfalla-project.org/readability_static/}{https://farfalla-project.org/readability\_static/}, per ogni documento prodotto. La procedura da adottare è la seguente:
+  \begin{enumerate}
+    \item Prelevare il testo dei documenti, omettendo la formattazione \LaTeX;
+    \item Incollare il testo estrapolato nell'opportuna casella presente nella pagina web;
+    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di Qualifica v}.
+  \end{enumerate}
 \end{itemize}
 
 \subparagraph{MoPD010 Correttezza lessicale/ortografica}
 \begin{itemize}
   \item \textbf{Descrizione}: la correttezza lessicale/ortografica fornisce una misura di correttezza lessicografica di un documento;
   \item \textbf{Unità di misura}: numero puro;
-  \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento.
+  \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento;
+  \item \textbf{Procedura per il calcolo}: il valore di tale metrica viene calcolato avvalendosi degli strumenti di correzione ortografica del testo integrati nell'IDE Visual Studio Code, documentati nel presente documento.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1091,6 +1098,7 @@ Questo processo farà uso delle seguenti metriche:
     \item $ \#TI $: numero di test implementati;
     \item $ \#TT $: numero totale di test documentati.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: per il calcolo di questa metrica il gruppo si avvale dello strumento di Continuous Integration Travis CI, il quale riporta nelle diverse dashboard corrispondenti alle diverse repository contenti codice sorgente.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%

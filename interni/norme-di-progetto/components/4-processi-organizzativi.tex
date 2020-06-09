@@ -252,6 +252,7 @@ Si fa quindi uso delle seguenti metriche:
   \item MoPR004 Aderenza ai ruoli;
   \item MoPR005 Controllo prodotti.
 \end{itemize}
+
 \subparagraph{MoPR001 Varianza dei tempi}
 \begin{itemize}
   \item \textbf{Descrizione}: la varianza dei tempi indica il ritardo nel rispetto delle scadenze previste internamente al gruppo;
@@ -263,9 +264,11 @@ Si fa quindi uso delle seguenti metriche:
     dove:
     \begin{itemize}
       \item $ Y_i $: giorno di completamento della scadenza;
-      \item $ X_i $: giorni di scadenza prefissato.
+      \item $ X_i $: giorni di scadenza prefissati.
     \end{itemize}
+    \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, riferendosi a quanto riportato nel \textsc{Piano di Progetto v} per quanto riguarda i giorni di scadenza prefissati.
 \end{itemize}
+
 \subparagraph{MoPR002 Varianza dei costi}
 \begin{itemize}
   \item \textbf{Descrizione}: la varianza dei costi indica il discostamento del totale finale rispeto al totale del preventivo iniziale;
@@ -279,13 +282,16 @@ Si fa quindi uso delle seguenti metriche:
     \item $ tot $: totale preventivo iniziale;
     \item $ d $: discostamento calcolato.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, riferendosi a quanto riportato nel \textsc{Piano di Progetto v} per quanto riguarda il totale del preventivo iniziale e il discostamento calcolato. Tali valori vengono confrontati per ricavare il valore della metrica in oggetto.
 \end{itemize}
+
 \subparagraph{MoPR003 Aderenza agli standard}
 \begin{itemize}
   \item \textbf{Descrizione}: l'aderenza agli standard indica quanto il progetto stia proseguendo nel rispetto degli standard. Questa metrica è verificabile attraverso le valutazioni del processo di SPICE;
   \item \textbf{Unità di misura}: valutazione degli attributi;
   \item \textbf{Formula}: il valore viene controllato sulla base di quanto descritto negli standard di qualità definiti.
 \end{itemize}
+
 \subparagraph{MoPR004 Aderenza ai ruoli}
 \begin{itemize}
   \item \textbf{Descrizione}: l'aderenza ai ruoli indica il numero di documenti nei quali non sono stati definiti correttamente i ruoli;
@@ -299,7 +305,9 @@ Si fa quindi uso delle seguenti metriche:
     \item $ N $: numero totale di prodotti realizzati;
     \item $ X $: numero di prodotti nei quali i ruoli non sono stati definiti adeguatamente.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, esaminando i documenti.
 \end{itemize}
+
 \subparagraph{MoPR005 Controllo prodotti}
 \begin{itemize}
   \item \textbf{Descrizione}: il controllo prodotti verifica il numero medio di commit totali eseguiti ogni settimana durante la realizzazione dei prodotti;
@@ -313,6 +321,7 @@ Si fa quindi uso delle seguenti metriche:
     \item $ C_i $: numero di commit nella settimana $ i $;
     \item $ n $: numero di settimane di lavoro.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata con l'ausilio degli strumenti di versionamento, i quali permettono di estrapolare facilmente il numero di commit effettuati ogni settimana all'interno delle diverse repository. Questi valori vengono confrontati con il numero di settimane di lavoro, le quali possono essere ricavate dal \textsc{Piano di Progetto v}.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%

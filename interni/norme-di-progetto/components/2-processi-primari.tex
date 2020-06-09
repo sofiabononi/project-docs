@@ -521,6 +521,7 @@ Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiest
     \item $ RoS $: numero di requisiti obbligatori soddisfatti;
     \item $ RoT $: numero di requisiti obbligatori totali.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: viene controllato tramite analisi statica, ossia manualmente, e analisi dinamica, ossia attraverso procedure di testing, il numero di requisiti obbligatori soddisfatti; con questo valore viene poi calcolata la percentuale oggetto della metrica.
 \end{itemize}
 
 \subparagraph{MoPR007 Verifica requisiti opzionali}
@@ -536,6 +537,7 @@ Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiest
     \item $ RS $: numero di requisiti totali soddisfatti, ossia $ opzionali + desiderabili $;
     \item $ RT $: numero di requisiti totali.
   \end{itemize}
+    \item \textbf{Procedura per il calcolo}: viene controllato tramite analisi statica, ossia manualmente, e analisi dinamica, ossia attraverso procedure di testing, il numero di requisiti opzionali soddisfatti; con questo valore viene poi calcolata la percentuale oggetto della metrica.
 \end{itemize}
 
 \subparagraph{MoPR008 Verifica requisiti desiderabili}
@@ -551,6 +553,7 @@ Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiest
     \item $ RS $: numero di requisiti totali soddisfatti, ossia $ opzionali + desiderabili $;
     \item $ RT $: numero di requisiti totali.
   \end{itemize}
+    \item \textbf{Procedura per il calcolo}: viene controllato tramite analisi statica, ossia manualmente, e analisi dinamica, ossia attraverso procedure di testing, il numero di requisiti desiderabili soddisfatti; con questo valore viene poi calcolata la percentuale oggetto della metrica.
 \end{itemize}
 
 \subparagraph{MoPR009 Verifica rischi non pervenuti}
@@ -566,6 +569,7 @@ Si vuole assicurare la capacità del prodotto di soddisfare i requisiti richiest
     \item $ \#RTA $: numero di rischi totali avvenuti;
     \item $ \#RPA $: numero di rischi preventivati avvenuti.
   \end{itemize}
+    \item \textbf{Procedura per il calcolo}: viene calcolato manualmente il numero di rischi non documentati nel \textsc{Piano di Progetto v}; questo valore viene poi confrontato con il numero di rischi documentati in tale documento, ottenendo così la misura della metrica in questione.
 \end{itemize}
 
 
@@ -575,6 +579,7 @@ Si vuole monitorare il soddisfacimento delle esigenze ricavate dall'analisi dei 
   \item MoPD001 Completezza di implementazione;
   \item MoPD002 Coerenza di interfaccia.
 \end{itemize}
+
 \subparagraph{MoPD001 Completezza di implementazione}
 \begin{itemize}
   \item \textbf{Descrizione}: questa metrica misura il numero di funzioni realizzate rispetto a quelle preventivate;
@@ -588,7 +593,9 @@ Si vuole monitorare il soddisfacimento delle esigenze ricavate dall'analisi dei 
     \item $ \#FR $: numero di funzioni realizzate;
     \item $ \#FP $: numero di funzioni previste.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: viene calcolato manualmente il numero di funzioni implementate durante il processo di sviluppo; questo valore viene quindi confrontato con il numero di funzioni previste durante la fase di progettazione, ottenendo così la misura della metrica in questione.
 \end{itemize}
+
 \subparagraph{MoPD002 Coerenza di interfaccia}
 \begin{itemize}
   \item \textbf{Descrizione}: questa metrica calcola la percentuale di interfacce di funzioni realizzate in confronto a quanto analizzato;
@@ -602,6 +609,7 @@ Si vuole monitorare il soddisfacimento delle esigenze ricavate dall'analisi dei 
     \item $ \#IC $: numero di interfacce correttamente implementate;
     \item $ \#IR $: numero di interfacce richieste.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: viene eseguita analisi statica ed analisi dinamica sul codice al fine di calcolare il numero di interfacce correttamente implementate. Viene poi usato il risultante valore per il calcolo della metrica come sopra riportato.
 \end{itemize}
 
 \paragraph{Affidabilità}
@@ -614,7 +622,8 @@ Si vuole monitorare la capacità del prodotto software di mantenere un determina
 \begin{itemize}
   \item \textbf{Descrizione}: questa metrica visualizza la copertura dei test in relazione al codice;
   \item \textbf{Unità di misura}: percentuale;
-  \item \textbf{Formula}: il calcolo di questa metrica è ad opera dello strumento \glossario{Travis CI}.
+  \item \textbf{Formula}: il calcolo di questa metrica è ad opera dello strumento \glossario{Travis CI};
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica viene effettuato automaticamente dallo strumento Travis CI, il quale è opportunamente integrato nelle repository contenti codice sorgente.
 \end{itemize}
 
 \subparagraph{MoPD004 Densità degli errori}
@@ -630,6 +639,7 @@ Si vuole monitorare la capacità del prodotto software di mantenere un determina
     \item $ \#TF $: numero di test eseguiti e falliti;
     \item $ \#TE $: numero di test eseguiti;
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica viene effettuato automaticamente dallo strumento Travis CI, il quale è opportunamente integrato nelle repository contenenti codice sorgente. I risultati della metrica sono quindi visualizzabili nelle dashboard di Travis CI.
 \end{itemize}
 
 \paragraph{Usabilità}
@@ -651,6 +661,7 @@ Si vuole ottenere un software comprensibile, utilizzabile, attraente e conforme 
     \item $ \#FD $: numero di funzioni descritte;
     \item $ \#FT $: numero di funzioni totali.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica viene effettuato tramite analisi statica; si procede quindi a controllare manualmente la presenza di documentazione delle singole funzioni. Questo valore si confronta quindi con il numero totale di funzioni, corrispondente al numero di funzioni implementate descritto dalla metrica MoPD001 Completezza di implementazione, al fine di ricavare il valore finale della metrica in oggetto.
 \end{itemize}
 
 \subparagraph{MoPD006 Messaggi di errore}
@@ -666,6 +677,7 @@ Si vuole ottenere un software comprensibile, utilizzabile, attraente e conforme 
     \item $ \#MeA $: numero di messaggi di errore ambigui;
     \item $ \#MeT $: numero di messaggi di errore totale.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica viene effettuato tramite analisi statica, per la rilevazione del numero totale di messaggi di errore, e valutazione personale da parte dei componenti del gruppo per la rilevazione del numero di messaggi d'errore ambigui. Vengono usati quindi questi valori per il calcolo della metrica in oggetto.
 \end{itemize}
 
 \paragraph{Efficienza}
@@ -677,7 +689,8 @@ Si vuole che il prodotto software fornisca prestazioni adeguate in relazione all
 \begin{itemize}
   \item \textbf{Descrizione}: questa metrica misura il tempo di risposta del programma;
   \item \textbf{Unità di misura}: millisecondi;
-  \item \textbf{Formula}: questa metrica coincide con il numero di millisecondi trascorsi tra l'ordine di avvio e l'avvio vero e proprio del programma.
+  \item \textbf{Formula}: questa metrica coincide con il numero di millisecondi trascorsi tra l'ordine di avvio e l'avvio vero e proprio del programma;
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica è demandato allo strumento \glossario{JMeter}, il quale calcola automaticamente il tempo di avvio degli applicativi scritti in linguaggio JavaScript e TypeScript.
 \end{itemize}
 \paragraph{Manutenibilità}
 Il prodotto software deve essere modificabile in ottica di miglioramento, e quanto più possibile adattabile a diversi sistemi. Sono quindi definite le seguenti metriche:
@@ -697,6 +710,7 @@ Il prodotto software deve essere modificabile in ottica di miglioramento, e quan
     \item $ \#RC $: numero di linee di commento;
     \item $ \#RCo $: numero di linee di codice totale.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: il calcolo di questa metrica è effettuato tramite analisi statica e con l'ausilio degli strumenti di versionamento. Viene utilizzata l'analisi statica per il conteggio di righe di commenti all'interno del codice, mentre il calcolo delle linee totali di codice è demandato agli strumenti di versionamento, che ne danno una stima precisa. Questi valori vengono poi usati per il calcolo della metrica in oggetto.
 \end{itemize}
 
 
