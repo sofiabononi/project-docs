@@ -12,10 +12,13 @@ package node_modules <<Frame>> {
 }
 
 package vendor <<Frame>> {
-  class RLadapter
-  Class SVMadapter
   class regression
   class svm
+}
+
+package adapter <<Frame>> {
+  class RLadapter
+  Class SVMadapter
 }
 
 package FileManager <<Frame>> {
@@ -32,5 +35,7 @@ package MVC <<Frame>> {
 MVC ..> vendor
 MVC ..> FileManager
 MVC ..> node_modules
+MVC ..> adapter
+adapter ..> vendor
 
 @enduml
