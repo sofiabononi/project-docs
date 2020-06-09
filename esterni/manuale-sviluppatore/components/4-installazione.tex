@@ -1,5 +1,22 @@
 \documentclass[../manuale-sviluppatore.tex]{subfiles}
 
 \begin{document}
+ Il prodotto è diviso in due repository separate, le quali sono disponibili all'interno della pagina github del team nel seguente indirizzo web: \url{https://github.com/CoffeeCodeSWE}.
+\subsection{Installazione applicazione di addestramento}%
+\label{subs:installazione_applicazione_di_addestramento}
+\begin{itemize}
+    \item Scaricare la repository dell'applicazione di addestramento dal seguente sito web: \url{https://github.com/CoffeeCodeSWE/swe-training-app};
+    \item Installare le dipendenze con il seguente comando da terminale : \emph{yarn install} oppure con \emph{npm install};
+\end{itemize}
+
+\subsection{Installazione plug-in}
+\label{subs:installazione_plug_in}
+\begin{itemize}
+    \item Scaricare la repository del plug-in dal seguente sito web: \url{https://github.com/CoffeeCodeSWE/swe-grafana-plugin};
+    \item Spostare la cartella del plug-in all'interno della cartella \emph{grafana/data/plugins};
+    \item Compilare il plug-in con il seguente comando da terminale : \emph{yarn build} oppure con \emph{npm build};
+    \item Avviare Grafana e selezionare \emph{CoffeCode Prediction Panel} durante l'aggiunta di un pannello alla dashboard.
+\end{itemize}
+
 
 \end{document}

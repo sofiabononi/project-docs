@@ -1,5 +1,37 @@
 \documentclass[../manuale-sviluppatore.tex]{subfiles}
 
 \begin{document}
+\subsection{Addestramento}%
+\label{subs:addestramento}
 
+\subsubsection{NodeJS}
+\label{sssec:nodejs}
+     NodeJS è necessario per avviare il server web che servirà poi per la pagina web all'utente. La versione di NodeJS utilizzata è la 12.6.3 
+
+\subsubsection{Yarn}
+\label{sssec:yarn}
+    Yarn è necessario per scaricare le dipendenze necessarie all' esecuzione del software specificate all interno del file package.json. Per installare Yarn bisogna usare il seguente comando: \emph{yarn install} .
+    
+\subsubsection{Electron}
+\label{sssec:electron}
+    Electron è il framework di Yarn utilizzato per avviare in locale la pagina web senza l'utilizzo di un Broswer.
+     
+\subsection{Plug-in}%
+\label{subs:plug_in}
+
+\subsubsection{Yarn}
+\label{sssec:yarn}
+    Yarn è necessario per scaricare le dipendenze necessarie all' esecuzione del software specificate all interno del file package.json. Per installare Yarn bisogna usare il seguente comando: \emph{yarn install} .
+    
+\subsubsection{Grafana}
+\label{sssec:grafana}
+    Per utilizzare il plug-in necessario avere il software Grafana installato alla versione 6.7.3, con possibili errori di GUI con versioni superiori.
+    
+\subsubsection{InfluxDB}
+\label{sssec:influxdb}
+    InfluxDB è il database con cui il plug-in.
+    
+\subsubsection{Telegraf}
+\label{sssec:telegraf}
+    Telegraf è lo strumento di monitoraggio che si interfaccia a InfluxDB per l'inserimento di dati.
 \end{document}
