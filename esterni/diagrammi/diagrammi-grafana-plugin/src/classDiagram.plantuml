@@ -8,14 +8,12 @@ class ConfigRL{
 }
 
 class ConfigSVM{
-    + toDo()
+     + render() : JSX.Element
+    - queryNames()
+    - queryAssociation()
+    - showQueryAssociation(ChangeEvent<HTMLSelectElement>)
 }
 
-
-
-class Config{
-    + toDo()
-}
 
 interface Strategy{
     + Predict(GrafanaData, Predictor, any): number[][]
@@ -27,19 +25,16 @@ interface Strategy{
 class PredictionRL implements Strategy{
     + const coefficients: number[]
     + const base: number
-    + data.inputGrafanaValues: number[][]
     + predict(GrafanaData, Predictor, parameter): number [][]
     + const f (number): number
-    + data.inputGrafanaValues.forEach(): number[][]
+  
 }
 
-class PredictionSVM{
+class PredictionSVM implements Strategy{
     + predict(GrafanaData, Predictor, parameter): number[][]
     + coefficients:number[]
     + base: number
     + f(number): number
-    + data.outputValues: number[][]
-    + data.inputGrafanaValues.forEach(): number[][]
 }
 
 
@@ -110,5 +105,35 @@ class PanelCtrl{
 
 }
 
+ConfigRL--*Props
+ConfigSVM--*Props
+Predictor--*Props
+
+
+
+
+PredictionRL--GrafanaData
+PredictionRL--Predictor
+
+PredictionSVM--GrafanaData
+PredictionSVM--Predictor
+
+
+
+Model o--Strategy
+
+EditorView--Props
+
+
+
+PanelCtrl--Model
+PanelCtrl--MainView
+PanelCtrl--Props
+
+
+
+
+
+Options--*MainView
 
 @enduml
