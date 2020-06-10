@@ -3,7 +3,7 @@
 \begin{document}
 \subsection{Visione generale}%
 \label{subs:installazione_applicazione_di_addestramento}
-Il programma di addestramento è costituito da un'applicazione web che si basu su NodeJS e sul framework Electron. Viene poi utilizzato\dots
+Il programma di addestramento è costituito da un'applicazione web che si basa su NodeJS e sul framework Electron. Viene poi utilizzato\dots
 
 Tale applicazione effettua l'addestramento su un dataset importato dall'utente attraverso un file CVS, attraverso un algoritmo di predizione da lui scelto tra quelli disponibili, per poi produrre in output
 un file JSON contenente la definizione del predittore.
@@ -21,7 +21,7 @@ All'interno dell'applicazione è stato utilizzato il design pattern architettura
     \item Permette di estendere facilmente l'applicazione nel caso di aggiunta di nuovi algoritmi di predizione.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
    \begin{center}
         \includegraphics[width=10cm]{img/classDiagramTA.png}
         \caption{Diagramma delle classi - addestramento}
@@ -29,13 +29,15 @@ All'interno dell'applicazione è stato utilizzato il design pattern architettura
     \end{center}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \begin{center}
          \includegraphics[width=15cm]{img/packagesDiagramTA.png}
          \caption{Diagramma dei package - addestramento}
          \label{fig:daa}
      \end{center}
  \end{figure}
+
+ 
 
 \subsubsection{Design pattern - MVC}
 \label{ssec:design_pattern_mvc}
@@ -45,7 +47,7 @@ La classe Model gestisce i dati che l'utente carica attraverso il file CVS o att
 CVSFile che gestisce i file di tipo CVS, quindi il file caricato inizialmente dall'utente, e JSONFile che gestisce i predittori che sono file di tipo JSON.
 La classe Controller gestisce gli eventi e le interazioni tra l'interfaccia grafica e il modello dei dati, permettendo di eseguire semplici richieste richiamando funzioni delle due rispettive classi.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
          \includegraphics[width=9cm]{img/mvcTA.png}
          \caption{Implementazione MVC - addestramento}
@@ -64,7 +66,7 @@ Le due classi adapter hanno anche un riferimento all'oggetto della libreria dell
 RLadapter avrà come riferimento l'oggetto della libreria regression. Tali riferimento saranno utilizzati per richiamare i metodi delle librerie all'interno del metodo executeTraining(data)
 e, se necessario, anche nei metodi privati della classe.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
          \includegraphics[width=9cm]{img/objectAdapterTA.png}
          \caption{Implementazione Object Adapter - addestramento}
@@ -89,7 +91,7 @@ Una volta ottenuti i dati filtrati il controller richiama la funzione calculateP
 Al termine dell'allenamento il model riceve i dati della predizione e aggiunge le note e il tipo di modello di addestramento a tali dati creando il predittore. \\
 Alla fine il controller richiama la funzione savePredictor(pred) che richiama indirettamente la funzione di save di ipcRender per salvare il file nel computer dell'utente.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
          \includegraphics[width=9cm]{img/sequenceDiagramNoP.png}
          \caption{Diagramma di sequenza - Addestramento senza predittore}
@@ -104,7 +106,7 @@ Quando l'utente inserisce il predittore viene scaturito un evento nella View che
 che richiama il metodo loadPredictor(path) del Model per creare l'oggetto JSONFile per salvare il file predittore.
 Una volta caricato il file nell'oggetto il Model richiede le note presenti nel predittore e le restituisce al Controller che provvederà a mandarle alle View in modo da settare le proprie impostazioni con le preferenze presenti nel predittore.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \begin{center}
          \includegraphics[width=9cm]{img/sequenceDiagramConP.png}
          \caption{Diagramma di sequenza - Addestramento con predittore}
