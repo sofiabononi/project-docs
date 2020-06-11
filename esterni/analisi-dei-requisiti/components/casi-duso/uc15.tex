@@ -1,15 +1,10 @@
-\subsubsection{UC15 - Rimozione del pannello selezionato}
+\subsubsection{UC15 - Interruzione del plug-in}
 \label{sssec:uc15}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
   \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente seleziona il pannello che vuole rimuovere dalla dashboard;
-  \item \textbf{Precondizione}:
-  \begin{enumerate}
-		\item L'utente deve aver impostato correttamente il pannello di monitoraggio(UC3.1);
-		\item L'utente deve aver avviato correttamente il plug-in(UC12).
-	\end{enumerate}
-  \item \textbf{Scenario principale}: L'utente seleziona il pannello di monitoraggio da eliminare ed usando le impostazioni di Grafana lo rimuove;
-  \item \textbf{Postcondizione}: La dashboard ha subito la rimozione del pannello, come desiderato dall'utente;
-  \item \textbf{Estensioni}: UC15 viene esteso nel caso d'uso UC24 con la visualizzazione del messaggio di errore quando si tenta di rimuovere un pannello senza che venga interrotta la predizione.
+  \item \textbf{Descrizione}: L'utente ha deciso di interrompere il plug-in;
+  \item \textbf{Precondizione}: L'utente ha configurato correttamente il plug-in(UC5);
+  \item \textbf{Scenario principale}: L'utente ha deciso di interrompere la predizione;
+  \item \textbf{Postcondizione}: La predizione sui nodi selezionati precedentemente è stata interrotta.
 \end{itemize}

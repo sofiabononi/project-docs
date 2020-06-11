@@ -1,16 +1,13 @@
-\subsubsection{UC23 - Visualizzazione alert superamento soglia}
-\label{sssec:uc23}
+\subsubsection{UC23 - Visualizzazione messaggio di errore file di addestramento invalido}
+\label{sssec:uc18}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Precondizione}:
-  \begin{enumerate}
-		\item L'utente ha impostato una soglia valida(UC14.2);
-		\item L'algoritmo di previsione prevede di superare la soglia.
-	\end{enumerate}
-  \item \textbf{Scenario principale}:  L'utente visualizza l'alert nel pannello indicando il superamento della soglia impostata;
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento valido;
+  \item \textbf{Precondizione}: L'utente ha caricato il plug-in(UC5) senza aver dato in ingresso un file di addestramento valido;
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento valido" impedendo il funzionamento del plug-in (UC5.1);
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza un messaggio di superamento della soglia impostata;
-		\item Nel pannello viene indicato il messaggio di errore tramite un alert.
+		\item L'utente visualizza il messaggio di errore "nessun file di addestramento valido";
+		\item Il plug-in non entra in funzione.
 	\end{enumerate}
 \end{itemize}

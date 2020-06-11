@@ -1,6 +1,8 @@
 @startuml uc1
 !include ../style.pu
 
+skinparam RectangleFontSize 24
+
 actor :Utente: as A
 
 rectangle "UC1 - Addestramento del sistema"{
@@ -10,14 +12,14 @@ rectangle "UC1 - Addestramento del sistema"{
     usecase (UC1.3) as "UC1.3\n Scelta del modello di machine learning\n"
     usecase (UC1.4) as "UC1.4\n Avvio dell'addestramento"
     usecase (UC1.5) as "UC1.5\n Salvataggio dei risultati ottenuti"
-    usecase (UC17) as "UC17\n Visualizzazione messaggio di errore\n invalidazione dati file di addestramento"
-    usecase (UC25) as "UC25\n  Visualizzazione messaggio di errore\n nel file del predittore allenato"
-    usecase (UC6)
-    usecase (UC7)
-    usecase (UC8)
-    usecase (UC9)
-    usecase (UC10)
-    usecase (UC11)
+    usecase (UC22) as "UC22\n Visualizzazione messaggio di errore\n invalidazione dati file di addestramento"
+    usecase (UC30) as "UC30\n  Visualizzazione messaggio di errore\n nel file del predittore allenato"
+    usecase (UC8) as "UC8\n Scelto modello Support Vector Machine"
+    usecase (UC9) as "UC9\n Scelto modello regressione lineare"
+    usecase (UC10) as "UC10\n Scelto modello regressione esponenziale"
+    usecase (UC11) as "UC11\n Scelto modello regressione logaritmica"
+    usecase (UC12) as "UC12\n Scelto modello rete neurale"
+    usecase (UC13) as "UC13\n Scelto modello SVM adattata alla regressione"
   }
 }
 
@@ -27,13 +29,13 @@ rectangle "UC1 - Addestramento del sistema"{
 :A: -- (UC1.4)
 :A: -- (UC1.5)
 
-(UC1.1) <.. (UC17) : <<extends>>
-(UC1.2) <.. (UC25) : <<extends>>
-(UC1.3) <|-- (UC6)
-(UC1.3) <|-- (UC7)
+(UC1.1) <.. (UC22) : <<extends>>
+(UC1.2) <.. (UC30) : <<extends>>
 (UC1.3) <|-- (UC8)
 (UC1.3) <|-- (UC9)
 (UC1.3) <|-- (UC10)
 (UC1.3) <|-- (UC11)
+(UC1.3) <|-- (UC12)
+(UC1.3) <|-- (UC13)
 
 @enduml
