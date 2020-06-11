@@ -1,0 +1,37 @@
+\documentclass[../manuale-sviluppatore.tex]{subfiles}
+
+\begin{document}
+
+Il prodotto si suddivide in due parti: un'applicazione web per addestrare i \glossario{predittori} e un plug-in per la piattaforma Grafana; le suddette parti utilizzano tecnologie che verranno elencate nei successivi paragrafi.
+
+\subsection{Addestramento}%
+\label{subs:addestramento}
+Le seguenti tecnologie sono utilizzate dall'applicazione web per l'addestramento:
+\begin{itemize}
+  \item \textbf{Javascript}: il linguaggio con cui la parte logica della pagina è stata scritta;
+  \item \textbf{HTML/CSS}: usati per gestire la visualizzazione della pagina web;
+  \item \textbf{Bootstrap}: libreria usata da HTML e CSS per gestire la visualizzazione della pagina web;
+  \item \textbf{NodeJS}: tecnologia runtime di Javascript costruita sul motore V8 di Google Chrome;
+  \item \textbf{Yarn}: usato per gestire i pacchetti di NodeJS;
+  \item \textbf{ESlint}: strumento di analisi statica del codice per identificare eventuali problemi riscontrati;
+  \item \textbf{Jest}: pacchetto NodeJS usato per effettuare i test;
+  \item \textbf{SVM/RL}: librerie usate per generare i predittori allenati per il plug-in;
+  \item \textbf{JQuery}: libreria Javascript usata per semplificare la procedura di scrittura del codice;
+  \item \textbf{ChartJS}: libreria Javascript usata per la visualizzazione dei dati in grafici;
+  \item \textbf{Electron}: usato per lo sviluppo di ambienti web in locale.
+\end{itemize}
+
+\subsection{Plug-in}%
+\label{subsc:plug_in}
+Le seguenti tecnologie sono utilizzate nel plug-in:
+\begin{itemize}
+  \item \textbf{Typescript}: il linguaggio con cui la parte logica della pagina è stata scritta;
+  \item \textbf{Yarn}: usato per gestire i pacchetti di NodeJS;
+  \item \textbf{HTML/CSS}: usati per gestire la visualizzazione della pagina web;
+  \item \textbf{NodeJS}: tecnologia runtime di Javascript costruita sul motore V8 di Google Chrome;
+  \item \textbf{Grafana}: software open-source per il monitoraggio di dati mediante grafici e indicatori;
+  \item \textbf{Grafana/toolkit}: pacchetto di NodeJs usato per effettuare le build e test del plug-in;
+  \item \textbf{React}: il framework usato da Grafana per gestire la visualizzazione e l'interazione tra le varie pagine del plug-in.
+\end{itemize}
+
+\end{document}
