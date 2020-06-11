@@ -109,7 +109,7 @@ I documenti prodotti appartengono a diverse categorie, secondo le quali sono cla
 I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. Seguono i documenti ufficiali.
 
 \subparagraph*{Glossario}
-In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.4-1.2.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
+In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.9-1.3.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
 Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i seguenti requisiti:
 \begin{itemize}
   \item Essere un termine tecnico. Rientrano in questo criterio i nomi propri delle tecnologie utilizzate, i termini tecnici propri di queste e i termini frequentemente utilizzati nell'Ingegneria del Software;
@@ -117,7 +117,7 @@ Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i 
   \item Avere più di un significato plausibile nel contesto in cui viene utilizzato;
   \item Essere un acronimo specifico e raramente usato.
 \end{itemize}
-Il \textsc{Glossario v1.4-1.2.0} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
+Il \textsc{Glossario v1.9-1.3.0} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
 I termini appartenenti al glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, al fine di evitare l'appesantimento visivo.
 
 \subparagraph*{Verbali}
@@ -183,7 +183,7 @@ Ogni diversa formattazione usata all'interno dei documenti ha un significato pre
   \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana non inclusi nel glossario;
   \item Utilizzo di testo in caratteri dattilografici per i nomi di file e delle \textit{directories}; queste ultime devono finire con il carattere barra \textbf{/};
   \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi. Viene inoltre utilizzato per rimarcare concetti considerati importanti;
-  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v1.4-1.2.0};
+  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v1.9-1.3.0};
   \item Utilizzo di testo maiuscoletto per i nomi dei documenti all'interno dei documenti stessi.
 \end{itemize}
 
@@ -349,7 +349,7 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
   \begin{enumerate}
     \item Prelevare il testo dei documenti, omettendo la formattazione \LaTeX;
     \item Incollare il testo estrapolato nell'opportuna casella presente nella pagina web;
-    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di Qualifica v}.
+    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di Qualifica v1.9-3.1.0}.
   \end{enumerate}
 \end{itemize}
 
@@ -396,10 +396,10 @@ La repository utilizzata si suddivide nei seguenti \glossario{branch}:
 \begin{itemize}
   \item \texttt{master}: branch principale, sul quale vengono fatte le \glossario{major releases};
   \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Norme di Progetto};
-  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei Requisiti v1.4-1.2.1};
-  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v1.4-1.2.0};
+  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei requisiti v1.9-1.3.0};
+  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v1.9-1.3.0};
   \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto v1.4-3.1.0};
-  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica v1.4-2.0.0};
+  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica v1.9-3.1.0};
   \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di Fattibilità v1.0.0-old};
   \item \texttt{verbali}: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
 \end{itemize}
@@ -585,7 +585,7 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
     \begin{itemize}
       \item Inizia da 0 a ogni incremento di A;
       \item Viene incrementata al completamento di uno o più requisiti;
-      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei Requisiti v1.4-1.2.1}.
+      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei requisiti v1.9-1.3.0}.
     \end{itemize}
     \item \textbf{C}: corrisponde a una \glossario{Patch}, e indica quindi la modifica a uno o più requisiti. Questa cifra segue le seguenti regole:
     \begin{itemize}
@@ -606,7 +606,7 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
 Il gruppo fa uso della pratica di \glossario{Continuous Integration} al fine di ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
 \begin{itemize}
   \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice (\glossario{Continuous Inspection});
-  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.4-2.0.0} e il supporto al versionamento dei documenti e delle componenti software.
+  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.9-3.1.0} e il supporto al versionamento dei documenti e delle componenti software.
 \end{itemize}
 \subparagraph{SonarCloud}
 SonarCloud è uno strumento di Continuous Inspection del codice. Questo strumento viene utilizzato dal gruppo per il controllo della qualità del codice delle diverse componenti software. Le misure che vengono rilevate sono le seguenti:
@@ -799,7 +799,7 @@ Le aspettative di questo processo sono le seguenti:
   \item Sviluppare un prodotto software di qualità, comprendente anche una documentazione completa e di facile fruizione.
 \end{itemize}
 \subsubsection{Descrizione}
-La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica v1.4-2.0.0}. In particolare, in tale documento:
+La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica v1.9-3.1.0}. In particolare, in tale documento:
 \begin{itemize}
   \item Sono presentati gli standard di qualità utilizzati;
   \item Di tali standard, sono individuati i processi di interesse per il particolare progetto.
@@ -1087,7 +1087,7 @@ Questo processo farà uso delle seguenti metriche:
 
 \subparagraph{MoPR013 Percentuale di test soddisfatti}
 \begin{itemize}
-  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica v1.4-2.0.0}.
+  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica v1.9-3.1.0}.
   \item \textbf{Unità di misura}: percentuale;
   \item \textbf{Formula}: la formula per tale metrica è la seguente:
   \begin{displaymath}
