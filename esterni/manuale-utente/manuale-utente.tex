@@ -1,0 +1,104 @@
+\documentclass{article}
+
+\input{../../commons/config}
+%Qui ci andrà il percorso delle immagini da includere in analisi dei requisiti
+\appendToGraphicspath{../../commons/img/}
+\appendToGraphicspath{img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Manuale Utente}
+
+\setVersione{
+  v1.9-0.4.0
+}
+
+\setResponsabile{
+  Sofia Bononi \\ &
+  Marco Nardelotto \\ &
+  Nicholas Miazzo
+}
+
+\setRedattori{
+  Marco Nardelotto \\ &
+  Enrico Galdeman \\ &
+  Enrico Buratto \\ &
+  Nicholas Miazzo
+}
+
+\setVerificatori{
+  Enrico Buratto \\ &
+  Alessandro Franchin \\&
+  Ian Nicolas Di Menna
+}
+
+\setUso{Esterno}
+
+\setDescrizione{Documento contenente una guida per il progetto \textit{Predire in Grafana} del gruppo \emph{CoffeeCode}.
+}
+
+\setModifiche{
+  v1.9-0.4.0 & Sofia Bononi & Responsabile & 2020-05-04 & Approvazione del documento \\
+  v1.8-0.3.1 & Enrico Buratto, Alessandro Franchin & Programmatore e Verificatore & 2020-05-03 & Aggiunta termini al grossario, verifica\\
+  v1.8-0.3.0 & Nicholas Miazzo & Responsabile & 2020-05-29 & Approvazione del documento \\
+  v1.8-0.2.0 & Enrico Buratto, Ian Nicolas Di Menna & Programmatore e Verificatore & 2020-05-29 & Stesura capitolo 5 - Utilizzo plug-in, verifica \\
+  v1.7-0.2.0 & Nicholas Miazzo & Responsabile & 2020-05-28 & Approvazione del documento \\
+  v1.7-0.1.0 & Enrico Galdeman, Enrico Buratto & Programmatore e Verificatore & 2020-05-26 & Stesura Capitolo 4 - Utilizzo training app, verifica \\
+  v1.7-0.1.0 & Nicholas Miazzo & Programmatore & 2020-05-25 & Stesura Capitolo 3 - Installazione \\
+  v1.6-0.1.0 & Enrico Galdeman, Alessandro Franchin & Programmatore e Verificatore & 2020-05-21 & Stesura Capitolo 6 - Segnalazione di bug e Stesura Appendice A - Glossario\\
+  v1.6-0.1.0 & Marco Nardelotto & Responsabile & 2020-05-21 & Approvazione del documento \\
+  v1.6-0.0.1 & Marco Nardelotto, Enrico Buratto & Programmatore e Verificatore & 2020-05-19 & Stesura Capitolo 2 - Requisiti di sistema, verifica \\
+  v1.6-0.0.1 & Marco Nardelotto & Programmatore & 2020-05-17 & Stesura Capitolo 1 - Introduzione \\
+  v1.6-0.0.1 & Sofia Bononi & Responsabile & 2020-05-16 & Creazione del documento
+}
+
+\disabilitaElencoTabelle{}
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/1-introduzione.tex}
+
+\newpage
+
+\section{Requisiti di sistema}%
+\label{sec:requisiti di sistema}
+\subfile{components/2-requisiti.tex}
+
+\newpage
+
+\section{Installazione}%
+\label{sec:installazione}
+\subfile{components/3-installazione.tex}
+
+\newpage
+
+\section{Utilizzo training app}%
+\label{sec:utilizzo-training-app}
+\subfile{components/4-utilizzo-training-app.tex}
+
+\newpage
+
+\section{Utilizzo plug-in}%
+\label{sec:utilizzo-plug-in}
+\subfile{components/5-utilizzo-plugin.tex}
+
+\newpage
+
+\section{Segnalazione di bug}%
+\label{sec:segnalazione-di-bug}
+\subfile{components/6-segnalazione-prob.tex}
+
+
+\newpage
+\appendix
+\setcounter{secnumdepth}{1} % No section number
+\section{Glossario}%
+\label{sec:glossario}
+\subfile{components/A-glossario}
+
+
+
+\end{document}
