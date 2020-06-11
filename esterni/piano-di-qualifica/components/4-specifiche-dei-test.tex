@@ -14,7 +14,7 @@ I test di accettazione si relazionano con i test di sistema e vengono eseguiti d
 \renewcommand{\arraystretch}{2} % 
 \begin{longtable}[H]{>{\centering\bfseries}m{2.5cm} >{\centering}m{7.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{3.5cm}}
   \caption{Tabella test di accettazione}%
-  \label{tab:tabella_test_di_sistema}                                                    \\
+  \label{tab:tabella_test_di_accettazione}                                                    \\
   \rowcolor{lightgray}
   {\textbf{Requisito}} & {\textbf{Descrizione}} & {\textbf{Priorità}} & {\textbf{Implementazione}}  \\
   \endfirsthead%
@@ -243,6 +243,13 @@ Garantiscono il corretto funzionamento di ogni minimo componente autonomo del si
   \textbf{TU53} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Target cannot be in variables list' nel caso la variabile selezionata non possa essere target  & Non Implementato \\
   \textbf{TU54} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select at least one valid variable' nel caso si fosse selezionato varie variabili ma non quella target  & Non Implementato \\
   \textbf{TU55} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select a target' nel caso non si selezioni una variabile target  & Non Implementato \\
+  \textbf{TU56} & Viene verificato che si visualizzi un messaggio di errore nel caso in cui il caricamento del file JSON nel plug-in non vada a buon fine & Non Implementato \\
+  \textbf{TU57} & Viene verificato che si visualizzi un messaggio di errore nel caso in cui non venga selezionato alcun file & Non Implementato \\
+  \textbf{TU58} & Viene verificato che si visualizzi un messaggio quando il caricamento del file JSON è andato a buon fine & Non Implementato \\
+  \textbf{TU59} & Viene verificato che il file JSON venga letto correttamente nel caso si selezioni la RL & Non Implementato \\
+  \textbf{TU60} & Viene verificato che il file JSON venga letto correttamente nel caso si selezioni la SVM & Non Implementato \\
+  \textbf{TU61} & Viene verificato che il metodo predict di PredictionRL ritorni i valori corretti & Non Implementato \\
+  \textbf{TU62} & Viene verificato che il metodo predict di PredictionSVM ritorni i valori corretti & Non Implementato \\
 \end{longtable}
 
 \end{document}
