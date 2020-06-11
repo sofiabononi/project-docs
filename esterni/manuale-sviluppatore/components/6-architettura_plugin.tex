@@ -32,7 +32,7 @@ Viene invece utilizzato il design pattern Strategy per fornire un ulteriore live
   \caption{Diagramma dei package del plug-in.}
 \end{figure}
 
-\subsubsection{Design Pattern - MVC}
+\subsection{Design Pattern - MVC}
 Il design MVC viene utilizzato per la gestione dell'input dei dati dalla componente back-end di Grafana, per la loro elaborazione tramite algoritmi di Regressione Lineare e Support Vector Machines e per il conseguente output a schermo tramite grafico. Le classi appartenenti a questo design pattern sono PanelCtrl, Model e MainView. \\
 La classe PanelCtrl si occupa di impostare i dati di input e il predittore; a partire da questi gestisce la predizione. Essa istanzia inoltre il model, il quale si occupa di reperire i dati da Grafana e il predittore dall'input dell'utente. Questi vengono quindi restituiti al controller, il quale istanzia la classe MainView per la visualizzazione del grafico.
 
@@ -42,10 +42,10 @@ La classe PanelCtrl si occupa di impostare i dati di input e il predittore; a pa
   \caption{Implementazione MVC del plug-in.}
 \end{figure}
 
-\subsubsection{Design Pattern - Strategy}
+\subsection{Design Pattern - Strategy}
 Viene utilizzato il design pattern Strategy per fornire un ulteriore livello di astrazione ai metodi di predizione tramite Regressione Lineare e Support Vector Machines.
-A tale scopo è presente un'interfaccia Strategy che si occupa di eseguire i calcoli interfacciandosi alle classi \texttt{ConfigRL} e \texttt{PredictionRL} per la Regressione Lineare,
-o i metodi \texttt{ConfigSVM} e \texttt{PredictionSVM} per le Support Vector Machines. \\
+A tale scopo è presente un'interfaccia Strategy che si occupa di eseguire i calcoli interfacciandosi alle classi ConfigRL e PredictionRL per la Regressione Lineare,
+o i metodi ConfigSVM e PredictionSVM per le Support Vector Machines. \\
 
 \begin{figure}[H]
   \centering
@@ -54,7 +54,7 @@ o i metodi \texttt{ConfigSVM} e \texttt{PredictionSVM} per le Support Vector Mac
 \end{figure}
 
 
-\subsubsection{Impostazione e utilizzo del plug-in}
+\subsection{Impostazione e utilizzo del plug-in}
 Una volta avviata la piattaforma Grafana e abilitato il plug-in in oggetto, l'utente caricherà il file Json contenente i predittori, risultato dell'output del programma di addestramento, interfacciandosi con l'EditorView, ossia il pannello di configurazione del plug-in proprio della piattaforma Grafana. \\
 Il file verrà quindi caricato e letto, e verrà effettuato il parsing su di esso. Verrà quindi creato l'oggetto Predictor contenente i valori letti; a seconda che la predizione sia di tipo Regressione Lineare o Support Vector Machines verrà configurata inoltre l'opportuna classe di predizione. Le classi che si occupano di questa configurazione sono, rispettivamente, ConfigRL e ConfigSVM; entrambe queste classi si occupano di leggere i nomi delle query e associarle alla predizione. \\
 L'utente sceglierà quindi la query sulla quale effettuare la predizione; il controller del pannello di visualizzazione, consistente della classe PanelCtrl, istanzierà quindi il Model, il quale leggerà i dati forniti da grafana utilizzando le classi di utilità descritte nella classe GrafanaData. \\

@@ -3,14 +3,13 @@
 \begin{document}
 \subsection{Visione generale}%
 \label{subs:installazione_applicazione_di_addestramento}
-Il programma di addestramento è costituito da un'applicazione web che si basa su NodeJS e sul framework Electron. Viene poi utilizzato\dots
-
-Tale applicazione effettua l'addestramento su un dataset importato dall'utente attraverso un file CVS, attraverso un algoritmo di predizione da lui scelto tra quelli disponibili, per poi produrre in output
+Il programma di addestramento è costituito da un'applicazione web che si basa su NodeJS e sul framework Electron.
+Tale applicazione effettua l'addestramento su un dataset importato dall'utente attraverso un file CSV, attraverso un algoritmo di predizione da lui scelto tra quelli disponibili, per poi produrre in output
 un file JSON contenente la definizione del predittore.
 All'interno dell'applicazione è stato utilizzato il design pattern architetturale Model-View-controller per gestire gli aspetti fondamentali dell'applicazione perché esso fornisce i seguenti vantaggi:
 \begin{itemize}
-    \item Rende le componenti indipendenti e permettere una suddivisione del lavoro migliore;
-    \item Rende l'applicazione facilmente scalabile nel caso si dovessero creare nuove view e i controller ad esse associati o nel caso di aggiunta di nuovi funzionalità relative a una delle 3 classi attuali del MVC;
+    \item Rende le componenti indipendenti e permette una suddivisione del lavoro migliore;
+    \item Rende l'applicazione facilmente scalabile nel caso si dovessero creare nuove view e i controller ad esse associati, o nel caso di aggiunta di nuovi funzionalità relative a una delle 3 classi attuali del MVC;
     \item Permette di avere un controllore separato dal resto dell’applicazione, il che rende la progettazione più semplice e permette di concentrare gli sforzi sulla logica del funzionamento dell'applicazione.
 \end{itemize}
 
@@ -37,9 +36,9 @@ All'interno dell'applicazione è stato utilizzato il design pattern architettura
      \end{center}
  \end{figure}
 
- 
 
-\subsubsection{Design pattern - MVC}
+
+\subsection{Design pattern - MVC}
 \label{ssec:design_pattern_mvc}
 Il design MVC è stato implementato realizzando le 3 classi principali: Model, View e Controller per gestire i 3 aspetti fondamentali dell'applicazione.
 La classe View gestisce l'interfaccia grafica della classe, gestendo quindi anche le interazioni con il framework Electron utilizzato dal gruppo.
@@ -55,7 +54,7 @@ La classe Controller gestisce gli eventi e le interazioni tra l'interfaccia graf
      \end{center}
  \end{figure}
 
-\subsubsection{Design pattern - Object Adapter}
+\subsection{Design pattern - Object Adapter}
 \label{ssec:design_pattern_object_adapter}
 Per gestire le diverse librerie esterne che implementano gli algoritmi di Regressione lineare e Support vector machine è stato utilizzato il design pattern Object Adapter.
 Pur non essendo possibile con node.js implementare un'interfaccia nativa, è stata creata la classe modelTrain, utilizzata come interfaccia, che lancia un'eccezione nel caso
@@ -74,11 +73,11 @@ e, se necessario, anche nei metodi privati della classe.
      \end{center}
  \end{figure}
 
-\subsubsection{Addestramento dei dati senza predittore}
+\subsection{Addestramento dei dati senza predittore}
 \label{ssec:addestramento_dati_senza_predittore}
 Una volta avviata l'applicazione l'utente inserisce il file CSV contenente i dati per l'addestramento, in quel momento nella View scatta l'evento relativo all'inserimento del file
 che attiva Controller tramite handle(path) in cui viene passato il percorso del file selezionato dall'utente. Il Controller quindi riceve questo segnale dalla View, interagisce col Model
-per leggere i dati dal file e salvarli in un oggetto CVSFile, una volta salvati il Controller riceve l'avvenuto salvataggio dei dati rimanda alla View le informazioni necessarie per eseguire 
+per leggere i dati dal file e salvarli in un oggetto CVSFile, una volta salvati il Controller riceve l'avvenuto salvataggio dei dati rimanda alla View le informazioni necessarie per eseguire
 la funzione buildPage() che inserisce all'interno dell'interfaccia la form per selezionare il modello di predizione dei dati, il grafico iniziale e le varie label per selezionare quali variabili
 visualizzare e salvare nel futuro predittore. \\
 Quando l'interfaccia è pronta, l'utente seleziona il tipo di modello (ossia l'algoritmo di predizione) per il quale intende allenare i dati inseriti, non appena viene selezionato uno dei modelli
@@ -99,7 +98,7 @@ Alla fine il controller richiama la funzione savePredictor(pred) che richiama in
      \end{center}
  \end{figure}
 
-\subsubsection{Addestramento dei dati con predittore}
+\subsection{Addestramento dei dati con predittore}
 \label{ssec:addestramento_dati_con_predittore}
 L'addestramento con l'inserimento del predittore aggiunge al workflow la parte di inserimento di un predittore.
 Quando l'utente inserisce il predittore viene scaturito un evento nella View che ottiene il percorso del file predittore e attraverso handler(path) lo passa al Controller,
@@ -113,5 +112,5 @@ Una volta caricato il file nell'oggetto il Model richiede le note presenti nel p
          \label{fig:daa}
      \end{center}
  \end{figure}
- 
+
 \end{document}

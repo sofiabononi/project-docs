@@ -13,11 +13,11 @@ All'interno del plugin, per gestire i diversi algoritmi di predizione dei dati, 
   \caption{Strategy per la gestione degli algoritmi di predizione.}
 \end{figure}
 
-Dalla figura si possono notare le classi dei due algoritmi di predizione, ossia \texttt{PredictionRL} e \texttt{PredictionSVM}, con la stessa interfaccia comune \texttt{Strategy}.
-Tali classi contengono al loro interno un metodo \texttt{predict()} che, ricevuti in input i valori sui quali effettuare la predizione e il parametro del predittore, restituiscono una matrice contenente i risultati della predizione. \\
+Dalla figura si possono notare le classi dei due algoritmi di predizione, ossia PredictionRL e PredictionSVM, con la stessa interfaccia comune Strategy.
+Tali classi contengono al loro interno un metodo predict() che, ricevuti in input i valori sui quali effettuare la predizione e il parametro del predittore, restituiscono una matrice contenente i risultati della predizione. \\
 Nel caso quindi si volesse includere un nuovo algoritmo di predizione dei dati i passaggi da svolgere per attuare tale cambiamento sono:
 \begin{enumerate}
-  \item Aggiungere una nuova Strategy, ossia la classe del nuovo algoritmo di predizione. Questa dovrà includere un metodo \texttt{predict()} con la stessa segnatura degli omonimi metodi degli algoritmi di predizione già implementati;
+  \item Aggiungere una nuova Strategy, ossia la classe del nuovo algoritmo di predizione. Questa dovrà includere un metodo predict() con la stessa segnatura degli omonimi metodi degli algoritmi di predizione già implementati;
   \begin{figure}[H]
     \centering
     \includegraphics[width=10cm]{img/plugin/newstrategy.png}
