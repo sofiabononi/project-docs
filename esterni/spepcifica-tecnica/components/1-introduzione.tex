@@ -1,0 +1,51 @@
+\documentclass[../specifica-tecnica.tex]{subfiles}
+\begin{document}
+\subsection{Scopo del documento}
+Lo scopo del presente documento è presentare i diagrammi dei package, delle classi e di sequenza delle due componenti software del progetto
+ Predire in Grafana del gruppo \emph{CoffeeCode}. Tali diagrammi illustrano e contestualizzano i design pattern adottati durante la progettazione
+ e lo sviluppo del sistema.
+
+\subsection{Struttura del documento}
+Il documento è diviso in tre capitoli: la presente introduzione e un capitolo per ogni componente software appartenente al progetto. \\
+Per ogni componente software vengono riportati i seguenti diagrammi:
+\begin{itemize}
+  \item Diagrammi dei package;
+  \item Diagrammi delle classi;
+  \item Diagrammi di sequenza.
+\end{itemize}
+Segue la contestualizzazione dei design pattern adottati.
+
+\subsection{Design Pattern}
+\subsubsection{Programma di addestramento}
+\paragraph{MVC push model}
+Il programma di addestramento consiste in un'applicazione sviluppata basandosi sulla runtime Node.js e sul framework Electron. Vengono quindi utilizzati il 
+linguaggio di markup HTML e il linguaggio di formattazione CSS per la realizzazione della vista con la quale l'utente interagisce, e il linguaggio JavaScript 
+per la realizzazione della vista e della componente back-and dell'applicativo. \\
+Tale componente software fa uso dell'architettura MVC (\textit{model-view-controller}) push model: una classe \texttt{Controller} si occupa di fare da tramite tra una classe \texttt{View} e 
+una classe \texttt{Model}; le classi \texttt{View} e \texttt{Model} si occupano invece rispettivamente della gestione dell'interfaccia utente e delle chiamate agli opportuni metodi, implementati nelle 
+altre classi.
+
+\paragraph{Object Adapter}
+Viene utilizzato il design pattern Object Adapter per la gestione delle librerie esterne, le quali si occupano dell'implementazione degli algoritmi di Regressione Lineare e 
+Support Vector Machines. \\
+È quindi presente un'interfaccia \texttt{ModelTrain} che si occupa di eseguire il training richiamando le classi \texttt{RLAdapter} o \texttt{SVMAdapter}, a seconda 
+del metodo di predizione scelto dall'utente. \\
+Il vantaggio principale di tale design pattern è la possibilità di estendere facilmente l'applicativo con ulteriori algoritmi di predizione.
+
+\subsubsection{Plug-in}
+\paragraph{MVC push model}
+Viene utilizzata l'architettura MVC anche per lo sviluppo del plug-in per la piattaforma Grafana; nello specifico, questo design pattern viene utilizzato 
+per la gestione dell'input dei dati dalla componente back-end di Grafana, per la loro elaborazione tramite algoritmi di Regressione Lineare e Support Vector Machines e 
+per il conseguente output a schermo tramite grafico. \\
+È stata implementata una classe \texttt{PanelCtrl} che funge da controller per il pannello di visualizzazione dei dati in output; essa istanzia e richiama i metodi di una classe \texttt{Model}, i quali eseguono 
+i metodi di input dei dati e di predizione. I risultati di tali metodi vengono ritornati alla classe \texttt{PanelCtrl}, la quale si occupa infine di richiamare la view, consistente 
+nella classe \texttt{MainPanel}. Quest'ultima classe si occupa quindi della visualizzazione a schermo dei risultati.
+
+\paragraph{Strategy}
+Viene utilizzato il design pattern Strategy per fornire un ulteriore livello di astrazione ai metodi di predizione tramite Regressione Lineare e Support Vector Machines. 
+A tale scopo è presente un'interfaccia Strategy che si occupa di eseguire i calcoli interfacciandosi alle classi \texttt{ConfigRL} e \texttt{PredictionRL} per la Regressione Lineare, 
+o i metodi \texttt{ConfigSVM} e \texttt{PredictionSVM} per le Support Vector Machines. \\
+Analogamente a object adapter per il programma di addestramento, la definizione di un'interfaccia con il design pattern Strategy permette 
+la futura espansione delle funzionalità tramite aggiunta di ulteriori algoritmi di predizione.
+
+\end{document}

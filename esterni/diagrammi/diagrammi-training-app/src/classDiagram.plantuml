@@ -1,0 +1,121 @@
+@startuml
+
+class CVSFile{
+    constructor(path)
+    get parsedCSV(): Object
+    read(): void
+}
+
+class JSONFile{
+  constructor(json)
+  get json(): Object
+  filterAndGroup(param): Object
+  {static} fromPath(path): JSON
+  {static} fromCVS(csv): JSON
+}
+
+package Object_adapter <<Rectangle>>{
+class RLadapter{
+    constructor(options)
+    executeTraining(data): Object
+    calculateMatrixDimensions(data): Object
+    libAdaptation(data, matrix, reg): Object
+    generateRLOutput(data, coefficients): Object
+}
+
+class SVMadapter{
+    constructor()
+    executeTraining(data): Object
+    calculateMatrixDimensions(data): Object
+    splitData(data,matrix): Object
+}
+
+class Regression
+class SVM
+
+
+interface ModelTrain
+ModelTrain : executeTraining()
+}
+
+package MVC <<Rectangle>> {
+together {
+class Model{
+    readFromCVS(path): void
+    convertCVStoJSON(): void
+    getDataByFilter(param): Object
+    loadPredictor(path): void
+    get notes(): string
+    get json(): JSON
+    calculatePredictor(data, meta): Object
+    savePredictor(pred): void
+}
+
+
+class Controller{
+    constructor(model, view)
+    handleFileChanged(path): void
+    handleFormSubmit(keys, meta): void
+    handleLoadPredictor(path): void
+}
+
+class View{
+    bindFileChange(handler): void
+    bindLoadPredictor(handler): void
+    bindFormSubmit(handler): void
+    buildPage(json): void
+    showContent(): void
+    showChart(): void
+    hideContent(): void
+    hideChart():void
+    initSelectTarget(json): void
+    initVars(json): void
+    addVar(key): void
+    addSelectTo(field, key): void
+    addTarget(key): void
+    getTarget(): Object
+    getVars(): Object
+    setNotes(notes): void
+    showError(message): void
+    reset(): void
+    getNotes(): Object
+    getModel(): Object
+    getRandomColor(): string
+    createChartData(x, y, target): Object
+    initChartSelect(json): void
+    updateChart(): void
+    getChartX(): void
+    getChartY(): void
+    getChartTargetArray(): bool
+    setChartData(x, y, target, xLabel, yLabel): void
+    
+}
+}
+
+interface Observer
+abstract class Subject
+}
+
+SVMadapter -- ModelTrain
+RLadapter -- ModelTrain
+
+SVMadapter --> SVM
+RLadapter --> Regression
+
+Model ..> ModelTrain
+
+Controller --> View
+Controller --> Model
+
+Model ..> CVSFile
+Model ..> JSONFile
+
+Controller --|> Observer
+Subject -- Observer
+View --|> Subject
+Model --|> Subject
+View --> Model
+
+' class MainWindow
+
+@enduml

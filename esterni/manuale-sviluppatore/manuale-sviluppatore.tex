@@ -1,0 +1,113 @@
+\documentclass{article}
+
+\input{../../commons/config}
+%Qui ci andrà il percorso delle immagini da includere in manuale dello sviluppatore
+\appendToGraphicspath{../../commons/img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Manuale dello sviluppatore}
+
+\setVersione{v1.9-1.0.0}
+
+\setResponsabile{Sofia Bononi}
+
+\setRedattori{
+Enrico Buratto \\ &
+Ian Nicolas Di Menna \\ &
+Enrico Galdeman \\ &
+Nicholas Miazzo \\ &
+Marco Nardelotto
+}
+
+\setVerificatori{
+Enrico Buratto \\ &
+Ian Nicolas Di Menna \\ &
+Nicholas Miazzo \\ &
+Marco Nardelotto
+}
+
+\setUso{Esterno}
+
+\setDescrizione{Documento contenente una guide per il progetto \emph{Predire in Grafana} del gruppo \emph{CoffeCode} .}
+
+\setModifiche{
+v1.9-1.0.0 & Sofia Bononi         & Responsabile  & 2020-06-09 & Approvazione del documento \\
+v1.9-0.2.0 & Nicholas Miazzo      & Verificatore  & 2020-06-04 & Verifica \S 8              \\
+v1.9-0.2.0 & Ian Nicolas Di Menna & Programmatore & 2020-06-04 & Stesura \S 8               \\
+v1.8-0.2.0 & Marco Nardelotto     & Verificatore  & 2020-05-29 & Verifica \S 7              \\
+v1.8-0.2.0 & Enrico Buratto       & Programmatore & 2020-05-29 & Stesura \S 7.2             \\
+v1.7-0.2.0 & Enrico Buratto       & Programmatore & 2020-05-08 & Stesura \S 7.1             \\
+v1.7-0.2.0 & Ian Nicolas Di Menna & Verificatore  & 2020-05-25 & Verifica \S 5 e \S 6       \\
+v1.7-0.2.0 & Nicholas Miazzo      & Programmatore & 2020-05-25 & Stesura \S 6               \\
+v1.7-0.2.0 & Nicholas Miazzo      & Programmatore & 2020-05-23 & Stesura \S 5               \\
+v1.6-0.2.0 & Marco Nardelotto     & Responsabile  & 2020-05-21 & Approvazione del documento \\
+v1.6-0.1.0 & Nicholas Miazzo      & Verificatore  & 2020-05-21 & Verifica \S 3 e \S 4       \\
+v1.6-0.1.0 & Enrico Galdeman      & Programmatore & 2020-05-21 & Stesura \S 4               \\
+v1.6-0.1.0 & Enrico Galdeman      & Programmatore & 2020-05-20 & Stesura \S 3               \\
+v1.6-0.1.0 & Marco Nardelotto     & Responsabile  & 2020-05-20 & Approvazione del documento \\
+v1.6-0.0.1 & Enrico Buratto       & Verificatore  & 2020-05-19 & Verifica \S 1 e \S 2       \\
+v1.6-0.0.1 & Marco Nardelotto     & Programmatore & 2020-05-19 & Stesura \S 1 e Appendice A \\
+v1.6-0.0.1 & Marco Nardelotto     & Programmatore & 2020-05-17 & Stesura \S 1               \\
+v1.6-0.0.1 & Sofia Bononi         & Responsabile  & 2020-05-17 & Creazione del documento
+  }
+
+\begin{document}
+
+\input{../../commons/template}
+
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/1-introduzione.tex}
+
+\newpage
+
+\section{Tecnologie interessate}
+\label{sec:tecnologie_interessate}
+\subfile{components/2-tecnologie_interessate.tex}
+
+\newpage
+
+\section{Prerequisiti}
+\label{sec:prerecuisiti}
+\subfile{components/3-prerequisiti.tex}
+
+\newpage
+
+\section{Installazione}
+\label{sec:installazione}
+\subfile{components/4-installazione.tex}
+
+\newpage
+
+\section{Architettura addestramento}
+\label{sec:architettura_addestramento}
+\subfile{components/5-architettura_addestramento.tex}
+
+\newpage
+
+\section{Architettura plug-in}
+\label{sec:architettura_plugin}
+\subfile{components/6-architettura_plugin.tex}
+
+\newpage
+
+\section{Estensione funzionalità}
+\label{sec:estensione_funzionalita}
+\subfile{components/7a-estensione_funzionalita_addestramento.tex}
+\subfile{components/7b-estensione_funzionalita_plugin.tex}
+
+\newpage
+
+\section{Test}
+\label{sec:test}
+\subfile{components/8-test.tex}
+
+\newpage
+\appendix
+\setcounter{secnumdepth}{1} % No section number
+\section{Glossario}%
+\label{sec:glossario}
+\subfile{components/A-glossario}
+
+
+\end{document}

@@ -1,0 +1,61 @@
+\pagenumbering{gobble}
+
+\begin{titlepage}% per non stampare il numero della pagina
+
+  \raggedleft% allinea a destra la pagina
+  \rule{1pt}{\textheight}% linea verticale
+  \hspace{0.05\textwidth}% spazio tra linea e testo
+  % lasciare questa riga per il corretto funziomento di \parbox
+  \parbox[b]{0.75\textwidth}{% paragrafo che tiene il testo a destra della riga cambiando la larghezza il testo si muove a destra o a sinistra
+  {\hspace{0.15\textwidth}\includegraphics[width=3.5cm,height=3.5cm]{logo.jpg}}\\[3\baselineskip] % logo
+  {\Huge\bfseries CoffeeCode \\[1\baselineskip] Predire in Grafana}\\[8\baselineskip] % titolo
+  {\Large\textsc{\placeholderTitle{}}}\\[7\baselineskip] % nome del documento
+  {\begin{tabular}{r l}
+    % testo in grassetto
+    \textbf{Uso}          & \uso{}                    \\
+    \textbf{Destinato a}  & CoffeeCode                \\
+    					  & Zucchetti S.p.A.		  \\
+                          & prof.\ Vardanega Tullio   \\
+                          & prof.\ Cardin Riccardo    \\
+  \end{tabular}}\\[5\baselineskip]
+
+  {\bfseries Descrizione}\\
+  {\descrizione{}}\\[1\baselineskip]
+  {\texttt{coffeecodeswe@gmail.com}}\\[\baselineskip] % email
+  }
+
+\end{titlepage}
+
+\newgeometry{textheight=660pt, lmargin=2cm, tmargin=2cm, rmargin=2cm}
+
+% setup di header e footer nelle pagine senza numero
+\fancypagestyle{nopage}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1.3cm]{logo.jpg}}%
+  \fancyhead[R]{\emph{CoffeeCode}\\\placeholderTitle{}}%
+}
+% setup di header e footer nelle pagine col numero
+\fancypagestyle{usual}{%
+  \fancyhf{}%
+  \fancyhead[L]{\includegraphics[width=1.3cm]{logo.jpg}}%
+  \fancyhead[R]{\emph{CoffeeCode}\\\placeholderTitle{}}%
+  \fancyfoot[R]{\thepage\ di~\pageref{LastPage}}%
+}
+\setlength{\headheight}{1.8cm}
+
+\newpage
+\pagestyle{nopage}
+
+\setcounter{table}{-1}
+
+\newpage
+\thispagestyle{nopage}
+\pagenumbering{roman}
+\tableofcontents
+
+\elencoFigure{}%
+
+\newpage
+
+\pagestyle{usual}
+\pagenumbering{arabic}

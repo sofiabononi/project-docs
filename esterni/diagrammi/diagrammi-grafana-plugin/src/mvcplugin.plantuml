@@ -1,0 +1,27 @@
+@startuml GrafanaClasses
+
+
+class Model{
+    - data: GrafanaData
+    - predictor: Predictor 
+    - strategy: Strategy
+    + setData(GrafanaData): GrafanaData
+    + setPredictor(Predictor): void
+    + predict(): number
+
+}
+
+
+
+class MainView{
+    + render(): any
+    + const getStyle: any
+}
+
+
+
+PanelCtrl--Model
+PanelCtrl--MainView
+
+
+@enduml

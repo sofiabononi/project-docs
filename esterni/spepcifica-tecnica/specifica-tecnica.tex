@@ -1,0 +1,36 @@
+
+
+\documentclass{article}
+
+\input{../../commons/config.tex}
+%Qui ci andrà il percorso delle immagini da includere in PdQ
+\appendToGraphicspath{../../commons/img/}
+
+%Tutti questi set permettono di modificare in modo adatto i placeholder nel template
+\setTitle{Specifica Tecnica}
+
+
+\setUso{Esterno}
+
+\setDescrizione{Documento finalizzato a presentare la progettazione del prodotto realizzato da \emph{CoffeeCode} per il progetto Predire in Grafana.}
+
+
+\begin{document}
+\input{./configs/template.tex}
+
+\newpage
+\section{Introduzione}%
+\label{sec:introduzione}
+\subfile{components/1-introduzione.tex}
+
+\newpage
+\section{Programma di addestramento}%
+\label{sec:addestramento}
+\subfile{components/2-programma-addestramento.tex}
+
+\newpage
+\section{Plug-in}%
+\label{sec:plugin}
+\subfile{components/3-plug-in.tex}
+
+\end{document}
