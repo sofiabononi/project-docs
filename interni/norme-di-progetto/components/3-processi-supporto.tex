@@ -24,13 +24,13 @@ Questa sezione descrive i dettagli su come deve essere redatta e verificata la d
 Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX\ sul quale basare la stesura di ogni documento. Questo assicura l'uniformità della struttura dei documenti, facilitando inoltre il \glossario{versionamento}. \\
 Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti attività:
 \begin{itemize}
-  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il Responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
-  \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai Verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al Responsabile, che farà avanzare il documento all'approvazione finale, o ai Redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai Verificatori;
-  \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei Verificatori, il Responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
+  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
+  \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al responsabile, che farà avanzare il documento all'approvazione finale, o ai redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai verificatori;
+  \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei verificatori, il responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
 \end{itemize}
 
 \subparagraph{Struttura dei documenti}
-Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
+Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} \texttt{project-docs} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
 \begin{itemize}
   \item Il file \texttt{config.tex}, contenente le definizioni dei comandi \LaTeX;
   \item Il file \texttt{template.tex}, contenente il \textit{template} su cui si basano tutti i documenti;
@@ -45,13 +45,13 @@ Basandosi su un \textit{template}, ogni documento ha quindi una struttura fissa 
 
 \subparagraph*{Frontespizio}
 Il frontespizio fornisce tutti i dati principali del documento. Esso presenta il logo del gruppo, centrato, seguito dal nome del gruppo e dal titolo del progetto; sotto di questo è presente il titolo del documento. \\
-Sono fornite anche altre informazioni essenziali, le quali sono:
+Sono fornite anche altre informazioni essenziali, che sono:
 \begin{itemize}
   \item \textbf{Versione}: versione attuale del documento;
   \item \textbf{Approvazione}: stato di approvazione del documento, che può essere "In redazione" o indicare il nome del responsabile che ha approvato il documento;
   \item \textbf{Redazione}: redattori del documento;
   \item \textbf{Verifica}: verificatori del documento;
-  \item \textbf{Uso}: destinazione del documento, che può essere "Interno" o "Esterno";
+  \item \textbf{Uso}: destinazione del documento, il quale può essere "Interno" o "Esterno";
   \item \textbf{Destinato a}: destinazione specifica del documento.
 \end{itemize}
 \subparagraph*{Registro delle modifiche}
@@ -106,10 +106,10 @@ Nello spazio compreso tra la riga orizzontale e il numero di pagina si articola 
 I documenti prodotti appartengono a diverse categorie, secondo le quali sono classificati.
 
 \subparagraph*{Documenti ufficiali}
-I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. I documenti ufficiali sono i seguenti:
+I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. Seguono i documenti ufficiali.
 
 \subparagraph*{Glossario}
-In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.4-1.2.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
+In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.9-1.3.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
 Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i seguenti requisiti:
 \begin{itemize}
   \item Essere un termine tecnico. Rientrano in questo criterio i nomi propri delle tecnologie utilizzate, i termini tecnici propri di queste e i termini frequentemente utilizzati nell'Ingegneria del Software;
@@ -117,7 +117,7 @@ Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i 
   \item Avere più di un significato plausibile nel contesto in cui viene utilizzato;
   \item Essere un acronimo specifico e raramente usato.
 \end{itemize}
-Il \textsc{Glossario v1.4-1.2.0} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
+Il \textsc{Glossario v1.9-1.3.0} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
 I termini appartenenti al glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, al fine di evitare l'appesantimento visivo.
 
 \subparagraph*{Verbali}
@@ -183,7 +183,7 @@ Ogni diversa formattazione usata all'interno dei documenti ha un significato pre
   \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana non inclusi nel glossario;
   \item Utilizzo di testo in caratteri dattilografici per i nomi di file e delle \textit{directories}; queste ultime devono finire con il carattere barra \textbf{/};
   \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi. Viene inoltre utilizzato per rimarcare concetti considerati importanti;
-  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v1.4-1.2.0};
+  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v1.9-1.3.0};
   \item Utilizzo di testo maiuscoletto per i nomi dei documenti all'interno dei documenti stessi.
 \end{itemize}
 
@@ -274,6 +274,7 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
     \item \textbf{RL}: Regressione Lineare;
     \item \textbf{ML}: Machine Learning;
     \item \textbf{JS}: JavaScript;
+    \item \textbf{TS}: TypeScript;
     \item \textbf{CLI}: \glossario{Command Line};
     \item \textbf{IDE}: Integrated Developement Environment;
     \item \textbf{ITS}: \glossario{Issue Tracking System};
@@ -288,10 +289,10 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
 Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
 
-
 \subsubsection{Strumenti}
 \paragraph{\LaTeX}
 Per la scrittura di tutti i documenti, ad eccezione dei documenti ufficiosi, viene utilizzato il \glossario{linguaggio di markup} \LaTeX. Questo permette la scrittura modulare, e quindi collaborativa, dei documenti, oltre a fornire una struttura stilistica uniforme per tutti i documenti.
+
 \paragraph{Google Docs}
 Per la scrittura dei documenti ufficiosi viene utilizzato Google Docs. Questo strumento permette la condivisione istantanea e visualizzabile immediatamente da tutti i componenti di quanto viene scritto.
 
@@ -344,13 +345,20 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
     \item $ \#L $: numero di lettere nel documento;
     \item $ \#P $: numero di parole nel documento.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: per il calcolo della metrica in oggetto si fa uso dello strumento "farfalla project", consistente della seguente pagina web: \href{https://farfalla-project.org/readability_static/}{https://farfalla-project.org/readability\_static/}, per ogni documento prodotto. La procedura da adottare è la seguente:
+  \begin{enumerate}
+    \item Prelevare il testo dei documenti, omettendo la formattazione \LaTeX;
+    \item Incollare il testo estrapolato nell'opportuna casella presente nella pagina web;
+    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di Qualifica v1.9-3.1.0}.
+  \end{enumerate}
 \end{itemize}
 
 \subparagraph{MoPD010 Correttezza lessicale/ortografica}
 \begin{itemize}
   \item \textbf{Descrizione}: la correttezza lessicale/ortografica fornisce una misura di correttezza lessicografica di un documento;
   \item \textbf{Unità di misura}: numero puro;
-  \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento.
+  \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento;
+  \item \textbf{Procedura per il calcolo}: il valore di tale metrica viene calcolato avvalendosi degli strumenti di correzione ortografica del testo integrati nell'IDE Visual Studio Code, documentati nel presente documento.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -375,16 +383,23 @@ I file del progetto sono divisi in tre repository per maggior chiarezza:
 Poiché però il prodotto che viene offerto consiste nella somma di software e documentazione, le tre repository sono unite in un'unica repository pubblica contenitrice, chiamata \texttt{swe-predire-in-grafana} e disponibile al seguente indirizzo: \href{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}{https://github.com/CoffeeCodeSWE/swe-predire-in-grafana}. \\
 Tale repository fa uso del meccanismo dei \glossario{git submodules} per combinare più repository in una unica.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/git-submodules.png}
+  \label{fig:errori_pdq}
+  \caption{Struttura delle repository del progetto.}
+\end{figure}
+
 \subparagraph{Repository \texttt{project-docs}}
 La struttura adottata nella repository \texttt{project-docs} sfrutta il meccanismo di \glossario{branching} offerto dallo strumento Git; questo permette lo sviluppo parallelo di più funzionalità e il lavoro in parallelo sulla stessa repository. \\
 La repository utilizzata si suddivide nei seguenti \glossario{branch}:
 \begin{itemize}
   \item \texttt{master}: branch principale, sul quale vengono fatte le \glossario{major releases};
   \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Norme di Progetto};
-  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei Requisiti v1.4-1.2.1};
-  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v1.4-1.2.0};
-  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto v1.4-3.1.0};
-  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica v1.4-2.0.0};
+  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei requisiti v1.9-1.3.0};
+  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v1.9-1.3.0};
+  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto v1.9-4.2.0};
+  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica v1.9-3.1.0};
   \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di Fattibilità v1.0.0-old};
   \item \texttt{verbali}: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
 \end{itemize}
@@ -456,6 +471,23 @@ In aggiunta a questi due branch, un nuovo branch viene creato a partire da \text
 \end{itemize}
 Al fine di evitare l'introduzione di codice non funzionante o malformato nei branch principali, la due repository fanno ampio uso del meccanismo delle Pull Requests. Ogni qualvolta una funzionalità in un branch secondario viene ultimata, il componente del gruppo responsabile di tale funzionalità ha il compito di aprire una pull request da tale branch verso \texttt{develop}; i verificatori controlleranno quindi la correttezza di quanto aggiunto e provvederanno a eseguire il \glossario{merge} sul branch principale o, nel caso in cui riscontrassero degli errori, a segnalarli tempestivamente all'autore.
 
+\subparagraph*{Formati comuni dei file}
+Le repository \texttt{swe-training-app} e \texttt{swe-grafana-plugin} contengono principalmente il codice sorgente dei due applicativi richiesti dal progetto. I file contenenti il codice sorgente hanno dunque le seguenti estensioni:
+\begin{itemize}
+  \item \texttt{.js}: file contenenti codice JavaScript;
+  \item \texttt{.ts}: file contenenti codice TypeScript;
+  \item \texttt{.tsx}: file contenenti codice TypeScript in accoppiata al framework React.js;
+  \item \texttt{.html}: file contenenti codice html, usato per la formattazione degli applicativi;
+  \item \texttt{.css}: file contententi codice css, usato insieme al codice html per la formattazione degli applicativi;
+  \item \texttt{.json}: file contenenti dati in formato json.
+\end{itemize}
+In aggiunta a questi possono essere presenti anche uno o più file con estensione \texttt{.lock}, consistenti in file di configurazione di Yarn. \\
+Oltre al codice sorgente, le repository possono contenere altri file per l'implementazione delle meccaniche di \glossario{Continuous Inspection} e \glossario{Continuous Integration}; questi file hanno le seguenti estensioni:
+\begin{itemize}
+  \item \texttt{.yml}: file di configurazione dello strumento di Continuous Integration TravisCI (approfondito in questo stesso capitolo);
+  \item \texttt{.properties}: file di configurazione dello strumento di Continuous Inspection SonarCloud.
+\end{itemize}
+
 \paragraph{Versionamento}
 Sebbene il progetto si sviluppi su più repositories, il prodotto che il gruppo deve fornire al proponente deve essere un prodotto unico e coeso; è quindi opportuno che il versionamento dei componenti di questo sia coerente e indichi uno sviluppo complessivo e globale del prodotto. \\
 Viene quindi adottato un sistema di versionamento comune a documentazione e componenti software, con delle opportune specializzazioni per entrambi. Un numero di versione di qualsiasi componente si presenta nel seguente modo:
@@ -476,7 +508,7 @@ Viene quindi adottato un sistema di versionamento comune a documentazione e comp
     \begin{itemize}
       \item Inizia da 0 ad ogni incremento di X;
       \item Viene incrementato ad ogni completamento di un incremento, corrispondente a una milestone del progetto;
-      \item La cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto v1.4-3.1.0}.
+      \item La cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto v1.9-4.2.0}.
     \end{itemize}
   \end{itemize}
   \item \textbf{A.B.C} indica la versione propria del componente singolo. Le cifre da cui è composta questa sezione hanno significato diverso per la documentazione e per il codice, ma in entrambi i casi si segue la logica del \glossario{Semantic Versioning 2.0.0}. Nelle successive sezioni verranno approfondite le regole che queste cifre seguono;
@@ -531,7 +563,7 @@ Il versionamento di un documento segue le regole sopra riportate; il numero di v
     \end{itemize}
   \end{itemize}
 \end{itemize}
-
+Viene ribadita la necessità della verifica come condizione necessaria per l'incremento di una cifra; non possono dunque esistere incrementi di una qualsiasi cifra antecedenti alla verifica della porzione di documento modificata.
 
 \subparagraph{Componenti software}
 Al pari della documentazione, anche i file delle componenti software del prodotto devono essere versionati. \\
@@ -553,7 +585,7 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
     \begin{itemize}
       \item Inizia da 0 a ogni incremento di A;
       \item Viene incrementata al completamento di uno o più requisiti;
-      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei Requisiti v1.4-1.2.1}.
+      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei requisiti v1.9-1.3.0}.
     \end{itemize}
     \item \textbf{C}: corrisponde a una \glossario{Patch}, e indica quindi la modifica a uno o più requisiti. Questa cifra segue le seguenti regole:
     \begin{itemize}
@@ -574,8 +606,36 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
 Il gruppo fa uso della pratica di \glossario{Continuous Integration} al fine di ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
 \begin{itemize}
   \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice (\glossario{Continuous Inspection});
-  \item \textbf{\glossario{Travis CI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.4-2.0.0} e il supporto al versionamento dei documenti e delle componenti software.
+  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.9-3.1.0} e il supporto al versionamento dei documenti e delle componenti software.
 \end{itemize}
+\subparagraph{SonarCloud}
+SonarCloud è uno strumento di Continuous Inspection del codice. Questo strumento viene utilizzato dal gruppo per il controllo della qualità del codice delle diverse componenti software. Le misure che vengono rilevate sono le seguenti:
+\begin{itemize}
+  \item Affidabilità;
+  \item Sicurezza;
+  \item Manutenibilità;
+  \item \glossario{Code Coverage};
+  \item Duplicazioni del codice.
+\end{itemize}
+
+Il controllo con questo strumento viene effettuato ad ogni pull request da un branch secondario a un branch principale (\texttt{master} o \texttt{develop}); i risultati vengono riportati in forma di commento della Pull Request e in una dashboard reperibile al sito \href{https://sonarcloud.io/}{https://sonarcloud.io/}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/sonarcloud.png}
+  \label{fig:github}
+  \caption{Dashboard di SonarCloud per un componente software del progetto.}
+\end{figure}
+
+\subparagraph{TravisCI}
+TravisCI è uno strumento di Continuous Integration utilizzato dal gruppo per il \textit{build} automatico delle componenti software del progetto. Esso è integrato nelle repository di tali componenti, e impostato tramite un file di configurazione presente in queste. \\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{img/travis.png}
+  \label{fig:github}
+  \caption{Dashboard di SonarCloud per un componente software del progetto.}
+\end{figure}
 
 \subsubsection{Strumenti}
 Le attività di gestione della configurazione sono coadiuvate dall'utilizzo di strumenti software, che permettono il perseguimento del giusto workflow e l'applicazione delle norme.
@@ -647,6 +707,9 @@ Due estensioni di Visual Studio Code permettono di operare sulla repository:
   \label{fig:github}
   \caption{Estensione Git Graph nell'IDE Visual Studio Code.}
 \end{figure}
+
+\subsubsection{Metriche}
+Il processo di gestione delle configurazione non fa uso di metriche di qualità.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% 3.3 - GESTIONE DEI CAMBIAMENTI %%%
@@ -720,6 +783,9 @@ Una volta risolto il problema, l'assegnatario finale provvederà a chiudere la i
 \paragraph{GitHub Issues}
 Il gruppo fa uso delle GitHub Issues per il tracciamento dei problemi. Questo strumento è integrato in GitHub, già usato dal gruppo come sede delle repository del progetto; tra le molte funzionalità messe a disposizione, spiccano per utilità la possibilità di associare ogni \textit{issue} a un determinato commit e di assegnare uno o più componenti ad ogni \textit{issue}.
 
+\subsubsection{Metriche}
+Il processo di gestione dei cambiamenti non fa uso di metriche di qualità.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%a
 %%% 3.4 - GESTIONE DELLA QUALITÀ %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -733,7 +799,7 @@ Le aspettative di questo processo sono le seguenti:
   \item Sviluppare un prodotto software di qualità, comprendente anche una documentazione completa e di facile fruizione.
 \end{itemize}
 \subsubsection{Descrizione}
-La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica v1.4-2.0.0}. In particolare, in tale documento:
+La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica v1.9-3.1.0}. In particolare, in tale documento:
 \begin{itemize}
   \item Sono presentati gli standard di qualità utilizzati;
   \item Di tali standard, sono individuati i processi di interesse per il particolare progetto.
@@ -811,13 +877,16 @@ Le metriche di qualità dei prodotti sono codificate nel seguente modo:
   \item \textbf{Caratteristica} indica a quale caratteristica appartiene la metrica.
 \end{itemize}
 
+\subsubsection{Metriche}
+Il processo di gestione della qualità non fa uso di metriche di qualità.
+
 %%%%%%%%%%%%%%%%%%%%%%
 %%% 3.5 - VERIFICA %%%
 %%%%%%%%%%%%%%%%%%%%%%
 \subsection{Verifica}
 
 \subsubsection{Scopo}
-Lo scopo del processo di verifica è quello di verificare che il prodotto venga realizzato nel modo corretto, secondo delle regole stabilite. \\
+Lo scopo del processo di verifica è verificare che il prodotto venga realizzato nel modo corretto, secondo delle regole stabilite. \\
 Il processo di verifica interessa sia il software che la documentazione prodotta, assicurando che il prodotto finale sia corretto e completo.
 
 \subsubsection{Aspettative}
@@ -868,6 +937,8 @@ Elenchi                           & \begin{itemize}
   \item Verificare che la prima lettera di ogni elemento sia maiuscola;
   \item Verificare che ogni elemento finisca con la corretta punteggiatura (; o .).
 \end{itemize}       \\
+Convenzioni redazionali   & Verificare che il testo dei documenti non contenga espressioni ridondanti (\underline{e.g.} "il fine di...è quello di") \\
+Stili del testo     & Verificare che il testo dei documenti faccia corretto uso degli stili grassetto, sottolineato, corsivo, tipografico e maiuscoletto \\
 \end{tabular}
 \caption{Errori frequenti nella documentazione.}
 \end{table}
@@ -894,7 +965,16 @@ I test appartengono a diverse categorie; essi possono essere infatti:
 \end{itemize}
 
 \subparagraph*{Test di unità}
-I test di unità sono quelli più piccoli in granularità: un test di unità testa infatti il funzionamento di una componente individuale del prodotto. Essendo queste ultime in gran numero, è opportuno sfruttare al massimo il parallelismo, in modo da eseguirne un gran numero contemporaneamente; per lo stesso motivo, il test delle unità più semplici è a cura dello stesso programmatore.
+I test di unità sono quelli più piccoli in granularità: un test di unità testa infatti il funzionamento di una componente individuale del prodotto. Essendo queste ultime in gran numero, è opportuno sfruttare al massimo il parallelismo, in modo da eseguirne un gran numero contemporaneamente; per lo stesso motivo, il test delle unità più semplici è a cura dello stesso programmatore. \\
+I test di unità vengono codificati nel seguente modo:
+\begin{center}
+  \centering
+  \textbf{TU[N]}
+\end{center} dove:
+\begin{itemize}
+  \item \textbf{TU} indica Test di Unità;
+  \item \textbf{N} indica un numero progressivo che parte da 1.
+\end{itemize}
 
 \subparagraph*{Test di regressione}
 Il test di regressione comprende tutti i test che accertano che la modifica di un componente del sistema non vada a influenzare, causando errori, alcuna altra parte in relazione con essa. Essi vengono quindi eseguiti ogni volta che un'unità viene modificata, per assicurare che il cambiamento non induca una regressione di quanto fatto. \\
@@ -924,7 +1004,67 @@ I Test di sistema vengono codificati nel seguente modo:
   \item \textbf{Id} si riferisce alla codifica del requisito funzionale al quale il test di sistema si applica.
 \end{itemize}
 
-%METRICHEPDQ4
+\subsubsection{Strumenti}
+\paragraph{Controllo ortografico}
+\subparagraph{Visual Studio Code}
+Il gruppo fa uso dell'IDE Visual Studio Code anche per quanto riguarda il controllo ortografico del testo dei documenti. L'ambiente di sviluppo include infatti un componente aggiuntivo chiamato \textit{SpellRight} che funge da correttore ortografico.
+
+\paragraph{Analisi statica del codice}
+\subparagraph{ESLint}
+\begin{table}[H]
+\centering
+\begin{tabular}{P{8cm}P{8cm}}
+  \textbf{Componenti Software}  &  \textbf{Linguaggio di programmazione} \\
+  swe-training-app  &   JavaScript \\
+  swe-grafana-plugin   &   TypeScript \\
+\end{tabular}
+\end{table}
+ESLint è uno strumento per l'analisi statica del codice per i linguaggi JavaScript e TypeScript. Esso permette di eseguire dei controlli, definiti da un file di configurazione opportumente presente nella directory principale del progetto, ai quali ogni file contenente codice JS o TS deve sottostare. Questi controlli riguardano principalmente la sintassi del codice; lo strumento automatizza quindi il controllo delle convenzioni di scrittura del codice definite in questo documento. \\
+Oltre al controllo del codice, ESLint mette a disposizione una funzionalità di autocorrezione di questo, facilitandone così la scrittura ordinata e corretta senza l'aggiunta di un \textit{overhead} temporale per la formattazione manuale.
+
+\subparagraph{Prettier}
+\begin{table}[H]
+\centering
+\begin{tabular}{P{8cm}P{8cm}}
+  \textbf{Componenti Software}  &  \textbf{Linguaggio di programmazione} \\
+  swe-training-app  &   JavaScript \\
+  swe-grafana-plugin   &   TypeScript \\
+\end{tabular}
+\end{table}
+Prettier è un'estensione dello strumento ESLint; esso viene utilizzato dal gruppo per il controllo della corretta formattazione del codice. Anche questo strumento è opportunamente configurato da un file presente nelle repository dei componenti software. \\
+Oltre al controllo della formattazione, Prettier mette a disposizione una funzionalità di autocorrezione di questa, analogamente a ESLint.
+
+\subparagraph{SonarCloud}
+\begin{table}[H]
+\centering
+\begin{tabular}{P{8cm}P{8cm}}
+  \textbf{Componenti Software}  &  \textbf{Linguaggio di programmazione} \\
+  swe-training-app  &   JavaScript \\
+  swe-grafana-plugin   &   TypeScript \\
+\end{tabular}
+\end{table}
+SonarCloud è un servizio web di Continuous Inspection che permette di eseguire dei controlli di qualità del codice all'interno di una repository, riportando opportunamente i risultati delle analisi su un portale web. I controlli che vengono effettuati da questo strumento sono i seguenti:
+\begin{itemize}
+  \item Presenza di bug nel codice;
+  \item Presenza di vulnerabilità nel codice;
+  \item Presenza di \textit{code smells};
+  \item Presenza di codice inutilmente duplicato.
+\end{itemize}
+
+\paragraph{Analisi dinamica del codice}
+
+\subparagraph{Jest}
+\begin{table}[H]
+\centering
+\begin{tabular}{P{8cm}P{8cm}}
+  \textbf{Componenti Software}  &  \textbf{Linguaggio di programmazione} \\
+  swe-grafana-plugin   &   TypeScript \\
+  swe-training-app  &   JavaScript \\
+\end{tabular}
+\end{table}
+Jest è un framework che permette di eseguire automaticamente i test di unità per il codice JavaScript e TypeScript. Esso viene integrato nel progetto tramite il gestore di dipendenze Yarn, e permette di essere configurato nell'apposita sezione all'interno del file \texttt{package.json}. \\
+Questo strumento viene utilizzato dal gruppo per l'esecuzione automatica dei test di unità del codice TypeScript.
+
 \subsubsection{Metriche}
 \paragraph{PRC004 Verifica}
 Questo processo farà uso delle seguenti metriche:
@@ -939,7 +1079,7 @@ Questo processo farà uso delle seguenti metriche:
 
 \subparagraph{MoPR013 Percentuale di test soddisfatti}
 \begin{itemize}
-  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica v1.4-2.0.0}.
+  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica v1.9-3.1.0}.
   \item \textbf{Unità di misura}: percentuale;
   \item \textbf{Formula}: la formula per tale metrica è la seguente:
   \begin{displaymath}
@@ -950,6 +1090,7 @@ Questo processo farà uso delle seguenti metriche:
     \item $ \#TI $: numero di test implementati;
     \item $ \#TT $: numero totale di test documentati.
   \end{itemize}
+  \item \textbf{Procedura per il calcolo}: per il calcolo di questa metrica il gruppo si avvale dello strumento di Continuous Integration Travis CI, il quale riporta nelle diverse dashboard corrispondenti alle diverse repository contenti codice sorgente.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -975,4 +1116,8 @@ Il processo di validazione consiste delle seguenti attività:
 \end{itemize}
 \paragraph{Test}
 Nel processo di validazione vengono eseguiti i test di accettazione, i quali corrispondono con i test di sistema con la differenza che essi vengono eseguiti con il supervisionamento del committente per dimostrare la conformità del prodotto con quanto richiesto; essi quindi accertano la copertura dei requisiti software concordati con il proponente.
+
+\subsubsection{Metriche}
+Il processo di validazione non adotta metriche di qualità.
+
 \end{document}
