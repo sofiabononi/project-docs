@@ -171,6 +171,72 @@ Il suo indice di Gulpease è rimasto invariato rispetto alla fase di sviluppo pr
 
 A causa delle poche modifiche e cambiamenti significativi non sono stati inseriti i grafici che non comunicavano alcuna informazione aggiuntiva.
 
+\paragraph{Manuale Utente}
+\label{sub:glossario}
+Il \textsc{Manuale Utente v1.9-0.4.0} è stato redatto in questa fase di sviluppo e ha riportato moderati errori errori durante le sua verifiche che sono stati sanati.
+Il suo indice di Gulpease in questa fase di sviluppo è 73.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Manuale Utente v1.9-0.4.0} & 73               & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Manuale Utente v1.9-0.4.0}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriMUv1.9-0.4.0.png}
+  \label{fig:errori_adr}
+  \caption{Grafico errori per \textsc{Manuale Utente v1.9-0.4.0}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeaseMUv1.9-0.4.0.png}
+  \label{fig:gulpease_adr}
+  \caption{Grafico indice di Gulpease per \textsc{Manuale Utente v1.9-0.4.0}}
+\end{figure}
+
+\paragraph{Manuale Sviluppatore}
+\label{sub:glossario}
+Il \textsc{Manuale Sviluppatore v1.9-1.0.0}, come per il \textsc{Manuale Utente v1.9-0.4.0}, è stato redatto in questa fase e ha avuto una curva di errori più altalenante che sono stati comunque sanati.
+Il suo indice di Gulpease in questa fase di sviluppo è 71.
+
+\rowcolors{2}{white!80!lightgray!90}{white}
+\renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
+\begin{longtable}[H]{>{\centering\bfseries}m{6cm} >{\centering}m{2cm} >{\centering}m{2.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{2.5cm}}  
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endfirsthead%
+  \rowcolor{lightgray}
+  {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
+  \endhead%
+  \textbf{Manuale Sviluppatore v1.9-1.0.0} & 71               & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Manuale Sviluppatore v1.9-1.0.0}
+  \label{tab:my-table}
+\end{longtable}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/erroriMSv1.9-1.0.0.png}
+  \label{fig:errori_adr}
+  \caption{Grafico errori per \textsc{Manuale Sviluppatore v1.9-1.0.0}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/gulpeaseMSv1.9-1.0.0.png}
+  \label{fig:gulpease_adr}
+  \caption{Grafico indice di Gulpease per \textsc{Manuale Sviluppatore v1.9-1.0.0}}
+\end{figure}
+
 \subsubsection{Esiti verifiche sui processi}
 \label{sub:esiti_verifiche_sui_processi}
 In questa sezione vengono visualizzati gli esiti delle metriche prese in considerazione per quanto riguarda i processi produttivi.
@@ -433,11 +499,11 @@ In questa sezione vengono visualizzati gli esiti delle metriche prese in conside
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPD003 Test completi sul codice - [Maturità]} & MoPD003 Copertura dei test- [Maturità] &  & Non soddisfatto \\
+  \textbf{QoPD003 Test completi sul codice - [Maturità]} & MoPD003 Copertura dei test- [Maturità] & / & Non soddisfatto \\
   \caption{Risultati metrica MoPD003}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}: 
+\textbf{Nota}: Nonostante la realizzazione di alcuni test, non è stato ancora verificato il coverage totale dei test in quanto risulterebbe molto basso al momento.
 
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
@@ -466,7 +532,7 @@ In questa sezione vengono visualizzati gli esiti delle metriche prese in conside
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPD005 Chiarezza del comportamento - [Comprensibilità]} & MoPD005 Documentazione delle funzioni - [Comprensibilità] & 90\%  & Non soddisfatto \\
+  \textbf{QoPD005 Chiarezza del comportamento - [Comprensibilità]} & MoPD005 Documentazione delle funzioni - [Comprensibilità] & 90\%  & Soddisfatto \\
   \caption{Risultati metrica MoPD005}
   \label{tab:my-table}
 \end{longtable}
@@ -499,11 +565,11 @@ In questa sezione vengono visualizzati gli esiti delle metriche prese in conside
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPD007 Velocità di esecuzione - [Comportamento temporale]} & MoPD007 Tempo medio di risposta - [Comportamento temporale] & minore di 1 sec. & Soddisfatto \\
+  \textbf{QoPD007 Velocità di esecuzione - [Comportamento temporale]} & MoPD007 Tempo medio di risposta - [Comportamento temporale] & 1.52 sec & Soddisfatto \\
   \caption{Risultati metrica MoPD007}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}: Il tempo di risposta soddisfa le aspettative di qualità
+\textbf{Nota}: Il tempo di risposta soddisfa le aspettative di qualità per la metrica.
 \paragraph{Manutenibilità}
 \label{sub:manutenibilita}
 
