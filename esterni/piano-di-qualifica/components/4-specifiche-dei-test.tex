@@ -13,7 +13,7 @@ I test di accettazione si relazionano con i test di sistema e vengono eseguiti d
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % 
 \begin{longtable}[H]{>{\centering\bfseries}m{2.5cm} >{\centering}m{7.5cm} >{\centering}m{2.5cm} >{\centering\arraybackslash}m{3.5cm}}
-  \caption{Tabella test di sistema}%
+  \caption{Tabella test di accettazione}%
   \label{tab:tabella_test_di_sistema}                                                    \\
   \rowcolor{lightgray}
   {\textbf{Requisito}} & {\textbf{Descrizione}} & {\textbf{Priorità}} & {\textbf{Implementazione}}  \\
@@ -25,50 +25,50 @@ I test di accettazione si relazionano con i test di sistema e vengono eseguiti d
   \multicolumn{4}{c}{\textit{Continua alla pagina successiva}}
   \endfoot%
   \endlastfoot%
-  \textbf{TVRFO1} & Si verifica che l'utente possa addestrare il sistema inserendo i dati tramite degli appositi pulsanti. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO1} & Si verifica che l'utente possa addestrare il sistema inserendo i dati tramite degli appositi pulsanti. & Obbligatorio & Non Implementato \\
 
-  \textbf{TVRFD1.1.1} & Si verifica che si venga notificati con un messaggio d’errore nel caso si carichino i dati di addestramento in un formato non valido. & Desiderabile & Non Implementato \\
+  \textbf{TARFD1.1.1} & Si verifica che si venga notificati con un messaggio d’errore nel caso si carichino i dati di addestramento in un formato non valido. & Desiderabile & Non Implementato \\
   
-  \textbf{TVRFD1.2.1} & Si verifica che l’utente venga notificato con un messaggio d’errore nel caso si carichi un predittore in un formato non valido. & Desiderabile & Non Implementato \\
+  \textbf{TARFD1.2.1} & Si verifica che l’utente venga notificato con un messaggio d’errore nel caso si carichi un predittore in un formato non valido. & Desiderabile & Non Implementato \\
   
-  \textbf{TVRFO1.3} & Si verifica che l'utente possa scegliere il modello di machine learning per l'addestramento. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO1.3} & Si verifica che l'utente possa scegliere il modello di machine learning per l'addestramento. & Obbligatorio & Non Implementato \\
   
-  \textbf{TVRFO1.4} & Si che verifica che l'utente possa avviare l'addestramento & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO1.5} & Si verifica che l'utente abbia a disposizione un pulsante per il caricamento di un file \glossario{JSON} contenente il \glossario{predittore} allenato in precedenza. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO1.4} & Si che verifica che l'utente possa avviare l'addestramento & Obbligatorio & Non Implementato \\
+  \textbf{TARFO1.5} & Si verifica che l'utente abbia a disposizione un pulsante per il caricamento di un file \glossario{JSON} contenente il \glossario{predittore} allenato in precedenza. & Obbligatorio & Non Implementato \\
   
-  \textbf{TVRFF2} & Si verifica che l'utente possa addestrare il sistema direttamente da Grafana & Facoltativo & Non Implementato \\
+  \textbf{TARFF2} & Si verifica che l'utente possa addestrare il sistema direttamente da Grafana & Facoltativo & Non Implementato \\
   
-  \textbf{TVRFF3} & Si verifica che l'utente possa avviare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF4} & Si verifica che l'utente possa disattivare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & Non Implementato \\
-  \textbf{TVRFO5} & Si verifica che l'utente possa configurare il plug-in. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO5.1} & Si verifica che l'utente abbia a disposizione un metodo per caricare il modello addestrato. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFD5.1.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui venga caricato un file contenente il modello addestrato non valido. & Desiderabile & Non Implementato \\
-  \textbf{TVRFD5.1.2} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga caricato nessun file. & Desiderabile & Non Implementato \\
-  \textbf{TVRFO5.2} & Si verifica che l'utente possa selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFD5.2.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui venga selezionato un nodo non valido. & Desiderabile & Non Implementato \\
-  \textbf{TVRFD5.2.2} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga selezionato alcun nodo. & Desiderabile & Non Implementato \\
-  \textbf{TVRFO5.3} & Si verifica che l'utente possa selezionare il tipo di visualizzazione della predizione. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFD5.3.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & Non Implementato \\
-  \textbf{TVRFO6} & Si verifica che l'utente abbia a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO7} & Si verifica che l'utente abbia a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO8} & Si verifica che l'utente possa selezionare il modello SVM per l'allenamento. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO9} & Si verifica che l'utente possa selezionare il modello RL per l'allenamento. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFF10} & Si verifica che l'utente possa selezionare la regressione esponenziale per l'allenamento. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF11} & Si verifica che l'utente possa selezionare la regressione logaritmica per l'allenamento. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF12} & Si verifica che l'utente possa selezionare il modello rete neurale per l'allenamento. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF13} & Si verifica che l'utente possa selezionare il modello SVM adattata alla regressione per l'allenamento. & Facoltativo & Non Implementato \\
-  \textbf{TVRFO14} & Si verifica che l'utente abbia a disposizione un pulsante per l’avvio della predizione. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFO15} & Si verifica che l'utente abbia a disposizione un pulsante per interrompere la predizione. & Obbligatorio & Non Implementato \\
-  \textbf{TVRFF16} & Si verifica che all'utente venga mostrato il pannello contenente le informazioni riguardanti la bontà della previsione. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF17} & Si verifica che all'utente venga mostrato il pannello contenente la bontà di previsione dell'algoritmo SVM descritta dal parametro F-Measure. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF18} & Si verifica che all'utente venga mostrato il pannello contenente la bontà di previsione dell'algoritmo RL descritta dal parametro R\textsuperscript{2}. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF19} & Si verifica che l'utente abbia a disposizione un metodo per l’impostazione degli alert. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF19.1} & Si verifica che all'utente venga mostrato un pulsante che permetta all'utente di creare un alert. & Facoltativo & Non Implementato \\
-  \textbf{TVRFF19.2} & Si verifica che l'utente abbia a disposizione un sistema per inserire una soglia di alert. & Facoltativo & Non Implementato \\
-  \textbf{TVRFD19.2.1} & Si verifica che l'utente venga notificato un messaggio di errore nel caso in cui venga superata la soglia impostata utilizzando un allert. & Desiderabile & Non Implementato \\
-  \textbf{TVRFD20} & Si verifica che l'utente possa eliminare il pannello di monitoraggio. & Desiderabile & Non Implementato \\
-  \textbf{TVRFD20.1} & Si verifica che l'utente visualizzi un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & Non Implementato \\
-  \textbf{TVRFO21} & Si verifica che l'utente abbia a disposizione un metodo per la visualizzazione delle previsioni. & Obbligatorio & Non Implementato \\
+  \textbf{TARFF3} & Si verifica che l'utente possa avviare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & Non Implementato \\
+  \textbf{TARFF4} & Si verifica che l'utente possa disattivare l'apprendimento del flusso di dati costante per mezzo di un pannello. & Facoltativo & Non Implementato \\
+  \textbf{TARFO5} & Si verifica che l'utente possa configurare il plug-in. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO5.1} & Si verifica che l'utente abbia a disposizione un metodo per caricare il modello addestrato. & Obbligatorio & Non Implementato \\
+  \textbf{TARFD5.1.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui venga caricato un file contenente il modello addestrato non valido. & Desiderabile & Non Implementato \\
+  \textbf{TARFD5.1.2} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga caricato nessun file. & Desiderabile & Non Implementato \\
+  \textbf{TARFO5.2} & Si verifica che l'utente possa selezionare i nodi su cui desidera effettuare la predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TARFD5.2.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui venga selezionato un nodo non valido. & Desiderabile & Non Implementato \\
+  \textbf{TARFD5.2.2} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga selezionato alcun nodo. & Desiderabile & Non Implementato \\
+  \textbf{TARFO5.3} & Si verifica che l'utente possa selezionare il tipo di visualizzazione della predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TARFD5.3.1} & Si verifica che l'utente venga notificato con un messaggio d'errore nel caso in cui non venga selezionato alcun tipo di visualizzazione. & Desiderabile & Non Implementato \\
+  \textbf{TARFO6} & Si verifica che l'utente abbia a disposizione la possibilità di visualizzare la previsione utilizzando un grafico. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO7} & Si verifica che l'utente abbia a disposizione la possibilità di visualizzare la previsione utilizzando un indicatore. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO8} & Si verifica che l'utente possa selezionare il modello SVM per l'allenamento. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO9} & Si verifica che l'utente possa selezionare il modello RL per l'allenamento. & Obbligatorio & Non Implementato \\
+  \textbf{TARFF10} & Si verifica che l'utente possa selezionare la regressione esponenziale per l'allenamento. & Facoltativo & Non Implementato \\
+  \textbf{TARFF11} & Si verifica che l'utente possa selezionare la regressione logaritmica per l'allenamento. & Facoltativo & Non Implementato \\
+  \textbf{TARFF12} & Si verifica che l'utente possa selezionare il modello rete neurale per l'allenamento. & Facoltativo & Non Implementato \\
+  \textbf{TARFF13} & Si verifica che l'utente possa selezionare il modello SVM adattata alla regressione per l'allenamento. & Facoltativo & Non Implementato \\
+  \textbf{TARFO14} & Si verifica che l'utente abbia a disposizione un pulsante per l’avvio della predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TARFO15} & Si verifica che l'utente abbia a disposizione un pulsante per interrompere la predizione. & Obbligatorio & Non Implementato \\
+  \textbf{TARFF16} & Si verifica che all'utente venga mostrato il pannello contenente le informazioni riguardanti la bontà della previsione. & Facoltativo & Non Implementato \\
+  \textbf{TARFF17} & Si verifica che all'utente venga mostrato il pannello contenente la bontà di previsione dell'algoritmo SVM descritta dal parametro F-Measure. & Facoltativo & Non Implementato \\
+  \textbf{TARFF18} & Si verifica che all'utente venga mostrato il pannello contenente la bontà di previsione dell'algoritmo RL descritta dal parametro R\textsuperscript{2}. & Facoltativo & Non Implementato \\
+  \textbf{TARFF19} & Si verifica che l'utente abbia a disposizione un metodo per l’impostazione degli alert. & Facoltativo & Non Implementato \\
+  \textbf{TARFF19.1} & Si verifica che all'utente venga mostrato un pulsante che permetta all'utente di creare un alert. & Facoltativo & Non Implementato \\
+  \textbf{TARFF19.2} & Si verifica che l'utente abbia a disposizione un sistema per inserire una soglia di alert. & Facoltativo & Non Implementato \\
+  \textbf{TARFD19.2.1} & Si verifica che l'utente venga notificato un messaggio di errore nel caso in cui venga superata la soglia impostata utilizzando un allert. & Desiderabile & Non Implementato \\
+  \textbf{TARFD20} & Si verifica che l'utente possa eliminare il pannello di monitoraggio. & Desiderabile & Non Implementato \\
+  \textbf{TARFD20.1} & Si verifica che l'utente visualizzi un messaggio di errore nel caso in cui si cerchi di eliminare il pannello senza interrompere la previsione. & Desiderabile & Non Implementato \\
+  \textbf{TARFO21} & Si verifica che l'utente abbia a disposizione un metodo per la visualizzazione delle previsioni. & Obbligatorio & Non Implementato \\
 \end{longtable}
 
 
