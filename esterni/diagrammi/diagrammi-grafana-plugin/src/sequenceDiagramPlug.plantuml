@@ -1,0 +1,57 @@
+@startuml
+Utente -> EditorView: inserimento file
+
+EditorView -> EditorView: Event(getUploadedFile)
+
+EditorView -> Predictor: readJson(json)
+
+Predictor --> EditorView: return predictor
+
+alt Modello di predizione: RL
+EditorView -> ConfigRL: SetQueries()
+ConfigRL -> ConfigRL: queryNames()
+ConfigRL -> ConfigRL: queryAssociations()
+ConfigRL -> ConfigRL: showQueryAssociations(HTMLSelectElement)
+ConfigRL --> EditorView: render()
+
+else Modello di predizione: SVM
+EditorView -> ConfigSVM: SetQueries()
+ConfigSVM -> ConfigSVM: queryNames()
+ConfigSVM -> ConfigSVM: queryAssociations()
+ConfigSVM --> ConfigRL: showQueryAssociations(HTMLSelectElement)
+ConfigSVM --> EditorView: render()
+end
+
+Utente -> EditorView: Scelta query su cui applicare predizione
+EditorView -> PanelCtrl: PanelPlugin(PanelCtrl)
+PanelCtrl -> Model: <<create>>
+Model -> GrafanaData: setData()
+GrafanaData -> GrafanaData: readValues(series)
+GrafanaData --> Model: return
+Model --> PanelCtrl: return
+PanelCtrl -> Model: predict()
+Model -> Strategy: predict()
+alt Modello di Predizione: RL
+Strategy -> PredictionRL: predict()
+PredictionRL -> PredictionRL: predict()
+PredictionRL --> Model: return
+Model -> PanelCtrl: return
+else Modello di Predizione: SVM
+Strategy -> PredictionSVM: predict()
+PredictionSVM -> PredictionSVM: predict()
+PredictionSVM --> Model: return
+Model -> PanelCtrl: return
+end
+
+PanelCtrl -> MainView: <<create>>(predictor.type, coefficients, opt, lv, time)
+MainView -> MainView: getStyles()
+MainView -> MainView: addValuesX(date)
+MainView -> MainView: AddValuesY(number)
+MainView -> Plotly: Plot(lv, time)
+Plotly --> MainView: show()
+
+Utente -> MainView: Interagisci con il grafico
+
+
+
+@enduml

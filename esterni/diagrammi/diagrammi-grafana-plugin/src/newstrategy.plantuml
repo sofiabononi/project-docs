@@ -1,0 +1,23 @@
+@startuml
+
+
+interface Strategy{
+    + Predict(GrafanaData, Predictor, any): number[][]
+}
+
+
+
+
+class NewPredictionClass implements Strategy{
+    + const coefficients: number[]
+    + const base: number
+    + predict(GrafanaData, Predictor, parameter): number [][]
+    + const f (number): number
+  
+}
+
+
+
+
+
+@enduml

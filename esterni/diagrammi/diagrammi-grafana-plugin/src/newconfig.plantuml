@@ -1,0 +1,19 @@
+@startuml GrafanaClasses
+
+
+class EditorView{
+    + getUploadFile(any): void
+    + render(): any
+}
+
+
+class ConfigNewAlgorithm {
+  + render() : JSX.Element
+  - queryNames()
+  - queryAssociation()
+  - showQueryAssociation(ChangeEvent<HTMLSelectElement>)
+}
+
+EditorView --> ConfigNewAlgorithm
+
+@enduml

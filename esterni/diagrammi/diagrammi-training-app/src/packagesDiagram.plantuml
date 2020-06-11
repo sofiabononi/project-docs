@@ -1,0 +1,41 @@
+@startuml
+
+package node_modules <<Frame>> {
+  class electron
+  class fs
+  class papaparse
+  class jquery
+  class chart_js
+  class sweetalert2
+  class popper
+  class bootstrap
+}
+
+package vendor <<Frame>> {
+  class regression
+  class svm
+}
+
+package adapter <<Frame>> {
+  class RLadapter
+  Class SVMadapter
+}
+
+package FileManager <<Frame>> {
+  class CVSFile
+  class JSONFile
+}
+
+package MVC <<Frame>> {
+  class Model 
+  class Controller
+  class View
+}
+
+MVC ..> vendor
+MVC ..> FileManager
+MVC ..> node_modules
+MVC ..> adapter
+adapter ..> vendor
+
+@enduml

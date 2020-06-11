@@ -1,0 +1,45 @@
+@startuml
+package node_modules <<Frame>> {
+  class React
+  class grafana-toolkit
+  class grafana-ui
+  class grafana-data
+  class plotly
+  class react-plotly
+}
+
+package app <<Frame>> {
+  class MainConfig
+}
+
+
+package editor <<Frame>> {
+  class EditorView
+}
+
+package panel <<Frame>> {
+  class PanelCtrl
+  class MainView
+  interface Options
+  class Model
+  class GrafanaData
+}
+
+package predictor <<Frame>> {
+  interface Strategy
+  interface Props
+  class Predictor
+  class ConfigRL
+  class ConfigSVM
+  class PredictionRL
+  class PredictionSVM
+}
+
+app ..> editor
+app ..>panel
+panel ..>predictor
+app ..>node_modules
+editor ..>node_modules
+panel ..>node_modules
+editor ..> predictor
+@enduml
