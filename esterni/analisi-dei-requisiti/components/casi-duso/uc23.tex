@@ -1,13 +1,17 @@
-\subsubsection{UC23 - Visualizzazione messaggio di errore file di addestramento invalido}
-\label{sssec:uc18}
+\subsubsection{UC23 - Visualizzazione messaggio di errore invalidazione dati file di addestramento}
+\label{sssec:uc23}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento valido;
-  \item \textbf{Precondizione}: L'utente ha caricato il plug-in(UC5) senza aver dato in ingresso un file di addestramento valido;
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento valido" impedendo il funzionamento del plug-in (UC5.1);
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dal caricamento di un file non valido per l'addestramento;
+  \item \textbf{Precondizione}:
+  \begin{enumerate}
+		\item L'utente ha caricato i dati necessari per l'addestramento in un formato non valido(UC1.1);
+		\item L'utente ha avviato l'addestramento del sistema(UC1).
+	\end{enumerate}
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "file non valido per l'addestramento" impedendo l'entrata a regime dell'addestramento;
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza il messaggio di errore "nessun file di addestramento valido";
-		\item Il plug-in non entra in funzione.
+		\item L'utente visualizza il messaggio di errore "file non valido per l'addestramento";
+		\item L'addestramento non entra in funzione.
 	\end{enumerate}
 \end{itemize}

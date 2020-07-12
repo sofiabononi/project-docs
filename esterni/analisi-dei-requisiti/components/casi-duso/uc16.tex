@@ -1,11 +1,10 @@
-\subsubsection{UC16 - Dati di bontà dei modelli di precisione}
+\subsubsection{UC16 - Interruzione del plug-in}
 \label{sssec:uc16}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
   \item \textbf{Attore secondario}: Grafana;
-  \item \textbf{Descrizione}: L'utente visualizza un pannello contenente la bontà della previsione effettuata dal plug-in. La misura della bontà viene identificata con F-Measure per quanto riguarda la SVM mentre con "R\textsuperscript{2}" per la RL;
-  \item \textbf{Precondizione}: L'utente ha effettuato la previsione con il plug-in;
-  \item \textbf{Scenario principale}: L'utente decide di visualizza la bontà della previsione ottenuta dal plug-in utilizzando un pannello attraverso Grafana;
-  \item \textbf{Postcondizione}: L'utente visualizza la bontà della previsone ottenuta dal plug-in;
-  \item \textbf{Generalizzazione}: UC16 viene generalizzato dai casi d'uso UC17 e UC18.
+  \item \textbf{Descrizione}: L'utente ha deciso di interrompere il plug-in;
+  \item \textbf{Precondizione}: L'utente ha configurato correttamente il plug-in(UC5);
+  \item \textbf{Scenario principale}: L'utente ha deciso di interrompere la predizione;
+  \item \textbf{Postcondizione}: La predizione sui nodi selezionati precedentemente è stata interrotta.
 \end{itemize}

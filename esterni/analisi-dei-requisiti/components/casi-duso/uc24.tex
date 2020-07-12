@@ -1,13 +1,13 @@
-\subsubsection{UC24 - Visualizzazione messaggio di errore nessun file di addestramento}
+\subsubsection{UC24 - Visualizzazione messaggio di errore file di addestramento invalido}
 \label{sssec:uc24}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento;
-  \item \textbf{Precondizione}: L'utente ha configurato il plug-in(UC5) senza aver dato in ingresso un file di addestramento;
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento dato" impedendo il funzionamento del plug-in(UC5.1);
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di un file di addestramento valido;
+  \item \textbf{Precondizione}: L'utente ha caricato il plug-in(UC5) senza aver dato in ingresso un file di addestramento valido;
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "nessun file di addestramento valido" impedendo il funzionamento del plug-in (UC5.1);
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza il messaggio di errore "nessun file di addestramento dato";
+		\item L'utente visualizza il messaggio di errore "nessun file di addestramento valido";
 		\item Il plug-in non entra in funzione.
 	\end{enumerate}
 \end{itemize}

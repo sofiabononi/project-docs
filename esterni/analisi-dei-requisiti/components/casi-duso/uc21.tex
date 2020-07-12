@@ -1,15 +1,15 @@
-\subsubsection{UC21 - Visualizzazione dei pannelli di previsione attivati}
+\subsubsection{UC21 - Rimozione del pannello selezionato}
 \label{sssec:uc21}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza le specifiche del pannello attivo selezionato;
+  \item \textbf{Attore secondario}: Grafana;
+  \item \textbf{Descrizione}: L'utente seleziona il pannello che vuole rimuovere dalla dashboard;
   \item \textbf{Precondizione}:
   \begin{enumerate}
-		\item L'utente deve aver impostato correttamente il plug-in(UC5);
-		\item L'utente deve aver avviato correttamente il plug-in(UC14);
-		\item L'utente esegue l'accesso alla sezione di visualizzazione dei pannelli di previsione attivati;
-		\item L'utente seleziona il pannello di previsione di cui vuole visualizzare i dati.
+		\item L'utente deve aver impostato correttamente il pannello di monitoraggio(UC5.1);
+		\item L'utente deve aver avviato correttamente il plug-in(UC14).
 	\end{enumerate}
-  \item \textbf{Scenario principale}: L'utente, dopo aver eseguito l'accesso alla visualizzazione dei pannelli, visualizza le specifiche del pannello attivo selezionato;
-  \item \textbf{Postcondizione}: L'utente visualizza le specifiche del pannello: indicatore, grafico di previsione e affidabilità della previsione.
+  \item \textbf{Scenario principale}: L'utente seleziona il pannello di monitoraggio da eliminare ed usando le impostazioni di Grafana lo rimuove;
+  \item \textbf{Postcondizione}: La dashboard ha subito la rimozione del pannello, come desiderato dall'utente;
+  \item \textbf{Estensioni}: UC20 viene esteso nel caso d'uso UC29 con la visualizzazione del messaggio di errore quando si tenta di rimuovere un pannello senza che venga interrotta la predizione.
 \end{itemize}

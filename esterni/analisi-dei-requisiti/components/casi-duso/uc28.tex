@@ -1,17 +1,13 @@
-\subsubsection{UC28 - Visualizzazione alert superamento soglia}
+\subsubsection{UC28 - Visualizzazione messaggio di errore di tipo di visualizzazione non definita}
 \label{sssec:uc28}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dal superamento della soglia impostata nell'alert;
-  \item \textbf{Precondizione}:
-  \begin{enumerate}
-		\item L'utente ha impostato una soglia valida(UC19.2);
-		\item L'algoritmo di previsione prevede di superare la soglia.
-	\end{enumerate}
-  \item \textbf{Scenario principale}:  L'utente visualizza l'alert nel pannello indicando il superamento della soglia impostata;
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza della selezione di tipo per il plug-in;
+  \item \textbf{Precondizione}: L'utente ha caricato il plug-in(UC5) senza aver segnato il tipo di visualizzazione da usare;
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "visualizzazione non definita" impedendo il funzionamento del plug-in (UC15);
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza un messaggio di superamento della soglia impostata;
-		\item Nel pannello viene indicato il messaggio di errore tramite un alert.
+		\item L'utente visualizza il messaggio di errore "visualizzazione non definita";
+		\item Il plug-in non entra in funzione.
 	\end{enumerate}
 \end{itemize}

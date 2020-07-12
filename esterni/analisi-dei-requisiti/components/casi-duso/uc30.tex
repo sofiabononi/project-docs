@@ -1,17 +1,17 @@
-\subsubsection{UC30 - Visualizzazione messaggio di errore nel file del predittore allenato}
+\subsubsection{UC30 - Visualizzazione messaggio di errore del plug-in di predizione non interrotta}
 \label{sssec:uc30}
 \begin{itemize}
   \item \textbf{Attore primario}: Utente;
-  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dal caricamento di un file del predittore non valido;
+  \item \textbf{Descrizione}: L'utente visualizza il messaggio di errore causato dalla mancanza di interruzzione della predizione prima della procedura di rimozioni di un pannello;
   \item \textbf{Precondizione}:
   \begin{enumerate}
-		\item L'utente ha caricato un predittore allenato in un formato non riconosciuto dal sistema (UC1.2);
-		\item L'utente ha avviato l'addestramento del sistema(UC1).
+		\item L'utente ha selezionato la rimozione di un pannello(UC20);
+		\item Il plug-in di predizione non si interrompe.
 	\end{enumerate}
-  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "file in ingresso non valido" impedendo il funzionamento del plug-in;
+  \item \textbf{Scenario principale}: L'utente visualizza il messaggio di errore "previsione non interrotta" impedendo l'eliminazione del pannello scelto;
   \item \textbf{Postcondizione}:
   \begin{enumerate}
-		\item L'utente visualizza l'errore "file in ingresso non valido";
-		\item L'addestramento del predittore non viene avviato.
+		\item L'utente visualizza il messaggio di errore "previsione non interrotta";
+		\item Il pannello selezionato non viene eliminato.
 	\end{enumerate}
 \end{itemize}
