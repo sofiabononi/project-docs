@@ -1,4 +1,4 @@
-documentclass[../norme-di-progetto.tex]{subfiles}
+\documentclass[../norme-di-progetto.tex]{subfiles}
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -8,9 +8,9 @@ documentclass[../norme-di-progetto.tex]{subfiles}
 \subsubsection{Scopo}
 Il processo di gestione dei processi ha lo scopo di:
 \begin{itemize}
-  \item Creare un modello organizzativo al fine di identificare i possibili rischi;
+  \item Creare un modello organizzativo per identificare i possibili rischi;
   \item Definire un modello di sviluppo da seguire;
-  \item Pianificare il lavoro al fine di rientrare nelle scadenze prefissate;
+  \item Pianificare il lavoro per poter rientrare nelle scadenze prefissate;
   \item Calcolare un preventivo orario per i vari ruoli e un prospetto economico per lo sviluppo del progetto;
   \item Effettuare un bilancio finale delle spese.
 \end{itemize}
@@ -216,7 +216,7 @@ Lo sviluppo dell'intero prodotto è eseguito nell'IDE Visual Studio Code, con l'
 \end{itemize}
 
 \paragraph{Google Calendar}
-Viene utilizzata la piattaforma di Google Calendar per fissare e ricordare gli appuntamenti del gruppo, in particolar modo gli incontri interni ed esterni. Il calendario utilizzato risiede sull'account Google del gruppo.
+Viene utilizzata la piattaforma Google Calendar per fissare e ricordare gli appuntamenti del gruppo, in particolar modo gli incontri interni ed esterni. Il calendario utilizzato risiede sull'account Google del gruppo.
 
 \paragraph{Altri strumenti}
 Gli altri strumenti di cui il gruppo fa uso, già documentati nelle \textsc{Norme di Progetto v1.9-2.3.3}, sono:
@@ -267,6 +267,12 @@ Si fa quindi uso delle seguenti metriche:
       \item $ X_i $: giorni di scadenza prefissati.
     \end{itemize}
     \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, riferendosi a quanto riportato nel \textsc{Piano di Progetto v1.9-4.2.0} per quanto riguarda i giorni di scadenza prefissati.
+    \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+    \begin{itemize}
+      \item Se il risultato è uguale a 0, le scadenze previste internamente al gruppo sono state rispettate;
+      \item Se il risultato è minore di 0, le scadenze previste internamente al gruppo sono state rispettate con un numero di giorni di anticipo diverso da zero;
+      \item Se il risultato è maggiore di 0, le scadenze previste internamente al gruppo non sono state rispettate.
+    \end{itemize}
 \end{itemize}
 
 \subparagraph{MoPR002 Varianza dei costi}
@@ -283,6 +289,12 @@ Si fa quindi uso delle seguenti metriche:
     \item $ d $: discostamento calcolato.
   \end{itemize}
   \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, riferendosi a quanto riportato nel \textsc{Piano di Progetto v1.9-4.2.0} per quanto riguarda il totale del preventivo iniziale e il discostamento calcolato. Tali valori vengono confrontati per ricavare il valore della metrica in oggetto.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è uguale a $tot$, il totale finale corrisponde al totale del preventivo iniziale;
+    \item Se il risultato è minore di $tot$, il totale finale è inferiore al totale del preventivo iniziale;
+    \item Se il risultato è maggiore di $tot$, il totale finale è superiore al totale del preventivo iniziale.
+  \end{itemize}
 \end{itemize}
 
 \subparagraph{MoPR003 Aderenza agli standard}
@@ -306,6 +318,12 @@ Si fa quindi uso delle seguenti metriche:
     \item $ X $: numero di prodotti nei quali i ruoli non sono stati definiti adeguatamente.
   \end{itemize}
   \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata manualmente, esaminando i documenti.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è uguale a $N$, il numero di documenti nei quali non sono stati definiti correttamente i ruoli è nullo;
+    \item Se il risultato è compreso tra $N$ e 0, in alcuni documenti non sono stati definiti correttamente i ruoli;
+    \item Se il risultato è uguale a 0, in tutti i documenti non sono stati definiti correttamente i ruoli.
+  \end{itemize}
 \end{itemize}
 
 \subparagraph{MoPR005 Controllo prodotti}
@@ -322,6 +340,11 @@ Si fa quindi uso delle seguenti metriche:
     \item $ n $: numero di settimane di lavoro.
   \end{itemize}
   \item \textbf{Procedura per il calcolo}: questa metrica viene calcolata con l'ausilio degli strumenti di versionamento, i quali permettono di estrapolare facilmente il numero di commit effettuati ogni settimana all'interno delle diverse repository. Questi valori vengono confrontati con il numero di settimane di lavoro, le quali possono essere ricavate dal \textsc{Piano di Progetto v1.9-4.2.0}.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è uguale a 0, nella settimana in questione non sono stati eseguiti commit;
+    \item Se il risultato è maggiore di 0, nella settimana in questione sono stati eseguiti commit.
+  \end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
