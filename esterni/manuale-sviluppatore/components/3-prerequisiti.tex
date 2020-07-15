@@ -1,37 +1,94 @@
 \documentclass[../manuale-sviluppatore.tex]{subfiles}
 
 \begin{document}
+
 \subsection{Addestramento}%
 \label{subs:addestramento}
 
-\subsubsection{NodeJS}
-\label{sssec:nodejs}
-     NodeJS è necessario per avviare il server web che servirà poi per la pagina web all'utente. La versione di NodeJS utilizzata è la 12.6.3 
+\subsubsection{Requisi hardware}
+I requisiti hardware minimi per lo sviluppo corrispondono alle risorse minime per poter sviluppare e/o manutenere il prodotto sulla propria macchina. Si consiglia di usare hardware con spepcifiche non inferiori a quanto riportato, poiché si rischia di avere instabilità del sistema o possibili malfunzionamenti.
+\begin{itemize}
+  \item \textbf{Sistema operativo}:
+  \begin{itemize}
+    \item GNU/Linux con linux kernel almeno 4.4 a 32 o 64 bit;
+    \item Windows 10 a 32 o 64 bit;
+    \item macOS 10.14 Mojave;
+  \end{itemize}
+  \item \textbf{Processore}: CPU dual-core da 2.0GHz o superiore;
+  \item \textbf{RAM}: 4GB DDR3 o superiore;
+  \item \textbf{Disco rigido}: 10GB o superiore.
+\end{itemize}
 
-\subsubsection{Yarn}
-\label{sssec:yarn}
-    Yarn è necessario per scaricare le dipendenze necessarie all'esecuzione del software specificate all'interno del file package.json. Per installare Yarn bisogna usare il seguente comando: \emph{yarn install} .
-    
-\subsubsection{Electron}
-\label{sssec:electron}
-    Electron è il framework di Yarn utilizzato per avviare in locale la pagina web senza l'utilizzo di un Broswer.
-     
+\subsubsection{Linguaggi di programmazione}
+\begin{itemize}
+  \item \textbf{JavaScript}: nella versione ECMAScript2015 (ES6);
+  \item \textbf{HTML}: nella versione 5;
+  \item \textbf{CSS}: nella versione 3.
+\end{itemize}
+
+\subsubsection{Estensioni del linguaggio}
+\begin{itemize}
+  \item \textbf{Node.JS}: nella versione 12.16.3 LTS;
+  \item \textbf{Bootstrap}: nella versione 4;
+  \item \textbf{Electron}: nella versione v9.0 o superiore;
+  \item \textbf{JQuery}: nella versione 3.5.1;
+  \item \textbf{Chart.JS}: nella versione 2.9.3.
+\end{itemize}
+
+\subsubsection{Strumenti di supporto}
+\begin{itemize}
+  \item \textbf{Yarn}: nella versione 1.22 o superiore;
+  \item \textbf{ESLint}: nella versione 7.4.0.
+\end{itemize}
+
+\subsubsection{Testing}
+\begin{itemize}
+  \item \textbf{Jest}: nella versione 26.
+\end{itemize}
+
 \subsection{Plug-in}%
 \label{subs:plug_in}
 
-\subsubsection{Yarn}
-\label{sssec:yarn}
-    Yarn è necessario per scaricare le dipendenze necessarie all'esecuzione del software specificate all'interno del file package.json. Per installare Yarn bisogna usare il seguente comando: \emph{yarn install} .
-    
-\subsubsection{Grafana}
-\label{sssec:grafana}
-    Per utilizzare il plug-in necessario avere il software Grafana installato alla versione 6.7.3, con possibili errori di GUI con versioni superiori.
-    
-\subsubsection{InfluxDB}
-\label{sssec:influxdb}
-    InfluxDB è il database che fornisce i dati per la predizione al plug-in.
-    
-\subsubsection{Telegraf}
-\label{sssec:telegraf}
-    Telegraf è lo strumento di monitoraggio che si interfaccia a InfluxDB per l'inserimento di dati.
+\subsubsection{Requisiti hardware}
+\begin{itemize}
+  \item \textbf{Sistema operativo}:
+  \begin{itemize}
+    \item GNU/Linux con linux kernel almeno 4.4 a 32 o 64 bit;
+    \item Windows 10 a 32 o 64 bit;
+    \item macOS 10.14 Mojave;
+  \end{itemize}
+  \item \textbf{Processore}: CPU dual-core da 2.0GHz o superiore;
+  \item \textbf{RAM}: 4GB DDR3 o superiore;
+  \item \textbf{Disco rigido}: 10GB o superiore.
+\end{itemize}
+
+\subsubsection{Linguaggi di programmazione}
+\begin{itemize}
+  \item \textbf{TypeScript}: nella versione ECMAScript2015 (ES6);
+  \item \textbf{HTML}: nella versione 5;
+  \item \textbf{CSS}: nella versione 3.
+\end{itemize}
+
+\subsubsection{Estensioni del linguaggio}
+\begin{itemize}
+  \item \textbf{React.JS}: nella versione 16.13.1.
+\end{itemize}
+
+\subsubsection{Piattaforme}
+\begin{itemize}
+  \item \textbf{Grafana}: nella versione 6.3 o superiori;
+  \item \textbf{InfluxDB}: nella versione 1.8.
+\end{itemize}
+
+\subsubsection{Strumenti di supporto}
+\begin{itemize}
+  \item \textbf{Yarn}: nella versione 1.22 o superiore;
+  \item \textbf{ESLint}: nella versione 7.4.0.
+\end{itemize}
+
+\subsubsection{Testing}
+\begin{itemize}
+  \item \textbf{Jest}: nella versione 26.
+\end{itemize}
+
 \end{document}
