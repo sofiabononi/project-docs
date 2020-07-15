@@ -93,4 +93,31 @@ Per concludere la configurazione si dovrà aggiornare la pagina e si visualizzer
     \end{center}
   \end{figure}
 
+\subsection{Visualizzazione dei dati di output}
+Per la visualizzazione, il salvataggio e la manipolazione dei risultati della predizione, sarà necessario utilizzare il proprio gestore di database InfluxDB. Si potrà poi selezionare il database contenente i dati di interesse tramite il comando
+\\ \centerline{\texttt{use graf}}
+Una volta selezionato il database, si potrà interagire con esso tramite comandi SQL. Prima di manipolare i dati, è anzitutto utile conoscere il nome delle colonne presenti nella tabella; si può fare ciò con il comando
+\\ \centerline{\texttt{show series}}
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=17cm]{showSeries.png}\\
+    \caption{Risultato del comando \texttt{show series}}%
+    \label{fig:show-series}
+  \end{center}
+\end{figure}
+
+Una volta a conoscenza dei nomi delle colonne, di particolare interesse è visualizzare i dati contenuti in una o più colonne; questo si può fare con il comando
+\\ \centerline{\texttt{select * from nomi\_colonne limit N}}
+
+dove con \textbf{nomi\_colonne} si intendono i nomi delle colonne di interesse, e con \textbf{limit N} si intende un limite di N tuple da mostrare.
+
+\begin{figure}[H]
+  \begin{center}
+    \includegraphics[width=17cm]{selectFrom.png}\\
+    \caption{Risultato del comando \texttt{select * from cpu limit 10}}%
+    \label{fig:show-series}
+  \end{center}
+\end{figure}
+
 \end{document}
