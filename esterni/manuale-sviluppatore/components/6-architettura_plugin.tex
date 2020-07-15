@@ -17,7 +17,7 @@ I tre componenti sono in stretta relazione tra loro; le interazioni che sussisto
   \item Il plug-in, ospitato dalla piattaforma Grafana, si occupa di elaborare i dati forniti da Grafana con gli opportuni algoritmi di predizione, e successivamente di visualizzarli in un opportuno grafico.
 \end{itemize}
 
-L'intero plug-in è sviluppato col \glossario{framework} ReactJS; viene usato il pattern architetturale MVC (\textit{model-view-controller}) per la gestione dell'input dei dati dalla componente \glossario{back-end} di Grafana, per la loro elaborazione tramite algoritmi di Regressione Lineare e Support Vector Machines e per il conseguente output a schermo tramite grafico. \\
+L'intero plug-in è sviluppato col \glossario{framework} ReactJS; viene usato il pattern architetturale MVC (\textit{model-view-controller}) per la gestione dell'input dei dati dalla componente back-end di Grafana, per la loro elaborazione tramite algoritmi di Regressione Lineare e Support Vector Machines e per il conseguente output a schermo tramite grafico. \\
 Viene invece utilizzato il design pattern Strategy per fornire un ulteriore livello di astrazione ai metodi di predizione tramite Regressione Lineare e Support Vector Machines.
 
 \begin{figure}[H]

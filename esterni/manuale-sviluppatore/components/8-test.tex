@@ -2,16 +2,25 @@
 
 \begin{document}
     Per testare il prodotto sia per l'applicazione di addestramento che per il plug-in è stato usato Jest, un framework di test di JavaScript.
-    
+
     \subsection{Installazione}%
     \label{subs:installazione}
-    Non sono necessari ulteriori passaggi per l'installazione per i test dato dal fatto che il paccheto JSON contiene all'interno della propria installazione anche i dati necessari per l'utilizzo di Jest. 
+    Non sono necessari ulteriori passaggi per l'installazione della suite di testing, poiché il file JSON delle dipendenze di Yarn contiene al suo interno le direttive per l'installazione della suite Jest.
 
     \subsection{Attivazione dei test}%
     \label{subs:attivazione-dei-test}
+    \subsubsection{Training app}
     \begin{itemize}
-    \item Per avviare i test sia per la parte  di addestramento che sia per la parte di plug-in sarà sufficiente digitare da terminare il comando: \emph{yarn run test} .
-    \item Per avviare ed osservare il livello di code coverage sarà sufficiente guardare da Sonarcube la copertura dei test effettuati.
+      \item \textbf{Ambiente}: JavaScript;
+      \item \textbf{Working directory}: \texttt{swe-training-app/training-app};
+      \item \textbf{Comando}: \texttt{yarn run test}.
+    \end{itemize}
+
+    \subsubsection{Plug-in}
+    \begin{itemize}
+      \item \textbf{Ambiente}: TypeScript;
+      \item \textbf{Working directory}: \texttt{swe-grafana-plugin};
+      \item \textbf{Comando}: \texttt{yarn run test}.
     \end{itemize}
 
 \end{document}
