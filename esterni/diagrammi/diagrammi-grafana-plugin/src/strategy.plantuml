@@ -1,11 +1,13 @@
 @startuml
 
+interface Props{
+    + predictor: Predictor
+
+}
 
 interface Strategy{
     + Predict(GrafanaData, Predictor, any): number[][]
 }
-
-
 
 
 class PredictionRL implements Strategy{
@@ -24,5 +26,22 @@ class PredictionSVM implements Strategy{
 }
 
 
+class ConfigRL implements Props {
+    + render() : JSX.Element
+    - queryNames()
+    - queryAssociation()
+    - showQueryAssociation(ChangeEvent<HTMLSelectElement>)
+}
+
+class ConfigSVM implements Props {
+     + render() : JSX.Element
+    - queryNames()
+    - queryAssociation()
+    - showQueryAssociation(ChangeEvent<HTMLSelectElement>)
+}
+
+
+PredictionRL-->ConfigRL
+PredictionSVM-->ConfigSVM
 
 @enduml
