@@ -12,18 +12,18 @@
 
 \subsection{Descrizione}%
 \label{sub:descrizione}
-Zucchetti chiede lo sviluppo di un software che applichi il \glossario{machine learning} al flusso dei dati raccolti dai sistemi dell’azienda per poter prevedere i loro stati futuri così da poter intervenire in tempo se necessario.
+Nello scenario Dev Ops, \emph{Zucchetti S.p.a} utilizza \glossario{Grafana}, un software \glossario{open-source} che offre un sistema di presentazione dei dati raccolti in \glossario{dashboard} e sistemi di allarme, che permettono di segnalare agli operatori eventuali problemi in cui è richiesto un intervento.
 
 \subsection{Finalità del progetto}%
 \label{sub:finalita_del_progetto}
-Il progetto ha come obiettivo la realizzazione di un \glossario{plug-in} per lo strumento di monitoraggio di \glossario{Grafana}.
-Il software dovrà soddisfare almeno i seguenti requisiti:
+Il software da realizzare consiste nello sviluppo di un \glossario{plug-in}, scritto in \glossario{JavaScript}, per lo strumento di monitoraggio di Grafana. Questo plug-in deve permettere di effettuare previsioni sul flusso di dati raccolti, per monitorare lo stato del sistema e, conseguentemente, segnalare agli operatori eventuali problemi in cui è richiesto un intervento. La soluzione proposta è l'utilizzo di un metodo di machine learning: Support Vector Machine (SVM) o Regressione Lineare (RL).\\
+Il software dovrà soddisfare i seguenti requisiti:
 \begin{itemize}
   \item Produrre un file JSON dai dati di addestramento con i \glossario{parametri} per le previsioni con \glossario{SVM} per le classificazioni o la \glossario{Regressione Lineare};
   \item Leggere la definizione del \glossario{predittore} dal file in formato \glossario{JSON};
   \item Associare i predittori letti dal file JSON al flusso di dati presente in Grafana;
   \item Applicare la previsione e fornire i nuovi dati ottenuti al sistema di Grafana;
-  \item Rendere disponibili i dati al sistema di creazione di grafici e \glossario{dashboard} per la loro visualizzazione.
+  \item Rendere disponibili i dati al sistema di creazione di grafici e dashboard per la loro visualizzazione.
 \end{itemize}
 Una volta soddisfatti i requisiti obbligatori si potranno implementare le seguenti caratteristiche:
 \begin{itemize}
@@ -38,28 +38,33 @@ Una volta soddisfatti i requisiti obbligatori si potranno implementare le seguen
 \subsection{Tecnologie interessate}%
 \label{sub:tecnologie_interessate}
 \begin{itemize}
-  \item Grafana: un software \glossario{Open Source} utilizzato per monitorare infrastrutture provvedendo grafici, diagrammi e allarmi;
-  \item \glossario{JavaScript}: il linguaggio di programmazione richiesto per lo sviluppo del plug-in di Grafana;
+  \item Grafana: un software open-source utilizzato per monitorare infrastrutture provvedendo grafici, diagrammi e allarmi;
+  \item JavaScript: il linguaggio di programmazione richiesto per lo sviluppo del plug-in di Grafana;
   \item \glossario{Modelli di apprendimento}: SVM e Regressione Lineare
   \item \glossario{Java JMX}: uno strumento utilizzato per il monitoraggio di applicazioni sviluppate in \glossario{Java};
-  \item \glossario{Java JMeter}: uno strumento utilizzato per verificare il comportamento di \glossario{applicazioni web}.
+  \item \glossario{Java JMeter}: uno strumento utilizzato per verificare il comportamento di \glossario{applicazioni web};
+  \item JSON: formato del file contenente i dati di addestramento con i parametri per le previsioni ottenute utilizzando gli algoritmi di machine learning;
+  \item InfluxDB: database utilizzato per la gestione di grandi moli di dati;
+  \item Orange Canvas: strumento di analisi consigliato dal proponente.
 \end{itemize}
 
 \subsection{Aspetti positivi}%
 \label{sub:aspetti_positivi}
 \begin{itemize}
   \item Le conoscenze di machine learning vengono sempre più richieste dalle imprese quindi sarebbe un’opportunità poterle imparare;
+  \item Gli algoritmi proposti sono interessanti dal punto di vista formativo;
+  \item La presenza di una forte componente matematica nelle funzionalità da implementare ha suscitato l'interesse di diversi componenti del gruppo;
   \item L’azienda è ampiamente disponibile a fornire la formazione sugli algoritmi e tecnologie di machine learning.
 \end{itemize}
 
 \subsection{Rischi}%
 \label{sub:rischi}
 \begin{itemize}
-  \item Il corso di studi della laurea triennale non copre il machine learning quindi si dovrà utilizzare una tecnologia a noi poco familiare.
+  \item Il corso di studi della laurea triennale non copre il machine learning quindi si dovrà utilizzare una tecnologia a noi poco familiare;
+  \item L'azienda non consente l'uso dei dati di Grafana, quindi bisogna utilizzare i propri dati.
 \end{itemize}
 
 \subsection{Conclusione}%
 \label{sub:conclusione}
-Il progetto ha riscontrato grande interesse nel gruppo e il poter essere formati da una grande \glossario{software house} come Zucchetti ci ha spinto ad optare per questo capitolato.
-
+Il progetto è stato preso in considerazione dal gruppo perchè tratta argomenti molto interessanti che permettono ad ogni componente del team di incrementare le conoscenze personali, visto che questi argomenti non vengono affrontati durante il corso di studi in Informatica, e di conoscere argomenti molto richiesti nel mondo del lavoro. Un altro fattore che ha attirato il gruppo a scegliere questo capitolato è il fatto di poter essere formati da una grande \glossario{software house} come Zucchetti, che da 41 anni realizza procedure gestionali nell'ambito delle Tecnologie Web. A seguito di attente valutazioni, il gruppo \emph{CoffeeCode} ha eletto questo capitolato come prima scelta.
 \end{document}
