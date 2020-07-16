@@ -1,0 +1,25 @@
+@startuml
+!include ../style.pu
+
+actor :Utente: as A
+actor :Grafana: as A1
+
+rectangle "UC3 - Attivazione apprendimento di flusso costante"{
+  together {
+    usecase (UC3.1) as "UC3.1\n Scelta dell’algoritmo da utilizzare"
+    usecase (UC3.2) as "UC3.2\n Scelta della sorgente dati da utilizzare"
+    usecase (UC9) as "UC9\n Scelto modello Support Vector Machine"
+    usecase (UC10) as "UC10\n Scelto modello regressione lineare"
+  }
+}
+
+:A: -- (UC3.1)
+:A: -- (UC3.2)
+
+(UC3.2) --- :A1:
+
+(UC3.1) <|--(UC9)
+(UC3.1) <|--(UC10)
+
+@enduml
+

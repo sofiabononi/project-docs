@@ -10,26 +10,19 @@ rectangle "UC5 - Configurazione del plug-in per la predizione"{
   together {
   usecase (UC5.1) as "UC5.1\n Caricamento dei risultati"
   usecase (UC5.2) as "UC5.2\n Scelta dei nodi"
-  usecase (UC5.3) as "UC5.3\n Vis. della previsione"
 
   usecase (UC23) as "UC23\n Vis. messaggio di errore \n file di addestramento invalido"
   usecase (UC24) as "UC24\n Vis. messaggio di errore \n nessun file di addestramento"
 
   usecase (UC25) as "UC25\n Vis. messaggio di errore \n collegamento nodo"
   usecase (UC26) as "UC26\n Vis. messaggio di errore \n nessun nodo collegato"
-
-  usecase (UC6) as "UC6\n Vis. attraverso un grafico"
-  usecase (UC7) as "UC7\n Vis. attraverso un indicatore"
-  usecase (UC27) as "UC27\n Vis. messaggio di errore: \n tipo di visualizzazione non definita"
   }
 }
 
 :A: -- (UC5.1)
 :A: -- (UC5.2)
-:A: -- (UC5.3)
 (UC5.1) --- :A1:
 (UC5.2) --- :A1:
-(UC5.3) --- :A1:
 
 (UC5.1) <. (UC23) : <<extends>>
 (UC5.1) <. (UC24) : <<extends>>
@@ -38,10 +31,6 @@ rectangle "UC5 - Configurazione del plug-in per la predizione"{
 
 (UC5.2) <. (UC25) : <<extends>>
 (UC5.2) <.left. (UC26) : <<extends>>
-
-(UC5.3) <. (UC27) : <<extends>>
-(UC5.3) <|-left- (UC6)
-(UC5.3) <|-left- (UC7)
 
 
 @endluml

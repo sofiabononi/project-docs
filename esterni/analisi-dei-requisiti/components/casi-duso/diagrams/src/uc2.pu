@@ -12,12 +12,12 @@ rectangle "UC2 - Addestramento del predittore in Grafana"{
     usecase (UC2.2) as "UC2.2\n Scelta del modello"
 }
     together {
-    usecase (UC8) as "UC8\n Scelto modello Support Vector Machine"
-    usecase (UC9) as "UC9\n Scelto modello regressione lineare"
-    usecase (UC10) as "UC10\n Scelto modello regressione esponenziale"
-    usecase (UC11) as "UC11\n Scelto modello regressione logaritmica"
-    usecase (UC12) as "UC12\n Scelto modello rete neurale"
-    usecase (UC13) as "UC13\n Scelto modello SVM adattata alla regressione"
+    usecase (UC9) as "UC9\n Scelto modello Support Vector Machine"
+    usecase (UC10) as "UC10\n Scelto modello regressione lineare"
+    usecase (UC11) as "UC11\n Scelto modello regressione esponenziale"
+    usecase (UC12) as "UC12\n Scelto modello regressione logaritmica"
+    usecase (UC13) as "UC13\n Scelto modello rete neurale"
+    usecase (UC14) as "UC14\n Scelto modello SVM adattata alla regressione"
   }
 }
 
@@ -26,11 +26,11 @@ rectangle "UC2 - Addestramento del predittore in Grafana"{
 
 (UC2.1) --- :A1:
 
-(UC2.2) <|--(UC8)
 (UC2.2) <|--(UC9)
 (UC2.2) <|--(UC10)
 (UC2.2) <|--(UC11)
-(UC2.2) <|- (UC12)
+(UC2.2) <|--(UC12)
 (UC2.2) <|- (UC13)
+(UC2.2) <|- (UC14)
 
 @enduml
