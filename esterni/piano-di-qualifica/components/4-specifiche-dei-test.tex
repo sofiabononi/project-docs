@@ -161,11 +161,11 @@ Garantiscono il corretto funzionamento di ogni componente del sistema quando vie
   \multicolumn{3}{c}{\textit{Continua alla pagina successiva}}
   \endfoot%
   \endlastfoot%
-  \textbf{TI1} & Si verifica il corretto caricamento del file CSV nel programma. & Non Implementato \\
-  \textbf{TI2} & Si verifica la correttezza del grafico che viene visualizzato una volta caricato i dati. & Non Implementato \\
-  \textbf{TI3} & Si verifica la correttezza dei coefficenti calcolati. & Non Implementato \\
-  \textbf{TI4} & Si verifica la correttezza della struttura del file JSON una volta salvato. & Non Implementato \\
-  \textbf{TI5} & Si verifica che il plug-in di Grafana carichi correttamente i dati. & Non Implementato \\
+  \textbf{TI1} & Si verifica il corretto caricamento del file CSV nel programma. & Implementato \\
+  \textbf{TI2} & Si verifica la correttezza del grafico che viene visualizzato una volta caricato i dati. & Implementato \\
+  \textbf{TI3} & Si verifica la correttezza dei coefficenti calcolati. & Implementato \\
+  \textbf{TI4} & Si verifica la correttezza della struttura del file JSON una volta salvato. & Implementato \\
+  \textbf{TI5} & Si verifica che il plug-in di Grafana carichi correttamente i dati. & Implementato \\
 
 \end{longtable}
 
@@ -191,32 +191,32 @@ Garantiscono il corretto funzionamento di ogni minimo componente autonomo del si
   \endlastfoot%
   \textbf{TU1} & Viene verificato il corretto avviamento dell'applicazione & Implementato \\
   \textbf{TU2} & Viene verificata la corretta lettura dei dati del file CVS inserito dall'utente & Implementato \\
-  \textbf{TU3} & Viene verificata la corretta lettura dei dati del file predittore inserito dall'utente & Non Implementato \\
-  \textbf{TU4} & Viene verificato che il costruttore dalla View costruisca la View come definito & Non Implementato \\
-  \textbf{TU5} & Viene verificato che la funzione bindFileChange(handler) della View venga eseguita correttamente quando viene aggiunto un nuovo file CVS & Non Implementato \\
-  \textbf{TU6} & Viene verificato che la funzione bindLoadPredictor(handler) della View venga eseguita correttamente quando viene aggiunto un nuovo file predittore & Non Implementato \\
-  \textbf{TU7} & Viene verificato che la funzione bindFormSubmit(handler) della View venga eseguita correttamente quando viene cliccato il pulsante "Salva" & Non Implementato \\
+  \textbf{TU3} & Viene verificata la corretta lettura dei dati del file predittore inserito dall'utente & Implementato \\
+  \textbf{TU4} & Viene verificato che il costruttore dalla View costruisca la View come definito & Implementato \\
+  \textbf{TU5} & Viene verificato che la funzione bindFileChange(handler) della View venga eseguita correttamente quando viene aggiunto un nuovo file CVS & Implementato \\
+  \textbf{TU6} & Viene verificato che la funzione bindLoadPredictor(handler) della View venga eseguita correttamente quando viene aggiunto un nuovo file predittore & Implementato \\
+  \textbf{TU7} & Viene verificato che la funzione bindFormSubmit(handler) della View venga eseguita correttamente quando viene cliccato il pulsante "Salva" & Implementato \\
   \textbf{TU8} & Viene verificato che la funzione addRlLine(coeff, min, max) della View venga eseguita correttamente per creare la retta della regressione lineare & Non Implementato \\
   \textbf{TU9} & Viene verificato che la funzione buildPage(json) della View venga eseguita correttamente per ricaricare la pagina in caso di modifiche alle opzioni di selezione da parte dell'utente & Non Implementato \\
   \textbf{TU10} & Viene verificato che la funzione showContent() della View cambi correttamente lo stato di visibilità di un elemento della form & Implementato \\
   \textbf{TU11} & Viene verificato che la funzione showChart() della View cambi correttamente lo stato di visibilità del grafico generato & Implementato \\
-  \textbf{TU12} & Viene verificato che la funzione hideContent() della View cambi correttamente lo stato di visibilità di un elemento della form & Non Implementato \\
-  \textbf{TU13} & Viene verificato che la funzione hideChart() della View cambi correttamente lo stato di visibilità del grafico generato & Non Implementato \\
-  \textbf{TU14} & Viene verificato che la funzione initSelectTarget(json) della View inserisca correttamente la variabile target & Non Implementato \\
-  \textbf{TU15} & Viene verificato che la funzione initVars(json) della View inserisca correttamente la variabili contenute nel file CVS & Implementato \\
+  \textbf{TU12} & Viene verificato che la funzione hideContent() della View cambi correttamente lo stato di visibilità di un elemento della form & Implementato \\
+  \textbf{TU13} & Viene verificato che la funzione hideChart() della View cambi correttamente lo stato di visibilità del grafico generato & Implementato \\
+  \textbf{TU14} & Viene verificato che la funzione initSelectTarget(json) della View inserisca correttamente la variabile target & Implementato \\
+  \textbf{TU15} & Viene verificato che la funzione initVars(json) della View inserisca correttamente la variabili contenute nel file CVS & Non Implementato \\
   \textbf{TU16} & Viene verificato che la funzione addVar(key) della View inserisca correttamente le label delle variabili all'interno dell'interfaccia grafica & Implementato \\
-  \textbf{TU17} & Viene verificato che la funzione addTarget(key) della View specifichi correttamente quale variabile è stata selezionata come target & Non Implementato \\
+  \textbf{TU17} & Viene verificato che la funzione addTarget(key) della View specifichi correttamente quale variabile è stata selezionata come target & Implementato \\
   \textbf{TU18} & Viene verificato che la funzione getTarget() della View ritorni correttamente quale variabile è stata selezionata come target & Implementato \\
   \textbf{TU19} & Viene verificato che la funzione getVars() della View ritorni correttamente quali variabili sono state selezionate dall'utente & Implementato \\
   \textbf{TU20} & Viene verificato che la funzione setNotes(notes) della View inserisca correttamente le note inserite dall'utente & Implementato \\
-  \textbf{TU21} & Viene verificato che la funzione showError(message) della View mostri il messaggio di errore corretto per un qualsiasi caso & Non Implementato \\
-  \textbf{TU22} & Viene verificato che la funzione reset() della View resetti la form dell'interfaccia grafica & Implementato \\
+  \textbf{TU21} & Viene verificato che la funzione showError(message) della View mostri il messaggio di errore corretto per un qualsiasi caso & Implementato \\
+  \textbf{TU22} & Viene verificato che la funzione reset() della View resetti la form dell'interfaccia grafica & Non Implementato \\
   \textbf{TU23} & Viene verificato che la funzione getNotes() della View ritorni le note inserite dall'utente & Implementato \\
   \textbf{TU24} & Viene verificato che la funzione updateChart() della View aggiorni correttamente il grafico & Non Implementato \\
   \textbf{TU25} & Viene verificato che la funzione getChartX() della View ritorni i dati dell'asse X & Implementato \\
   \textbf{TU26} & Viene verificato che la funzione getChartY() della View ritorni i dati dell'asse Y & Implementato \\
-  \textbf{TU27} & Viene verificato che la funzione getChartTargetArray() della View ritorni i dati della variabile target presi dal grafico & Non Implementato \\
-  \textbf{TU28} & Viene verificato che la funzione setChartData(x, y, target, xLabel, yLabel, model) della View inserisca correttamente i nuovi dati nel grafico & Non Implementato \\
+  \textbf{TU27} & Viene verificato che la funzione getChartTargetArray() della View ritorni i dati della variabile target presi dal grafico & Implementato \\
+  \textbf{TU28} & Viene verificato che la funzione setChartData(x, y, target, xLabel, yLabel, model) della View inserisca correttamente i nuovi dati nel grafico & Implementato \\
   \textbf{TU29} & Viene verificato che il costruttore dal Controller definisca correttamente i bind con la View & Non Implementato \\
   \textbf{TU30} & Viene verificato che la funzione handleFileChanged(path) del Controller venga attivata dopo l'esecuzione della funzione bindFileChange(handler) della View & Non Implementato \\
   \textbf{TU31} & Viene verificato che la funzione handleFormSubmit(keys, meta) del Controller venga attivata dopo l'esecuzione della funzione bindFormSubmit(handler) della View & Non Implementato \\
@@ -226,22 +226,22 @@ Garantiscono il corretto funzionamento di ogni minimo componente autonomo del si
   \textbf{TU35} & Viene verificato che la funzione getDataByFilter(param) del Model ritorni i dati filtrati per certi parametri & Non Implementato \\
   \textbf{TU36} & Viene verificato che la funzione loadPredictor(path) del Model carichi i dati di un predittore in un oggetto JSONFile & Non Implementato \\
   \textbf{TU37} & Viene verificato che la funzione get notes() del Model ritorni le note contenuto nel modello dei dati & Implementato \\
-  \textbf{TU38} & Viene verificato che la funzione get json() del Model ritorni il file JSON salvato & Non Implementato \\
-  \textbf{TU39} & Viene verificato che la funzione calculatePredictor(data, meta) del Model ritorni correttamente le informazioni con i dati allenati & Non Implementato \\
+  \textbf{TU38} & Viene verificato che la funzione get json() del Model ritorni il file JSON salvato & Implementato \\
+  \textbf{TU39} & Viene verificato che la funzione calculatePredictor(data, meta) del Model ritorni correttamente le informazioni con i dati allenati & Implementato \\
   \textbf{TU40} & Viene verificato che la funzione savePredictor(pred) del Model salvi correttamente il file predittore sul computer dell'utente & Non Implementato \\
   \textbf{TU41} & Viene verificato che quando viene estesa l'interfaccia modelTrain, venga restituito un errore nel caso non sia stato implementato il metodo executeTraining(data) & Non Implementato \\
   \textbf{TU42} & Viene verificato che il costruttore di RLadapter instanzi correttamente l'oggetto di tipo regressione & Implementato \\
-  \textbf{TU43} & Viene verificato che la funzione calculateMatrixDimensions(data) di RLadapter ritorni la corretta dimensione della matrice dei dati & Non Implementato \\
-  \textbf{TU44} & Viene verificato che la funzione libAdaptation(data, matrix, reg) di RLadapter inserisca correttamente i dati di predizione all'interno dell'oggetto di regressione lineare & Non Implementato \\
-  \textbf{TU45} & Viene verificato che la funzione generateRLOutput(data, coefficients) di RLadapter ritorni correttamente i dati allenati e conformi per l'inserimento nel predittore & Non Implementato \\
-  \textbf{TU46} & Viene verificato che la funzione executeTraining(data) di RLadapter ritorni correttamente i dati allenati & Non Implementato \\
-  \textbf{TU47} & Viene verificato che il costruttore di SVMadapter instanzi correttamente l'oggetto di tipo svm & Non Implementato \\
-  \textbf{TU48} & Viene verificato che la funzione calculateMatrixDimensions(data) di SVMadapter ritorni la corretta dimensione della matrice dei dati & Non Implementato \\
-  \textbf{TU49} & Viene verificato che la funzione splitData(data,matrix) di SVMadapter dividi correttamente i dati tra variabili e labels & Non Implementato \\
-  \textbf{TU50} & Viene verificato che la funzione executeTraining(data) di SVMadapter ritorni correttamente i dati allenati & Non Implementato \\
-  \textbf{TU51} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Target cannot be in variables list' nel caso la variabile selezionata non possa essere target  & Non Implementato \\
-  \textbf{TU52} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select at least one valid variable' nel caso si fosse selezionato varie variabili ma non quella target  & Non Implementato \\
-  \textbf{TU53} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select a target' nel caso non si selezioni una variabile target  & Non Implementato \\
+  \textbf{TU43} & Viene verificato che la funzione calculateMatrixDimensions(data) di RLadapter ritorni la corretta dimensione della matrice dei dati & Implementato \\
+  \textbf{TU44} & Viene verificato che la funzione libAdaptation(data, matrix, reg) di RLadapter inserisca correttamente i dati di predizione all'interno dell'oggetto di regressione lineare & Implementato \\
+  \textbf{TU45} & Viene verificato che la funzione generateRLOutput(data, coefficients) di RLadapter ritorni correttamente i dati allenati e conformi per l'inserimento nel predittore & Implementato \\
+  \textbf{TU46} & Viene verificato che la funzione executeTraining(data) di RLadapter ritorni correttamente i dati allenati & Implementato \\
+  \textbf{TU47} & Viene verificato che il costruttore di SVMadapter instanzi correttamente l'oggetto di tipo svm & Implementato \\
+  \textbf{TU48} & Viene verificato che la funzione calculateMatrixDimensions(data) di SVMadapter ritorni la corretta dimensione della matrice dei dati & Implementato \\
+  \textbf{TU49} & Viene verificato che la funzione splitData(data,matrix) di SVMadapter dividi correttamente i dati tra variabili e labels & Implementato \\
+  \textbf{TU50} & Viene verificato che la funzione executeTraining(data) di SVMadapter ritorni correttamente i dati allenati & Implementato \\
+  \textbf{TU51} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Target cannot be in variables list' nel caso la variabile selezionata non possa essere target  & Implementato \\
+  \textbf{TU52} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select at least one valid variable' nel caso si fosse selezionato varie variabili ma non quella target  & Implementato \\
+  \textbf{TU53} & Viene verificato che la funzione bindFormSubmit(handler) della View esponga il messaggio di errore 'Select a target' nel caso non si selezioni una variabile target & Implementato \\
   \textbf{TU54} & Viene verificato che si visualizzi un messaggio di errore nel caso in cui il caricamento del file JSON nel plug-in non vada a buon fine & Implementato \\
   \textbf{TU55} & Viene verificato che si visualizzi un messaggio di errore nel caso in cui nel plug-in non venga selezionato alcun file JSON & Implementato \\
   \textbf{TU56} & Viene verificato che si visualizzi un messaggio quando il caricamento del file JSON nel plug-in è andato a buon fine & Implementato \\
