@@ -2,9 +2,19 @@
 
 \begin{document}
 
+Una volta installata ed avviata la training app ci si trova davanti a questa schermata.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=15cm]{schermataTrainingApp.png}\\
+    \caption{Schermata training app}%
+    \label{fig:trainingApp}
+  \end{center}
+  \end{figure}
+
 \subsection{Scelta e inserimento di un file}
 \label{subs:scelta-e-inserimento}
-Una volta installata la training app è possibile scegliere un file \glossario{CSV}contenente i dati con cui si vuole compiere l'addestramento. Per caricare il file è sufficiente premere il pulsante sotto la scritta "CSV data file:"
+Successivamente è possibile scegliere un file \glossario{CSV}contenente i dati con cui si vuole compiere l'addestramento. Per caricare il file è sufficiente premere il pulsante sotto la scritta "CSV data file:"
 
 \begin{figure}[h!]
   \begin{center}
@@ -32,6 +42,15 @@ Dopo aver caricato il file, è possibile scegliere l'algoritmo di machine learni
   \item RL (Regressione Lineare);
   \item SVM (Support Vector Machine).
 \end{itemize}
+Come indicato nella figura 3.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=10cm]{model.png}\\
+    \caption{Modelli selezionabili}%
+    \label{fig:modelli_selezionabili}
+  \end{center}
+  \end{figure}
 
 \newpage
 \subsection{Addestramento}
@@ -61,6 +80,20 @@ Nel caso venga selezionata la Support Vector Machine sarà possibile visualizzar
     \end{figure}
 
 \newpage
+Una volta scelto il modello possono essere selezionate le variabili da inserire nel predittore attraverso le checkbox in corrispondenza della colonna "select variables:", è inoltre possibile scegliere a quali delle variabili applicare il log.
+Indifferentemente dal modello di predizione scelto, sarà necessario selezionare una variabile target nel caso si intenda procedere con il salvataggio del predittore realizzato.
+Nel caso però venga selezionato il modello SVM, la variabile target dovrà inoltre essere di tipo binario, nel caso non lo fosse l'applicazione produrrà il seguente messaggio d'errore.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=10cm]{errore.png}\\
+    \caption{Esempio SVM}%
+    \label{fig:SVM}
+  \end{center}
+  \end{figure}
+
+\newpage
+
 \subsection{Salvataggio del predittore}
 \label{subs:salvataggio-del-predittore}
 Premendo il pulsante "Submit" evidenziato in rosso

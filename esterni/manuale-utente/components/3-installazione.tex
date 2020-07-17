@@ -12,7 +12,7 @@ Per installare il prodotto è necessario seguire i passaggi descritti in seguito
 \label{subs:installazione-training-app}
 Per installare ed avviare il modulo di addestramento è necessario:
 \begin{itemize}
-  \item Scaricare la cartella contenente la Training App presente nella \glossario{Repository}: \\
+  \item Scaricare la cartella contenente la Training App presente nella \glossario{repository}: \\
   \centerline{\url{https://github.com/CoffeeCodeSWE/swe-training-app}}
   \item Aprire il Prompt dei comandi (Windows) o il terminale (Linux/Mac);
   \item Posizionarsi nella cartella appena scaricata tramite: \\
@@ -26,21 +26,31 @@ Per installare ed avviare il modulo di addestramento è necessario:
 \subsection{Installazione plug-in}%
 \label{subs:installazione-plug-in}
 Per installare ed avviare il plug-in è neccessario:
-\begin{itemize}
-  \item Scaricare la cartella contenente il plug-in presente nella Repository: \\
-  \centerline{\url{https://github.com/CoffeeCodeSWE/swe-grafana-plugin}}
-  \item Estrarre i file nella cartella \texttt{../grafana/plugins} presente nella root di Grafana;
-  \item Aprire il Prompt dei comandi (Windows) o il terminale (Linux/Mac);
-  \item Posizionarsi nella cartella appena scaricata tramite: \\
-  \centerline{\texttt{cd /}\textit{percorso}}
-  \item Solo per il primo utilizzo eseguire: \\
-  \centerline{\texttt{yarn install}}
-  \item Per avviare è sufficiente eseguire: \\
-  \centerline{\texttt{yarn build}} \\
-  \newline
-  Alternativamente è possibile rendere il plug-in operativo, dopo il processo di installazione e sempre nel terminale nella cartella dove è stato installato il plug-in, eseguendo il seguente comando: \\
-  \newline
-  \centerline{\texttt{yarn dev}}
-\end{itemize}
+\begin{enumerate}
+    \item Scaricare o clonare la repository del plug-in dalla seguente risorsa web: \href{https://github.com/CoffeeCodeSWE/swe-grafana-plugin}{https://github.com/CoffeeCodeSWE/swe-grafana-plugin};
+    \item Spostare la cartella del plug-in all'interno dell'apposita cartella di Grafana. Questa varia a seconda del tipo di installazione della piattaforma e del sistema operativo. Nello specifico:
+    \begin{itemize}
+      \item Se la piattaforma viene utilizzata tramite binari \textit{standalone}, la cartella si trova alla posizione \texttt{grafana/data/plugins};
+      \item Se la piattaforma è globalmente installata su un sistema Windows, la cartella si trova alla posizione \texttt{FS:\textbackslash Program Files\textbackslash GrafanaLabs\textbackslash grafana\textbackslash data\textbackslash plugins}, dove con \texttt{FS} si intende la lettera del drive contenente il sistema operativo;
+      \item Se la piattaforma è globalmente installata su un sistema GNU/Linux, la cartella si trova alla posizione \texttt{/var/lib/grafana/plugins} o \texttt{/usr/local/var/lib/grafana/plugins};
+      \item Se la piattaforma è globalmente installata su un sistema macOS, la cartella si trova alla posizione \texttt{/usr/local/var/lib/grafana/plugins}.
+    \end{itemize}
+    \item Installare le dipendenze con il seguente comando da terminale:
+    \\ \centerline{\texttt{yarn install}}
+    In alternativa, è possibile utilizzare il software npm. Per l'installazione delle dipendenze tramite npm, eseguire il seguente comando da terminale:
+    \\ \centerline{\texttt{npm install}}
+    \item Compilare il plug-in con il seguente comando da terminale:
+    \\ \centerline{\texttt{yarn build}}
+    In alternativa, è possibile utilizzare il software npm. Per la compilazione tramite npm, eseguire il seguente comando da terminale:
+    \\ \centerline{\texttt{npm build}}
+    È inoltre possibile compilare il plug-in in modalità sviluppatore tramite il comando
+    \\ \centerline{\texttt{yarn dev}}
+    oppure, alternativamente
+    \\ \centerline{\texttt{npm dev}}
+    Questo compila il componente software senza ottimizzazioni e senza eseguire i test di unità automatici;
+    \item Avviare Grafana;
+    \item Recarsi in Configurazione $>$ Plugins $>$ \emph{CoffeeCode Prediction Panel} e abilitare il plug-in;
+    \item Selezionare \emph{CoffeCode Prediction Panel} durante l'aggiunta di un pannello alla dashboard.
+\end{enumerate}
 
 \end{document}
