@@ -60,7 +60,7 @@ Il file verrà quindi caricato e letto, e verrà effettuato il parsing su di ess
 L'utente sceglierà quindi la query sulla quale effettuare la predizione; il controller del pannello di visualizzazione, consistente della classe PanelCtrl, istanzierà quindi il Model, il quale leggerà i dati forniti da grafana utilizzando le classi di utilità descritte nella classe GrafanaData. \\
 Su questi dati verrà quindi effettuata la predizione, utilizzando la funzionalità di scelta dell'algoritmo messa a disposizione dal design pattern Strategy; l'interfaccia Strategy si occuperà quindi di richiamare il metodo render() dell'opportuna classe (PredictionRL o PredictionSVM). \\
 La classe MainView si occuperà quindi di visualizzare a schermo i risultati della predizione sottoforma di grafico. L'utente a questo punto potrà quindi interagire con il grafico a suo piacimento. \\
-I dati risultanti dall'applicazione della predizione vengono salvati su un database InfluxDB chimato \texttt{graf}; il salvataggio dei dati è ad opera della classe PanelCtrl, che si occupa di richiamare l'opportuno metodo definito dal model del componente software.
+I dati risultanti dall'applicazione della predizione vengono salvati su un database InfluxDB chiamato \texttt{graf}; il salvataggio dei dati è ad opera della classe PanelCtrl, che si occupa di richiamare l'opportuno metodo definito dal model del componente software.
 
 \begin{figure}[H]
   \centering
