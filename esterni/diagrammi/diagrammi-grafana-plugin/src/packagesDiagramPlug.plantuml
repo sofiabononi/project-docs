@@ -20,7 +20,6 @@ package editor <<Frame>> {
 package panel <<Frame>> {
   class PanelCtrl
   class MainView
-  interface Options
   class Model
   class GrafanaData
 }

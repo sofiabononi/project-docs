@@ -2,36 +2,85 @@
 
 \begin{document}
 
-Il prodotto si suddivide in due parti: un'applicazione web per addestrare i \glossario{predittori} e un plug-in per la piattaforma Grafana; le suddette parti utilizzano tecnologie che verranno elencate nei successivi paragrafi.
+Il prodotto si suddivide in due parti: un'applicazione web per addestrare i \glossario{predittori} e un plug-in per la piattaforma Grafana, che
+utilizza i risultati ottenuti dal programma di addestramento per effettuare la predizione dei valori reali;
+le suddette parti utilizzano tecnologie che verranno elencate nei successivi paragrafi.
 
 \subsection{Addestramento}%
 \label{subs:addestramento}
-Le seguenti tecnologie sono utilizzate dall'applicazione web per l'addestramento:
-\begin{itemize}
-  \item \textbf{Javascript}: il linguaggio con cui la parte logica della pagina è stata scritta;
-  \item \textbf{HTML/CSS}: usati per gestire la visualizzazione della pagina web;
-  \item \textbf{Bootstrap}: libreria usata da HTML e CSS per gestire la visualizzazione della pagina web;
-  \item \textbf{NodeJS}: tecnologia runtime di Javascript costruita sul motore V8 di Google Chrome;
-  \item \textbf{Yarn}: usato per gestire i pacchetti di NodeJS;
-  \item \textbf{ESlint}: strumento di analisi statica del codice per identificare eventuali problemi riscontrati;
-  \item \textbf{Jest}: pacchetto NodeJS usato per effettuare i test;
-  \item \textbf{SVM/RL}: librerie usate per generare i predittori allenati per il plug-in;
-  \item \textbf{JQuery}: libreria Javascript usata per semplificare la procedura di scrittura del codice;
-  \item \textbf{ChartJS}: libreria Javascript usata per la visualizzazione dei dati in grafici;
-  \item \textbf{Electron}: usato per lo sviluppo di ambienti web in locale.
-\end{itemize}
+Per lo sviluppo del programma di addestramento vengono utilizzate le tecnologie riportate di seguito.
+\subsubsection{Linguaggi di programmazione}
+\paragraph{Javascript}
+JavaScript è un linguaggio di programmazione \glossario{object-oriented} ed \glossario{event-driven} utilizzato comunemente nella programmazione Web lato client e sempre più anche lato server. Esso è il linguaggio con cui la parte logica della pagina è stata scritta.
+\paragraph{HTML e CSS}
+HTML, acronimo di \textit{HyperText Markup Language}, è un linguaggio di markup per la definizione di pagine e documenti web; CSS, acronimo di \textit{Cascade StyleSheet}, è un linguaggio usato per definire la formattazione di documenti HTML e XML. Questi due linguaggi sono usati per gestire la visualizzazione della pagina web.
+
+\subsubsection{Estensioni del linguaggio}
+\paragraph{Node.JS}
+\glossario{Node.js} è una \glossario{runtime} open-source per l'esecuzione di codice JavaScript, costruita sul motore \glossario{JavaScript V8} di \glossario{Google Chrome}. Essa viene utilizzato per la gestione dell'intero programma di addestramento.
+
+\paragraph{Bootstrap}
+Bootstrap è una raccolta di strumenti per la creazione di siti e applicazioni per il web; essa contiene modelli di progettazione basati su HTML e CSS, sia per la tipografia che per le componenti dell'interfaccia. Essa viene usata per gestire la visualizzazione della pagina web.
+
+\paragraph{Electron}
+Electron è un framework open-source che combina il \glossario{motore di rendering} \glossario{Chromium} e la runtime Node.js, che permette lo sviluppo della \glossario{GUI} di applicazioni desktop utilizzando tecnologie web. Esso è usato per lo sviluppo dell'ambiente web locale.
+
+\paragraph{JQuery}
+JQuery è una libreria JavaScript per applicazioni web, nata con l'obiettivo di semplificare la selezione, la manipolazione, la gestione degli eventi e l'animazione di elementi DOM in pagine web. Essa viene usata per la gestione dell'input e dell'output all'interno dell'applicazione.
+
+\paragraph{Chart.JS}
+Chart.JS è una libreria JavaScript open-source per la visualizzazione di dati. Essa viene utilizzata per la visualizzazione dei dati inseriti tramite file CSV, per semplificare la scelta delle giuste variabili da predire.
+
+\subsubsection{Algoritmi di predizione}
+\paragraph{Regressione lineare}
+La regressione lineare è quella tecnica statistica utilizzata per studiare le relazioni che intercorrono tra due o più caratteri (variabili) statistici.
+
+\paragraph{Support Vector Machines}
+Le Support Vector Machines (SVM) sono dei modelli di apprendimento supervisionato associati ad algoritmi di apprendimento per la regressione e la classificazione.
+
+\subsubsection{Strumenti di supporto}
+\paragraph{Yarn}
+Yarn è un gestore di pacchetti per il linguaggio di programmazione JavaScript. Esso viene utilizzato dal gruppo per l'installazione dei pacchetti necessari allo sviluppo e all'esecuzione del codice.
+
+\paragraph{ESLint}
+ESLint è uno strumento di analisi statica del codice che identifica all'interno di questo eventuali problemi o discordanze da quanto definito per la codifica.
+
+\subsubsection{Suite di testing}
+\paragraph{Jest}
+Jest è un framework che permette di eseguire automaticamente i test di unità per il codice JavaScript e TypeScript. Esso viene integrato nel progetto tramite il gestore di dipendenze Yarn, e permette di essere configurato nell'apposita sezione all'interno del file \texttt{package.json}. \\
+Questo strumento viene utilizzato per l'esecuzione automatica dei test di unità del codice JavaScript.
 
 \subsection{Plug-in}%
 \label{subsc:plug_in}
-Le seguenti tecnologie sono utilizzate nel plug-in:
-\begin{itemize}
-  \item \textbf{Typescript}: il linguaggio con cui la parte logica della pagina è stata scritta;
-  \item \textbf{Yarn}: usato per gestire i pacchetti di NodeJS;
-  \item \textbf{HTML/CSS}: usati per gestire la visualizzazione della pagina web;
-  \item \textbf{NodeJS}: tecnologia runtime di Javascript costruita sul motore V8 di Google Chrome;
-  \item \textbf{Grafana}: software open-source per il monitoraggio di dati mediante grafici e indicatori;
-  \item \textbf{Grafana/toolkit}: pacchetto di NodeJs usato per effettuare le build e test del plug-in;
-  \item \textbf{React}: il framework usato da Grafana per gestire la visualizzazione e l'interazione tra le varie pagine del plug-in.
-\end{itemize}
+Per lo sviluppo del plug-in vengono utilizzate le tecnologie riportate di seguito.
+\subsubsection{Linguaggi di programmazione}
+\paragraph{TypeScript}
+TypeScript è un linguaggio di programmazione sviluppato da \glossario{Microsoft}; esso è un super-set di JavaScript, basato sulle caratteristiche ECMAScript 6 di quest'utilimo. Questo linguaggio estende la sintassi di JavaScript in modo che qualunque programma scritto in JavaScript sia in grado di funzionare anche con TypeScript senza bisogno di alcuna modifica. \\
+Esso viene utilizzato dal gruppo per lo sviluppo del plug-in di Grafana, poiché permette la definizione dei tipi delle variabili e delle costanti, rendendo più rigorosa e facilitando quindi la programmazione.
+
+\paragraph{HTML e CSS}
+Vengono usati HTML e CSS per gestire la visualizzazione delle componenti web del plug-in.
+
+\subsubsection{Estensioni del linguaggio}
+\paragraph{React.JS}
+React è una libreria Javascript per lo sviluppo di applicazioni web e interfacce utente. Esso viene usato per lo sviluppo del plug-in di Grafana poiché il framework \glossario{AngularJS} è ormai deprecato per la piattaforma in questione.
+
+\subsubsection{Piattaforme}
+\paragraph{Grafana}
+Grafana è un software open-source per l'analisi dati e l'interazione con questi. Questo strumento viene utilizzato come sistema sul quale sviluppare il plug-in.
+
+\paragraph{InfluxDB}
+InfluxDB è un \glossario{database} di tipo \textit{time-series}. Esso viene utilizzato per fornire i dati in input al plug-in di Grafana e per salvare i dati processati da quest'ultimo.
+
+\subsubsection{Strumenti di supporto}
+\paragraph{Yarn}
+Anche per lo sviluppo del plug-in viene utilizzato lo strumento Yarn per la gestione delle dipendenze.
+
+\paragraph{ESLint}
+Anche per lo sviluppo del plug-in viene utilizzato lo strumento ESLint per il \textit{linting} automatizzato del codice.
+
+\subsubsection{Suite di testing}
+\paragraph{Jest}
+Anche per lo sviluppo del plug-in viene utilizzata la suite di test Jest per l'esecuzione automatica dei test di unità del codice TypeScript.
 
 \end{document}

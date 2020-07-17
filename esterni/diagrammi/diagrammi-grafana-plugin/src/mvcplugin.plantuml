@@ -8,20 +8,42 @@ class Model{
     + setData(GrafanaData): GrafanaData
     + setPredictor(Predictor): void
     + predict(): number
+    + writeInflux(): void
 
 }
 
 
+class EditorView implements Props{
+    + getUploadFile(any): void
+    + render(): any
+}
 
-class MainView{
+
+interface Props{
+    + predictor: Predictor
+
+}
+class MainView implements Props {
     + render(): any
     + const getStyle: any
 }
 
+class PanelCtrl implements Props {
+    - model: Model
+    - lv: number
+    - time: Date
+    + constructor(PanelProps)
+    - setData(): void
+    - setPredictor(): void
+    - predict(): void
+    - writeInflux(): void
+    - update(): void
+    - render(): any
 
+}
 
-PanelCtrl--Model
-PanelCtrl--MainView
+PanelCtrl*--Model
+
 
 
 @enduml
