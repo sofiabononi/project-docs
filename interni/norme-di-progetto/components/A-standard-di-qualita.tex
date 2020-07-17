@@ -4,7 +4,7 @@
 
 \subsection{ISO/IEC 15504 (SPICE)}%
 \label{sec:iso/iec_15504_spice}
-Il modello ISO/IEC 15504, conosciuto anche come SPICE acronimo di \textit{Software Process Improvement and Capability Determination} (\textit{"Capability"} inteso come la capacità di un processo di essere cognitivamente capace di raggiungere il suo scopo), è lo standard di riferimento per valutare equamente la qualità dei processi software con lo scopo di migliorarli.
+Il modello ISO/IEC 15504, conosciuto anche come SPICE, acronimo di \textit{Software Process Improvement and Capability Determination} (\textit{"Capability"} inteso come la capacità di un processo di essere cognitivamente capace di raggiungere il suo scopo), è lo standard di riferimento per valutare equamente la qualità dei processi software con lo scopo di migliorarli.
 Per fare ciò SPICE contiene una serie di 9 documenti che possono essere utilizzati nella valutazione del processo:
 \begin{itemize}
     \item I primi 6 si concentrano sull'affrontare varie tematiche della valutazione del processo;
@@ -26,22 +26,22 @@ Nelle seguenti sezioni verranno descritte le caratteristiche principali dei docu
 \label{sub:concetti_iniziali}
 Lo scopo del documento è fornire informazioni generali sulla valutazione del processo software e sul suo utilizzo in due contesti: miglioramento e determinazione della capacità del processo.
 La determinazione della capacità del software è importante perché generalmente motiva un'organizzazione a migliorare i processi.
-In questo documento vengono inoltre spiegati i vantaggi che l'uso di SPICE fornisce a un'organizzazione, i più importanti vengono elencati di seguito:
+In questo documento vengono inoltre spiegati i vantaggi che l'uso di SPICE fornisce a un'organizzazione; i più importanti vengono elencati di seguito:
 
 
-\textbf{Per gli acquirenti}:
+\subparagraph*{Per gli acquirenti}
 \begin{itemize}
     \item La possibilità di determinare la capacità attuale e potenziale dei processi software del fornitore.
 \end{itemize}
 
-\textbf{Per i fornitori}:
+\subparagraph*{Per i fornitori}
 \begin{itemize}
     \item La possibilità di determinare la capacità attuale e potenziale dei propri processi software;
     \item La capacità di definire aree e priorità per il miglioramento dei processi software;
     \item Un \glossario{framework} che definisce una \glossario{road map} per il miglioramento dei processi software.
 \end{itemize}
 
-\textbf{Per i valutatori}:
+\subparagraph*{Per i valutatori}
 \begin{itemize}
     \item Un quadro che definisce gli aspetti dello svolgimento delle valutazioni.
 \end{itemize}
@@ -49,7 +49,7 @@ In questo documento vengono inoltre spiegati i vantaggi che l'uso di SPICE forni
 \subsubsection{Modello di riferimento}
 \label{sub:modello_di_riferimento}
 Il documento fornisce una serie di pratiche fondamentali per una buona ingegneria del software.
-Vengono definiti vari processi utilizzabili in varie fasi della produzione, che possono essere raggruppati in cinque categorie che sono:
+Vengono definiti vari processi utilizzabili in varie fasi della produzione, che possono essere raggruppati in cinque categorie; queste sono:
 
 \begin{itemize}
     \item \textbf{Cliente-Fornitore}: sono processi che incidono direttamente sul cliente, supportano lo sviluppo e il passaggio del software al cliente, garantendone il corretto funzionamento e utilizzo;
@@ -137,7 +137,7 @@ Lo standard consente di utilizzare altri modelli purché soddisfino i criteri di
 \paragraph{Strumenti di valutazione}
 \label{sub:strumenti_di_valutazione}
 Esistono diversi strumenti di valutazione, i più semplici comprendono strumenti cartacei. In generale, sono previsti per incorporare gli indicatori del modello di valutazione, inclusi gli indicatori di pratica di base e gli indicatori di pratica generica. I valutatori scrivono i risultati della valutazione e le note a supporto del giudizio di valutazione.
-Per quanto riguarda gli strumenti basati su software sono in numero limitato pertanto sono preferibili gli strumenti in modalità cartacea.
+Per quanto riguarda gli strumenti basati su software, sono in numero limitato pertanto sono preferibili gli strumenti in modalità cartacea.
 
 \subsection{ISO/IEC 9126}%
 \label{sec:iso/iec_9126}
@@ -146,7 +146,7 @@ Lo standard descrive un modello di qualità diviso in 3 parti:
 \begin{itemize}
     \item \textbf{Qualità interna}: si applica al software non eseguibile (come il codice sorgente) durante le fasi di progettazione e codifica.
     Le misure in questa fase permettono di prevedere anche i livelli di qualità esterna e in uso del prodotto dato che essi dipendono dalla qualità interna.
-    Per misurare la qualità interna vengono utilizzate le metriche interne che permettono di individuare eventuali problemi attraverso l'analisi statica e la simulazione del comportamento del prodotto finale tramite delle simulazioni;
+    Per misurare la qualità interna vengono utilizzate le metriche interne che permettono di individuare eventuali problemi attraverso l'analisi statica e la simulazione del comportamento del prodotto finale tramite delle simulazioni.
     \\Gli attributi che possono essere assegnati alla qualità interna sono:
     \begin{itemize}
         \item Manutenibilità;
@@ -163,13 +163,13 @@ Lo standard descrive un modello di qualità diviso in 3 parti:
     \item \textbf{Qualità in uso}: rappresenta il punto di vista dell'utente sul software ed è fortemente influenzata dalle precedenti 2 qualità. Essa permette di abilitare specifici utenti ad ottenere specifici obiettivi sui suoi relativi attributi.
     \\Gli attributi assegnati ad essa sono:
     \begin{itemize}
-        \item \glossario{Efficacia};
+        \item Efficacia;
         \item Produttività;
         \item Soddisfazione;
         \item Sicurezza.
     \end{itemize}
 \end{itemize}
-Ovviamente per ciascun attributo delle tre qualità è misurabile e valutabile secondo le relative metriche: interne, esterne e in uso.
+Ovviamente ciascun attributo delle tre qualità è misurabile e valutabile secondo le relative metriche: interne, esterne e in uso.
 
 \begin{figure}[H]
     \centering
@@ -180,7 +180,7 @@ Ovviamente per ciascun attributo delle tre qualità è misurabile e valutabile s
 
 \subsubsection{Descrizione degli attributi di qualità interni ed esterni}%
 \label{sec:descrizione_attributi_interni_esterni}
-Verrà descritto brevemente ciascun attributo relativo alla Qualità interna e alla Qualità esterna, per ogni attributo verranno analizzate le sue sottocaratteristiche.
+Viene descritto brevemente ciascun attributo relativo alla Qualità interna e alla Qualità esterna, per ogni attributo verranno analizzate le sue sottocaratteristiche.
 
 \begin{itemize}
     \item \textbf{Manutenibilità}: il software deve essere facilmente modificabile nel caso di correzioni, adattamenti e/o miglioramenti.
@@ -236,7 +236,7 @@ Verrà descritto brevemente ciascun attributo relativo alla Qualità interna e a
 
 \subsubsection{Descrizione degli attributi di qualità in uso}%
 \label{sec:descrizione_attributi_in_uso}
-Verrà descritto brevemente ciascun attributo relativo alla Qualità in uso.
+Verrà descritto brevemente ciascun attributo relativo alla qualità in uso.
 
 Attributi:
 \begin{itemize}
@@ -250,7 +250,7 @@ Attributi:
 \label{sec:ciclo_di_deming}
 Il Ciclo di Deming è un metodo iterativo utilizzato per il controllo e il miglioramento continuo della qualità dei processi e dei prodotti.
 Serve per promuovere una cultura della qualità che si basa sul miglioramento continuo dei processi e sull'ottimizzazione delle risorse.
-Questo strumento ha come scopo il raggiungimento del massimo della qualità mediante la costante iterazione tra ricerca,progettazione,test,produzione e vendita, ed è necessario passare in tutte le fasi per soddisfare la qualità richiesta dal cliente.
+Questo strumento ha lo scopo di raggiungere il massimo della qualità mediante la costante iterazione tra ricerca,progettazione, test, produzione e vendita, ed è necessario passare in tutte le fasi per soddisfare la qualità richiesta dal cliente.
 
 Il ciclo è anche chiamato PDCA in riferimento alla sua divisione in 4 fasi:
 \begin{itemize}
@@ -259,7 +259,7 @@ Il ciclo è anche chiamato PDCA in riferimento alla sua divisione in 4 fasi:
     \item \textbf{C - Check} Test e controllo: studio dei dati raccolti e confrontarli con i risultati attesi nella fase di "Plan". Valutare i risultati e verificare se i cambiamenti attuati possono portare a miglioramenti;
     \item \textbf{A - Act} Azione: Richiede azioni correttive sulle differenze tra i risultati previsti e quelli effettivi, analizza le differenze per determinare dove applicare le modifiche per ottenere un miglioramento del prodotto o processo.
 \end{itemize}
-Quando un procedimento attraversa le quattro fasi, non è obbligato a migliorare immediatamente, il ciclo può essere ripetuto tutto o in parte per raffinare maggiormente il prodotto.
+Quando un procedimento attraversa le quattro fasi, non è obbligato a migliorare immediatamente; il ciclo può essere ripetuto tutto o in parte per raffinare maggiormente il prodotto.
 \\ \\
 \begin{figure}[H]
     \centering

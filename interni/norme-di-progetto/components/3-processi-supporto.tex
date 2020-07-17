@@ -24,13 +24,13 @@ Questa sezione descrive i dettagli su come deve essere redatta e verificata la d
 Il documento viene innanzitutto creato; a tale scopo, il gruppo ha deciso di creare un template \LaTeX\ sul quale basare la stesura di ogni documento. Questo assicura l'uniformità della struttura dei documenti, facilitando inoltre il \glossario{versionamento}. \\
 Dopo la creazione, il ciclo di vita dei documenti è suddiviso in tre differenti attività:
 \begin{itemize}
-  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal Responsabile di progetto; dopo la stesura, il responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
+  \item \textbf{Stesura del documento}: la stesura del documento consiste nella scrittura del documento stesso. Questa attività viene svolta da un redattore, assegnato dal responsabile di progetto; dopo la stesura, il responsabile autorizzerà all'avanzamento della stesura, rimanendo in attesa dell'esito della revisione;
   \item \textbf{Revisione}: dopo la stesura, il documento verrà revisionato dai verificatori, che ne controlleranno l'aderenza alle norme di progetto e la correttezza sintattica e semantica. Dopo questo controllo, a seconda che l'esito sia positivo o negativo, lo comunicheranno al responsabile, che farà avanzare il documento all'approvazione finale, o ai redattori, che correggeranno eventuali segnalazioni e lo riproporranno ai verificatori;
   \item \textbf{Approvazione finale}: con l'approvazione ricevuta da parte dei verificatori, il responsabile di progetto confermerà quindi il documento, eseguendone il rilascio.
 \end{itemize}
 
 \subparagraph{Struttura dei documenti}
-Al fine di organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} \texttt{project-docs} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
+Per poter organizzare coerentemente e uniformemente la struttura dei documenti, si è deciso di utilizzare il \textit{package} \textbf{subfiles} di \LaTeX. La \glossario{repository} \texttt{project-docs} contiene una \textit{directory} denominata \texttt{commons/} con al suo interno:
 \begin{itemize}
   \item Il file \texttt{config.tex}, contenente le definizioni dei comandi \LaTeX;
   \item Il file \texttt{template.tex}, contenente il \textit{template} su cui si basano tutti i documenti;
@@ -39,7 +39,7 @@ Al fine di organizzare coerentemente e uniformemente la struttura dei documenti,
 Per ogni documento è quindi presente una \textit{directory} contenente:
 \begin{itemize}
   \item  Il file principale, chiamato con il nome del documento, in formato \texttt{.tex};
-  \item La cartella \texttt{components/}, contenente gli altri file in formato \texttt{.tex} che vengono inclusi nel file principale ed eventuali allegati interni al documento.
+  \item La cartella \texttt{components/}, contenente gli altri file in formato \texttt{.tex} che vengono inclusi nel file principale, ed eventuali allegati interni al documento.
 \end{itemize}
 Basandosi su un \textit{template}, ogni documento ha quindi una struttura fissa e predeterminata.
 
@@ -106,10 +106,10 @@ Nello spazio compreso tra la riga orizzontale e il numero di pagina si articola 
 I documenti prodotti appartengono a diverse categorie, secondo le quali sono classificati.
 
 \subparagraph*{Documenti ufficiali}
-I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno. Seguono i documenti ufficiali.
+I documenti ufficiali sono quelli che seguono la struttura elencata in questo documento, e che sono stati verificati e approvati dal responsabile di progetto. Essi possono essere Interni o Esterni, a seconda della destinazione che hanno.
 
 \subparagraph*{Glossario}
-In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v1.9-1.3.0}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
+In accompagnamento ai documenti ufficiali viene fornito un \textsc{Glossario v3.11-1.3.1}, contenente tutti i termini caratterizzati da sottolineatura e una G maiuscola come pedice. Il glossario ha la funzione di chiarire possibili fraintendimenti provenienti dall'utilizzo di determinati termini. \\
 Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i seguenti requisiti:
 \begin{itemize}
   \item Essere un termine tecnico. Rientrano in questo criterio i nomi propri delle tecnologie utilizzate, i termini tecnici propri di queste e i termini frequentemente utilizzati nell'Ingegneria del Software;
@@ -117,8 +117,8 @@ Perché un termine venga incluso nel glossario deve soddisfare almeno uno tra i 
   \item Avere più di un significato plausibile nel contesto in cui viene utilizzato;
   \item Essere un acronimo specifico e raramente usato.
 \end{itemize}
-Il \textsc{Glossario v1.9-1.3.0} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
-I termini appartenenti al glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, al fine di evitare l'appesantimento visivo.
+Il \textsc{Glossario v3.11-1.3.1} possiede un'impostazione grafica identica agli altri documenti, con l'eccezione di non possedere numerazione nell'indice. I termini sono ordinati in ordine alfabetico, e divisi in base alla prima lettera; ogni lettera deve avere la sua sezione, anche nel caso in cui nessun termine vi appartenga. \\
+I termini appartenenti al glossario sono contrassegnati come tali solo una volta per ogni documento, nello specifico la prima volta che il termine compare in esso, per evitare l'appesantimento visivo.
 
 \subparagraph*{Verbali}
 I verbali documentano gli argomenti discussi in una riunione; essi possono essere interni, e quindi riferirsi a una riunione tra soli membri del gruppo, o esterni, e quindi riferirsi a una riunione a cui partecipa anche il proponente e/o il committente. La struttura del documento è identica a quella dei documenti ufficiali. \\
@@ -183,12 +183,12 @@ Ogni diversa formattazione usata all'interno dei documenti ha un significato pre
   \item Utilizzo di testo in corsivo per i termini in lingua diversa da quella italiana non inclusi nel glossario;
   \item Utilizzo di testo in caratteri dattilografici per i nomi di file e delle \textit{directories}; queste ultime devono finire con il carattere barra \textbf{/};
   \item Utilizzo di testo in grassetto per i termini conseguentemente definiti e per i titoli dei sottoparagrafi di sottoparagrafi. Viene inoltre utilizzato per rimarcare concetti considerati importanti;
-  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v1.9-1.3.0};
+  \item Utilizzo di testo sottolineato, in aggiunta al pedice G maiuscola, per i termini appartenenti al \textsc{Glossario v3.11-1.3.1};
   \item Utilizzo di testo maiuscoletto per i nomi dei documenti all'interno dei documenti stessi.
 \end{itemize}
 
 \subparagraph*{Figure}
-L'utilizzo di figure all'interno dei documenti è permesso; le immagini devono essere centrate nella pagina, avere larghezza o lunghezza massima di 15cm ed essere seguite dalla seguente dicitura: \\ \begin{center}
+L'utilizzo di figure all'interno dei documenti è permesso; le immagini devono essere centrate nella pagina, avere larghezza o lunghezza massima di 15 centimetri ed essere seguite dalla seguente dicitura: \\ \begin{center}
   \centering
   \textbf{Figura N: D}
 \end{center} dove:
@@ -211,7 +211,10 @@ Le tabelle devono essere centrate nella pagina, ed essere seguite dalla seguente
   \item \textbf{N} è il numero progressivo della tabella all'interno del documento in cui è inserita;
   \item \textbf{T} è il titolo della tabella.
 \end{itemize}
-La tabella del Registro delle modifiche non segue queste regole, poiché non possiede né numero progressivo né titolo.
+La tabella del registro delle modifiche non segue queste regole, poiché non possiede né numero progressivo né titolo.
+
+\subparagraph*{Titoli}
+I titoli delle sezioni, sottosezioni, paragrafi e sottoparagrafi devono essere uniformi in tutti i documenti. Essi devono brevi, concisi e significativi; ogni titolo deve iniziare con una lettera maiuscola ed essere seguito unicamente da lettere minuscole. L'unica eccezione a questa regola può avvenire quando nei titoli sono presenti nomi propri, che necessitano quindi di ulteriori lettere maiuscole.
 
 \subparagraph*{Formati comuni}
 I formati di data, ora e versione sono determinati e univoci per ogni documento. Nello specifico:
@@ -284,7 +287,6 @@ All'interno della documentazione possono essere utilizzate delle sigle. Esse son
   \end{itemize}
 \end{itemize}
 
-\subparagraph*{Altre norme tipografiche}
 \subparagraph*{Elenchi}
 Gli elenchi di tipo puntato sono indicati con un cerchietto pieno, o con un trattino (lo stesso carattere del tratto d'unione) nel caso in cui si tratti di un sotto-elenco di un elenco puntato. Gli elenchi numerati sono invece indicati da un numero progressivo seguito da un punto. \\
 Ogni parola appartenente a un elenco puntato o numerato deve iniziare con la lettera maiuscola; ogni elemento di un elenco puntato o numerato deve finire con un punto e virgola, ad eccezione dell'ultimo che deve finire con un punto.
@@ -316,6 +318,8 @@ Questo processo farà uso delle seguenti metriche:
 \subparagraph{MoPR010 Analisi way of working}
 \begin{itemize}
   \item \textbf{Descrizione}: i membri del gruppo sono incaricati di verificare di volta in volta la corretta attuazione del way of working.
+  \item \textbf{Unità di misura}: la metrica non adotta unità di misura.
+  \item \textbf{Formula}: la metrica non possiede una formula per il calcolo.
 \end{itemize}
 
 \subparagraph{MoPR011 Analisi documenti}
@@ -323,6 +327,11 @@ Questo processo farà uso delle seguenti metriche:
   \item \textbf{Descrizione}: questa metrica indica il numero di volte che un documento viene analizzato e verificato;
   \item \textbf{Unità di misura}: numero puro;
   \item \textbf{Formula}: la seguente metrica viene calcolata unicamente sul numero delle verifiche dei documenti.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è uguale a 0, il documento non è mai stato analizzato e verificato;
+    \item Se il risultato è maggiore di 0, il documento è stato analizzato e verificato.
+  \end{itemize}
 \end{itemize}
 
 \paragraph{Portabilità}
@@ -349,8 +358,16 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
   \begin{enumerate}
     \item Prelevare il testo dei documenti, omettendo la formattazione \LaTeX;
     \item Incollare il testo estrapolato nell'opportuna casella presente nella pagina web;
-    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di Qualifica v1.9-3.1.0}.
+    \item Riportare i valori ottenuti nell'opportuna sezione del \textsc{Piano di qualifica v3.11-4.0.0}.
   \end{enumerate}
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è compreso tra 0 e 40, il documento non esiste o risulta completamente illeggibile;
+    \item Se il risultato è maggiore o uguale a 40, il documento esiste ed è leggibile da chi possiede un diploma superiore;
+    \item Se il risultato è maggiore di 60, il documento esiste ed è leggibile da chi possiede una licenza media;
+    \item Se il risultato è maggiore di 80, il documento esiste ed è leggibile da chi possiete una licenza elementare;
+    \item Se il risultato è uguale a 100, il documento esiste ed è leggibile da chiunque conosca la lingua di riferimento.
+  \end{itemize}
 \end{itemize}
 
 \subparagraph{MoPD010 Correttezza lessicale/ortografica}
@@ -359,6 +376,11 @@ Vengono utilizzate le seguenti metriche per la comprensione del testo:
   \item \textbf{Unità di misura}: numero puro;
   \item \textbf{Formula}: il valore di questa metrica corrisponde al numero di errori ortografici presenti nel documento;
   \item \textbf{Procedura per il calcolo}: il valore di tale metrica viene calcolato avvalendosi degli strumenti di correzione ortografica del testo integrati nell'IDE Visual Studio Code, documentati nel presente documento.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è 0, il documento non contiene errori ortografici;
+    \item Se il risultato è maggiore di 0, il documento contiene errori ortografici.
+  \end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -396,11 +418,11 @@ La repository utilizzata si suddivide nei seguenti \glossario{branch}:
 \begin{itemize}
   \item \texttt{master}: branch principale, sul quale vengono fatte le \glossario{major releases};
   \item \texttt{norme-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Norme di Progetto};
-  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei requisiti v1.9-1.3.0};
-  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v1.9-1.3.0};
-  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Progetto v1.9-4.2.0};
-  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di Qualifica v1.9-3.1.0};
-  \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di Fattibilità v1.0.0-old};
+  \item \texttt{analisi-dei-requisiti}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Analisi dei requisiti v3.11-1.4.0};
+  \item \texttt{glossario}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Glossario v3.11-1.3.1};
+  \item \texttt{piano-di-progetto}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di progetto v3.11-4.4.0};
+  \item \texttt{piano-di-qualifica}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Piano di qualifica v3.11-4.0.0};
+  \item \texttt{studio-di-fattibilita}: branch secondario nel quale viene sviluppato l'intero documento \textsc{Studio di fattibilità v1.4-1.1.0};
   \item \texttt{verbali}: branch secondario nel quale vengono sviluppati i verbali interni ed esterni.
 \end{itemize}
 Il \glossario{workflow} adottato è basato quindi su un principio della separazione dei documenti: questo, unito ai sistemi anti-collisione di git, permette che, durante il periodo in cui un membro del gruppo è assegnato a un ruolo di redazione specifico, egli sia l'unico a lavorare su tale documento.
@@ -508,7 +530,7 @@ Viene quindi adottato un sistema di versionamento comune a documentazione e comp
     \begin{itemize}
       \item Inizia da 0 ad ogni incremento di X;
       \item Viene incrementato ad ogni completamento di un incremento, corrispondente a una milestone del progetto;
-      \item La cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di Progetto v1.9-4.2.0}.
+      \item La cifra massima corrisponde al numero massimo di incrementi previsti dal \textsc{Piano di progetto v3.11-4.4.0}.
     \end{itemize}
   \end{itemize}
   \item \textbf{A.B.C} indica la versione propria del componente singolo. Le cifre da cui è composta questa sezione hanno significato diverso per la documentazione e per il codice, ma in entrambi i casi si segue la logica del \glossario{Semantic Versioning 2.0.0}. Nelle successive sezioni verranno approfondite le regole che queste cifre seguono;
@@ -558,7 +580,7 @@ Il versionamento di un documento segue le regole sopra riportate; il numero di v
     Questa cifra segue le seguenti regole:
     \begin{itemize}
       \item Inizia da 0 ad ogni incremento di B o A;
-      \item Viene incrementata ad ogni cambiamento generico nel documento. L'incremento è ad opera di un verificatore.
+      \item Viene incrementata ad ogni cambiamento generico nel documento. L'incremento è ad opera del responsabile o di uno strumento da lui approvato che ne faccia le veci.
       \item Non ha numero massimo.
     \end{itemize}
   \end{itemize}
@@ -585,7 +607,7 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
     \begin{itemize}
       \item Inizia da 0 a ogni incremento di A;
       \item Viene incrementata al completamento di uno o più requisiti;
-      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei requisiti v1.9-1.3.0}.
+      \item La cifra massima corrisponde al massimo numero di requisiti riportati nell'\textsc{Analisi dei requisiti v3.11-1.4.0}.
     \end{itemize}
     \item \textbf{C}: corrisponde a una \glossario{Patch}, e indica quindi la modifica a uno o più requisiti. Questa cifra segue le seguenti regole:
     \begin{itemize}
@@ -603,10 +625,10 @@ Il versionamento del codice segue le regole sopra riportate; il numero di versio
 \end{itemize}
 
 \paragraph{Continuous Integration}
-Il gruppo fa uso della pratica di \glossario{Continuous Integration} al fine di ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
+Il gruppo fa uso della pratica di \glossario{Continuous Integration} per poter ottenere un prodotto sempre funzionante, anche se composto da singole componenti sviluppate da persone diverse. Nello specifico, le repository contententi codice sorgente implementeranno questa pratica con l'utilizzo di due strumenti:
 \begin{itemize}
   \item \textbf{\glossario{Sonarcloud}} per l'analisi statica del codice (\glossario{Continuous Inspection});
-  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di Qualifica v1.9-3.1.0} e il supporto al versionamento dei documenti e delle componenti software.
+  \item \textbf{\glossario{TravisCI}} per le operazioni di controllo basate sui test definiti nel \textsc{Piano di qualifica v3.11-4.0.0} e il supporto al versionamento dei documenti e delle componenti software.
 \end{itemize}
 \subparagraph{SonarCloud}
 SonarCloud è uno strumento di Continuous Inspection del codice. Questo strumento viene utilizzato dal gruppo per il controllo della qualità del codice delle diverse componenti software. Le misure che vengono rilevate sono le seguenti:
@@ -799,7 +821,7 @@ Le aspettative di questo processo sono le seguenti:
   \item Sviluppare un prodotto software di qualità, comprendente anche una documentazione completa e di facile fruizione.
 \end{itemize}
 \subsubsection{Descrizione}
-La gestione della qualità viene trattata nello specifico nel \textsc{Piano di Qualifica v1.9-3.1.0}. In particolare, in tale documento:
+La gestione della qualità viene trattata nello specifico nel \textsc{Piano di qualifica v3.11-4.0.0}. In particolare, in tale documento:
 \begin{itemize}
   \item Sono presentati gli standard di qualità utilizzati;
   \item Di tali standard, sono individuati i processi di interesse per il particolare progetto.
@@ -815,6 +837,23 @@ Per ogni prodotto, invece, vengono descritti:
   \item Le metriche da utilizzare;
   \item Gli obiettivi da perseguire.
 \end{itemize}
+
+\paragraph{Obiettivi di qualità}
+\subparagraph{Qualità di prodotto}
+La qualità di prodotto viene garantita dall'attuazione dei processi di verifica e validazione. In particolare vengono definite:
+\begin{itemize}
+  \item \textbf{Verifica}: il processo di controllo che garantisce la qualità dei processi di fornitura del prodotto;
+  \item \textbf{Validazione}: il processo di controllo del prodotto che permette la conferma delle aspettative dei requisiti pattuiti con il proponente.
+\end{itemize}
+La somma di questi due processi porta a un miglioramento continuo del prodotto.
+
+\subparagraph{Qualità di processo}
+La qualità di processo deve essere perseguita durante il ciclo di vita del software per poter assicurare la qualità di quest'ultimo. In particolare vengono definite:
+\begin{itemize}
+  \item \textbf{Efficienza}: i processi devono fare il corretto uso del tempo e delle risorse disponibili, massimizzando la qualità del prodotto in relazione alle risorse;
+  \item \textbf{Efficacia}: il prodotto deve soddisfare quanto pattuito con il proponente.
+\end{itemize}
+
 \subsubsection{Attività}
 \paragraph{Classificazione dei processi}
 I processi sono codificati in tal modo: \\
@@ -890,7 +929,7 @@ Lo scopo del processo di verifica è verificare che il prodotto venga realizzato
 Il processo di verifica interessa sia il software che la documentazione prodotta, assicurando che il prodotto finale sia corretto e completo.
 
 \subsubsection{Aspettative}
-La procedura che tale processo, al fine di essere implementato correttamente, deve rispettare, è la seguente:
+La procedura che tale processo, per poter essere implementato correttamente, deve rispettare, è la seguente:
 \begin{itemize}
   \item Vengono definiti dei chiari criteri di accettazione;
   \item Vengono definite delle attività di verifica, con relativa documentazione;
@@ -938,6 +977,7 @@ Elenchi                           & \begin{itemize}
   \item Verificare che ogni elemento finisca con la corretta punteggiatura (; o .).
 \end{itemize}       \\
 Convenzioni redazionali   & Verificare che il testo dei documenti non contenga espressioni ridondanti (\underline{e.g.} "il fine di...è quello di") \\
+Convenzioni redazionali   & Verificare che i titoli delle diverse sezioni non facciano un errato uso delle lettere maiuscole \\
 Stili del testo     & Verificare che il testo dei documenti faccia corretto uso degli stili grassetto, sottolineato, corsivo, tipografico e maiuscoletto \\
 \end{tabular}
 \caption{Errori frequenti nella documentazione.}
@@ -947,7 +987,7 @@ Stili del testo     & Verificare che il testo dei documenti faccia corretto uso 
 L'analisi dinamica è la tipologia di analisi che viene eseguita sul prodotto eseguendolo. Essa viene effettuata tramite dei test, che controllano il corretto funzionamento del prodotto.
 
 \paragraph{Test}
-L'attività di test fa parte dell'analisi dinamica; i test hanno come scopo principale la verifica del corretto funzionamento del codice, individuando eventuali errori di funzionamento. \\
+L'attività di test fa parte dell'analisi dinamica; lo scopo principale dei test è la verifica del corretto funzionamento del codice, individuando eventuali errori di funzionamento. \\
 Per la corretta implementazione dei test, essi devono essere automatizzati e ripetibili; devono essere definiti a tale scopo:
 \begin{itemize}
   \item L'ambiente di sviluppo, ossia il sistema sul quale viene eseguito il test;
@@ -1075,11 +1115,13 @@ Questo processo farà uso delle seguenti metriche:
 \subparagraph{MoPR012 Frequenza dei controlli}
 \begin{itemize}
   \item \textbf{Descrizione}: i verificatori devono costantemente controllare l'andamento dello sviluppo dei prodotti e validarli secondo le norme.
+  \item \textbf{Unità di misura}: la metrica non possiede unità di misura.
+  \item \textbf{Formula}: la metrica non possiede una formula con la quale essere calcolata.
 \end{itemize}
 
 \subparagraph{MoPR013 Percentuale di test soddisfatti}
 \begin{itemize}
-  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di Qualifica v1.9-3.1.0}.
+  \item \textbf{Descrizione}: questa metrica identifica la percentuale di test implementati e soddisfatti tra quelli definiti dal gruppo nel \textsc{Piano di qualifica v3.11-4.0.0}.
   \item \textbf{Unità di misura}: percentuale;
   \item \textbf{Formula}: la formula per tale metrica è la seguente:
   \begin{displaymath}
@@ -1091,6 +1133,12 @@ Questo processo farà uso delle seguenti metriche:
     \item $ \#TT $: numero totale di test documentati.
   \end{itemize}
   \item \textbf{Procedura per il calcolo}: per il calcolo di questa metrica il gruppo si avvale dello strumento di Continuous Integration Travis CI, il quale riporta nelle diverse dashboard corrispondenti alle diverse repository contenti codice sorgente.
+  \item \textbf{Risultato}: il risultato della rilevazione assume i seguenti significati:
+  \begin{itemize}
+    \item Se il risultato è uguale a 0\%, nessun test documentato è stato implementato o soddisfatto;
+    \item Se il risultato è compreso tra 0\% e 100\%, alcuni test documentati sono stati implementati e soddisfatti;
+    \item Se il risultato è uguale a 100\%, tutti i test documentati sono stati implementati e soddisfatti.
+  \end{itemize}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1115,7 +1163,7 @@ Il processo di validazione consiste delle seguenti attività:
   \end{itemize}
 \end{itemize}
 \paragraph{Test}
-Nel processo di validazione vengono eseguiti i test di accettazione, i quali corrispondono con i test di sistema con la differenza che essi vengono eseguiti con il supervisionamento del committente per dimostrare la conformità del prodotto con quanto richiesto; essi quindi accertano la copertura dei requisiti software concordati con il proponente.
+Nel processo di validazione vengono eseguiti i test di accettazione, i quali corrispondono ai test di sistema con la differenza che essi vengono eseguiti con il supervisionamento del committente per dimostrare la conformità del prodotto con quanto richiesto; essi quindi accertano la copertura dei requisiti software concordati con il proponente.
 
 \subsubsection{Metriche}
 Il processo di validazione non adotta metriche di qualità.
