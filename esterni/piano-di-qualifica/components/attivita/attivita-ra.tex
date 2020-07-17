@@ -140,7 +140,7 @@ L'\textsc{Analisi dei Requisiti v3.11-1.4.0} non presenta grafici in quanto è s
 
 \paragraph{Glossario}
 \label{sub:glossario}
-Il \textsc{Glossario v1.9-1.3.0} ha subito modifiche poco rilevanti per cui è bastata una sola revisione e approvazione generale al documento.
+Nel \textsc{Glossario v3.11-1.3.1} sono stati aggiornati solo alcuni termini della sezione F, il che non ha richiesto grandi fasi di verifica e approvazione del documento.
 Il suo indice di Gulpease è rimasto invariato rispetto alla fase di sviluppo precedente.
 
 \rowcolors{2}{white!80!lightgray!90}{white}
@@ -152,15 +152,15 @@ Il suo indice di Gulpease è rimasto invariato rispetto alla fase di sviluppo pr
   \rowcolor{lightgray}
   {\textbf{Documento}} & {\textbf{Risultato indice}} & {\textbf{Errori presenti}} & {\textbf{Esito indice}} & {\textbf{Esito errori}}  \\
   \endhead%
-  \textbf{Glossario v1.9-1.3.0} & 65               & 0               & Soddisfatto & Soddisfatto \\
-  \caption{Risultati metriche per il Glossario v1.9-1.3.0}
+  \textbf{Glossario v3.11-1.3.1} & 65               & 0               & Soddisfatto & Soddisfatto \\
+  \caption{Risultati metriche per il Glossario v3.11-1.3.1}
   \label{tab:my-table}
 \end{longtable}
 
 A causa delle poche modifiche e cambiamenti significativi non sono stati inseriti i grafici che non comunicavano alcuna informazione aggiuntiva.
 
 \paragraph{Manuale Utente}
-\label{sub:glossario}
+\label{sub:manuale_utente}
 Il \textsc{Manuale Utente v3.11-1.0.0} ha ricevuto modifiche e ampliamenti in quasi tutte le sue sezioni ma non così significative da richiedere molte fasi di verifica e approvazione.
 Il suo indice di Gulpease in questa fase di sviluppo è salito a 74.
 
@@ -181,7 +181,7 @@ Il suo indice di Gulpease in questa fase di sviluppo è salito a 74.
 A causa delle poche fasi di verifica richieste non sono stati inseriti i grafici che non comunicavano alcuna informazione aggiuntiva.
 
 \paragraph{Manuale Sviluppatore}
-\label{sub:glossario}
+\label{sub:manuale_sviluppatore}
 Il \textsc{Manuale Sviluppatore v3.11-2.0.0} ha ricevuto modifiche principalmente ai diagrammi UML sia della training app che del plug-in, oltre ad altre modifiche relative alla parte relativa al plug-in.
 Il suo indice di Gulpease in questa fase di sviluppo è rimasto invariato a 71.
 
@@ -233,11 +233,11 @@ Come per i documenti, anche per queste metriche verrà fornito un esito che può
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPR002 Rispetto del budget istanziato} & MoPR002 Varianza dei costi &  & Soddisfatto  \\
+  \textbf{QoPR002 Rispetto del budget istanziato} & MoPR002 Varianza dei costi & -2 & Soddisfatto  \\
   \caption{Risultati metrica MoPR002}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}: La variazione rispetto al preventivo iniziale rientra nel range deciso per la metrica, per cui l'obiettivo è stato soddisfatto. Il discostamento dal preventivo totale rilevato è di:  euro.
+\textbf{Nota}: La variazione rispetto al preventivo iniziale rientra nel range deciso per la metrica, per cui l'obiettivo è stato soddisfatto. Il discostamento dal preventivo totale rilevato è di: -2 euro.
 
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
@@ -348,7 +348,7 @@ Come per i documenti, anche per queste metriche verrà fornito un esito che può
   \caption{Risultati metrica MoPR010}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}: I componenti del gruppo svolgono costantemente un aggiornamento in base alle modifiche fatte alle \textsc{Norme di Progetto}.
+\textbf{Nota}: I componenti del gruppo svolgono costantemente un aggiornamento in base alle modifiche fatte alle \textsc{Norme di Progetto v3.11-2.4.1}.
 
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
@@ -408,17 +408,24 @@ Come per i documenti, anche per queste metriche verrà fornito un esito che può
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPR014 Soddisfare i test richiesti} & MoPR013 Percentuale di test soddisfatti & 85\% & Non soddisfatto \\
+  \textbf{QoPR014 Soddisfare i test richiesti} & MoPR013 Percentuale di test soddisfatti & 88.35\% & Soddisfatto \\
   \caption{Risultati MoPR013}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}:  Come preventivato, in questa ultima fase di progetto siamo riusciti ad ottenere un valore accettabile per quanto riguarda il numero di test implementati.
+\textbf{Nota}: Come preventivato, in questa ultima fase di progetto siamo riusciti ad ottenere un valore accettabile per quanto riguarda il numero di test implementati.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{img/testImplRa.png}
   \label{fig:test_implementati}
   \caption{Grafico con il numero test implementati}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=12cm]{img/percentTestImplRa.png}
+  \label{fig:test_implementati}
+  \caption{Grafico con la Percentuale di test implementati}
 \end{figure}
 
 \subsubsection{Esiti verifiche sui prodotti}
@@ -471,11 +478,18 @@ In questa sezione vengono visualizzati gli esiti delle metriche prese in conside
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPD003 Test completi sul codice - [Maturità]} & MoPD003 Copertura dei test- [Maturità] &  & Non soddisfatto \\
+  \textbf{QoPD003 Test completi sul codice - [Maturità]} & MoPD003 Copertura dei test- [Maturità] & 90.55\% & Soddisfatto \\
   \caption{Risultati metrica MoPD003}
   \label{tab:my-table}
 \end{longtable}
 \textbf{Nota}: 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{img/coperturaTest.png}
+  \label{fig:test_implementati}
+  \caption{Grafico con la percentuale di copertura del codice}
+\end{figure}
 
 \rowcolors{2}{white!80!lightgray!90}{white}
 \renewcommand{\arraystretch}{2} % allarga le righe con dello spazio sotto e sopra
@@ -554,12 +568,13 @@ In questa sezione vengono visualizzati gli esiti delle metriche prese in conside
   \rowcolor{lightgray}
   {\textbf{Obiettivo}} & {\textbf{Metrica}} & {\textbf{Risultato}} & {\textbf{Esito}}  \\
   \endhead%
-  \textbf{QoPD08 Comprensione del codice - [Modifica]} & MoPD008 Commenti sul codice - [Modifica] &  & Soddisfatto \\
+  \textbf{QoPD08 Comprensione del codice - [Modifica]} & MoPD008 Commenti sul codice - [Modifica] & 19.3\% & Soddisfatto \\
   \caption{Risultati metrica MoPD006}
   \label{tab:my-table}
 \end{longtable}
-\textbf{Nota}:
+\textbf{Nota}: Il valore della metrica è leggermente aumentato rispetto alla revisione precedente rimanendo quindi soddisfacente.
 
 \subsubsection{Conclusioni}%
 \label{sub:conclusioni}
 In questa fase il team ha provveduto principalmente a sanare le lacune riguardanti l'implementazione dei test che risultavano essere carenti nella fase di sviluppo precedente.
+Sono stati raggiunti tutti i valori accettabili per ciascuna metrica definita, il che rende il gruppo di lavoro molto soddisfatto, pur avendo comunque capito di aver commesso diversi errori durante ogni fase di sviluppo del processo, tali considerazioni possono essere consultate nella sezione appendice §B.4.
